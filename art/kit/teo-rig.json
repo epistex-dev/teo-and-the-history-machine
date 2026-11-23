@@ -1,0 +1,284 @@
+{
+  "shade": {
+    "offset": [2, 3],
+    "files": [
+      "<part>-shade.svg",
+      "<part>-lit.svg"
+    ],
+    "rule": "Draw <part>-shade at the lit sprite position + (2,3) in world space, below the lit sprite and above everything drawn earlier. Rotate and scale the shade sprite with the part, but never rotate the (2,3) offset. Inside a rotated container, add the offset in world space too (or counter-rotate it by the container angle). Parts without a -shade file cast none. File coordinates: each sprite file has viewBox = bbox, so its top-left sits at bbox[0],bbox[1] of the character frame; pivots are in frame coordinates."
+  },
+  "rest": {
+    "pose": "normal",
+    "rule": "Parts and containers with a rest entry are posed as in <character>/expr-normal.svg: rotate by angle (SVG degrees, clockwise positive) about pivot, then translate by offset (parent frame), inside the rotated containers. No rest entry = angle 0. visible:false = only shown in other poses (fx, stamp). The face sprite kit/<character>-face-normal.svg goes inside the head rig. node art/safe-bg.mjs rebuilds every character this way and compares it with expr-normal.svg."
+  },
+  "plate": {
+    "files": "kit/plate-<colour>.svg",
+    "topLeft": [-28, -8],
+    "colourByBackground": "style.json plate",
+    "safeBackgrounds": "style.json teoSafeBg"
+  },
+  "frame": [-18, 0, 196, 200],
+  "root": {
+    "id": "teo-root",
+    "pivot": [80, 197]
+  },
+  "headRig": {
+    "id": "teo-head-rig",
+    "pivot": [80, 132],
+    "children": [
+      "teo-ear-l",
+      "teo-ear-r",
+      "teo-head",
+      "teo-face",
+      "teo-hat-rig",
+      "teo-fx-*"
+    ],
+    "rest": {
+      "angle": 0,
+      "pivot": [80, 132]
+    }
+  },
+  "hatRig": {
+    "id": "teo-hat-rig",
+    "pivot": [80, 66],
+    "children": [
+      "teo-hat",
+      "teo-pom"
+    ],
+    "rest": {
+      "angle": -3,
+      "pivot": [80, 66]
+    }
+  },
+  "parts": {
+    "teo-leg-l": {
+      "bbox": [36, 163, 42, 35],
+      "pivot": [65, 166],
+      "shade": true
+    },
+    "teo-leg-r": {
+      "bbox": [82, 163, 42, 35],
+      "pivot": [95, 166],
+      "shade": true
+    },
+    "teo-body": {
+      "bbox": [45, 123, 70, 50],
+      "pivot": [80, 172],
+      "shade": true
+    },
+    "teo-badge": {
+      "bbox": [53, 130, 26, 26],
+      "pivot": [66, 138],
+      "shade": true
+    },
+    "teo-arm-l": {
+      "bbox": [40, 127, 16, 43],
+      "pivot": [48, 134],
+      "shade": true
+    },
+    "teo-arm-r": {
+      "bbox": [104, 127, 16, 43],
+      "pivot": [112, 134],
+      "shade": true
+    },
+    "teo-ear-l": {
+      "bbox": [4, 28, 47, 84],
+      "pivot": [46, 92],
+      "shade": true
+    },
+    "teo-ear-r": {
+      "bbox": [109, 28, 47, 84],
+      "pivot": [114, 92],
+      "shade": true
+    },
+    "teo-head": {
+      "bbox": [36, 51, 88, 82],
+      "pivot": [80, 132],
+      "shade": true
+    },
+    "teo-hat": {
+      "bbox": [31, 0, 107, 71],
+      "pivot": [80, 66],
+      "shade": true
+    },
+    "teo-pom": {
+      "bbox": [126, 31, 22, 22],
+      "pivot": [134, 44],
+      "shade": true
+    },
+    "teo-fx-elated": {
+      "bbox": [-1, 2, 163, 29],
+      "pivot": [80, 132],
+      "shade": true,
+      "rest": {
+        "visible": false
+      }
+    },
+    "teo-fx-elated-ink": {
+      "bbox": [-1, 2, 163, 29],
+      "pivot": [80, 132],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "teo-fx-fainted": {
+      "bbox": [4, 1, 154, 28],
+      "pivot": [80, 132],
+      "shade": true,
+      "rest": {
+        "visible": false
+      }
+    },
+    "teo-fx-fainted-ink": {
+      "bbox": [4, 1, 154, 28],
+      "pivot": [80, 132],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    }
+  },
+  "faces": {
+    "normal": {
+      "bbox": [50, 67, 60, 62],
+      "fx": null
+    },
+    "awkward": {
+      "bbox": [46, 72, 75, 50],
+      "fx": null
+    },
+    "scared": {
+      "bbox": [47, 73, 77, 57],
+      "fx": null
+    },
+    "elated": {
+      "bbox": [46, 73, 68, 59],
+      "fx": "teo-fx-elated"
+    },
+    "tired": {
+      "bbox": [49, 77, 62, 48],
+      "fx": null
+    },
+    "angry": {
+      "bbox": [45, 73, 70, 55],
+      "fx": null
+    },
+    "smug": {
+      "bbox": [50, 70, 60, 56],
+      "fx": null
+    },
+    "fainted": {
+      "bbox": [49, 78, 62, 55],
+      "fx": "teo-fx-fainted"
+    }
+  },
+  "fxVariants": {
+    "teo-fx-elated": {
+      "ink": "teo-fx-elated-ink"
+    },
+    "teo-fx-fainted": {
+      "ink": "teo-fx-fainted-ink"
+    }
+  },
+  "features": {
+    "teo-marks": [80, 108],
+    "teo-eyes": [80, 94],
+    "teo-brows": [80, 81],
+    "teo-mouth": [80, 118]
+  },
+  "order": [
+    "teo-leg-l",
+    "teo-leg-r",
+    "teo-body",
+    "teo-badge",
+    "teo-arm-l",
+    "teo-arm-r",
+    "teo-head-rig"
+  ],
+  "views": {
+    "three-quarter": {
+      "pivots": {
+        "teo-arm-far": [110, 134],
+        "teo-leg-far": [93, 166],
+        "teo-leg-near": [61, 166],
+        "teo-body": [81, 172],
+        "teo-badge": [66, 138],
+        "teo-arm-near": [51, 134],
+        "teo-ear-far": [118, 92],
+        "teo-ear-near": [50, 92],
+        "teo-head": [84, 132],
+        "teo-hat": [82, 66],
+        "teo-pom": [138, 46]
+      },
+      "headRig": [84, 132],
+      "hatRig": [82, 66],
+      "faces": {
+        "normal": {
+          "bbox": [56, 69, 61, 60]
+        },
+        "awkward": {
+          "bbox": [54, 73, 63, 49]
+        },
+        "scared": {
+          "bbox": [53, 73, 64, 57]
+        },
+        "elated": {
+          "bbox": [56, 72, 61, 59]
+        },
+        "smug": {
+          "bbox": [56, 71, 61, 55]
+        }
+      }
+    },
+    "side": {
+      "pivots": {
+        "teo-arm-far": [80, 134],
+        "teo-leg-far": [62, 166],
+        "teo-leg-near": [95, 166],
+        "teo-body": [82, 172],
+        "teo-badge": [98, 138],
+        "teo-arm-near": [82, 134],
+        "teo-head": [82, 132],
+        "teo-ear-near": [82, 92],
+        "teo-hat": [82, 66],
+        "teo-pom": [26, 30]
+      },
+      "headRig": [82, 132],
+      "hatRig": [82, 66],
+      "faces": {
+        "normal": {
+          "bbox": [91, 72, 30, 55]
+        },
+        "awkward": {
+          "bbox": [88, 72, 30, 50]
+        },
+        "scared": {
+          "bbox": [88, 72, 31, 58]
+        },
+        "elated": {
+          "bbox": [87, 72, 32, 59]
+        },
+        "smug": {
+          "bbox": [91, 76, 31, 49]
+        }
+      }
+    },
+    "back": {
+      "pivots": {
+        "teo-leg-l": [95, 166],
+        "teo-leg-r": [65, 166],
+        "teo-body": [80, 172],
+        "teo-arm-l": [48, 134],
+        "teo-arm-r": [112, 134],
+        "teo-ear-l": [46, 92],
+        "teo-ear-r": [114, 92],
+        "teo-head": [80, 132],
+        "teo-hat": [80, 66],
+        "teo-pom": [26, 44]
+      },
+      "headRig": [80, 132],
+      "hatRig": [80, 66]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "dickens",
+  "status": "verified",
+  "source": "research/m0b-act-3.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Dickens không phát minh ra Giáng Sinh.",
+    "\"A Christmas Carol\" ra ngày 19/12/1843, đúng lúc nhiều thứ được làm mới; cùng năm, Henry Cole đặt họa sĩ Horsley vẽ tấm thiệp Giáng Sinh thương mại đầu tiên, in 1.000 tấm, bán 1 shilling."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "\"A Christmas Carol\" do Chapman and Hall xuất bản ngày 19/12/1843; 6.000 bản đầu bán hết trong vài ngày.",
+        "sources": [
+          {
+            "label": "britishlibrary.cn",
+            "url": "https://www.britishlibrary.cn/en/works/charles-dickenss-christmas-carol/"
+          }
+        ]
+      },
+      {
+        "text": "Thập niên 1840 có nhiều đổi mới quanh Giáng Sinh (thiệp, cây thông được hoàng gia làm phổ biến, pháo giấy, tặng quà trẻ em); Dickens không phát minh tất cả những thứ đó, mà viết một câu chuyện bắt được tinh thần thời ấy.",
+        "sources": [
+          {
+            "label": "birmingham.ac.uk",
+            "url": "https://www.birmingham.ac.uk/research/perspective/was-christmas-invented-in-birmingham"
+          },
+          {
+            "label": "vam.ac.uk",
+            "url": "https://www.vam.ac.uk/articles/the-first-christmas-card"
+          }
+        ]
+      },
+      {
+        "text": "Cây thông vào Anh từ cuối thế kỷ 18 qua Hoàng hậu Charlotte; Nữ hoàng Victoria và Hoàng thân Albert làm nó phổ biến (hình in trên báo năm 1848).",
+        "sources": [
+          {
+            "label": "rct.uk",
+            "url": "https://www.rct.uk/collection/stories/a-royal-christmas/the-christmas-tree"
+          }
+        ]
+      },
+      {
+        "text": "Năm 1843 Henry Cole đặt John Callcott Horsley vẽ tấm thiệp Giáng Sinh thương mại đầu tiên; in 1.000 tấm, bán 1 shilling mỗi tấm.",
+        "sources": [
+          {
+            "label": "postalmuseum.org",
+            "url": "https://www.postalmuseum.org/collections/first-christmas-card/"
+          },
+          {
+            "label": "vam.ac.uk",
+            "url": "https://www.vam.ac.uk/articles/the-first-christmas-card"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta hay gọi Dickens là \"người đã phát minh ra Giáng Sinh\", nhưng đó là biệt danh, không phải sự thật lịch sử.",
+        "sources": [
+          {
+            "label": "birmingham.ac.uk",
+            "url": "https://www.birmingham.ac.uk/research/perspective/was-christmas-invented-in-birmingham"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "V&A: việc làm ăn bị coi là thất bại thương mại vì giá đắt. Postal Museum: người ta vẫn mua và phải in thêm.",
+        "sources": [
+          {
+            "label": "vam.ac.uk",
+            "url": "https://www.vam.ac.uk/articles/the-first-christmas-card"
+          },
+          {
+            "label": "postalmuseum.org",
+            "url": "https://www.postalmuseum.org/collections/first-christmas-card/"
+          }
+        ]
+      }
+    ]
+  }
+}

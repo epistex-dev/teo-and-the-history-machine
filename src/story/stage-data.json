@@ -1,0 +1,427 @@
+{
+  "backdrops": {
+    "phong-ho-so-cuc-bac": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch1-office"
+    },
+    "ban-tiec-saturnalia-roma": {
+      "color": "berry",
+      "ground": "ink",
+      "plate": "ch2-feast"
+    },
+    "sanh-dai-bac-au-giua-dong": {
+      "color": "pinedeep",
+      "ground": "ink",
+      "plate": "ch3-hall"
+    },
+    "hanh-lang-nha-anh-1784": {
+      "color": "pinedeep",
+      "ground": "ink",
+      "plate": "ch4-corridor"
+    },
+    "dem-ngoai-belem": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch5-bethlehem"
+    },
+    "kho-lich-roma": {
+      "color": "ink",
+      "ground": "ink",
+      "plate": "ch6-vault"
+    },
+    "ben-cang-myra-dem": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch7-harbour"
+    },
+    "san-lang-anh-1426": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch8-yard"
+    },
+    "nha-o-y-dem-hien-linh": {
+      "color": "pinedeep",
+      "ground": "ink",
+      "plate": "ch10-kitchen"
+    },
+    "lang-alps-dem-dong": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch9-village"
+    },
+    "can-phong-strasbourg-1605": {
+      "color": "pinedeep",
+      "ground": "ink",
+      "plate": "ch11-parlour"
+    },
+    "pho-anh-1647": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch12-street"
+    },
+    "oberndorf-toi-24-12-1818": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch13-church"
+    },
+    "bep-nha-iceland-dem-dong": {
+      "color": "pinedeep",
+      "ground": "ink",
+      "plate": "ch14-iceland-kitchen"
+    },
+    "xuong-len-iceland-the-ky-19": {
+      "color": "pinedeep",
+      "ground": "ink",
+      "plate": "ch15-wool-workshop"
+    },
+    "toa-soan-troy-23-12-1823": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch16-print-shop"
+    },
+    "nha-nong-catalonia-dem-dong": {
+      "color": "pinedeep",
+      "ground": "ink",
+      "plate": "ch17-tio-corner"
+    },
+    "pho-london-1843": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch18-london-snow"
+    },
+    "nong-trai-na-uy-dem-giang-sinh": {
+      "color": "night",
+      "ground": "ink",
+      "plate": "ch19-norway-yard"
+    }
+  },
+  "props": {
+    "coffee-cup": {
+      "at": [
+        -74,
+        300
+      ],
+      "width": 64
+    },
+    "coffee-cup-full": {
+      "at": [
+        -58,
+        304
+      ],
+      "width": 64,
+      "landscape": {
+        "at": [
+          -74,
+          300
+        ],
+        "width": 64
+      }
+    },
+    "letter": {
+      "at": [
+        -14,
+        284
+      ],
+      "width": 46
+    },
+    "letter-blurred": {
+      "at": [
+        -14,
+        284
+      ],
+      "width": 46
+    },
+    "lantern": {
+      "at": [
+        -62,
+        262
+      ],
+      "width": 44
+    },
+    "candle-wax": {
+      "at": [
+        -74,
+        19
+      ],
+      "width": 72,
+      "landscape": {
+        "at": [
+          -262,
+          88
+        ],
+        "width": 72
+      }
+    },
+    "manger-lamp": {
+      "scenery": true,
+      "at": [
+        107.9,
+        221.9
+      ],
+      "width": 248.3,
+      "landscape": {
+        "at": [
+          350.3,
+          80.3
+        ],
+        "width": 179.3
+      }
+    },
+    "window-shadow": {
+      "scenery": true,
+      "at": [
+        4.1,
+        222
+      ],
+      "width": 86,
+      "landscape": {
+        "at": [
+          286.4,
+          20
+        ],
+        "width": 70.2
+      }
+    },
+    "kitchen-shadows": {
+      "scenery": true,
+      "at": [
+        258.8,
+        299.9
+      ],
+      "width": 50.1,
+      "landscape": {
+        "at": [
+          460.8,
+          34.2
+        ],
+        "width": 60.2
+      }
+    },
+    "tree-light": {
+      "scenery": true,
+      "at": [
+        300.4,
+        311.9
+      ],
+      "width": 62,
+      "landscape": {
+        "at": [
+          451.3,
+          46.2
+        ],
+        "width": 80
+      }
+    },
+    "draft-face": {
+      "scenery": true,
+      "at": [
+        183.1,
+        362.1
+      ],
+      "width": 40,
+      "landscape": {
+        "at": [
+          409,
+          136.5
+        ],
+        "width": 40
+      }
+    },
+    "draft-holes": {
+      "scenery": true,
+      "at": [
+        183.1,
+        362.1
+      ],
+      "width": 40,
+      "landscape": {
+        "at": [
+          409,
+          136.5
+        ],
+        "width": 40
+      }
+    },
+    "name-page": {
+      "scenery": true,
+      "at": [
+        204.6,
+        370.8
+      ],
+      "width": 42.7,
+      "landscape": {
+        "at": [
+          378.8,
+          142.7
+        ],
+        "width": 42.7
+      }
+    },
+    "name-draft": {
+      "scenery": true,
+      "at": [
+        240,
+        380
+      ],
+      "width": 34,
+      "landscape": {
+        "at": [
+          518,
+          129
+        ],
+        "width": 14
+      }
+    },
+    "mistletoe-sprig": {
+      "scenery": true,
+      "at": [
+        64,
+        604
+      ],
+      "width": 30,
+      "landscape": {
+        "at": [
+          230,
+          241.5
+        ],
+        "width": 30
+      }
+    },
+    "small-bag": {
+      "scenery": true,
+      "at": [
+        4,
+        498.8
+      ],
+      "width": 36,
+      "landscape": {
+        "at": [
+          176,
+          222.4
+        ],
+        "width": 35
+      }
+    },
+    "folded-sheet": {
+      "scenery": true,
+      "at": [
+        4,
+        525.3
+      ],
+      "width": 34,
+      "landscape": {
+        "at": [
+          169,
+          248.3
+        ],
+        "width": 35
+      }
+    },
+    "apple": {
+      "scenery": true,
+      "at": [
+        262.8,
+        361.6
+      ],
+      "width": 22,
+      "landscape": {
+        "at": [
+          412.2,
+          127
+        ],
+        "width": 22
+      }
+    },
+    "paper-star": {
+      "scenery": true,
+      "at": [
+        215.3,
+        344.2
+      ],
+      "width": 32,
+      "landscape": {
+        "at": [
+          312.3,
+          105.4
+        ],
+        "width": 32
+      }
+    },
+    "step-apple": {
+      "scenery": true,
+      "at": [
+        241.9,
+        350.4
+      ],
+      "width": 22,
+      "landscape": {
+        "at": [
+          363.4,
+          163.7
+        ],
+        "width": 22
+      }
+    },
+    "lone-slip": {
+      "scenery": true,
+      "at": [
+        257.6,
+        357.4
+      ],
+      "width": 32,
+      "landscape": {
+        "at": [
+          404.6,
+          170.7
+        ],
+        "width": 32
+      }
+    },
+    "door-shadows": {
+      "scenery": true,
+      "at": [
+        212.9,
+        277.1
+      ],
+      "width": 53.6,
+      "landscape": {
+        "at": [
+          417.3,
+          49.4
+        ],
+        "width": 74.8
+      }
+    },
+    "choir-mark": {
+      "scenery": true,
+      "at": [
+        212.9,
+        277.1
+      ],
+      "width": 53.6,
+      "landscape": {
+        "at": [
+          417.3,
+          49.4
+        ],
+        "width": 74.8
+      }
+    },
+    "door-calendar": {
+      "scenery": true,
+      "at": [
+        227.6,
+        316.6
+      ],
+      "width": 24,
+      "landscape": {
+        "at": [
+          442.7,
+          103.3
+        ],
+        "width": 24
+      }
+    }
+  }
+}

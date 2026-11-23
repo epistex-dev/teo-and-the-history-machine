@@ -1,0 +1,314 @@
+{
+  "id": "mistletoe",
+  "format": "A",
+  "input": "assign",
+  "goal": "find-missing-link",
+  "orientation": "both",
+  "title": "Tầm gửi qua các nguồn mở được",
+  "question": "Bốn nguồn trên bàn, sáu mảnh để đặt. Mảnh nào thuộc nguồn nào, hay không có chỗ, các thẻ mới cho biết.",
+  "predict": {
+    "prompt": "Hôn dưới tầm gửi: ghi chép đầu tiên được biết thuộc thời nào?",
+    "options": [
+      "Thời cổ đại",
+      "Thời Trung cổ",
+      "Thời cận đại"
+    ]
+  },
+  "aha": "Không nguồn nào nối truyện Baldur, sách thế kỷ 13, với nụ hôn; tục ấy chỉ thấy ghi từ năm 1784.",
+  "history": "mistletoe",
+  "rules": [
+    {
+      "text": "Mỗi nguồn trên bàn cần ít nhất một mảnh, và nhận nhiều nhất hai mảnh."
+    },
+    {
+      "text": "Chạm một mảnh, rồi chạm một nguồn để đặt. Mảnh có thể không đặt."
+    },
+    {
+      "text": "Kiểm tra chấm cả bốn nguồn một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Prose Edda của Snorri",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s2",
+      "label": "Völuspá trong Codex Regius",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s3",
+      "label": "Bài của English Heritage",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s4",
+      "label": "Bài của Smithsonian",
+      "cap": 2,
+      "min": 1
+    }
+  ],
+  "tokens": [
+    {
+      "id": "w",
+      "text": "Hài kịch có nhạc năm 1784 ghi nụ hôn dưới tầm gửi",
+      "status": "fact"
+    },
+    {
+      "id": "f",
+      "text": "Lời thề của muôn vật trừ cây tầm gửi",
+      "status": "fact"
+    },
+    {
+      "id": "k",
+      "text": "Tục hôn bắt nguồn từ vòng cành treo",
+      "status": "disputed"
+    },
+    {
+      "id": "i",
+      "text": "Lệ của Irving: mỗi quả mọng một nụ hôn",
+      "status": "fact"
+    },
+    {
+      "id": "b",
+      "text": "Cành cây mảnh trên đồng cao hóa mũi tên",
+      "status": "fact"
+    },
+    {
+      "id": "h",
+      "text": "Thơ gắn tầm gửi với mùa lễ Giáng Sinh",
+      "status": "fact"
+    }
+  ],
+  "bankSeed": 2,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Prose Edda và bản dịch Völuspá",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://en.wikisource.org/wiki/The_Elder_Edda_and_the_Younger_Edda/Younger_Edda/The_Death_of_Baldur",
+        "https://sacred-texts.com/neu/poe/poe03.htm",
+        "https://www.arnastofnun.is/en/news/new-electronic-edition-codex-regius-poetic-edda"
+      ],
+      "evidence": [
+        "except one little shrub that grows on the eastern side of Valhalla, and is called Mistletoe",
+        "From the branch which seemed so slender and fair Came a harmful shaft that Hoth should hurl",
+        "The story is fully told by Snorri"
+      ],
+      "text": "Völuspá trong Codex Regius tả cành mảnh trên đồng cao, hóa mũi tên. Lời thề của muôn vật được Snorri kể trong Prose Edda.",
+      "do": [
+        {
+          "op": "at",
+          "t": "b",
+          "s": "s2"
+        },
+        {
+          "op": "at",
+          "t": "f",
+          "s": "s1"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "who": "Snorri Sturluson, Prose Edda",
+      "kind": "retelling",
+      "status": "legend",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://en.wikisource.org/wiki/The_Elder_Edda_and_the_Younger_Edda/Younger_Edda/The_Death_of_Baldur"
+      ],
+      "evidence": [
+        "Hodur then took the mistletoe, and under the guidance of Loki, darted it at Baldur"
+      ],
+      "text": "Người ta kể rằng Hödr, theo lời chỉ dẫn của Loki, ném cành tầm gửi trúng thần Baldur."
+    },
+    {
+      "id": "c3",
+      "who": "Suy ra từ bài nghiên cứu hiện đại",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.english-heritage.org.uk/learn/histories/christmas-greenery-history"
+      ],
+      "evidence": [
+        "The poet Robert Herrick (1591–1674) is the first known source to associate mistletoe with Christmas",
+        "thought to have been first recorded in the comic-opera Two to One, written in 1784"
+      ],
+      "text": "Một trong hai bài viết dẫn thơ Herrick về tầm gửi, và dẫn hài kịch có nhạc năm 1784.",
+      "do": [
+        {
+          "op": "same",
+          "t": [
+            "h",
+            "w"
+          ]
+        },
+        {
+          "op": "oneOf",
+          "t": "h",
+          "s": [
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "op": "oneOf",
+          "t": "w",
+          "s": [
+            "s3",
+            "s4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "who": "Smithsonian Magazine",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-1.md; research/m0c-puzzles.md",
+      "url": [
+        "https://www.smithsonianmag.com/history/how-mistletoe-became-christmas-kissing-tradition-180985450/"
+      ],
+      "evidence": [
+        "Washington Irving",
+        "when the berries are all plucked the privilege ceases"
+      ],
+      "text": "Bài của Smithsonian dẫn lệ của Irving: mỗi quả mọng một nụ hôn, hết quả thì thôi.",
+      "do": {
+        "op": "at",
+        "t": "i",
+        "s": "s4"
+      }
+    },
+    {
+      "id": "c5",
+      "who": "Suy ra từ English Heritage",
+      "kind": "inference",
+      "status": "disputed",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.english-heritage.org.uk/learn/histories/christmas-greenery-history"
+      ],
+      "evidence": [
+        "This may be where the tradition of kissing under the mistletoe comes from.",
+        "thought to have been first recorded in the comic-opera Two to One, written in 1784"
+      ],
+      "text": "Tục hôn từ vòng cành treo: chỉ là giả thuyết. Nếu có chỗ, nó ở cùng bài với hài kịch có nhạc năm 1784.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "not",
+            [
+              "placed",
+              "k"
+            ]
+          ],
+          [
+            "eq",
+            [
+              "pos",
+              "k"
+            ],
+            [
+              "pos",
+              "w"
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    [
+      [
+        "f"
+      ],
+      [
+        "b"
+      ],
+      [
+        "w",
+        "h"
+      ],
+      [
+        "i"
+      ]
+    ]
+  ],
+  "space": 2880,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mỗi mảnh thuộc nguồn nào trên bàn, hay không có chỗ?"
+    },
+    {
+      "tier": 2,
+      "card": "c3",
+      "text": "Đọc thẻ 3 trước: hai mảnh nào cùng nằm trong một bài viết?"
+    },
+    {
+      "tier": 3,
+      "text": "Chung một cành cây, có chắc chuyện Bắc Âu sinh ra tục hôn?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s4": "i"
+      },
+      "text": "Thẻ 4 đặt mảnh quả mọng vào bài của Smithsonian. Đặt mảnh ấy vào, rồi đọc lại thẻ 3."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nguồn."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: nhờ Baldur mà người ta hôn dưới tầm gửi.",
+    "cards": [
+      "c3"
+    ],
+    "trap": {
+      "s1": [
+        "f",
+        "w"
+      ],
+      "s2": "b",
+      "s3": "h",
+      "s4": "i"
+    },
+    "do": [
+      {
+        "op": "oneOf",
+        "t": "w",
+        "s": [
+          "s1",
+          "s2"
+        ]
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Nụ hôn dưới tầm gửi: ghi chép đầu tiên được biết là năm 1784, nhiều thế kỷ sau hai sách chép truyện Baldur.",
+      "Giữa truyện Baldur và nụ hôn chưa nguồn nào nối: chưa ai chứng minh."
+    ],
+    "label": "TRUYỀN THUYẾT"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả bốn nguồn một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  }
+}

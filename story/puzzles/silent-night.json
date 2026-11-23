@@ -1,0 +1,307 @@
+{
+ "id": "silent-night",
+ "format": "I",
+ "input": "assign",
+ "goal": "cast",
+ "orientation": "both",
+ "title": "Đêm 24/12/1818: nguồn nào kể điều gì",
+ "question": "Bốn nguồn trên bậc đá, sáu mảnh để đặt. Mảnh nào do nguồn nào kể, các thẻ cho biết.",
+ "predict": {
+  "prompt": "Gruber từng viết về đêm ra mắt. Ông viết lúc nào?",
+  "options": [
+   "Ngay trong đêm ấy",
+   "Vài năm sau",
+   "Hơn ba mươi năm sau"
+  ]
+ },
+ "aha": "Ai hát, ai đàn và ca đoàn: tất cả từ lời kể về sau, không giống nhau.",
+ "history": "silent-night",
+ "rules": [
+  {
+   "text": "Gruber, 1854 nhận nhiều nhất 3 mảnh, Salzburgerland nhận nhiều nhất một mảnh. Hai nguồn còn lại nhận bao nhiêu mảnh cũng được."
+  },
+  {
+   "text": "Chạm một mảnh, rồi chạm một nguồn để đặt. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Kiểm tra chấm cả bốn nguồn một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Gruber, 1854",
+   "cap": 3,
+   "min": 0
+  },
+  {
+   "id": "s2",
+   "label": "Bảo tàng Oberndorf",
+   "cap": "any",
+   "min": 0
+  },
+  {
+   "id": "s3",
+   "label": "Bảo tàng Salzburg",
+   "cap": "any",
+   "min": 0
+  },
+  {
+   "id": "s4",
+   "label": "Salzburgerland",
+   "cap": 1,
+   "min": 0,
+   "lane": "legend",
+   "accepts": [
+    "legend"
+   ]
+  }
+ ],
+ "tokens": [
+  {
+   "id": "c",
+   "text": "Bản gốc đã mất",
+   "status": "fact"
+  },
+  {
+   "id": "g",
+   "text": "Bài được đặt cho hai giọng solo, hợp xướng và guitar",
+   "status": "fact"
+  },
+  {
+   "id": "e",
+   "text": "Chuột gặm đàn organ, nên phải dùng guitar",
+   "status": "legend",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://www.stille-nacht-museum.at/en/silent-nightholy-night/history/"
+   ],
+   "evidence": [
+    "it is clear that the legend of the mouse that gnawed at the bellows is not true"
+   ]
+  },
+  {
+   "id": "a",
+   "text": "Mohr hát tenor và đệm guitar, Gruber hát bass",
+   "status": "fact"
+  },
+  {
+   "id": "k",
+   "text": "Bản chép cổ nhất, của Mohr, khoảng 1820",
+   "status": "fact"
+  },
+  {
+   "id": "f",
+   "text": "Ca đoàn nhà thờ lặp bốn ô nhịp cuối",
+   "status": "disputed",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://www.stille-nacht-museum.at/en/silent-nightholy-night/"
+   ],
+   "evidence": [
+    "The church singers repeated the final four bars in chorus"
+   ]
+  }
+ ],
+ "bankSeed": 0,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Suy ra từ Gruber, 1854",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://www.stille-nacht-museum.at/en/silent-nightholy-night/history/"
+   ],
+   "evidence": [
+    "2 solo voices with chorus and guitar accompaniment",
+    "immediately performed with great approval on Christmas Night"
+   ],
+   "text": "Trong ba mảnh về hợp xướng và giọng hát, bản kể Gruber ngày 30/12/1854 chứa một.",
+   "do": {
+    "op": "count",
+    "t": [
+     "g",
+     "a",
+     "f"
+    ],
+    "s": "s1",
+    "n": 1
+   }
+  },
+  {
+   "id": "c2",
+   "who": "Suy ra từ Bảo tàng Oberndorf",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://www.stille-nacht-museum.at/en/silent-nightholy-night/"
+   ],
+   "evidence": [
+    "sang the tenor part and accompanied on the guitar",
+    "The church singers repeated the final four bars in chorus",
+    "written for two solo voices, choir, and guitar accompaniment"
+   ],
+   "text": "Về hợp xướng và giọng hát: bảo tàng Oberndorf có hai mảnh mà bản kể Gruber không có.",
+   "do": {
+    "op": "count",
+    "t": [
+     "g",
+     "a",
+     "f"
+    ],
+    "s": "s2",
+    "n": 2
+   }
+  },
+  {
+   "id": "c3",
+   "who": "Suy ra từ Bảo tàng Oberndorf",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://www.stille-nacht-museum.at/en/silent-nightholy-night/"
+   ],
+   "evidence": [
+    "Franz Xaver Gruber sang the lower bass part",
+    "The church singers repeated the final four bars in chorus"
+   ],
+   "text": "Hai câu, về giọng hát và về ca đoàn lặp, đứng liền nhau trong một đoạn.",
+   "do": {
+    "op": "same",
+    "t": [
+     "a",
+     "f"
+    ]
+   }
+  },
+  {
+   "id": "c4",
+   "who": "Bảo tàng Salzburg",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://sammlung-online.salzburgmuseum.at/detail/collection/c6be0c0f-2a40-4ddc-82c4-0e7b1a5113f3"
+   ],
+   "evidence": [
+    "und ist verloren gegangen",
+    "Um 1820"
+   ],
+   "text": "Một mục của Bảo tàng Salzburg ghi bản gốc 1818 đã mất, và ghi cả bản chép cổ nhất của Mohr, khoảng 1820.",
+   "do": [
+    {
+     "op": "at",
+     "t": "c",
+     "s": "s3"
+    },
+    {
+     "op": "at",
+     "t": "k",
+     "s": "s3"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "who": "Salzburgerland",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://www.salzburgerland.com/en/myths-and-legends/"
+   ],
+   "evidence": [
+    "The story about the defective organ has been going around since 1909",
+    "began with Hertha Pauli in 1954"
+   ],
+   "text": "Salzburgerland ghi chuyện chuột gặm đàn trong mục chuyện hoang đường: chuyện đàn hỏng từ năm 1909, chuyện chuột từ năm 1954.",
+   "do": {
+    "op": "at",
+    "t": "e",
+    "s": "s4"
+   }
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "g"
+   ],
+   [
+    "a",
+    "f"
+   ],
+   [
+    "c",
+    "k"
+   ],
+   [
+    "e"
+   ]
+  ]
+ ],
+ "space": 9990,
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Câu hỏi: mảnh nào do nguồn nào kể? Mỗi thẻ cho biết một nguồn kể gì."
+  },
+  {
+   "tier": 2,
+   "card": "c1",
+   "text": "Đọc thẻ 1 trước. Trong ba mảnh về hợp xướng và giọng hát, Gruber chứa mấy?"
+  },
+  {
+   "tier": 3,
+   "text": "Có người nghĩ lời Gruber kể trọn đêm ấy. Thẻ nào cho thấy điều ấy sai?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s4": "e"
+   },
+   "text": "Thẻ 5 đặt một mảnh vào Salzburgerland. Đặt mảnh ấy vào, rồi đọc lại thẻ 1, thẻ 2 và thẻ 3."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nguồn."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Lời Gruber kể trọn đêm ấy, nên cả ba mảnh về hợp xướng và giọng hát đều là lời ông.",
+  "cards": [
+   "c1",
+   "c2",
+   "c3"
+  ],
+  "trap": {
+   "s1": [
+    "g",
+    "a",
+    "f"
+   ]
+  },
+  "do": [
+   {
+    "op": "at",
+    "t": "f",
+    "s": "s1"
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Gruber viết lời kể ba mươi sáu năm sau, và không nêu ai hát giọng nào.",
+   "Trong các nguồn đã mở, ca đoàn hát chỉ có ở một bảo tàng, không dẫn nguồn sơ cấp; các lời kể không giống nhau."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả bốn nguồn một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ }
+}

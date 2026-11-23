@@ -1,0 +1,85 @@
+{
+  "id": "caga-tio",
+  "status": "verified",
+  "source": "research/m0b-act-3.md",
+  "stamp": "TRANH CÃI",
+  "card": [
+    "Ở Catalonia, trẻ con cho khúc củi Tió de Nadal \"ăn\", phủ chăn rồi đập bằng gậy, vừa hát vừa bảo nó \"ỉa\" ra kẹo và quà.",
+    "Gốc gác còn mờ: có người cho là nghi lễ cổ, nhưng bài hát đập Tió chỉ thấy ghi từ cuối thế kỷ 19."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Tió là khúc củi to. Trước Giáng Sinh vài ngày trẻ con mang đồ ăn cho nó; đến đêm 24/12 người ta phủ chăn, cho trẻ đập bằng gậy theo bài hát, rồi nhấc chăn lên: dưới đó có kẹo và quà nhỏ.",
+        "sources": [
+          {
+            "label": "visitmuseum.gencat.cat",
+            "url": "https://visitmuseum.gencat.cat/ca/museu/museu-terra/objecte/el-tio-de-nadal"
+          },
+          {
+            "label": "npr.org",
+            "url": "https://www.npr.org/sections/thesalt/2017/12/22/572569325/caga-ti-a-catalan-log-that-poops-nougats-at-christmas"
+          }
+        ]
+      },
+      {
+        "text": "Bài hát đập Tió sớm nhất mà nhóm Càntut tìm thấy được in năm 1886, trong sách về làng Blanes của Josep Cortils i Vieta.",
+        "sources": [
+          {
+            "label": "cantut.cat",
+            "url": "https://cantut.cat/canconer/cancons/item/720-tio-tio"
+          },
+          {
+            "label": "pccd.dites.cat",
+            "url": "https://pccd.dites.cat/obra/Cortils_i_Vieta%2C_Josep_%281886%29%3A_Etholog%C3%ADa_de_Bl%C3%A1nes"
+          }
+        ]
+      },
+      {
+        "text": "Tió ngày xưa là khúc củi trơn, không mặt; khuôn mặt và chiếc mũ barretina phổ biến từ khoảng thập niên 1970.",
+        "sources": [
+          {
+            "label": "beteve.cat",
+            "url": "https://beteve.cat/cultura/llibre-tio-nadal-repassa-origens-ancestrals-tradicio/"
+          },
+          {
+            "label": "cultura.gencat.cat",
+            "url": "https://cultura.gencat.cat/ca/detall/Noticies/N_Nadala2025"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Phía cổ: tờ rơi của phòng Văn hóa Dân gian Barcelona (qua NPR) mô tả Tió là tục ngoại giáo mừng đông chí, và nhà nhân học Josep Fornés nói khúc củi có gốc từ các nghi lễ cổ; Bộ Văn hóa Catalonia xếp nó cùng họ với tục khúc củi Giáng Sinh ở nhiều nơi châu Âu.",
+        "sources": [
+          {
+            "label": "npr.org",
+            "url": "https://www.npr.org/sections/thesalt/2017/12/22/572569325/caga-ti-a-catalan-log-that-poops-nougats-at-christmas"
+          },
+          {
+            "label": "beteve.cat",
+            "url": "https://beteve.cat/cultura/llibre-tio-nadal-repassa-origens-ancestrals-tradicio/"
+          },
+          {
+            "label": "cultura.gencat.cat",
+            "url": "https://cultura.gencat.cat/ca/detall/Noticies/N_Nadala2025"
+          }
+        ]
+      },
+      {
+        "text": "Phía thận trọng: cũng Fornés nói tục bắt nó \"ỉa\" và đập bằng gậy hiện đại hơn, bài hát chỉ thấy ghi từ khoảng 150 năm trước (tính đến 2020); NPR: không ai biết vì sao nó phải \"ỉa\" và tục tiến hóa lúc nào.",
+        "sources": [
+          {
+            "label": "beteve.cat",
+            "url": "https://beteve.cat/cultura/llibre-tio-nadal-repassa-origens-ancestrals-tradicio/"
+          },
+          {
+            "label": "npr.org",
+            "url": "https://www.npr.org/sections/thesalt/2017/12/22/572569325/caga-ti-a-catalan-log-that-poops-nougats-at-christmas"
+          }
+        ]
+      }
+    ]
+  }
+}

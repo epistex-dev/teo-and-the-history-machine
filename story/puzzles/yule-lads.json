@@ -1,0 +1,301 @@
+{
+ "id": "yule-lads",
+ "format": "C",
+ "input": "assign",
+ "goal": "attribute-records",
+ "orientation": "both",
+ "title": "Các chàng Yule: lời nào của bản ghi nào",
+ "question": "Quanh tờ giấy trắng: ba bản ghi, sáu lời về các chàng. Lời nào ở bản ghi nào? Các thẻ cho biết.",
+ "predict": {
+  "prompt": "Con số mười ba chàng Yule: trong các bản ghi đã mở, bản nào chép sớm nhất?",
+  "options": [
+   "Thơ năm 1932",
+   "Sách in năm 1862",
+   "Bản chép tay thế kỷ 18"
+  ]
+ },
+ "aha": "Số mười ba có từ thế kỷ 18, tên và lịch đến chỉ thấy ghi từ 1862; chỉ ngày 24/12 đủ cả mười ba chàng.",
+ "history": "yule-lads",
+ "rules": [
+  {
+   "text": "Chạm một mảnh, rồi chạm một ô để đặt. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Mỗi ô nhận ít nhất một mảnh, riêng Jón Árnason nhận ít nhất hai. Bản chép tay nhận nhiều nhất hai mảnh."
+  },
+  {
+   "text": "Kiểm tra chấm cả ba ô một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Bản chép tay thế kỷ 18",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s2",
+   "label": "Jón Árnason 1862",
+   "cap": "any",
+   "min": 2
+  },
+  {
+   "id": "s3",
+   "label": "Lịch Iceland ngày nay",
+   "cap": "any",
+   "min": 1
+  }
+ ],
+ "tokens": [
+  {
+   "id": "e",
+   "text": "Hurðaskellir là chàng thứ bảy",
+   "status": "fact"
+  },
+  {
+   "id": "b",
+   "text": "Chàng đầu xuống mười ba ngày trước Giáng Sinh, mỗi ngày thêm một chàng",
+   "status": "fact"
+  },
+  {
+   "id": "h",
+   "text": "Chưa gọi tên chàng nào",
+   "status": "fact"
+  },
+  {
+   "id": "g",
+   "text": "Mười ba tên có trước sách in trăm năm",
+   "status": "decoy"
+  },
+  {
+   "id": "a",
+   "text": "Con số mười ba, có sớm hơn sách in chừng một thế kỷ",
+   "status": "fact"
+  },
+  {
+   "id": "d",
+   "text": "Faldafeykir là chàng thứ bảy",
+   "status": "fact"
+  }
+ ],
+ "bankSeed": 5,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Árni Björnsson, Árnastofnun",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md",
+   "url": [
+    "https://arnastofnun.is/is/utgafa-og-gagnasofn/pistlar/nofn-jolasveina",
+    "https://www.visindavefur.is/svar.php?id=54312"
+   ],
+   "evidence": [
+    "Nöfn á jólasveinum sjást hinsvegar engin fyrr en í Þjóðsögum Jóns Árnasonar árið 1862 (I:219)"
+   ],
+   "text": "Theo Árni Björnsson, tên các chàng chưa thấy ở đâu trước năm 1862.",
+   "do": [
+    {
+     "op": "notAt",
+     "t": "d",
+     "s": "s1"
+    },
+    {
+     "op": "notAt",
+     "t": "e",
+     "s": "s1"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "who": "Jón Árnason, tập I, tr. 219 (1862)",
+   "kind": "record",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md",
+   "url": [
+    "https://archive.org/download/Islenzkarthjodso000197672v1JonReyk/Islenzkarthjodso000197672v1JonReyk_orig_djvu.txt"
+   ],
+   "evidence": [
+    "hinn fyrsti kemur 13 dögum fyrir jól, síðan einn á hverjum degi, og sá síðasti á aðfangadag jóla. Á jóladaginn fer hinn fyrsti burt aptur, og svo hver að öðrum, en hinn síðasti á þrettánda dag jóla"
+   ],
+   "text": "Jón Árnason chép năm 1862: chàng đầu xuống núi cách Giáng Sinh mười ba ngày, mỗi ngày thêm một.",
+   "do": [
+    {
+     "op": "at",
+     "t": "b",
+     "s": "s2"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "who": "Lịch Iceland ngày nay, Vísindavefur",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md",
+   "url": [
+    "https://www.visindavefur.is/svar.php?id=5491"
+   ],
+   "evidence": [
+    "12. desember byrja gömlu jólasveinarnir að koma til byggða",
+    "18 Hurðaskellir",
+    "23 Ketkrókur (Þorláksmessa), 24 Kertasníkir"
+   ],
+   "text": "Lịch ngày nay đếm từ 12/12: Hurðaskellir 18/12, Ketkrókur 23/12, Kertasníkir 24/12. Không có Faldafeykir.",
+   "do": [
+    {
+     "op": "at",
+     "t": "e",
+     "s": "s3"
+    },
+    {
+     "op": "notAt",
+     "t": "d",
+     "s": "s3"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "who": "Suy ra từ Árni Björnsson",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md",
+   "url": [
+    "https://arnastofnun.is/is/utgafa-og-gagnasofn/pistlar/nofn-jolasveina"
+   ],
+   "evidence": [
+    "Þar eru þeir sagðir vera 13",
+    "Nöfn á jólasveinum sjást hinsvegar engin fyrr en í Þjóðsögum Jóns Árnasonar árið 1862 (I:219)"
+   ],
+   "text": "Suy ra: lời về số mười ba, cùng lời chưa có tên, thuộc một bản ghi.",
+   "do": [
+    {
+     "op": "same",
+     "t": [
+      "a",
+      "h"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra từ Árni Björnsson",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md",
+   "url": [
+    "https://arnastofnun.is/is/utgafa-og-gagnasofn/pistlar/nofn-jolasveina",
+    "https://www.visindavefur.is/svar.php?id=54312"
+   ],
+   "evidence": [
+    "Þar eru þeir sagðir vera 13"
+   ],
+   "text": "Suy ra: nguồn nào nói mười ba tên có trước sách in trăm năm, nguồn ấy cũng nói con số mười ba sớm chừng ấy.",
+   "do": [
+    {
+     "op": "expr",
+     "e": [
+      "or",
+      [
+       "not",
+       [
+        "placed",
+        "g"
+       ]
+      ],
+      [
+       "eq",
+       [
+        "pos",
+        "g"
+       ],
+       [
+        "pos",
+        "a"
+       ]
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Câu hỏi: lời nào ở bản ghi nào? Các thẻ cho biết bản ghi nào nói gì."
+  },
+  {
+   "tier": 2,
+   "card": "c1",
+   "text": "Đọc thẻ 1: trước năm 1862, đã có bản ghi nào gọi tên các chàng chưa?"
+  },
+  {
+   "tier": 3,
+   "text": "Có chắc tên các chàng có từ khi có con số?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s3": "e"
+   },
+   "text": "Thẻ 3 đặt một mảnh vào lịch ngày nay. Đặt mảnh ấy vào, rồi đọc lại thẻ 1."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả ba ô."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo nghĩ tên các chàng lâu đời bằng con số mười ba, nên lời ấy có chỗ ở bản chép tay.",
+  "cards": [
+   "c1",
+   "c2",
+   "c3",
+   "c4",
+   "c5"
+  ],
+  "trap": {
+   "s1": [
+    "a",
+    "g"
+   ]
+  },
+  "do": [
+   {
+    "op": "used",
+    "t": "g"
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Số mười ba có trong bản chép tay thế kỷ 18; tên và lịch đến chỉ thấy ghi từ sách 1862.",
+   "Theo quy tắc 1862, chàng cuối đến 24/12 và chàng đầu đi 25/12, nên chỉ ngày 24/12 đủ cả mười ba chàng."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả ba ô một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ },
+ "solutions": [
+  [
+   [
+    "h",
+    "a"
+   ],
+   [
+    "b",
+    "d"
+   ],
+   [
+    "e"
+   ]
+  ]
+ ],
+ "space": 960
+}

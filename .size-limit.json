@@ -1,0 +1,236 @@
+[
+  {
+    "name": "First load JS (shell + title + chapter 1 + puzzle player), gzip",
+    "path": [
+      "dist/assets/index-*.js",
+      "dist/assets/shared-*.js",
+      "dist/assets/title-*.js",
+      "dist/assets/pz-intro-*.js",
+      "dist/assets/chapter-intro-*.js",
+      "dist/assets/puzzle-*.js",
+      "dist/assets/rolldown-runtime-*.js"
+    ],
+    "limit": "600 kB",
+    "gzip": true
+  },
+  {
+    "name": "Puzzle player chunk JS (player, boards, shared checker logic), gzip",
+    "path": "dist/assets/puzzle-*.js",
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Shared helper chunk JS (preload helper, storage, audio), gzip",
+    "path": "dist/assets/shared-*.js",
+    "limit": "5 kB",
+    "gzip": true
+  },
+  {
+    "name": "Bundler runtime helper chunk JS, gzip",
+    "path": "dist/assets/rolldown-runtime-*.js",
+    "limit": "5 kB",
+    "gzip": true
+  },
+  {
+    "name": "Puzzle data chunks JS (every puzzle file), gzip",
+    "path": "dist/assets/pz-*.js",
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter intro chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-intro-*.js",
+      "dist/assets/chapter-intro-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter saturnalia chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-saturnalia-*.js",
+      "dist/assets/chapter-saturnalia-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter yule chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-yule-*.js",
+      "dist/assets/chapter-yule-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter ending chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-ending-*.js",
+      "dist/assets/chapter-ending-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter mistletoe chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-mistletoe-*.js",
+      "dist/assets/chapter-mistletoe-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter bethlehem chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-bethlehem-*.js",
+      "dist/assets/chapter-bethlehem-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter dec25 chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-dec25-*.js",
+      "dist/assets/chapter-dec25-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter nicholas chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-nicholas-*.js",
+      "dist/assets/chapter-nicholas-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter carol chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-carol-*.js",
+      "dist/assets/chapter-carol-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter krampus chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-krampus-*.js",
+      "dist/assets/chapter-krampus-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter befana chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-befana-*.js",
+      "dist/assets/chapter-befana-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter tree chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-tree-*.js",
+      "dist/assets/chapter-tree-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter ban1647 chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-ban1647-*.js",
+      "dist/assets/chapter-ban1647-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter silent-night chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-silent-night-*.js",
+      "dist/assets/chapter-silent-night-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter yule-lads chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-yule-lads-*.js",
+      "dist/assets/chapter-yule-lads-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter yule-cat chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-yule-cat-*.js",
+      "dist/assets/chapter-yule-cat-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter santa-ny chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-santa-ny-*.js",
+      "dist/assets/chapter-santa-ny-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter caga-tio chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-caga-tio-*.js",
+      "dist/assets/chapter-caga-tio-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter dickens chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-dickens-*.js",
+      "dist/assets/chapter-dickens-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Chapter brooms chunk JS (scene + script), gzip",
+    "path": [
+      "dist/assets/pz-brooms-*.js",
+      "dist/assets/chapter-brooms-*.js"
+    ],
+    "limit": "150 kB",
+    "gzip": true
+  },
+  {
+    "name": "Sổ nguồn data chunk JS, gzip",
+    "path": "dist/assets/notebook-*.js",
+    "limit": "50 kB",
+    "gzip": true
+  },
+  {
+    "name": "Lazy shell and screens chunks JS, gzip",
+    "path": [
+      "dist/assets/shell-*.js",
+      "dist/assets/screens-*.js",
+      "dist/assets/code-*.js"
+    ],
+    "limit": "50 kB",
+    "gzip": true
+  }
+]

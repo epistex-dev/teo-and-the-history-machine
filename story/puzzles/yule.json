@@ -1,0 +1,450 @@
+{
+  "id": "yule",
+  "format": "T",
+  "input": "order",
+  "goal": "two-lane",
+  "orientation": "both",
+  "title": "Yule trên hai làn: năm viết và thời được tả",
+  "question": "Hai làn chung dãy cột: năm bản ghi được viết, và thời nó tả. Có năm mảnh: mảnh nào vào đâu, các thẻ cho biết.",
+  "predict": {
+    "prompt": "Một bản ghi chép về thời vua Hákon: người chép sống cách thời ấy bao lâu?",
+    "options": [
+      "Cùng thời",
+      "Khoảng một thế kỷ sau",
+      "Khoảng ba thế kỷ sau"
+    ]
+  },
+  "aha": "Chuyện ba ngày nằm ở bản ghi muộn nhất, viết gần ba thế kỷ sau thời nó kể.",
+  "history": "yule",
+  "rules": [
+    {
+      "text": "Năm viết là lúc bản ghi ra đời; thời được tả là lúc việc trong bản ghi xảy ra."
+    },
+    {
+      "text": "Hai làn chung dãy cột: số nhỏ là xưa hơn."
+    },
+    {
+      "text": "Chạm một mảnh, rồi chạm một ô; ô có thể để trống, mảnh có thể không đặt."
+    },
+    {
+      "text": "Kiểm tra chấm cả hai làn một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Năm viết, cột 2",
+      "cap": 1,
+      "value": 2
+    },
+    {
+      "id": "s2",
+      "label": "Năm viết, cột 5",
+      "cap": 1,
+      "value": 5
+    },
+    {
+      "id": "s3",
+      "label": "Năm viết, cột 7",
+      "cap": 1,
+      "value": 7
+    },
+    {
+      "id": "s4",
+      "label": "Thời được tả, cột 1",
+      "cap": 1,
+      "value": 1
+    },
+    {
+      "id": "s5",
+      "label": "Thời được tả, cột 4",
+      "cap": 1,
+      "value": 4
+    },
+    {
+      "id": "s6",
+      "label": "Thời được tả, cột 6",
+      "cap": 1,
+      "value": 6
+    },
+    {
+      "id": "s7",
+      "label": "Thời được tả, cột 7",
+      "cap": 1,
+      "value": 7
+    }
+  ],
+  "tokens": [
+    {
+      "id": "H",
+      "text": "Thời vua Hákon của Na Uy",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "S",
+      "text": "Sử thi Heimskringla của Snorri",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "P",
+      "text": "Tên tháng Giuli",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "T",
+      "text": "Thời Yule ngoại giáo của Na Uy",
+      "status": "legend",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.gutenberg.org/cache/epub/598/pg598.txt",
+        "https://www.scandinavianarchaeology.com/from-jol-to-yule/"
+      ],
+      "evidence": [
+        "Yule was kept for three days thereafter",
+        "Heimskringla was composed around 1230 AD"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Sách tính lịch của Bede",
+      "status": "fact",
+      "required": true
+    }
+  ],
+  "bankSeed": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Bede",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.monumenta.ch/latein/text.php?rumpfid=Beda+Venerabilis%2C+De+Temporum+Ratione%2C+++15&tabelle=Beda_Venerabilis"
+      ],
+      "evidence": [
+        "Bede (khoảng 725) viết rằng người Anh xưa gọi cả tháng 1 lẫn tháng 12 là Giuli"
+      ],
+      "text": "Sách Bede ở làn năm viết. Ông chép tên Giuli của người Anh xưa: có trước ông, nó đứng cột 1 thời được tả.",
+      "do": [
+        {
+          "op": "at",
+          "t": "P",
+          "s": "s4"
+        },
+        {
+          "op": "oneOf",
+          "t": "B",
+          "s": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "who": "Suy ra từ Bede và Heimskringla",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.monumenta.ch/latein/text.php?rumpfid=Beda+Venerabilis%2C+De+Temporum+Ratione%2C+++15&tabelle=Beda_Venerabilis",
+        "https://www.gutenberg.org/cache/epub/598/pg598.txt",
+        "https://www.ull.es/revistas/index.php/fortvnatae/en/article/view/3449",
+        "https://www.scandinavianarchaeology.com/from-jol-to-yule/"
+      ],
+      "evidence": [
+        "In 725 he wrote an longer version, De temporum ratione",
+        "Heimskringla was composed around 1230 AD—nearly 300 years after Hákon's death"
+      ],
+      "text": "Vua Hákon của Na Uy trị vì sau khi Bede viết sách; thời vua ấy là thời được tả.",
+      "do": [
+        {
+          "op": "expr",
+          "e": [
+            "lt",
+            [
+              "slot",
+              "B"
+            ],
+            [
+              "slot",
+              "H"
+            ]
+          ]
+        },
+        {
+          "op": "oneOf",
+          "t": "H",
+          "s": [
+            "s4",
+            "s5",
+            "s6",
+            "s7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "who": "Suy ra từ Bede và Snorri",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.monumenta.ch/latein/text.php?rumpfid=Beda+Venerabilis%2C+De+Temporum+Ratione%2C+++15&tabelle=Beda_Venerabilis",
+        "https://www.gutenberg.org/cache/epub/598/pg598.txt",
+        "https://www.ull.es/revistas/index.php/fortvnatae/en/article/view/3449",
+        "https://www.scandinavianarchaeology.com/from-jol-to-yule/"
+      ],
+      "evidence": [
+        "In 725 he wrote an longer version, De temporum ratione",
+        "Heimskringla was composed around 1230 AD"
+      ],
+      "text": "Tính theo số cột, mảnh thời vua nằm giữa hai mảnh: sách Bede và sử thi Snorri. Nó không chung cột với hai mảnh ấy.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "and",
+            [
+              "lt",
+              [
+                "slot",
+                "B"
+              ],
+              [
+                "slot",
+                "H"
+              ]
+            ],
+            [
+              "lt",
+              [
+                "slot",
+                "H"
+              ],
+              [
+                "slot",
+                "S"
+              ]
+            ]
+          ],
+          [
+            "and",
+            [
+              "lt",
+              [
+                "slot",
+                "S"
+              ],
+              [
+                "slot",
+                "H"
+              ]
+            ],
+            [
+              "lt",
+              [
+                "slot",
+                "H"
+              ],
+              [
+                "slot",
+                "B"
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c4",
+      "who": "Suy ra từ Heimskringla và ngày vua Hákon mất",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.scandinavianarchaeology.com/from-jol-to-yule/",
+        "https://www.gutenberg.org/cache/epub/598/pg598.txt"
+      ],
+      "evidence": [
+        "Heimskringla was composed around 1230 AD—nearly 300 years after Hákon",
+        "Hákon (934–961)"
+      ],
+      "text": "Sử thi Snorri ở làn năm viết. Ông viết gần ba thế kỷ sau vua Hákon, nên giữa hai mảnh còn ít nhất hai cột.",
+      "do": [
+        {
+          "op": "oneOf",
+          "t": "S",
+          "s": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "op": "expr",
+          "e": [
+            "ge",
+            [
+              "abs",
+              [
+                "sub",
+                [
+                  "slot",
+                  "S"
+                ],
+                [
+                  "slot",
+                  "H"
+                ]
+              ]
+            ],
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "who": "Suy ra từ Heimskringla",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.gutenberg.org/cache/epub/598/pg598.txt",
+        "https://www.scandinavianarchaeology.com/from-jol-to-yule/"
+      ],
+      "evidence": [
+        "Before him, the beginning of Yule, or the slaughter night, was the night of mid-winter",
+        "Yule was kept for three days thereafter",
+        "There is always a certain doubt around the accuracy of Snorri Sturluson's information about the pagan era"
+      ],
+      "text": "Heimskringla kể Yule trước vua Hákon. Vẫn có chút ngờ về Snorri: nếu mảnh ấy có chỗ, nó ở thời được tả, trước thời vua.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "not",
+            [
+              "placed",
+              "T"
+            ]
+          ],
+          [
+            "and",
+            [
+              "ge",
+              [
+                "pos",
+                "T"
+              ],
+              4
+            ],
+            [
+              "lt",
+              [
+                "pos",
+                "T"
+              ],
+              [
+                "pos",
+                "H"
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    [
+      "B",
+      null,
+      "S",
+      "P",
+      "H",
+      null,
+      null
+    ]
+  ],
+  "space": 3360,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mỗi mảnh thuộc làn nào, đứng cột nào, hay không thuộc làn nào?"
+    },
+    {
+      "tier": 2,
+      "card": "c4",
+      "text": "Đọc thẻ 4 trước: thẻ ấy nói về quãng giữa Snorri và vua Hákon."
+    },
+    {
+      "tier": 3,
+      "text": "Một bản ghi chi tiết hơn: có chắc được viết gần thời nó tả hơn không?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s4": "P"
+      },
+      "text": "Thẻ 1 đặt tên Giuli vào cột 1, làn thời được tả. Đặt mảnh ấy vào, rồi đọc thẻ 2."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả hai làn."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: chi tiết càng rõ thì nguồn càng gần.",
+    "cards": [
+      "c4"
+    ],
+    "trap": {
+      "s2": "S",
+      "s5": "H"
+    },
+    "do": [
+      {
+        "op": "expr",
+        "e": [
+          "lt",
+          [
+            "abs",
+            [
+              "sub",
+              [
+                "slot",
+                "S"
+              ],
+              [
+                "slot",
+                "H"
+              ]
+            ]
+          ],
+          2
+        ]
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Sự thật: cái tên Giuli có bản ghi; Bede chép khoảng năm 725.",
+      "Người ta kể rằng Yule kéo dài ba ngày; Snorri chép lời ấy khoảng năm 1230, gần ba thế kỷ sau vua Hákon."
+    ],
+    "label": "SỰ THẬT"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả hai làn một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "santa-ny",
+  "status": "verified",
+  "source": "research/m0b-act-3.md",
+  "stamp": "TRANH CÃI",
+  "card": [
+    "Bài thơ \"A Visit from St. Nicholas\" đăng nặc danh trên báo Troy Sentinel ngày 23/12/1823; lâu nay gán cho Clement Clarke Moore, nhưng có người cho là Henry Livingston Jr. và chưa ngã ngũ.",
+    "Hình ông già Noel do nhiều họa sĩ định hình dần, trong đó có Thomas Nast từ năm 1863; Coca-Cola nói chính họ không tạo ra ông."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Bài thơ đăng nặc danh ngày 23/12/1823 trên Troy Sentinel; tên Moore xuất hiện năm 1837, và Moore tự nhận năm 1844.",
+        "sources": [
+          {
+            "label": "mcny.org",
+            "url": "https://www.mcny.org/story/clement-clarke-moore-and-santa-city"
+          },
+          {
+            "label": "nysl.nysed.gov",
+            "url": "https://nysl.nysed.gov/collections/stnick/"
+          }
+        ]
+      },
+      {
+        "text": "Bài thơ góp nhiều nét của ông già Noel Mỹ: người béo tròn vui vẻ, xe trượt tuyết do tuần lộc kéo, đi vào đêm Giáng Sinh.",
+        "sources": [
+          {
+            "label": "magazine.columbia.edu",
+            "url": "https://magazine.columbia.edu/article/story-behind-most-famous-christmas-poem-all"
+          }
+        ]
+      },
+      {
+        "text": "Thomas Nast vẽ ông già Noel đầu tiên cho số Harper's Weekly đề 3/1/1863; ông tiếp tục vẽ đến năm 1886 và có sức ảnh hưởng lớn đến hình dáng ngày nay. Trước Nast đã có nhiều hình khác nhau, kể cả một ông già không râu có xe kéo bởi gà tây (1858).",
+        "sources": [
+          {
+            "label": "library.osu.edu",
+            "url": "https://library.osu.edu/thomas-nast/santa-claus"
+          },
+          {
+            "label": "harpweek.com",
+            "url": "https://www.harpweek.com/09cartoon/BrowseByDateCartoon.asp?Date=25&Month=December"
+          }
+        ]
+      },
+      {
+        "text": "Năm 1931 Coca-Cola thuê họa sĩ Haddon Sundblom vẽ ông già Noel cho quảng cáo. Chính công ty nói họ không tạo ra ông già Noel, và ông đã mặc áo đỏ trước đó.",
+        "sources": [
+          {
+            "label": "coca-cola.com",
+            "url": "https://www.coca-cola.com/us/en/about-us/faq/did-coca-cola-create-santa-claus"
+          },
+          {
+            "label": "coca-colacompany.com",
+            "url": "https://www.coca-colacompany.com/about-us/history/haddon-sundblom-and-the-coca-cola-santas"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta hay kể rằng Coca-Cola \"phát minh\" ông già Noel áo đỏ, hoặc Nast \"phát minh\" ra ông. Cả hai đều quá lời: hình ảnh này hình thành dần qua nhiều tay.",
+        "sources": [
+          {
+            "label": "coca-cola.com",
+            "url": "https://www.coca-cola.com/us/en/about-us/faq/did-coca-cola-create-santa-claus"
+          },
+          {
+            "label": "library.osu.edu",
+            "url": "https://library.osu.edu/thomas-nast/santa-claus"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Phía Moore: bài thơ gán cho ông từ 1837, ông nhận năm 1844; một số nhà nghiên cứu (Nissenbaum, Kaller, Nickell) bảo vệ ông.",
+        "sources": [
+          {
+            "label": "nysl.nysed.gov",
+            "url": "https://nysl.nysed.gov/collections/stnick/"
+          },
+          {
+            "label": "mcny.org",
+            "url": "https://www.mcny.org/story/clement-clarke-moore-and-santa-city"
+          }
+        ]
+      },
+      {
+        "text": "Phía Livingston: gia đình ông (mất 1828) khẳng định từ đầu thế kỷ 20, và Don Foster phân tích văn phong ủng hộ; nhưng không có ghi chép nào cho thấy ông từng nhận, và không có bằng chứng vật chất.",
+        "sources": [
+          {
+            "label": "nysl.nysed.gov",
+            "url": "https://nysl.nysed.gov/collections/stnick/"
+          },
+          {
+            "label": "magazine.columbia.edu",
+            "url": "https://magazine.columbia.edu/article/story-behind-most-famous-christmas-poem-all"
+          }
+        ]
+      },
+      {
+        "text": "Một số nguồn ngày nay nghiêng về Livingston.",
+        "sources": [
+          {
+            "label": "poetryfoundation.org",
+            "url": "https://www.poetryfoundation.org/poets/clement-clarke-moore"
+          }
+        ]
+      }
+    ]
+  }
+}

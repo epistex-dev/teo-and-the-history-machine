@@ -1,0 +1,399 @@
+{
+ "id": "ban1647",
+ "format": "C",
+ "input": "assign",
+ "goal": "attribute-claims",
+ "orientation": "both",
+ "title": "Lệnh cấm 1647: nguồn nào ghi điều gì",
+ "question": "Bốn nguồn trên bậc đá, sáu mảnh để đặt. Mảnh nào do nguồn nào ghi, các thẻ cho biết.",
+ "predict": {
+  "prompt": "Văn bản sắc lệnh 1647 có nhắc holly hay carol không?",
+  "options": [
+   "Có",
+   "Không",
+   "Chưa rõ"
+  ]
+ },
+ "aha": "Văn bản lệnh 1647 không có holly, carol hay Cromwell.",
+ "history": "ban1647",
+ "rules": [
+  {
+   "text": "Bài NAM nhận nhiều nhất một mảnh, HistoryExtra nhận nhiều nhất hai mảnh. Hai nguồn còn lại nhận bao nhiêu mảnh cũng được."
+  },
+  {
+   "text": "Chạm một mảnh, rồi chạm một nguồn để đặt. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Kiểm tra chấm cả bốn nguồn một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Văn bản sắc lệnh",
+   "cap": "any",
+   "min": 0
+  },
+  {
+   "id": "s2",
+   "label": "Nhật ký Hạ viện 24/12",
+   "cap": "any",
+   "min": 0
+  },
+  {
+   "id": "s3",
+   "label": "Bảo tàng Quân đội (NAM)",
+   "cap": 1,
+   "min": 0
+  },
+  {
+   "id": "s4",
+   "label": "HistoryExtra",
+   "cap": 2,
+   "min": 0
+  }
+ ],
+ "tokens": [
+  {
+   "id": "e",
+   "text": "Có bạo loạn đòi giữ lễ ở Ipswich",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N13",
+   "url": [
+    "https://www.historyextra.com/period/stuart/no-christmas-under-cromwell-the-puritan-assault-on-christmas-during-the-1640s-and-1650s/"
+   ],
+   "evidence": [
+    "pro-Christmas riots also took place at Norwich and Ipswich"
+   ]
+  },
+  {
+   "id": "c",
+   "text": "Hát carol bị cấm",
+   "status": "disputed",
+   "source": "research/m0c-puzzles.md §6 N12",
+   "url": [
+    "https://www.nam.ac.uk/explore/war-christmas"
+   ],
+   "evidence": [
+    "Traditional decorations like holly and ivy were banned and singing carols was outlawed."
+   ]
+  },
+  {
+   "id": "x",
+   "text": "Lệnh cấm Giáng Sinh là việc riêng của Cromwell",
+   "status": "legend",
+   "source": "research/m0c-puzzles.md §6 N14",
+   "url": [
+    "https://historicengland.org.uk/listing/what-is-designation/heritage-highlights/did-oliver-cromwell-really-ban-christmas/"
+   ],
+   "evidence": [
+    "It's a commonly held belief that Cromwell 'banned' Christmas."
+   ]
+  },
+  {
+   "id": "a",
+   "text": "Học trò, thợ học việc, người hầu nghỉ thứ Ba thứ hai mỗi tháng",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N10",
+   "url": [
+    "https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/p954"
+   ],
+   "evidence": [
+    "on every second Tuesday in the moneth throughout the year"
+   ]
+  },
+  {
+   "id": "b",
+   "text": "Ủy ban dân quân London phải ngăn rối loạn ngày Giáng Sinh",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N11",
+   "url": [
+    "https://www.british-history.ac.uk/commons-jrnl/vol5/pp401-404"
+   ],
+   "evidence": [
+    "the several and respective Committees of the Militia of London, Westminster, Hamlets, and Borough of Southwarke, do take care, that no such like Disturbance of the Peace be made"
+   ]
+  },
+  {
+   "id": "d",
+   "text": "Lệnh được thông qua ngày 10/6",
+   "status": "disputed",
+   "source": "research/m0c-puzzles.md §6 N13",
+   "url": [
+    "https://www.historyextra.com/period/stuart/no-christmas-under-cromwell-the-puritan-assault-on-christmas-during-the-1640s-and-1650s/"
+   ],
+   "evidence": [
+    "on 10 June that year, parliament has passed an ordinance"
+   ]
+  }
+ ],
+ "bankSeed": 1,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Văn bản sắc lệnh và Nhật ký Hạ viện",
+   "kind": "record",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N10, N11",
+   "url": [
+    "https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/p954",
+    "https://www.british-history.ac.uk/commons-jrnl/vol5/pp401-404"
+   ],
+   "evidence": [
+    "on every second Tuesday in the moneth throughout the year",
+    "the several and respective Committees of the Militia of London, Westminster, Hamlets, and Borough of Southwarke, do take care, that no such like Disturbance of the Peace be made"
+   ],
+   "text": "Văn bản sắc lệnh có ngày nghỉ thứ Ba thứ hai. Nhật ký Hạ viện 24/12 ghi lệnh ngăn rối loạn.",
+   "do": [
+    {
+     "op": "at",
+     "t": "a",
+     "s": "s1"
+    },
+    {
+     "op": "at",
+     "t": "b",
+     "s": "s2"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "who": "Suy ra từ văn bản sắc lệnh và Nhật ký Hạ viện",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N10, N11",
+   "url": [
+    "https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/p954",
+    "https://www.british-history.ac.uk/commons-jrnl/vol5/pp401-404"
+   ],
+   "evidence": [
+    "And it is further Ordained by the said Lords and Commons, That if any difference shall arise between any Master and Servant concerning the Liberty hereby granted, the next Justice of the Peace shall have power to hear and determine the same.",
+    "suffered very many and great Affronts, Abuses, and Prejudices"
+   ],
+   "text": "Hai nguồn ấy không ghi: hát carol, ngày 10/6, Ipswich.",
+   "do": [
+    {
+     "op": "notAt",
+     "t": "c",
+     "s": "s1"
+    },
+    {
+     "op": "notAt",
+     "t": "c",
+     "s": "s2"
+    },
+    {
+     "op": "notAt",
+     "t": "d",
+     "s": "s1"
+    },
+    {
+     "op": "notAt",
+     "t": "d",
+     "s": "s2"
+    },
+    {
+     "op": "notAt",
+     "t": "e",
+     "s": "s1"
+    },
+    {
+     "op": "notAt",
+     "t": "e",
+     "s": "s2"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "who": "Suy ra từ NAM và HistoryExtra",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N12, N13",
+   "url": [
+    "https://www.nam.ac.uk/explore/war-christmas",
+    "https://www.historyextra.com/period/stuart/no-christmas-under-cromwell-the-puritan-assault-on-christmas-during-the-1640s-and-1650s/"
+   ],
+   "evidence": [
+    "Traditional decorations like holly and ivy were banned and singing carols was outlawed.",
+    "on 10 June that year, parliament has passed an ordinance"
+   ],
+   "text": "Mảnh carol và mảnh ngày 10/6 thuộc hai nguồn khác nhau.",
+   "do": [
+    {
+     "op": "differ",
+     "t": [
+      "c",
+      "d"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "who": "Suy ra từ NAM và HistoryExtra",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N12, N13",
+   "url": [
+    "https://www.nam.ac.uk/explore/war-christmas",
+    "https://www.historyextra.com/period/stuart/no-christmas-under-cromwell-the-puritan-assault-on-christmas-during-the-1640s-and-1650s/"
+   ],
+   "evidence": [
+    "Traditional decorations like holly and ivy were banned and singing carols was outlawed.",
+    "pro-Christmas riots also took place at Norwich and Ipswich"
+   ],
+   "text": "Mảnh carol và mảnh Ipswich thuộc hai nguồn khác nhau.",
+   "do": [
+    {
+     "op": "differ",
+     "t": [
+      "c",
+      "e"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra từ bốn nguồn",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0c-puzzles.md §6 N10, N11, N12, N13",
+   "url": [
+    "https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/p954",
+    "https://www.british-history.ac.uk/commons-jrnl/vol5/pp401-404",
+    "https://www.nam.ac.uk/explore/war-christmas",
+    "https://www.historyextra.com/period/stuart/no-christmas-under-cromwell-the-puritan-assault-on-christmas-during-the-1640s-and-1650s/"
+   ],
+   "evidence": [
+    "Be it Ordained, by the Lords and Commons in Parliament assembled",
+    "It is Ordered, That the several and respective Committees of the Militia of London",
+    "As Lord Protector from December 1653 until his death in September 1658, Oliver Cromwell supported the enforcement of these measures.",
+    "While he had not been personally responsible for ‘cancelling Christmas’ in the first place"
+   ],
+   "text": "Mảnh về Cromwell, nếu đặt, cùng bài với mảnh carol hoặc mảnh ngày 10/6.",
+   "do": [
+    {
+     "op": "expr",
+     "e": [
+      "or",
+      [
+       "not",
+       [
+        "placed",
+        "x"
+       ]
+      ],
+      [
+       "eq",
+       [
+        "pos",
+        "x"
+       ],
+       [
+        "pos",
+        "c"
+       ]
+      ],
+      [
+       "eq",
+       [
+        "pos",
+        "x"
+       ],
+       [
+        "pos",
+        "d"
+       ]
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "a"
+   ],
+   [
+    "b"
+   ],
+   [
+    "c"
+   ],
+   [
+    "d",
+    "e"
+   ]
+  ]
+ ],
+ "space": 8910,
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Câu hỏi: mảnh nào do nguồn nào ghi? Mỗi thẻ cho biết một nguồn ghi gì, hoặc không ghi gì."
+  },
+  {
+   "tier": 2,
+   "card": "c1",
+   "text": "Đọc thẻ 1. Thẻ ấy nói văn bản và nhật ký có mảnh nào?"
+  },
+  {
+   "tier": 3,
+   "text": "Tèo nghĩ lệnh 1647 ghi đủ mọi điều cấm. Thẻ nào cho thấy điều ấy sai?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s1": "a",
+    "s2": "b"
+   },
+   "text": "Thẻ 1 đặt hai mảnh vào hai nguồn. Đặt hai mảnh ấy vào, rồi đọc lại thẻ 2."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nguồn."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo đoán: văn bản lệnh ghi cả lệnh cấm hát carol, cả ngày thông qua.",
+  "cards": [
+   "c2",
+   "c3"
+  ],
+  "trap": {
+   "s1": [
+    "a",
+    "c",
+    "d"
+   ],
+   "s2": "b"
+  },
+  "do": [
+   {
+    "op": "at",
+    "t": "c",
+    "s": "s1"
+   },
+   {
+    "op": "at",
+    "t": "d",
+    "s": "s1"
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Văn bản lệnh không nhắc holly hay carol, dù NAM ghi chúng bị cấm.",
+   "Hai bản gốc đều của Nghị viện, không nhắc tên Cromwell."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả bốn nguồn một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ }
+}

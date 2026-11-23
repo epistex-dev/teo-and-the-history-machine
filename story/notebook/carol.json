@@ -1,0 +1,51 @@
+{
+  "id": "carol",
+  "status": "verified",
+  "source": "research/m0b-act-2.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Carol vốn là bài hát để nhảy: chữ carol có lẽ mượn từ carole của tiếng Pháp.",
+    "Khoảng 500 carol tiếng Anh xưa nhất còn lại trong bản chép tay thế kỷ 13–15.",
+    "Nhiều khả năng chúng không được soạn cho nhà thờ."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Chữ carol có lẽ mượn từ tiếng Pháp carole, một bài hát để nhảy.",
+        "sources": [
+          {
+            "label": "cathedralmusictrust.org.uk",
+            "url": "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+          }
+        ]
+      },
+      {
+        "text": "Khoảng 500 carol tiếng Anh xưa nhất còn lại trong bản chép tay thế kỷ 13–15. Rất khó có chuyện chúng được soạn để hát trong nhà thờ; nhiều khả năng chúng được hát trong các dịp chung vui: nhà quý tộc, đi chúc rượu (wassail), quán trọ.",
+        "sources": [
+          {
+            "label": "cathedralmusictrust.org.uk",
+            "url": "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+          }
+        ]
+      },
+      {
+        "text": "Carol thời đó không chỉ nói về Giáng Sinh: khoảng một nửa số carol Anh sớm còn lại nói về lễ khác hoặc hoàn toàn thế tục.",
+        "sources": [
+          {
+            "label": "cathedralmusictrust.org.uk",
+            "url": "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+          }
+        ]
+      },
+      {
+        "text": "Một bản chép tay nổi tiếng là sách của cha John Audelay, ghi năm 1426, có chuỗi 25 carol.",
+        "sources": [
+          {
+            "label": "metseditions.org",
+            "url": "https://metseditions.org/read/1PPZw4vFDjrdT4wMizRMVF3qWARzPav"
+          }
+        ]
+      }
+    ]
+  }
+}

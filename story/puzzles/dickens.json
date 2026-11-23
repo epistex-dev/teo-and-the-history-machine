@@ -1,0 +1,332 @@
+{
+  "id": "dickens",
+  "format": "M",
+  "input": "order",
+  "goal": "age-customs",
+  "orientation": "both",
+  "title": "Dickens 1843: mảnh nào có bản ghi trước",
+  "question": "Bốn nấc trên tuyết, nấc 1 xưa nhất. Sáu mảnh: theo các nguồn đã mở, mảnh nào vào nấc nào? Các thẻ cho biết.",
+  "predict": {
+    "prompt": "Mấy mảnh có bản ghi xưa hơn cuốn A Christmas Carol?",
+    "options": [
+      "Không mảnh nào",
+      "Hai mảnh",
+      "Bốn mảnh"
+    ]
+  },
+  "aha": "Hai mảnh có bản ghi xưa hơn cuốn sách của Dickens. Mảnh Albert không có nấc: V&A chỉ ghi một thập niên.",
+  "history": "dickens",
+  "rules": [
+    {
+      "text": "Mỗi mảnh đứng ở nấc của bản ghi sớm nhất được biết. Số nhỏ là xưa hơn; chung nấc là nguồn không tách trước sau."
+    },
+    {
+      "text": "Nấc nào cũng cần ít nhất một mảnh, và nhận nhiều nhất hai mảnh. Mảnh có thể không đặt."
+    },
+    {
+      "text": "Chạm một mảnh, rồi chạm một nấc để đặt."
+    },
+    {
+      "text": "Kiểm tra chấm cả bốn nấc một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Nấc 1 (xưa nhất)",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s2",
+      "label": "Nấc 2",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s3",
+      "label": "Nấc 3",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s4",
+      "label": "Nấc 4 (mới nhất)",
+      "cap": 2,
+      "min": 1
+    }
+  ],
+  "tokens": [
+    {
+      "id": "g",
+      "text": "Hoàng thân Albert đưa cây thông vào Anh",
+      "status": "disputed"
+    },
+    {
+      "id": "d",
+      "text": "Thiệp Giáng Sinh thương mại",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "f",
+      "text": "Hình cây nhà Victoria và Albert trên báo",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "b",
+      "text": "Hôn dưới tầm gửi",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "e",
+      "text": "Cuốn A Christmas Carol",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "c",
+      "text": "Cây trang trí ở Windsor",
+      "status": "fact",
+      "required": true
+    }
+  ],
+  "bankSeed": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Royal Collection Trust và V&A",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-3.md §3.5",
+      "url": [
+        "https://www.rct.uk/collection/stories/a-royal-christmas/the-christmas-tree",
+        "https://www.rct.uk/articles/royal-christmas-trees",
+        "https://www.vam.ac.uk/articles/the-first-christmas-card"
+      ],
+      "evidence": [
+        "Their love for Christmas trees did much to popularise the tradition. In 1848, The Illustrated London News printed a picture of the royal family around a Christmas tree.",
+        "the 1840s was a period of change"
+      ],
+      "text": "Suy ra: trong các mảnh được nguồn ghi rõ năm, hình cây trên báo có bản ghi mới nhất.",
+      "do": {
+        "op": "at",
+        "t": "f",
+        "s": "s4"
+      }
+    },
+    {
+      "id": "c2",
+      "who": "Suy ra từ Postal Museum và British Library",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-3.md §3.5",
+      "url": [
+        "https://www.postalmuseum.org/collections/first-christmas-card/",
+        "https://www.britishlibrary.cn/en/works/charles-dickenss-christmas-carol/"
+      ],
+      "evidence": [
+        "commissioned the first commercial Christmas card in 1843",
+        "published by Chapman and Hall on 19 December 1843"
+      ],
+      "text": "Suy ra: thiệp thương mại được đặt làm đúng năm cuốn sách ra. Hai nguồn không nói cái nào có trước.",
+      "do": {
+        "op": "same",
+        "t": [
+          "d",
+          "e"
+        ]
+      }
+    },
+    {
+      "id": "c3",
+      "who": "Suy ra từ English Heritage, Royal Collection Trust và Postal Museum",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md §7 M1; research/m0b-act-3.md §3.5",
+      "url": [
+        "https://www.english-heritage.org.uk/learn/histories/christmas-greenery-history",
+        "https://www.rct.uk/articles/royal-christmas-trees",
+        "https://www.postalmuseum.org/collections/first-christmas-card/"
+      ],
+      "evidence": [
+        "thought to have been first recorded in the comic-opera Two to One, written in 1784",
+        "On Christmas Eve 1800, Queen Charlotte hosted a festive party",
+        "commissioned the first commercial Christmas card in 1843"
+      ],
+      "text": "Suy ra: không mảnh nào có bản ghi xưa hơn hôn dưới tầm gửi.",
+      "do": {
+        "op": "at",
+        "t": "b",
+        "s": "s1"
+      }
+    },
+    {
+      "id": "c4",
+      "who": "Suy ra từ Royal Collection Trust và Postal Museum",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-3.md §3.5",
+      "url": [
+        "https://www.rct.uk/articles/royal-christmas-trees",
+        "https://www.postalmuseum.org/collections/first-christmas-card/"
+      ],
+      "evidence": [
+        "On Christmas Eve 1800, Queen Charlotte hosted a festive party",
+        "commissioned the first commercial Christmas card in 1843"
+      ],
+      "text": "Suy ra: cây ở Windsor có bản ghi xưa hơn tấm thiệp thương mại.",
+      "do": {
+        "op": "before",
+        "t": [
+          "c",
+          "d"
+        ]
+      }
+    },
+    {
+      "id": "c5",
+      "who": "Suy ra từ Birmingham, V&A và Postal Museum",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-3.md §3.5",
+      "url": [
+        "https://www.birmingham.ac.uk/research/perspective/was-christmas-invented-in-birmingham",
+        "https://www.vam.ac.uk/articles/the-first-christmas-card",
+        "https://www.postalmuseum.org/collections/first-christmas-card/"
+      ],
+      "evidence": [
+        "Christmas cards were first sent in the 1840s; Prince Albert brought with him the German tradition of the Christmas tree",
+        "the 1840s was a period of change",
+        "Prince Albert introducing various German Christmas traditions to the British public, including the decorated Christmas tree"
+      ],
+      "text": "Suy ra: V&A chỉ cho Albert một thập niên, trùng cả thiệp lẫn hình trên báo. Mảnh Albert, nếu đặt, chung nấc với cả hai.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "not",
+            [
+              "placed",
+              "g"
+            ]
+          ],
+          [
+            "and",
+            [
+              "eq",
+              [
+                "pos",
+                "g"
+              ],
+              [
+                "pos",
+                "d"
+              ]
+            ],
+            [
+              "eq",
+              [
+                "pos",
+                "g"
+              ],
+              [
+                "pos",
+                "f"
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    [
+      [
+        "b"
+      ],
+      [
+        "c"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "f"
+      ]
+    ]
+  ],
+  "space": 1320,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mảnh nào vào nấc nào? Mỗi thẻ dựa trên các nguồn đã mở."
+    },
+    {
+      "tier": 2,
+      "card": "c3",
+      "text": "Đọc thẻ 3: so với mọi mảnh khác, bản ghi của mảnh ấy xưa đến đâu?"
+    },
+    {
+      "tier": 3,
+      "text": "Có chắc cuốn sách đứng trước mọi mảnh khác?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s1": "b"
+      },
+      "text": "Thẻ 3 đặt một mảnh vào nấc 1. Đặt mảnh ấy vào, rồi đọc thẻ 4."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nấc."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: cuốn sách làm ra cả mùa lễ, nên mọi mảnh khác đứng sau nó.",
+    "cards": [
+      "c2",
+      "c4"
+    ],
+    "trap": {
+      "s1": [
+        "e"
+      ],
+      "s2": [
+        "b"
+      ],
+      "s3": [
+        "c"
+      ],
+      "s4": [
+        "d",
+        "f"
+      ]
+    },
+    "do": [
+      {
+        "op": "before",
+        "t": [
+          "e",
+          "c"
+        ]
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Hai mảnh có bản ghi xưa hơn cuốn sách của Dickens: hôn dưới tầm gửi và cây ở Windsor.",
+      "Royal Collection ghi Hoàng hậu Charlotte đưa cây vào Anh; Victoria và Albert làm nó phổ biến, hình trên báo ra sau cuốn sách."
+    ],
+    "label": "SỰ THẬT"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả bốn nấc một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  }
+}

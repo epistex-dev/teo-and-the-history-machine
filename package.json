@@ -1,0 +1,30 @@
+{
+  "name": "teo-co-may-lich-su",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "bake": "node art/style/bake.mjs",
+    "dev": "vite --host 127.0.0.1 --port 19000 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 19001 --strictPort",
+    "presize": "npm run build",
+    "size": "size-limit --ignore-missing",
+    "measure": "node tests/support/measure-dist.mjs",
+    "pretest": "npm run build",
+    "test": "node scripts/check-minigames.mjs && playwright test",
+    "release:check": "node scripts/puzzles.mjs check --release",
+    "guard:staging": "node scripts/guard-staging.mjs",
+    "deploy:staging": "npm run guard:staging && npm run size && npm run measure && wrangler pages deploy dist --project-name=teo-co-may-lich-su --branch=staging"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@size-limit/file": "14.3.0",
+    "@types/pngjs": "6.0.5",
+    "pngjs": "7.0.0",
+    "size-limit": "14.3.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "wrangler": "4.163.0"
+  }
+}

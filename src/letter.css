@@ -1,0 +1,20 @@
+#namecard-letter p:last-child { text-align: end; font-style: italic; }
+#namecard-letter a { color: var(--ox2); }
+
+@media (orientation: landscape) and (max-height: 520px) {
+  #namecard-screen:not([hidden]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: 'heading heading' 'letter image' 'letter hint' 'letter row';
+    grid-template-rows: auto auto auto auto;
+    align-content: center;
+    justify-items: center;
+    column-gap: 20px;
+  }
+  #namecard-heading { grid-area: heading; }
+  #namecard-letter { grid-area: letter; justify-self: end; align-self: start; overflow: auto; max-block-size: calc(100dvh - 9rem); }
+  #namecard-img { grid-area: image; }
+  #namecard-hint { grid-area: hint; }
+  #namecard-screen > .row { grid-area: row; }
+  #namecard-screen > :first-child, #namecard-screen > :last-child { margin-block: 0; }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "krampus",
+  "status": "verified",
+  "source": "research/m0b-act-2.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Krampus là nhân vật vùng núi Alps đi cùng Thánh Nicôla để dọa trẻ hư.",
+    "Nhiều người nói gốc của nó có từ thời cổ, nhưng chưa ai chứng minh được.",
+    "Bản ghi sớm nhất liên quan là năm 1582, về tục ‘săn Percht’; chữ Krampus phổ biến mãi cuối thế kỷ 19."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Krampus là nhân vật của vùng nói tiếng Đức quanh dãy Alps; đêm 5 hoặc ngày 6/12 Thánh Nicôla đến tặng quà và thường có một Krampus đi cùng để dọa trẻ hư.",
+        "sources": [
+          {
+            "label": "blogs.loc.gov",
+            "url": "https://blogs.loc.gov/folklife/2025/12/krampus-origins-and-development-of-a-winter-devil/"
+          }
+        ]
+      },
+      {
+        "text": "Tên Krampus có hai giả thuyết: từ Krampe (móc, vuốt) hoặc từ Krampn (khô quắt).",
+        "sources": [
+          {
+            "label": "blogs.loc.gov",
+            "url": "https://blogs.loc.gov/folklife/2025/12/krampus-origins-and-development-of-a-winter-devil/"
+          }
+        ]
+      },
+      {
+        "text": "Bản ghi viết sớm nhất về tục liên quan là năm 1582 ở Dießen (Bavaria): những người “săn Percht” được thưởng tiền. Bản ghi không cho biết nghi thức hay trang phục, và chưa có chữ Krampus.",
+        "sources": [
+          {
+            "label": "doi.org",
+            "url": "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+          }
+        ]
+      },
+      {
+        "text": "Giữa thế kỷ 19, ở vài làng Alps của Áo và Bavaria, thanh niên đeo mặt nạ gỗ có sừng, mặc áo lông và đeo chuông bò để đóng vai quỷ. Chữ Krampus phổ biến từ cuối thế kỷ 19, nhờ bưu thiếp.",
+        "sources": [
+          {
+            "label": "doi.org",
+            "url": "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng Krampus có từ thời tiền Kitô giáo, thậm chí là con của nữ thần Hel. Chưa có bằng chứng viết nào; các nhà nghiên cứu không tìm thấy gốc “ngoại giáo”.",
+        "sources": [
+          {
+            "label": "blogs.loc.gov",
+            "url": "https://blogs.loc.gov/folklife/2025/12/krampus-origins-and-development-of-a-winter-devil/"
+          },
+          {
+            "label": "doi.org",
+            "url": "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+          }
+        ]
+      }
+    ],
+    "tradition": [
+      {
+        "text": "Theo truyền thống vùng Alps, Krampus đi cùng Thánh Nicôla; ý tưởng ghép đôi này lan rộng thời Phản Cải cách.",
+        "sources": [
+          {
+            "label": "onb.ac.at",
+            "url": "https://www.onb.ac.at/mehr/blogs/detail/auf-teufel-komm-raus-der-krampusbrauch-in-oesterreich"
+          }
+        ]
+      }
+    ]
+  }
+}

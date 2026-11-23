@@ -1,0 +1,251 @@
+{
+  "id": "intro",
+  "format": "G",
+  "input": "assign",
+  "goal": "label",
+  "orientation": "both",
+  "title": "Bốn mặt số, sáu mảnh nhãn",
+  "question": "Bốn mặt số trống tên nằm dưới đèn. Hộp có sáu mảnh nhãn: mảnh nào về mặt nào, bốn tấm thẻ cho biết.",
+  "predict": {
+    "prompt": "Sáu nhãn, bốn mặt số. Tèo nên bắt đầu từ đâu?",
+    "options": [
+      "Từ thẻ nói chắc về một mặt số",
+      "Từ nhãn nghe hợp với máy nhất",
+      "Từ thẻ nhắc hai mặt số cùng lúc"
+    ]
+  },
+  "aha": "Mặt số không thẻ nào nhắc tới vẫn xác định được: nó nhận nhãn duy nhất còn lại.",
+  "history": "none",
+ "l2Exempt": "Câu đố làm quen: mỗi thẻ loại bớt chỗ cho các mảnh, chỉ cần L1; chưa dạy giả định hay đọc chung hai thẻ.",
+  "rules": [
+    {
+      "text": "Chạm một nhãn, rồi chạm một mặt số để dán. Chạm lại để gỡ."
+    },
+    {
+      "text": "Kiểm tra chấm cả bốn mặt số một lượt: khớp, hoặc chưa khớp."
+    },
+    {
+      "text": "Gợi ý mở từng bậc, mỗi lần chạm một bậc. Bậc cuối là Nhờ Cúc Cu soi tỏ."
+    }
+  ],
+  "demo": {
+    "question": "Dán hai nhãn vào hai ô theo tấm thẻ. Đây là ví dụ, không tính vào câu đố.",
+    "slots": [
+      {
+        "id": "o1",
+        "label": "Ô trái"
+      },
+      {
+        "id": "o2",
+        "label": "Ô phải"
+      }
+    ],
+    "tokens": [
+      {
+        "id": "tao",
+        "text": "TÁO",
+        "status": "rule"
+      },
+      {
+        "id": "cam",
+        "text": "CAM",
+        "status": "rule"
+      },
+      {
+        "id": "le",
+        "text": "LÊ",
+        "status": "rule"
+      }
+    ],
+    "cards": [
+      {
+        "id": "d1",
+        "text": "Nhãn CAM nằm ngay bên phải nhãn TÁO.",
+        "kind": "rule",
+        "status": "rule",
+        "source": "game",
+        "do": [
+          {
+            "op": "next",
+            "t": [
+              "tao",
+              "cam"
+            ]
+          }
+        ]
+      }
+    ],
+    "solutions": [
+      [
+        "tao",
+        "cam"
+      ]
+    ]
+  },
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Mặt số 1"
+    },
+    {
+      "id": "s2",
+      "label": "Mặt số 2"
+    },
+    {
+      "id": "s3",
+      "label": "Mặt số 3"
+    },
+    {
+      "id": "s4",
+      "label": "Mặt số 4"
+    }
+  ],
+  "tokens": [
+    {
+      "id": "gio",
+      "text": "GIỜ",
+      "status": "rule"
+    },
+    {
+      "id": "nguoi",
+      "text": "NGƯỜI",
+      "status": "rule"
+    },
+    {
+      "id": "caphe",
+      "text": "CÀ PHÊ",
+      "status": "rule"
+    },
+    {
+      "id": "nam",
+      "text": "NĂM",
+      "status": "rule"
+    },
+    {
+      "id": "nguon",
+      "text": "NGUỒN",
+      "status": "rule"
+    },
+    {
+      "id": "noi",
+      "text": "NƠI",
+      "status": "rule"
+    }
+  ],
+  "bankSeed": 0,
+  "cards": [
+    {
+      "id": "k1",
+      "who": "Máy",
+      "kind": "rule",
+      "status": "rule",
+      "source": "game",
+      "text": "Máy chỉ có bốn mặt số. Hai nhãn GIỜ và CÀ PHÊ là nhãn thừa.",
+      "do": [
+        {
+          "op": "unused",
+          "t": "gio"
+        },
+        {
+          "op": "unused",
+          "t": "caphe"
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "who": "Máy",
+      "kind": "rule",
+      "status": "rule",
+      "source": "game",
+      "text": "Mặt số NĂM nằm ngay bên trái mặt số NƠI.",
+      "do": {
+        "op": "next",
+        "t": [
+          "nam",
+          "noi"
+        ]
+      }
+    },
+    {
+      "id": "k3",
+      "who": "Máy",
+      "kind": "rule",
+      "status": "rule",
+      "source": "game",
+      "text": "Mặt số NGUỒN đứng cuối hàng, ngoài cùng bên phải.",
+      "do": {
+        "op": "at",
+        "t": "nguon",
+        "s": "s4"
+      }
+    },
+    {
+      "id": "k4",
+      "who": "Máy",
+      "kind": "rule",
+      "status": "rule",
+      "source": "game",
+      "text": "Mặt số thứ hai không mang nhãn NĂM.",
+      "do": {
+        "op": "notAt",
+        "t": "nam",
+        "s": "s2"
+      }
+    }
+  ],
+  "solutions": [
+    [
+      "nam",
+      "noi",
+      "nguoi",
+      "nguon"
+    ]
+  ],
+  "space": 360,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mặt số nào mang nhãn nào? Hộp có sáu nhãn, nên hai nhãn là thừa."
+    },
+    {
+      "tier": 2,
+      "card": "k3",
+      "text": "Đọc thẻ 3 trước: thẻ ấy nói chắc về một mặt số."
+    },
+    {
+      "tier": 3,
+      "text": "Tèo đoán mỗi thẻ nói riêng về một mặt số. Điều ấy đã có thẻ nào bảo đảm chưa?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s4": "nguon"
+      },
+      "text": "Thẻ 3 đặt NGUỒN ở mặt số 4. Dán nhãn ấy vào, rồi đọc thẻ 2 cùng thẻ 4."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu dán hộ cả bốn nhãn."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: mỗi thẻ nói riêng về một mặt số.",
+    "cards": [
+      "k2",
+      "k3"
+    ],
+    "exempt": "Câu mở đầu dạy cách chơi: người chơi chưa có khung sai nào để bẻ, nên không có wrongFrame.do."
+  },
+  "reveal": {
+    "lines": [
+      "Tèo đoán mỗi thẻ nói riêng về một mặt số; thẻ 2 nói về hai, còn mặt số 3 không thẻ nào nhắc.",
+      "Mặt số ấy nhận NGƯỜI, nhãn duy nhất còn lại: loại trừ cũng là bằng chứng."
+    ],
+    "label": "—"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả bốn mặt số một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mặt số nào sai."
+  }
+}

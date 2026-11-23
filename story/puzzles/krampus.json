@@ -1,0 +1,293 @@
+{
+ "id": "krampus",
+ "format": "G",
+ "input": "assign",
+ "goal": "match-records",
+ "orientation": "both",
+ "title": "Krampus: mỗi mảnh thuộc tờ nào",
+ "question": "Bốn tờ theo thời gian, tờ 1 cũ nhất. Sáu mảnh: mảnh nào vào tờ nào, các thẻ cho biết.",
+ "predict": {
+  "prompt": "Mặt nạ gỗ có sừng của Krampus: bản ghi sớm nhất thuộc thế kỷ nào?",
+  "options": [
+   "Thế kỷ 12",
+   "Thế kỷ 16",
+   "Thế kỷ 19"
+  ]
+ },
+ "aha": "Mặt nạ, lông, chuông bò: bản ghi chỉ từ giữa thế kỷ 19.",
+ "history": "krampus",
+ "rules": [
+  {
+   "text": "Số nhỏ là tờ cũ hơn. Mỗi mảnh vào tờ cũ nhất có nó."
+  },
+  {
+   "text": "Tờ nào cũng cần ít nhất một mảnh, nhận bao nhiêu mảnh cũng được."
+  },
+  {
+   "text": "Chạm một mảnh, rồi chạm một tờ để đặt."
+  },
+  {
+   "text": "Kiểm tra chấm cả bốn tờ một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Tờ 1 (cũ nhất)",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s2",
+   "label": "Tờ 2",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s3",
+   "label": "Tờ 3",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s4",
+   "label": "Tờ 4 (mới nhất)",
+   "cap": "any",
+   "min": 1,
+   "accepts": [
+    "legend"
+   ],
+   "lane": "legend"
+  }
+ ],
+ "tokens": [
+  {
+   "id": "nm",
+   "text": "Chữ Krampus phổ biến",
+   "status": "fact"
+  },
+  {
+   "id": "pc",
+   "text": "Săn Percht",
+   "status": "fact"
+  },
+  {
+   "id": "fb",
+   "text": "Áo lông và chuông bò",
+   "status": "fact"
+  },
+  {
+   "id": "org",
+   "text": "Con của Hel",
+   "status": "legend",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://blogs.loc.gov/folklife/2025/12/krampus-origins-and-development-of-a-winter-devil/",
+    "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+   ],
+   "evidence": [
+    "Billock provides no evidence",
+    "there is no written evidence for the practice before 1582"
+   ]
+  },
+  {
+   "id": "yg",
+   "text": "Nhóm thanh niên chưa vợ",
+   "status": "fact"
+  },
+  {
+   "id": "mk",
+   "text": "Mặt nạ gỗ có sừng",
+   "status": "fact"
+  }
+ ],
+ "bankSeed": 5,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Suy ra từ bài trên Ethnoscripts",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231",
+    "https://www.onb.ac.at/mehr/blogs/detail/auf-teufel-komm-raus-der-krampusbrauch-in-oesterreich"
+   ],
+   "evidence": [
+    "there is no written evidence for the practice before 1582",
+    "there are no details of the sequence of the rite or the costumes",
+    "In the mid-nineteenth century we know of only a few villages"
+   ],
+   "text": "Bản ghi săn Percht, ở Dießen, cũ hơn bản ghi mặt nạ gỗ có sừng.",
+   "do": {
+    "op": "before",
+    "t": [
+     "pc",
+     "mk"
+    ]
+   }
+  },
+  {
+   "id": "c2",
+   "who": "Bài trên Ethnoscripts",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+   ],
+   "evidence": [
+    "groups of young, unmarried men dressed up in horned wooden masks, fur suits and cow bells in an attempt to impersonate the devil"
+   ],
+   "text": "Trong một bản ghi ở vài làng Alps, thanh niên chưa vợ đeo mặt nạ gỗ có sừng.",
+   "do": {
+    "op": "same",
+    "t": [
+     "yg",
+     "mk"
+    ]
+   }
+  },
+  {
+   "id": "c3",
+   "who": "Bài trên Ethnoscripts",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+   ],
+   "evidence": [
+    "groups of young, unmarried men dressed up in horned wooden masks, fur suits and cow bells in an attempt to impersonate the devil"
+   ],
+   "text": "Bài viết: mặt nạ gỗ có sừng đi cùng áo lông, chuông bò.",
+   "do": {
+    "op": "same",
+    "t": [
+     "mk",
+     "fb"
+    ]
+   }
+  },
+  {
+   "id": "c4",
+   "who": "Suy ra từ bài trên Ethnoscripts",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+   ],
+   "evidence": [
+    "In the mid-nineteenth century we know of only a few villages",
+    "The word Krampus only rose to popularity in the late nineteenth century"
+   ],
+   "text": "Chữ Krampus chỉ phổ biến muộn hơn mặt nạ gỗ có sừng.",
+   "do": {
+    "op": "before",
+    "t": [
+     "mk",
+     "nm"
+    ]
+   }
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra từ Thư viện Quốc hội Mỹ và Ethnoscripts",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://blogs.loc.gov/folklife/2025/12/krampus-origins-and-development-of-a-winter-devil/",
+    "https://doi.org/10.15460/ethnoscripts.2018.20.1.1231"
+   ],
+   "evidence": [
+    "simply states that Krampus is",
+    "Billock provides no evidence",
+    "there is no written evidence for the practice before 1582"
+   ],
+   "text": "Sách báo ngày nay là tờ mới nhất. Nó chép con của Hel, không dẫn chứng.",
+   "do": {
+    "op": "at",
+    "t": "org",
+    "s": "s4"
+   }
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "pc"
+   ],
+   [
+    "yg",
+    "mk",
+    "fb"
+   ],
+   [
+    "nm"
+   ],
+   [
+    "org"
+   ]
+  ]
+ ],
+ "space": 3360,
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Mỗi mảnh vào tờ nào? Mỗi mảnh vào tờ cũ nhất có nó."
+  },
+  {
+   "tier": 2,
+   "card": "c1",
+   "text": "Đọc thẻ 1 trước: bản ghi nào đến trước, bản ghi nào đến sau?"
+  },
+  {
+   "tier": 3,
+   "text": "Tèo tin mặt nạ có từ tờ cũ nhất. Thẻ nào cho thấy điều ấy sai?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s1": "pc"
+   },
+   "text": "Mảnh săn Percht vào tờ 1. Đặt mảnh ấy vào, rồi đọc lại thẻ 1."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn tờ."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo đoán: mặt nạ, lông, chuông đã có từ tờ cũ nhất.",
+  "cards": [
+   "c1"
+  ],
+  "trap": {
+   "s1": [
+    "pc",
+    "mk",
+    "fb"
+   ]
+  },
+  "do": [
+   {
+    "op": "at",
+    "t": "mk",
+    "s": "s1"
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Mặt nạ, lông và chuông bò chỉ có bản ghi ở vài làng Alps, giữa thế kỷ 19.",
+   "Người ta kể rằng Krampus là con của Hel, nhưng chưa ai chứng minh."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả bốn tờ một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ }
+}

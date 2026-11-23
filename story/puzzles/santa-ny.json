@@ -1,0 +1,290 @@
+{
+  "id": "santa-ny",
+  "format": "G",
+  "input": "assign",
+  "goal": "match-hands",
+  "orientation": "both",
+  "title": "Ông già Noel: nét nào từ bàn tay nào",
+  "question": "Bốn ô trên tờ nháp, sáu chi tiết để đặt. Theo các nguồn đã mở, chi tiết nào thuộc ô nào? Các thẻ cho biết.",
+  "predict": {
+    "prompt": "Ông già Noel mặc áo đỏ từ bao giờ?",
+    "options": [
+      "Từ quảng cáo năm 1931",
+      "Từ trước năm 1931",
+      "Không ai biết"
+    ]
+  },
+  "aha": "Không bàn tay nào làm ra trọn hình ông già Noel. Áo đỏ có trước quảng cáo năm 1931.",
+  "history": "santa-ny",
+  "rules": [
+    {
+      "text": "Chạm một mảnh, rồi chạm một ô để đặt. Mảnh có thể không đặt."
+    },
+    {
+      "text": "Bài thơ năm 1823, Tranh Nast và Quảng cáo mỗi nơi nhận ít nhất một mảnh. Nguồn khác nhận nhiều nhất một mảnh."
+    },
+    {
+      "text": "Kiểm tra chấm cả bốn ô một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Bài thơ năm 1823",
+      "cap": "any",
+      "min": 1
+    },
+    {
+      "id": "s2",
+      "label": "Tranh Nast",
+      "cap": "any",
+      "min": 1
+    },
+    {
+      "id": "s3",
+      "label": "Quảng cáo",
+      "cap": "any",
+      "min": 1
+    },
+    {
+      "id": "s4",
+      "label": "Nguồn khác",
+      "cap": 1,
+      "min": 0
+    }
+  ],
+  "tokens": [
+    {
+      "id": "d",
+      "text": "Áo đỏ",
+      "status": "fact"
+    },
+    {
+      "id": "a",
+      "text": "Xe trượt tuyết tuần lộc kéo",
+      "status": "fact"
+    },
+    {
+      "id": "e",
+      "text": "Hình do Haddon Sundblom vẽ",
+      "status": "fact"
+    },
+    {
+      "id": "b",
+      "text": "Béo tròn, vui tính",
+      "status": "fact"
+    },
+    {
+      "id": "c",
+      "text": "Ở Bắc Cực",
+      "status": "disputed"
+    },
+    {
+      "id": "m",
+      "text": "Tên Moore gắn với bài thơ",
+      "status": "fact"
+    }
+  ],
+  "bankSeed": 3,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Columbia",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-3.md",
+      "url": [
+        "https://magazine.columbia.edu/article/story-behind-most-famous-christmas-poem-all"
+      ],
+      "evidence": [
+        "a plump, jolly, cherry-nosed, white-bearded chimney spelunker whose toy-packed sleigh, drawn by team of reindeer"
+      ],
+      "text": "Suy ra từ Columbia: dáng béo tròn, vui tính và xe trượt tuyết tuần lộc kéo chung một nguồn.",
+      "do": [
+        {
+          "op": "same",
+          "t": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "who": "Coca-Cola, trang của công ty",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-3.md",
+      "url": [
+        "https://www.coca-cola.com/us/en/about-us/faq/did-coca-cola-create-santa-claus",
+        "https://www.coca-colacompany.com/about-us/history/haddon-sundblom-and-the-coca-cola-santas"
+      ],
+      "evidence": [
+        "Before 1931, there were many different depictions of Santa Claus",
+        "Santa appeared in a red coat before Sundblom painted him."
+      ],
+      "text": "Coca-Cola ghi: trước năm 1931 đã có nhiều hình ông già Noel. Trang của hãng về Sundblom: áo đỏ có trước khi ông vẽ.",
+      "do": [
+        {
+          "op": "at",
+          "t": "e",
+          "s": "s3"
+        },
+        {
+          "op": "notAt",
+          "t": "d",
+          "s": "s3"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "who": "HarpWeek",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-3.md",
+      "url": [
+        "https://www.harpweek.com/09cartoon/BrowseByDateCartoon.asp?Date=25&Month=December"
+      ],
+      "evidence": [
+        "Santa’s suit was changed to the red color"
+      ],
+      "text": "HarpWeek ghi: trong bản thơ do Nast minh họa năm 1869, áo ông già Noel được đổi sang màu đỏ.",
+      "do": [
+        {
+          "op": "at",
+          "t": "d",
+          "s": "s2"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "who": "HarpWeek",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-3.md",
+      "url": [
+        "https://www.harpweek.com/09cartoon/BrowseByDateCartoon.asp?Date=25&Month=December"
+      ],
+      "evidence": [
+        "Nast may have been the first illustrator to so identify the locale"
+      ],
+      "text": "HarpWeek ghi: ông già Noel ở Bắc Cực, có thể Nast vẽ sớm nhất.",
+      "do": [
+        {
+          "op": "oneOf",
+          "t": "c",
+          "s": [
+            "s2",
+            "s4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "who": "NYSL",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-3.md",
+      "url": [
+        "https://nysl.nysed.gov/collections/stnick/"
+      ],
+      "evidence": [
+        "It appeared without attribution",
+        "In New-York Book of Poetry, in 1837, Charles Fenno Hoffman identified his friend Clement Moore as the author"
+      ],
+      "text": "NYSL ghi: bài thơ năm 1823 in ra không đề tên tác giả; năm 1837, sách của Hoffman nêu tên Moore.",
+      "do": [
+        {
+          "op": "notAt",
+          "t": "m",
+          "s": "s1"
+        },
+        {
+          "op": "at",
+          "t": "m",
+          "s": "s4"
+        }
+      ]
+    }
+  ],
+  "solutions": [
+    [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "c",
+        "d"
+      ],
+      [
+        "e"
+      ],
+      [
+        "m"
+      ]
+    ]
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: theo các nguồn đã mở, chi tiết nào thuộc ô nào? Mỗi thẻ dựa trên một nguồn đã mở."
+    },
+    {
+      "tier": 2,
+      "card": "c2",
+      "text": "Đọc thẻ 2: thẻ ấy nói gì về màu áo, và về quảng cáo?"
+    },
+    {
+      "tier": 3,
+      "text": "Có chắc màu áo ông già Noel bắt đầu từ quảng cáo? Thẻ nào nói khác?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s4": "m"
+      },
+      "text": "Thẻ 5 đặt một mảnh vào Nguồn khác. Đặt mảnh ấy vào, rồi đọc lại thẻ 4."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn ô."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: áo đỏ bắt đầu từ quảng cáo của Coca-Cola, nên mảnh áo đỏ nằm cùng tranh của Sundblom.",
+    "cards": [
+      "c2",
+      "c3"
+    ],
+    "trap": {
+      "s3": [
+        "d",
+        "e"
+      ]
+    },
+    "do": [
+      {
+        "op": "at",
+        "t": "d",
+        "s": "s3"
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Theo HarpWeek, áo đỏ có trong bản thơ Nast minh họa năm 1869, trước quảng cáo 1931; chính Coca-Cola cũng ghi áo đỏ có trước.",
+      "Không bàn tay nào làm ra trọn hình ấy: thơ, tranh Nast và quảng cáo đều góp phần; tên Moore do sách năm 1837 nêu."
+    ],
+    "label": "TRANH CÃI"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả bốn ô một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  },
+  "space": 4440
+}

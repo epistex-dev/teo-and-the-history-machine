@@ -1,0 +1,83 @@
+{
+  "id": "dec25",
+  "status": "verified",
+  "source": "research/m0b-act-1.md",
+  "stamp": "TRANH CÃI",
+  "card": [
+    "Một bản ghi lễ Giáng Sinh ngày 25/12 nằm trong một cuốn lịch ở Rôma giữa thế kỷ 4 (lịch 354).",
+    "Vì sao chọn ngày ấy thì có hai giả thuyết: trùng lễ mặt trời, hoặc tính từ 25/3.",
+    "Sử gia chưa thống nhất."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Năm 354 một quý tộc La Mã đặt làm một cuốn lịch; mục ngày 25/12 ghi Chúa Kitô sinh ở Bêlem, miền Giuđê. Danh sách này được cho là có từ năm 336.",
+        "sources": [
+          {
+            "label": "liverpool.ac.uk",
+            "url": "https://www.liverpool.ac.uk/history/blog/2023/first-noel/"
+          },
+          {
+            "label": "historytoday.com",
+            "url": "https://www.historytoday.com/archive/months-past/first-christmas-celebration"
+          }
+        ]
+      },
+      {
+        "text": "Không ai biết ngày sinh thật.",
+        "sources": [
+          {
+            "label": "academia.edu (chỉ tóm tắt)",
+            "url": "https://www.academia.edu/968841/_Sol_Invictus_the_Winter_Solstice_and_the_Origins_of_Christmas_Mouseion_Number_47_3_2003_377_398"
+          }
+        ]
+      },
+      {
+        "text": "Cùng cuốn lịch 354 có mục “N INVICTI” (được cho là lễ mặt trời) ngày 25/12, với ba mươi cuộc đua xe.",
+        "sources": [
+          {
+            "label": "penelope.uchicago.edu",
+            "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/invictus.html"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Giả thuyết “lịch sử tôn giáo”: ngày 25/12 được chọn vì trùng lễ mặt trời. Phía này dựa vào mục “N INVICTI”.",
+        "sources": [
+          {
+            "label": "historytoday.com",
+            "url": "https://www.historytoday.com/archive/months-past/first-christmas-celebration"
+          },
+          {
+            "label": "penelope.uchicago.edu",
+            "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/invictus.html"
+          }
+        ]
+      },
+      {
+        "text": "Giả thuyết “tính toán”: ngày 25/12 được tính từ 25/3, ngày Truyền Tin.",
+        "sources": [
+          {
+            "label": "historytoday.com",
+            "url": "https://www.historytoday.com/archive/months-past/first-christmas-celebration"
+          }
+        ]
+      },
+      {
+        "text": "Nghi vấn về thứ tự: lịch 354 là nơi duy nhất có cả hai mục; sử gia Hijmans cho rằng không thể chắc lễ mặt trời có trước, và lễ ấy có thể được lập sau lễ Kitô. Một bài tổng quan năm 2012 khuyên giữ cả hai hướng nhưng nhìn tinh tế hơn.",
+        "sources": [
+          {
+            "label": "academia.edu (chỉ tóm tắt)",
+            "url": "https://www.academia.edu/968841/_Sol_Invictus_the_Winter_Solstice_and_the_Origins_of_Christmas_Mouseion_Number_47_3_2003_377_398"
+          },
+          {
+            "label": "doi.org (chỉ tóm tắt)",
+            "url": "https://doi.org/10.1017/s0009640712001941"
+          }
+        ]
+      }
+    ]
+  }
+}

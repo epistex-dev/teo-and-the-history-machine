@@ -1,0 +1,373 @@
+{
+  "id": "tree",
+  "format": "I",
+  "input": "assign",
+  "goal": "identify",
+  "orientation": "both",
+  "title": "Bản Tille và đoạn trích Augsburger",
+  "question": "Một ghi chép ở Strasbourg, hai nơi chép lại, vài ghi chép khác. Mỗi mảnh được ghi ở ô nào, các thẻ cho biết.",
+  "predict": {
+    "prompt": "Một bản chép đầy đủ, một đoạn trích, cùng một ghi chép Strasbourg. Chúng có giống nhau từng chữ không?",
+    "options": [
+      "Giống nhau từng chữ",
+      "Khác nhau ở vài chi tiết",
+      "Chưa ai đặt hai bản cạnh nhau"
+    ]
+  },
+  "aha": "Tille và đoạn trích không giống nhau từng chữ: có chữ chỉ một nơi viết. Nến không có trong cả hai.",
+  "history": "tree",
+  "rules": [
+    {
+      "text": "Chạm một mảnh, rồi chạm một ô để đặt. Mảnh có thể không đặt."
+    },
+    {
+      "text": "Kiểm tra chấm cả bốn ô một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Cả Tille và đoạn trích",
+      "cap": "any",
+      "min": 0
+    },
+    {
+      "id": "s2",
+      "label": "Chỉ bản Tille",
+      "cap": "any",
+      "min": 0
+    },
+    {
+      "id": "s3",
+      "label": "Chỉ đoạn trích Augsburger",
+      "cap": "any",
+      "min": 0
+    },
+    {
+      "id": "s4",
+      "label": "Chỉ ghi chép nơi khác",
+      "cap": "any",
+      "min": 0
+    }
+  ],
+  "tokens": [
+    {
+      "id": "a",
+      "text": "Hoa hồng giấy",
+      "status": "fact"
+    },
+    {
+      "id": "t",
+      "text": "Chữ «Zischgolt»",
+      "status": "fact"
+    },
+    {
+      "id": "d",
+      "text": "Chữ «Zischgold»",
+      "status": "fact"
+    },
+    {
+      "id": "e",
+      "text": "Câu khung bốn cạnh",
+      "status": "fact"
+    },
+    {
+      "id": "g",
+      "text": "Chữ «v.v.»",
+      "status": "fact"
+    },
+    {
+      "id": "f",
+      "text": "Nến",
+      "status": "disputed"
+    }
+  ],
+  "bankSeed": 2,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Tille 1889 và Augsburger, ghi chú 48",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+      "url": [
+        "https://de.wikisource.org/wiki/Noch_einmal_auf_den_Spuren_des_Weihnachtsbaums",
+        "https://d-nb.info/1077702078/34"
+      ],
+      "evidence": [
+        "roßen auß vielfarbigem papier geschnitten",
+        "roßen auß vielfarbigem papier geschnitten"
+      ],
+      "text": "Tille và đoạn trích Augsburger đều ghi: hoa hồng cắt từ giấy nhiều màu.",
+      "do": [
+        {
+          "op": "at",
+          "t": "a",
+          "s": "s1"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "who": "Suy ra từ Tille 1889 và Augsburger, ghi chú 48",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+      "url": [
+        "https://de.wikisource.org/wiki/Noch_einmal_auf_den_Spuren_des_Weihnachtsbaums",
+        "https://d-nb.info/1077702078/34"
+      ],
+      "evidence": [
+        "Aepfel, Oblaten, Zischgolt, Zucker etc.",
+        "Man pflegt darum ein viererkent ramen zu machen",
+        "Aepfel, Oblaten, Zischgold, Zucker."
+      ],
+      "text": "«v.v.», câu khung bốn cạnh và «Zischgolt» nằm ở cùng các bản.",
+      "do": [
+        {
+          "op": "same",
+          "t": [
+            "e",
+            "g"
+          ]
+        },
+        {
+          "op": "same",
+          "t": [
+            "t",
+            "e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "who": "Suy ra từ Tille 1889",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+      "url": [
+        "https://de.wikisource.org/wiki/Noch_einmal_auf_den_Spuren_des_Weihnachtsbaums",
+        "https://en.wikisource.org/wiki/Folk-Lore/Volume_3/German_Christmas_and_the_Christmas-Tree"
+      ],
+      "evidence": [
+        "Aepfel, Oblaten, Zischgolt, Zucker etc.",
+        "Man pflegt darum ein viererkent ramen zu machen",
+        "roses made of coloured paper, apples, wafers, tinsel, sweetmeats, etc. Usually a square frame is made around it."
+      ],
+      "text": "Bản Tille ghi đúng bốn trong sáu mảnh này.",
+      "do": [
+        {
+          "op": "expr",
+          "e": [
+            "eq",
+            [
+              "add",
+              [
+                "count",
+                "s1",
+                "a",
+                "t",
+                "d",
+                "e",
+                "g",
+                "f"
+              ],
+              [
+                "count",
+                "s2",
+                "a",
+                "t",
+                "d",
+                "e",
+                "g",
+                "f"
+              ]
+            ],
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "who": "Suy ra từ Augsburger, ghi chú 48",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+      "url": [
+        "https://d-nb.info/1077702078/34"
+      ],
+      "evidence": [
+        "Aepfel, Oblaten, Zischgold, Zucker."
+      ],
+      "text": "Đoạn trích ở Augsburger ghi đúng hai trong sáu mảnh này.",
+      "do": [
+        {
+          "op": "expr",
+          "e": [
+            "eq",
+            [
+              "add",
+              [
+                "count",
+                "s1",
+                "a",
+                "t",
+                "d",
+                "e",
+                "g",
+                "f"
+              ],
+              [
+                "count",
+                "s3",
+                "a",
+                "t",
+                "d",
+                "e",
+                "g",
+                "f"
+              ]
+            ],
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "who": "Suy ra từ Tille, Augsburger, Wissenschaftsjahr và Waldwissen",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md",
+      "url": [
+        "https://en.wikisource.org/wiki/Folk-Lore/Volume_3/German_Christmas_and_the_Christmas-Tree",
+        "https://d-nb.info/1077702078/34",
+        "https://www.wissenschaftsjahr.de/2022/fragen/antworten/detailansicht/woher-kommt-die-tradition-mit-dem-weihnachtsbaum.html",
+        "https://www.waldwissen.net/de/wald-und-mensch/forstgeschichte/geschichte-des-weihnachtsbaumes"
+      ],
+      "evidence": [
+        "(but without candles)",
+        "Es ist jedoch unwahrscheinlich",
+        "Der erste kerzengeschmückte Tannenbaum ist überliefert aus dem Jahr 1611",
+        "Erste Weihnachtsbäume mit Lichtschmuck sind für den Hannoverschen Hof um 1660 belegt"
+      ],
+      "text": "Phần đọc được của bản Tille không nhắc nến; đoạn trích cũng không. Wissenschaftsjahr và Waldwissen ghi cây có nến.",
+      "do": [
+        {
+          "op": "at",
+          "t": "f",
+          "s": "s4"
+        }
+      ]
+    }
+  ],
+  "solutions": [
+    [
+      [
+        "a"
+      ],
+      [
+        "t",
+        "e",
+        "g"
+      ],
+      [
+        "d"
+      ],
+      [
+        "f"
+      ]
+    ]
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mỗi mảnh được ghi ở ô nào, theo các thẻ?"
+    },
+    {
+      "tier": 2,
+      "card": "c3",
+      "text": "Đọc thẻ 3: thẻ ấy đếm các mảnh mà một bản ghi."
+    },
+    {
+      "tier": 3,
+      "text": "Có chắc hai nơi chép lại giống nhau từng chữ?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s4": "f"
+      },
+      "text": "Thẻ 5 đặt mảnh Nến. Đặt mảnh ấy vào ô của nó, rồi đọc thẻ 3 và thẻ 4."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn ô."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: Tille và đoạn trích giống nhau từng chữ, và chỉ ghi chép nơi khác mới có nến.",
+    "cards": [
+      "c3",
+      "c4"
+    ],
+    "trap": {
+      "s1": [
+        "a",
+        "t",
+        "d",
+        "e",
+        "g"
+      ],
+      "s4": [
+        "f"
+      ]
+    },
+    "do": [
+      {
+        "op": "at",
+        "t": "a",
+        "s": "s1"
+      },
+      {
+        "op": "at",
+        "t": "f",
+        "s": "s4"
+      },
+      {
+        "op": "at",
+        "t": "t",
+        "s": "s1"
+      },
+      {
+        "op": "at",
+        "t": "d",
+        "s": "s1"
+      },
+      {
+        "op": "at",
+        "t": "e",
+        "s": "s1"
+      },
+      {
+        "op": "at",
+        "t": "g",
+        "s": "s1"
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Đoạn trích ở Augsburger kết bằng «Zucker.», không có «v.v.» và câu khung của bản Tille.",
+      "Phần đọc được không nhắc nến; cây có nến ở 1611, khoảng 1660, còn thư 1708 chỉ nói cành hoàng dương."
+    ],
+    "label": "TRANH CÃI"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả bốn ô một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  },
+  "space": 15625
+}

@@ -1,0 +1,250 @@
+{
+  "shade": {
+    "offset": [2, 3],
+    "files": [
+      "<part>-shade.svg",
+      "<part>-lit.svg"
+    ],
+    "rule": "Draw <part>-shade at the lit sprite position + (2,3) in world space, below the lit sprite and above everything drawn earlier. Rotate and scale the shade sprite with the part, but never rotate the (2,3) offset. Inside a rotated container, add the offset in world space too (or counter-rotate it by the container angle). Parts without a -shade file cast none. File coordinates: each sprite file has viewBox = bbox, so its top-left sits at bbox[0],bbox[1] of the character frame; pivots are in frame coordinates."
+  },
+  "rest": {
+    "pose": "normal",
+    "rule": "Parts and containers with a rest entry are posed as in <character>/expr-normal.svg: rotate by angle (SVG degrees, clockwise positive) about pivot, then translate by offset (parent frame), inside the rotated containers. No rest entry = angle 0. visible:false = only shown in other poses (fx, stamp). The face sprite kit/<character>-face-normal.svg goes inside the head rig. node art/safe-bg.mjs rebuilds every character this way and compares it with expr-normal.svg."
+  },
+  "plate": {
+    "files": "kit/plate-<colour>.svg",
+    "topLeft": [-28, -8],
+    "colourByBackground": "style.json plate",
+    "safeBackgrounds": "style.json castSafeBg"
+  },
+  "frame": [-18, 0, 196, 200],
+  "root": {
+    "id": "quado-root",
+    "pivot": [80, 197]
+  },
+  "headRig": {
+    "id": "quado-head-rig",
+    "pivot": [80, 84],
+    "children": [
+      "quado-head",
+      "quado-face",
+      "quado-beak-low",
+      "quado-beak-up",
+      "quado-fx-*"
+    ],
+    "rest": {
+      "angle": -4,
+      "pivot": [80, 84]
+    }
+  },
+  "wingRig": {
+    "id": "quado-wing-r-rig",
+    "pivot": [110, 94],
+    "children": [
+      "quado-horn",
+      "quado-wing-r"
+    ],
+    "rest": {
+      "angle": -4,
+      "pivot": [110, 94]
+    }
+  },
+  "parts": {
+    "quado-foot-l": {
+      "bbox": [39, 176, 44, 22],
+      "pivot": [62, 182],
+      "shade": true
+    },
+    "quado-foot-r": {
+      "bbox": [77, 176, 44, 22],
+      "pivot": [98, 182],
+      "shade": true
+    },
+    "quado-body": {
+      "bbox": [31, 61, 98, 130],
+      "pivot": [80, 176],
+      "shade": true
+    },
+    "quado-collar": {
+      "bbox": [43, 83, 74, 32],
+      "pivot": [80, 92],
+      "shade": true
+    },
+    "quado-wing-l": {
+      "bbox": [7, 89, 48, 94],
+      "pivot": [50, 94],
+      "shade": false,
+      "rest": {
+        "angle": 4,
+        "pivot": [50, 94]
+      }
+    },
+    "quado-wing-r": {
+      "bbox": [105, 89, 48, 94],
+      "pivot": [110, 94],
+      "shade": false
+    },
+    "quado-horn": {
+      "bbox": [91, 65, 67, 52],
+      "pivot": [100, 92],
+      "shade": true,
+      "rest": {
+        "angle": 64,
+        "pivot": [100, 92],
+        "offset": [22, 36]
+      }
+    },
+    "quado-head": {
+      "bbox": [41, 3, 78, 84],
+      "pivot": [80, 84],
+      "shade": true
+    },
+    "quado-beak-low": {
+      "bbox": [66, 76, 28, 25],
+      "pivot": [80, 76],
+      "shade": true
+    },
+    "quado-beak-up": {
+      "bbox": [57, 61, 46, 46],
+      "pivot": [80, 64],
+      "shade": true
+    },
+    "quado-fx-smug": {
+      "bbox": [30, 16, 100, 18],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "quado-fx-smug-ink": {
+      "bbox": [30, 16, 100, 18],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "quado-fx-doubtful": {
+      "bbox": [117, 25, 20, 28],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "quado-fx-doubtful-ink": {
+      "bbox": [117, 25, 20, 28],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "quado-fx-surprised": {
+      "bbox": [6, 20, 148, 36],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "quado-fx-surprised-ink": {
+      "bbox": [6, 20, 148, 36],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    }
+  },
+  "faces": {
+    "normal": {
+      "bbox": [41, 21, 78, 34],
+      "fx": null,
+      "beakOpen": 0
+    },
+    "talking": {
+      "bbox": [41, 17, 78, 82],
+      "fx": null,
+      "beakOpen": 0.7
+    },
+    "smug": {
+      "bbox": [41, 23, 76, 44],
+      "fx": "quado-fx-smug",
+      "beakOpen": 0
+    },
+    "surprised": {
+      "bbox": [39, 11, 82, 92],
+      "fx": "quado-fx-surprised",
+      "beakOpen": 1
+    },
+    "doubtful": {
+      "bbox": [41, 12, 77, 79],
+      "fx": "quado-fx-doubtful",
+      "beakOpen": 0.4
+    }
+  },
+  "fxVariants": {
+    "quado-fx-smug": {
+      "ink": "quado-fx-smug-ink"
+    },
+    "quado-fx-doubtful": {
+      "ink": "quado-fx-doubtful-ink"
+    },
+    "quado-fx-surprised": {
+      "ink": "quado-fx-surprised-ink"
+    }
+  },
+  "features": {
+    "quado-eyes": [80, 52],
+    "quado-brows": [80, 32],
+    "quado-mouth": [80, 80]
+  },
+  "order": [
+    "quado-foot-l",
+    "quado-foot-r",
+    "quado-body",
+    "quado-wing-l",
+    "quado-collar",
+    "quado-wing-r-rig",
+    "quado-head-rig"
+  ],
+  "views": {
+    "side": {
+      "pivots": {
+        "quado-tail": [56, 140],
+        "quado-foot-far": [64, 182],
+        "quado-foot-near": [92, 182],
+        "quado-body": [80, 176],
+        "quado-wing": [86, 94],
+        "quado-head": [86, 84],
+        "quado-beak-low": [112, 70],
+        "quado-beak-up": [112, 58]
+      },
+      "headRig": [86, 84],
+      "faces": {
+        "normal": {
+          "bbox": [87, 24, 36, 31],
+          "beakOpen": 0
+        },
+        "talking": {
+          "bbox": [87, 20, 56, 65],
+          "beakOpen": 0.7
+        },
+        "smug": {
+          "bbox": [87, 25, 36, 43],
+          "beakOpen": 0
+        },
+        "surprised": {
+          "bbox": [85, 14, 60, 77],
+          "beakOpen": 1
+        },
+        "doubtful": {
+          "bbox": [87, 35, 52, 46],
+          "beakOpen": 0.4
+        }
+      }
+    }
+  }
+}

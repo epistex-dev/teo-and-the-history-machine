@@ -1,0 +1,56 @@
+{
+  "id": "brooms",
+  "status": "verified",
+  "source": "research/m0b-act-3.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Theo tín ngưỡng dân gian Na Uy, đêm Giáng Sinh là một trong những đêm nguy hiểm nhất năm: gần như mọi sinh vật siêu nhiên đều ra ngoài.",
+    "Người ta vẽ dấu thập lên cửa, đặt đồ thép khắp trang trại và canh thức suốt đêm để bảo vệ nhà."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Bách khoa toàn thư quốc gia Na Uy viết: theo tín ngưỡng dân gian, đêm giữa 24 và 25/12 là một trong những đêm nguy hiểm nhất năm, gần như mọi sinh vật siêu nhiên đều đi lại, đáng sợ nhất là đoàn săn hoang Åsgårdsreia, và còn có con dê Yule (julebukk).",
+        "sources": [
+          {
+            "label": "SNL",
+            "url": "https://snl.no/julenatt"
+          }
+        ]
+      },
+      {
+        "text": "Người ta tự bảo vệ bằng dấu thập vẽ lên cửa và đồ vật, đồ thép đặt ở chỗ quan trọng, một cây chổi bách xù (briskefut) đóng chặt canh cửa, và nhiều nơi ngủ chung trên rơm đến giữa thế kỷ 19.",
+        "sources": [
+          {
+            "label": "SNL",
+            "url": "https://snl.no/julenatt"
+          }
+        ]
+      },
+      {
+        "text": "Bảo tàng Dân gian Na Uy nói Giáng Sinh vốn được biết là mùa nguy hiểm, và đêm 24/12 là đỉnh điểm của mùa kể chuyện rùng rợn: troll, hulder, draug, Quỷ, Åsgårdsreia. Ông giải thích đó là cách thời Trung Cổ làm lễ vui hơn bằng tương phản, và cho rằng cũng có thể chỉ để thích thú như phim kinh dị.",
+        "sources": [
+          {
+            "label": "Norsk Folkemuseum",
+            "url": "https://norskfolkemuseum.no/den-skumle-jula"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Một số bài viết nói người Na Uy giấu chổi đêm Giáng Sinh để phù thủy không lấy được. Chúng tôi chưa tìm thấy nguồn dân tộc học hay bảo tàng xác nhận, và một sử gia lại kể chổi được để ngoài cửa. Vì vậy đây không được tính là sự thật.",
+        "sources": [
+          {
+            "label": "Northeastern",
+            "url": "https://news.northeastern.edu/2018/12/20/these-holiday-traditions-will-surprise-you/"
+          },
+          {
+            "label": "Bratberg",
+            "url": "https://www.tronderdebatt.no/tronderhistorie-jul-i-trondelag/o/5-122-14474"
+          }
+        ]
+      }
+    ]
+  }
+}

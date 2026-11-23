@@ -1,0 +1,102 @@
+{
+  "id": "yule-lads",
+  "status": "verified",
+  "source": "research/m0b-act-3.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Người Iceland ngày nay nói có 13 chàng Yule; lịch đếm từ 12/12 đến 24/12, mỗi ngày một chàng.",
+    "Con số 13 đã có trong một bản chép tay thế kỷ 18.",
+    "Tên từng chàng và quy tắc đến chỉ thấy từ sách in năm 1862, và khi ấy vẫn có người nói chỉ có 9."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Con số 13 có trong một bản chép tay của bài Grýlukvæði. Không rõ ai chép; học giả Jón Samsonarson xếp bản ấy vào thế kỷ 18 theo nét chữ, và viết rằng đó là nguồn sớm nhất về con số 13 mà ông nhớ đã thấy.",
+        "sources": [
+          {
+            "label": "Jón Samsonarson 1979",
+            "url": "https://timarit.is/page/5400133"
+          }
+        ]
+      },
+      {
+        "text": "Sách truyện dân gian của Jón Árnason in năm 1862 liệt kê 13 tên, do mục sư Páll Jónsson ở Myrká cung cấp; chàng thứ bảy trong sách là Faldafeykir. Theo học giả Árni Björnsson, trước năm 1862 chưa thấy tên chàng nào.",
+        "sources": [
+          {
+            "label": "Bản quét tập I",
+            "url": "https://archive.org/download/Islenzkarthjodso000197672v1JonReyk/Islenzkarthjodso000197672v1JonReyk_orig_djvu.txt"
+          },
+          {
+            "label": "Landsbókasafn",
+            "url": "https://landsbokasafn.is/en/yule-lads-jolin-koma/"
+          },
+          {
+            "label": "Árnastofnun",
+            "url": "https://arnastofnun.is/is/utgafa-og-gagnasofn/pistlar/nofn-jolasveina"
+          }
+        ]
+      },
+      {
+        "text": "Lịch Iceland ngày nay: chàng đầu đến ngày 12/12, mỗi ngày thêm một chàng, chàng cuối đến ngày 24/12; chàng thứ bảy là Hurðaskellir. Thư viện Quốc gia Iceland nói bài thơ \"Jólasveinarnir\" trong tập Jólin koma (1932) của Jóhannes úr Kötlum đã cố định tên, số lượng và thứ tự đến của các chàng.",
+        "sources": [
+          {
+            "label": "Vísindavefur",
+            "url": "https://www.visindavefur.is/svar.php?id=5491"
+          },
+          {
+            "label": "Landsbókasafn",
+            "url": "https://landsbokasafn.is/en/yule-lads-jolin-koma/"
+          },
+          {
+            "label": "Landsbókasafn 2",
+            "url": "https://landsbokasafn.is/en/jolin-koma-christmas-arrives-finished/"
+          }
+        ]
+      },
+      {
+        "text": "Đầu thế kỷ 20 người ta còn xem họ như troll; tranh minh họa 1932 vẽ họ giống nông dân, và dần dần họ pha giữa troll Iceland và ông già Noel Mỹ: biết tặng quà nhưng vẫn giữ trò tinh nghịch.",
+        "sources": [
+          {
+            "label": "Landsbókasafn",
+            "url": "https://landsbokasafn.is/en/yule-lads-jolin-koma/"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng chàng đầu tiên xuống núi 13 ngày trước Giáng Sinh, mỗi ngày thêm một chàng, chàng cuối cùng đến đúng ngày 24/12.",
+        "sources": [
+          {
+            "label": "Jón Árnason 1862, tập I",
+            "url": "https://archive.org/download/Islenzkarthjodso000197672v1JonReyk/Islenzkarthjodso000197672v1JonReyk_orig_djvu.txt"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Phía 13: Jón Árnason (1862) viết rằng dường như chắc chắn họ có 13 người, và bản chép tay thế kỷ 18 của bài Grýlukvæði cũng nói 13.",
+        "sources": [
+          {
+            "label": "Jón Árnason I",
+            "url": "https://archive.org/download/Islenzkarthjodso000197672v1JonReyk/Islenzkarthjodso000197672v1JonReyk_orig_djvu.txt"
+          },
+          {
+            "label": "Jón Samsonarson 1979",
+            "url": "https://timarit.is/page/5400133"
+          }
+        ]
+      },
+      {
+        "text": "Phía 9: có người dẫn vần \"Jólasveinarnir einn og átta\" để nói chỉ có 9; giữa thế kỷ 19 ý kiến còn chia.",
+        "sources": [
+          {
+            "label": "Jón Samsonarson 1979",
+            "url": "https://timarit.is/page/5400133"
+          }
+        ]
+      }
+    ]
+  }
+}

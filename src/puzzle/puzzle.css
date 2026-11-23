@@ -1,0 +1,142 @@
+/* Puzzle player: a book page of evidence cards, a plate of slots and a bank of pieces. Colours and frames come from the shared UI (style.css). */
+.stage:has(.pz) .mg-bar { display: none; }
+.pz { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--page); color: var(--ink); font-size: calc(1rem * var(--font-scale, 1)); line-height: 1.35; }
+.pz h2:focus { outline: none; }
+.pz-scroll { flex: 1; min-block-size: 0; overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px 18px; display: grid; align-content: start; gap: 18px; }
+.pz-left, .pz-right { display: grid; align-content: start; gap: 12px; min-inline-size: 0; }
+.pz-head { display: grid; gap: 6px; }
+.pz-head::after { --rl: linear-gradient(var(--ink), var(--ink)); content: ''; display: block; block-size: 9px; margin-block-start: 4px; background: var(--diamond) 50% 0 / 9px 9px no-repeat, var(--rl) 0 1px / calc(50% - 13px) 1.5px no-repeat, var(--rl) 100% 1px / calc(50% - 13px) 1.5px no-repeat, var(--rl) 0 6px / calc(50% - 13px) 0.6px no-repeat, var(--rl) 100% 6px / calc(50% - 13px) 0.6px no-repeat; }
+.pz-kicker { margin: 0; display: flex; align-items: center; gap: 0.7em; font-size: 0.72em; font-weight: 600; letter-spacing: 0.2em; line-height: 1.7; text-transform: uppercase; color: var(--ox2); }
+.pz-kicker::before { content: ''; flex: none; inline-size: 0.5em; block-size: 0.5em; background: currentColor; transform: rotate(45deg); }
+.pz-title { margin: 0; font-size: 1.25em; font-weight: 600; line-height: 1.3; letter-spacing: 0.06em; }
+.pz-question { margin: 0; line-height: 1.45; }
+.pz-h { margin: 0 0 8px; font-size: 0.8em; font-weight: 600; letter-spacing: 0.16em; line-height: 1.5; text-transform: uppercase; color: var(--text2); }
+.pz-rules summary { min-block-size: 44px; display: flex; align-items: center; gap: 0.8em; font-size: 0.8em; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ox2); cursor: pointer; list-style: none; }
+.pz-rules summary::-webkit-details-marker { display: none; }
+.pz-rules summary::before { content: ''; flex: none; inline-size: 0.5em; block-size: 0.5em; background: currentColor; transform: rotate(45deg); }
+.pz-rules[open] summary::before { background: transparent; box-shadow: inset 0 0 0 1.5px currentColor; }
+.pz-rule-list { margin: 0 0 4px; padding-inline-start: 1.2rem; display: grid; gap: 4px; font-size: 0.95em; }
+
+.pz-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.pz .pz-card { --fill: var(--card); inline-size: auto; padding: 10px 14px 9px; gap: 4px; user-select: text; -webkit-user-select: text; }
+.pz-card[data-pointed='true'] { --fill: var(--plate); outline: 3px solid var(--ox); outline-offset: 2px; }
+.pz-card-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.pz-no { font-size: 0.75em; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ox2); }
+.pz-card .flag { font-size: 0.68em; padding: 1px 8px 1px calc(8px + 0.13em); }
+.pz-kind:not([data-kind='inference']) { border-style: solid; }
+.pz-kind[data-kind='inference'] { background: var(--recess); }
+.pz .stamp.plain { container-type: normal; white-space: nowrap; }
+.pz-card .stamp.plain { font-size: 0.72em; margin-inline-start: auto; }
+.pz-who { margin: 0; font-size: 0.85em; font-style: italic; color: var(--text2); }
+.pz-text { margin: 0; line-height: 1.4; }
+.pz-src { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.9em; font-size: 0.8em; color: var(--text2); }
+.pz-src a, a.pz-src { display: inline-flex; align-items: center; min-block-size: 44px; min-inline-size: 44px; color: var(--ox2); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+.pz-board { display: grid; gap: 14px; }
+.pz-slots { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pz-slot { display: grid; container-type: inline-size; grid-template-columns: minmax(min-content, 30%) minmax(0, 1fr); align-items: center; min-block-size: 56px; border: 1.5px dashed var(--ink); background: var(--recess); cursor: pointer; }
+.pz-slot[data-filled='true'] { border-style: solid; }
+.pz-slots[data-armed='true'] .pz-slot { border-color: var(--ox); border-width: 2px; background: var(--card); }
+.pz .pz-slot-btn { --fill: transparent; --in: transparent; align-self: stretch; justify-self: stretch; place-items: center start; min-block-size: 54px; padding: 4px 6px 4px 10px; border: 0; background: none; box-shadow: none; color: var(--ink); font-size: 0.72em; letter-spacing: 0.12em; text-align: left; }
+.pz-slots[data-row] { grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); gap: 6px; }
+.pz-slots[data-row][data-long] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pz-slots[data-row] .pz-slot { grid-template-columns: minmax(0, 1fr); align-content: start; min-block-size: 96px; }
+.pz-slots[data-row] .pz-slot-btn { min-block-size: 44px; padding-inline: 4.5px; letter-spacing: 0.04em; place-items: center; text-align: center; }
+.pz-slots[data-row] .pz-chips { justify-content: center; padding: 1px; }
+.pz-slots[data-row] .pz-chips .pz-piece { min-inline-size: 44px; padding: 10px 8.5px; font-size: min(1em, 16.5cqi); }
+.pz-chips { list-style: none; margin: 0; padding: 5px; display: flex; flex-wrap: wrap; gap: 6px; min-inline-size: 0; }
+.pz-chips li { display: contents; }
+.pz .pz-piece { --fill: var(--card); --in: var(--ink); display: grid; place-items: center start; min-block-size: 48px; max-inline-size: 100%; padding: 10px 12px; color: var(--ink); font-size: 1em; font-weight: 500; letter-spacing: 0.02em; line-height: 1.25; text-align: left; text-transform: none; touch-action: pan-y; user-select: none; -webkit-user-select: none; transition: background-color 0.12s; }
+.pz .pz-piece:hover { --fill: var(--plate); }
+.pz .pz-piece[aria-pressed='true'] { --fill: var(--ox); --in: var(--cream); color: var(--cream); }
+.pz .pz-chip { min-block-size: 44px; }
+.pz-bank { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 8.2rem), 1fr)); gap: 8px; }
+.pz-bank .pz-piece { inline-size: 100%; }
+.pz-gap { min-block-size: 48px; border: 1.5px dashed var(--text3); opacity: 0.45; }
+.pz-ghost { position: fixed; z-index: 60; transform: translate(-50%, -130%); max-inline-size: 11rem; padding: 8px 12px; background: var(--ox); color: var(--cream); font-family: 'EB Garamond', serif; font-size: 0.95rem; box-shadow: 3px 3px 0 var(--ink); pointer-events: none; }
+
+.pz-bar { flex: none; max-block-size: min(24rem, 55vh); display: grid; grid-template-rows: minmax(0, auto) auto; gap: 6px; padding: 8px 14px 10px; background: var(--card); color: var(--ink); box-shadow: inset 0 3.5px 0 var(--ink); }
+.pz-msgs { min-block-size: 0; overflow-y: auto; font-size: 0.95em; line-height: 1.3; }
+.pz-msgs p { margin: 0 0 3px; }
+.pz-msgs p:empty { display: none; }
+.pz-verdict { font-weight: 600; color: var(--ox2); }
+.pz-hint { color: var(--text3); }
+.pz-actions { display: flex; gap: 10px; }
+.pz-actions button { flex: 1 1 0; max-inline-size: none; padding-inline: 0.5rem calc(0.5rem + 0.1em); font-size: 0.74em; letter-spacing: 0.1em; line-height: 1.25; text-align: center; }
+.pz-hint-btn[data-nudge='true'] { outline: 2px solid var(--ox); outline-offset: 2px; }
+
+.pz-options { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pz .pz-option { inline-size: 100%; min-block-size: 56px; padding: 8px 14px; font-size: 1em; font-weight: 500; letter-spacing: 0.02em; text-align: left; text-transform: none; place-items: center start; }
+.pz .pz-skip { justify-self: start; min-block-size: 48px; }
+.pz-prompt { margin: 0; font-weight: 600; line-height: 1.4; }
+.pz-note { margin: 0; font-size: 0.9em; font-style: italic; color: var(--text2); }
+.pz-top { display: grid; gap: 12px; min-inline-size: 0; }
+.pz-dock { display: none; }
+
+.pz-reveal { gap: 14px; justify-items: start; }
+.pz-line { margin: 0; font-size: 1.1em; line-height: 1.5; }
+.pz-echo { margin: 0; font-style: italic; color: var(--text2); }
+.pz .pz-next { justify-self: start; min-inline-size: 11rem; }
+.pz-reveal .stamp.plain { font-size: 0.85em; }
+
+.pz-sentence { margin: 0; font-size: 1.05em; line-height: 2.3; }
+.pz .pz-blank { --fill: var(--recess); --in: var(--ink); display: inline-grid; vertical-align: middle; min-inline-size: 5rem; min-block-size: 44px; margin-inline: 2px; padding: 2px 10px; color: var(--ink); font-size: 0.9em; font-weight: 500; letter-spacing: 0.02em; line-height: 1.25; text-transform: none; }
+.pz .pz-blank[data-filled='true'] { --fill: var(--card); }
+.pz-pieces { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pz-piece-row { display: grid; gap: 2px; }
+.pz-piece-row .pz-gap { min-block-size: 48px; }
+.pz-final b { font-weight: 600; }
+.pz-final .stamp.plain { display: inline-block; font-size: 0.7em; vertical-align: middle; }
+
+@media (orientation: landscape) and (min-width: 640px) {
+  .pz { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; }
+  .pz-scroll { display: contents; }
+  .pz-left { grid-area: 1 / 1 / 3 / 2; overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px 18px; min-block-size: 0; }
+  .pz-right { grid-area: 1 / 2; overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px 12px; min-block-size: 0; align-content: start; }
+  .pz-left.pz-reveal { grid-column: 1 / -1; }
+  .pz-bar { grid-area: 2 / 2; max-block-size: min(18rem, 58vh); }
+}
+@media (orientation: landscape) and (max-height: 520px) {
+  .pz-left.pz-reveal { padding-block-start: 62px; }
+  .pz-right { margin-block-start: 62px; }
+  .pz-bar { max-block-size: 58vh; gap: 4px; padding-block: 6px 8px; }
+  .pz-slot, .pz .pz-slot-btn { min-block-size: 46px; }
+  .pz .pz-piece { min-block-size: 44px; }
+  .pz-actions button { min-block-size: 46px; }
+  .pz-msgs { font-size: 0.9em; }
+}
+
+/* Portrait board: the head, the slots and the pieces share one scroll box, the piece bank stays pinned at its bottom, the dock and the bar sit under it, and the evidence cards open from the dock as a sheet over that box. */
+@media (orientation: portrait) {
+  .pz:is([data-phase='board'], [data-phase='demo']) { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(max(120px, 22dvh), 1fr) auto auto; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-scroll { grid-area: 1 / 1; container-type: size; grid-auto-rows: max-content; gap: 10px; padding: 10px 14px 0; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-left, .pz:is([data-phase='board'], [data-phase='demo']) .pz-right, .pz:is([data-phase='board'], [data-phase='demo']) .pz-board { display: contents; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-top { gap: 8px; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-kicker, .pz:is([data-phase='board'], [data-phase='demo']) .pz-head::after { display: none; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-head { gap: 4px; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-title { font-size: 1.1em; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-question { font-size: 0.92em; line-height: 1.35; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-note { font-size: 0.8em; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-slots { gap: 6px; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-slot { min-block-size: 48px; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-slot-btn { min-block-size: 46px; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-bank { grid-template-columns: repeat(auto-fill, minmax(min(100%, 7.4rem), 1fr)); gap: 6px; padding-block-end: 12px; }
+  @container (min-height: 340px) {
+    .pz:is([data-phase='board'], [data-phase='demo']) .pz-bank { position: sticky; bottom: 0; z-index: 1; margin-inline: -14px; padding: 8px 14px 10px; max-block-size: min(36dvh, 42cqh); overflow-y: auto; overscroll-behavior: contain; background: var(--page); box-shadow: 0 -1.5px 0 var(--ink); }
+    .pz:is([data-phase='board'], [data-phase='demo']) .pz-bank .pz-gap { display: none; }
+  }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-dock { display: flex; align-items: center; gap: 0.8em; grid-area: 2 / 1; min-block-size: 48px; padding: 0 14px; font-size: 0.8em; font-weight: 600; letter-spacing: 0.16em; line-height: 1.5; text-transform: uppercase; text-align: left; cursor: pointer; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-dock::before { content: ''; flex: none; inline-size: 0.5em; block-size: 0.5em; background: currentColor; transform: rotate(45deg); }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-dock[aria-expanded='true']::before { background: transparent; box-shadow: inset 0 0 0 1.5px currentColor; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-bar { grid-area: 3 / 1; }
+  .pz:is([data-phase='board'], [data-phase='demo']) .pz-evidence[data-open='false'] { display: none; }
+  .pz:has(.pz-evidence[data-open='true']) :is(.pz-top, .pz-slots, .pz-bank) { display: none; }
+}
+
+@media (orientation: portrait) and (max-height: 620px) {
+  .pz-bar { gap: 4px; padding: 6px 14px 8px; }
+  .pz-msgs { font-size: 0.9em; }
+  .pz-actions button { min-block-size: 46px; }
+  .pz-slot, .pz .pz-slot-btn { min-block-size: 46px; }
+  .pz .pz-piece { min-block-size: 44px; }
+}

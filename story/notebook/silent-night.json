@@ -1,0 +1,97 @@
+{
+  "id": "silent-night",
+  "status": "verified",
+  "source": "research/m0b-act-2.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Cha Joseph Mohr viết lời năm 1816; Franz Xaver Gruber soạn giai điệu và bài ra mắt đêm 24/12/1818 ở Oberndorf, theo lời Gruber kể năm 1854.",
+    "Lời kể ấy không nêu ai hát giọng nào; hai trang hiện nay kể Mohr hát tenor và Gruber hát bass, và trong các nguồn đã mở, chỉ một bảo tàng kể ca đoàn nhà thờ lặp phần kết.",
+    "Chuyện chuột gặm đàn organ là không đúng, theo bảo tàng Stille Nacht; đàn có hỏng đêm đó hay không thì không chứng minh được."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Cha phụ tá Joseph Mohr viết lời bài hát năm 1816 ở Mariapfarr.",
+        "sources": [
+          {
+            "label": "stillenacht.at",
+            "url": "https://www.stillenacht.at/en/history-of-the-song"
+          },
+          {
+            "label": "sammlung-online.salzburgmuseum.at",
+            "url": "https://sammlung-online.salzburgmuseum.at/detail/collection/c6be0c0f-2a40-4ddc-82c4-0e7b1a5113f3"
+          }
+        ]
+      },
+      {
+        "text": "Mohr nhờ Gruber, nhạc sĩ organ kiêm thầy giáo, soạn giai điệu cho hai giọng solo, hợp xướng và đệm guitar. Gruber viết ngày 30/12/1854, gần đúng 36 năm sau, rằng bài vang lên ngay trong Đêm Thánh với sự tán thưởng chung; bản kể ấy không nêu ai hát giọng nào và không nói hợp xướng hát.",
+        "sources": [
+          {
+            "label": "stillenacht.at",
+            "url": "https://www.stillenacht.at/en/history-of-the-song"
+          },
+          {
+            "label": "stille-nacht-museum.at",
+            "url": "https://www.stille-nacht-museum.at/en/silent-nightholy-night/history/"
+          }
+        ]
+      },
+      {
+        "text": "Theo stillenacht.at và bảo tàng Stille Nacht ở Oberndorf, Mohr hát giọng tenor và chơi guitar, Gruber hát bass; hai nơi này không dẫn nguồn sơ cấp.",
+        "sources": [
+          {
+            "label": "stillenacht.at",
+            "url": "https://www.stillenacht.at/en/history-of-the-song"
+          },
+          {
+            "label": "stille-nacht-museum.at",
+            "url": "https://www.stille-nacht-museum.at/en/silent-nightholy-night/"
+          }
+        ]
+      },
+      {
+        "text": "Bản gốc 1818 đã mất; bản chép tay cổ nhất còn lại là của Mohr, khoảng năm 1820, ghi hai giọng hát và phần guitar.",
+        "sources": [
+          {
+            "label": "sammlung-online.salzburgmuseum.at",
+            "url": "https://sammlung-online.salzburgmuseum.at/detail/collection/c6be0c0f-2a40-4ddc-82c4-0e7b1a5113f3"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Bảo tàng Stille Nacht ở Oberndorf kể ca đoàn nhà thờ lặp bốn ô nhịp cuối trong buổi ra mắt, không dẫn nguồn sơ cấp. stillenacht.at chỉ nêu Gruber và Mohr là người trình diễn, và bản kể Gruber 1854 chỉ nói bài được đặt cho hợp xướng. Bản gốc 1818 đã mất nên không kiểm được.",
+        "sources": [
+          {
+            "label": "stille-nacht-museum.at",
+            "url": "https://www.stille-nacht-museum.at/en/silent-nightholy-night/"
+          },
+          {
+            "label": "stillenacht.at",
+            "url": "https://www.stillenacht.at/en/history-of-the-song"
+          },
+          {
+            "label": "stille-nacht-museum.at",
+            "url": "https://www.stille-nacht-museum.at/en/silent-nightholy-night/history/"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng một con chuột gặm ống bễ làm đàn organ hỏng nên phải hát bằng guitar. Bảo tàng Stille Nacht viết rằng chuyện này không đúng; truyện chuột xuất hiện từ năm 1954 (Hertha Pauli), truyện đàn hỏng từ năm 1909. Đàn organ cũ có cần sửa, nhưng việc nó hỏng đêm 24/12/1818 thì không chứng minh được.",
+        "sources": [
+          {
+            "label": "stille-nacht-museum.at",
+            "url": "https://www.stille-nacht-museum.at/en/silent-nightholy-night/history/"
+          },
+          {
+            "label": "salzburgerland.com",
+            "url": "https://www.salzburgerland.com/en/myths-and-legends/"
+          }
+        ]
+      }
+    ]
+  }
+}

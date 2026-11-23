@@ -1,0 +1,307 @@
+{
+ "id": "yule-cat",
+ "format": "A",
+ "input": "assign",
+ "goal": "attribute-claims",
+ "orientation": "both",
+ "title": "Mèo Yule: lời nào của ai",
+ "question": "Bốn nguồn trên mặt bàn đan, sáu lời về Mèo Yule để đặt. Lời nào của nguồn nào, các thẻ cho biết.",
+ "predict": {
+  "prompt": "Trong sách in sớm nhất, Mèo Yule làm gì người không có áo mới?",
+  "options": [
+   "Ăn thịt họ",
+   "Tóm họ",
+   "Dọa rồi tha"
+  ]
+ },
+ "aha": "Sách 1864 chỉ chép «tóm (ăn?)»; mèo ăn trẻ em là lời kể sau. Lời về sách thời trung cổ không nằm trong bốn nguồn.",
+ "history": "yule-cat",
+ "rules": [
+  {
+   "text": "Chạm một mảnh, rồi chạm một nguồn để đặt. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Jón Árnason, Nhà dân tộc học và Hai học giả mỗi nguồn nhận ít nhất một mảnh."
+  },
+  {
+   "text": "Thư viện Quốc gia nhận nhiều nhất một mảnh. Hai học giả nhận nhiều nhất hai mảnh."
+  },
+  {
+   "text": "Kiểm tra chấm cả bốn nguồn một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Jón Árnason",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s2",
+   "label": "Nhà dân tộc học",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s3",
+   "label": "Thư viện Quốc gia",
+   "cap": 1,
+   "min": 0,
+   "lane": "legend",
+   "accepts": [
+    "legend"
+   ]
+  },
+  {
+   "id": "s4",
+   "label": "Hai học giả",
+   "cap": 2,
+   "min": 1
+  }
+ ],
+ "tokens": [
+  {
+   "id": "a",
+   "text": "Tóm ai không có áo mới, hoặc ít nhất lấy phần ăn Giáng Sinh của họ",
+   "status": "fact"
+  },
+  {
+   "id": "c",
+   "text": "Ăn trẻ em chưa kịp có áo mới trước Giáng Sinh",
+   "status": "legend",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://landsbokasafn.is/en/jolin-koma-christmas-arrives-finished/"
+   ],
+   "evidence": [
+    "a beast that, according to folklore, eats children that don’t receive new clothes in time for Christmas"
+   ]
+  },
+  {
+   "id": "d",
+   "text": "Giám sát việc chuẩn bị lễ, để ai cũng xong việc, từ đan áo đến nấu bia",
+   "status": "fact"
+  },
+  {
+   "id": "e",
+   "text": "Sinh ra nhờ chuyện dê Yule, từ Na Uy sang trong hai thế kỷ gần đây",
+   "status": "disputed"
+  },
+  {
+   "id": "f",
+   "text": "Có lẽ cổ hơn nhiều trong tín ngưỡng của người Iceland",
+   "status": "disputed"
+  },
+  {
+   "id": "g",
+   "text": "Đã có mặt trong sách thời trung cổ",
+   "status": "decoy"
+  }
+ ],
+ "bankSeed": 3,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Jón Árnason, tập II, tr. 570",
+   "kind": "record",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://archive.org/details/Islenzkarthjodso000197672v2JonReyk"
+   ],
+   "evidence": [
+    "svo hann tók (át?) þá, eða að minnsta kosti jólarefinn þeirra"
+   ],
+   "text": "Jón Árnason chép «tóm (ăn?)», dấu hỏi là của chính ông. Trang ấy không nêu riêng trẻ em.",
+   "do": [
+    {
+     "op": "at",
+     "t": "a",
+     "s": "s1"
+    },
+    {
+     "op": "notAt",
+     "t": "c",
+     "s": "s1"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "who": "Thư viện Quốc gia",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://landsbokasafn.is/en/jolin-koma-christmas-arrives-finished/"
+   ],
+   "evidence": [
+    "a beast that, according to folklore, eats children that don’t receive new clothes in time for Christmas"
+   ],
+   "text": "Thư viện Quốc gia ghi: theo truyện dân gian, con quái ăn trẻ em không kịp có áo mới trước lễ.",
+   "do": {
+    "op": "at",
+    "t": "c",
+    "s": "s3"
+   }
+  },
+  {
+   "id": "c3",
+   "who": "Hrefna S. Bjartmarsdóttir, nhà dân tộc học",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://www.visindavefur.is/svar.php?id=5511"
+   ],
+   "evidence": [
+    "Að fylgjast með jólaundirbúningi manna og sjá til þess þeir klári öll verk sem vinna þarf fyrir jólin, hvort sem það er að prjóna og vinna fatnað, baka, brugga eða útbúa jólamatinn."
+   ],
+   "text": "Nhà dân tộc học ghi: như nhiều sinh vật Giáng Sinh, Mèo Yule theo dõi việc chuẩn bị lễ, để ai cũng làm xong việc.",
+   "do": {
+    "op": "at",
+    "t": "d",
+    "s": "s2"
+   }
+  },
+  {
+   "id": "c4",
+   "who": "bbl.is, bài của Hrefna S. Bjartmarsdóttir",
+   "kind": "modern",
+   "status": "disputed",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://www.bbl.is/skodun/a-faglegum-notum/jolakotturinn-%E2%80%93-uppruni-hans-aettir-og-hlutverk"
+   ],
+   "evidence": [
+    "Árni Björnsson telur að munnmæli um jólahafurinn hafi borist hingað frá Noregi einhvern tímann á tveimur síðastliðnum öldum",
+    "Guðmundur Ólafsson fornleifafræðingur er þessu ekki sammála og telur líklegt að jólakötturinn sé mun eldri í þjóðtrú okkar Íslendinga."
+   ],
+   "text": "Árni Björnsson cho rằng truyện sinh ra nhờ chuyện dê Yule; Guðmundur Ólafsson không đồng ý: có lẽ cổ hơn. Hai lời chung một bài.",
+   "do": {
+    "op": "same",
+    "t": [
+     "e",
+     "f"
+    ]
+   }
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra của game, từ bài bbl.is (Árni Björnsson, Guðmundur Ólafsson)",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://www.bbl.is/skodun/a-faglegum-notum/jolakotturinn-%E2%80%93-uppruni-hans-aettir-og-hlutverk"
+   ],
+   "evidence": [
+    "Árni Björnsson telur að munnmæli um jólahafurinn hafi borist hingað frá Noregi einhvern tímann á tveimur síðastliðnum öldum",
+    "Guðmundur Ólafsson fornleifafræðingur er þessu ekki sammála og telur líklegt að jólakötturinn sé mun eldri í þjóðtrú okkar Íslendinga."
+   ],
+   "text": "Suy ra: nguồn nào nói mèo đã có mặt trong sách thời trung cổ, nguồn ấy cũng nói truyện có lẽ cổ hơn nhiều.",
+   "do": {
+    "op": "expr",
+    "e": [
+     "or",
+     [
+      "not",
+      [
+       "placed",
+       "g"
+      ]
+     ],
+     [
+      "eq",
+      [
+       "pos",
+       "g"
+      ],
+      [
+       "pos",
+       "f"
+      ]
+     ]
+    ]
+   }
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "a"
+   ],
+   [
+    "d"
+   ],
+   [
+    "c"
+   ],
+   [
+    "e",
+    "f"
+   ]
+  ]
+ ],
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Câu hỏi: lời nào của nguồn nào? Mỗi thẻ cho biết một nguồn ghi gì."
+  },
+  {
+   "tier": 2,
+   "card": "c1",
+   "text": "Đọc thẻ 1: trang sách ấy chép gì về mèo, và không chép gì?"
+  },
+  {
+   "tier": 3,
+   "text": "Có chắc truyện nghe lâu đời thì lâu đời thật?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s3": "c"
+   },
+   "text": "Thẻ 2 đặt một mảnh vào Thư viện Quốc gia. Đặt mảnh ấy vào, rồi đọc lại thẻ 1."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nguồn."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo nghe Quạ Đồn: lời về thời xa xưa nhất cũng có người nói ra, nên mảnh ấy có ô.",
+  "cards": [
+   "c1",
+   "c2",
+   "c3",
+   "c4",
+   "c5"
+  ],
+  "trap": {
+   "s4": [
+    "f",
+    "g"
+   ]
+  },
+  "do": [
+   {
+    "op": "used",
+    "t": "g"
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Sách 1864 chỉ chép «tóm (ăn?)», dấu hỏi là của người chép; mèo ăn trẻ em là lời kể sau.",
+   "Lời đặt mèo vào sách thời trung cổ: bốn nguồn đã mở, không nguồn nào nói thế."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả bốn nguồn một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ },
+ "space": 4050
+}

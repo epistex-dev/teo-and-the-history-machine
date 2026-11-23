@@ -1,0 +1,117 @@
+{
+  "shade": {
+    "offset": [2, 3],
+    "files": [
+      "<part>-shade.svg",
+      "<part>-lit.svg"
+    ],
+    "rule": "Draw <part>-shade at the lit sprite position + (2,3) in world space, below the lit sprite and above everything drawn earlier. Rotate and scale the shade sprite with the part, but never rotate the (2,3) offset. Inside a rotated container, add the offset in world space too (or counter-rotate it by the container angle). Parts without a -shade file cast none. File coordinates: each sprite file has viewBox = bbox, so its top-left sits at bbox[0],bbox[1] of the character frame; pivots are in frame coordinates."
+  },
+  "frame": [0, 0, 400, 424],
+  "units": "Same units as the characters (Teo is 197 tall): draw the machine and the characters at one scale. Ground line y = 420 (frame height 424 leaves room for the +3 shade), body spans x 20..340, the crank reaches x 395.",
+  "parts": {
+    "machine-body": {
+      "bbox": [7, 1, 346, 420],
+      "pivot": [200, 420],
+      "shade": true
+    },
+    "machine-screen": {
+      "bbox": [51, 241, 118, 138],
+      "pivot": [110, 310],
+      "shade": true
+    },
+    "machine-stain": {
+      "bbox": [60, 258, 92, 104],
+      "pivot": [110, 310],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "machine-door": {
+      "bbox": [97, 85, 166, 148],
+      "pivot": [180, 153],
+      "shade": true
+    },
+    "machine-door-l": {
+      "bbox": [121, 97, 60, 112],
+      "pivot": [122, 153],
+      "shade": true
+    },
+    "machine-door-r": {
+      "bbox": [179, 97, 60, 112],
+      "pivot": [238, 153],
+      "shade": true
+    },
+    "machine-dial": {
+      "bbox": [199, 259, 94, 94],
+      "pivot": [246, 306],
+      "shade": true
+    },
+    "machine-needle": {
+      "bbox": [237, 272, 18, 43],
+      "pivot": [246, 306],
+      "shade": false,
+      "rest": {
+        "angle": -30,
+        "pivot": [246, 306]
+      }
+    },
+    "machine-fx-stuck": {
+      "bbox": [282, 260, 29, 37],
+      "pivot": [246, 306],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "machine-crank": {
+      "bbox": [326, 292, 70, 28],
+      "pivot": [340, 306],
+      "shade": true,
+      "rest": {
+        "angle": 60,
+        "pivot": [340, 306]
+      }
+    }
+  },
+  "order": [
+    "machine-body",
+    "machine-screen",
+    "machine-stain",
+    "machine-door",
+    "<cuc-cu slot, clipped to door.hole>",
+    "machine-door-l",
+    "machine-door-r",
+    "machine-dial",
+    "machine-needle",
+    "machine-fx-stuck",
+    "machine-crank"
+  ],
+  "door": {
+    "hole": [122, 98, 116, 110],
+    "perch": [180, 214],
+    "rule": "Cuc Cu root (80,181 in its frame) sits at door.perch when out, at 0.8 of the machine scale. While inside, clip it to door.hole and draw it between machine-door and the leaves; once out, draw it above the whole machine. Open leaves: scaleX 0.22 of machine-door-l / machine-door-r about their pivots (the hinge edges); shade sprite scales the same way and keeps its +(2,3) offset."
+  },
+  "needle": {
+    "pivot": [246, 306],
+    "rest": -30,
+    "stuck": 62,
+    "rule": "Rotate machine-needle about its pivot. Stuck = parked at the stuck angle with machine-fx-stuck shown; shake it a few degrees around that angle."
+  },
+  "screen": {
+    "rect": [60, 250, 100, 120],
+    "note": "The coffee stain sits here; machine-stain is the same 10 x 12 cell grid as bg/ch1-minigame at pitch 10."
+  },
+  "crank": {
+    "hub": [340, 306],
+    "rest": 60,
+    "rule": "Rotate machine-crank about its pivot; the arm is 53 long, so a full turn stays inside the frame."
+  },
+  "states": {
+    "idle": "machine/idle.svg",
+    "stained": "machine/stained.svg",
+    "door-open": "machine/door-open.svg",
+    "stuck": "machine/stuck.svg"
+  }
+}

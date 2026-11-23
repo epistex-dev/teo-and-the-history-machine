@@ -1,0 +1,82 @@
+{
+  "id": "befana",
+  "status": "verified",
+  "source": "research/m0b-act-2.md",
+  "stamp": "TRUYỀN THUYẾT",
+  "card": [
+    "Người ta kể rằng bà Befana bận dọn nhà nên không đi cùng các nhà chiêm tinh, rồi đi tìm Chúa Hài Đồng mãi.",
+    "Đó là truyện dân gian, chưa tìm thấy bản ghi sớm nhất của truyện.",
+    "Tên Befana đến từ chữ Epifania, nghĩa là Lễ Hiển Linh."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Tên Befana đến từ Epifania (Lễ Hiển Linh); các dạng befanie và befania được chép là tên của lễ này ở Florence, trong văn bản mà TLIO ghi mốc trước năm 1284 và trước năm 1347. Dạng Bitfanie (Siena, 1048) và befanias (Arezzo, 1211, nghĩa “quà nhân Lễ Hiển Linh”) trong văn bản La-tinh gắn với lễ ấy.",
+        "sources": [
+          {
+            "label": "tlio.ovi.cnr.it",
+            "url": "https://tlio.ovi.cnr.it/voci/005834.htm"
+          },
+          {
+            "label": "treccani.it",
+            "url": "https://www.treccani.it/vocabolario/befana/"
+          }
+        ]
+      },
+      {
+        "text": "Ở Ý, Befana là bà lão mang quà cho trẻ ngoan đêm Lễ Hiển Linh. Ngày xưa ở Florence người ta làm hình nộm bằng giẻ hoặc xơ đặt ở cửa sổ.",
+        "sources": [
+          {
+            "label": "treccani.it",
+            "url": "https://www.treccani.it/enciclopedia/befana_(Enciclopedia-Italiana)/"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng các nhà chiêm tinh gặp một bà lão đang quét nhà và mời đi cùng; bà hẹn đi sau, rồi suốt đời đi tìm Chúa Hài Đồng. Các dị bản khác nhau ở chi tiết lời hẹn. Chưa tìm thấy bản ghi sớm nhất của truyện.",
+        "sources": [
+          {
+            "label": "kids.britannica.com",
+            "url": "https://kids.britannica.com/scholars/article/Befana/14117"
+          },
+          {
+            "label": "scholarworks.iu.edu",
+            "url": "https://scholarworks.iu.edu/journals/index.php/jfrr/article/view/40586"
+          }
+        ]
+      }
+    ],
+    "tradition": [
+      {
+        "text": "Theo Tin Mừng Mátthêu 2,1-12: “có mấy nhà chiêm tinh từ phương Đông đến Giê-ru-sa-lem”. Kinh Thánh không nêu số người và không có bà Befana; con số “Ba Vua” là truyền thống về sau.",
+        "sources": [
+          {
+            "label": "hdgmvietnam.com",
+            "url": "https://hdgmvietnam.com/chi-tiet/le-chua-hien-linh-ba-vua-cac-dao-si-hay-cac-nha-chiem-tinh--54255"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Nguồn gốc của nhân vật còn tranh cãi. Từ điển Treccani gọi Befana là “nhân cách hóa của Lễ Hiển Linh”. Một số sử gia cho rằng bà là bản Kitô giáo của một nữ thần La Mã cổ tên Strenia hoặc Bestrina (Britannica Kids), và các học giả đầu thế kỷ 20 nối hình nộm bị đốt với tục pháp thuật tiền Kitô giáo (Enciclopedia Italiana, 1930). Chưa bên nào được chứng minh.",
+        "sources": [
+          {
+            "label": "treccani.it",
+            "url": "https://www.treccani.it/vocabolario/befana/"
+          },
+          {
+            "label": "kids.britannica.com",
+            "url": "https://kids.britannica.com/scholars/article/Befana/14117"
+          },
+          {
+            "label": "treccani.it",
+            "url": "https://www.treccani.it/enciclopedia/befana_(Enciclopedia-Italiana)/"
+          }
+        ]
+      }
+    ]
+  }
+}

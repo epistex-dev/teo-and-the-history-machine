@@ -1,0 +1,102 @@
+{
+  "id": "ban1647",
+  "status": "verified",
+  "source": "research/m0b-act-2.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Tháng 6/1647, hai viện Nghị viện Anh ra sắc lệnh bỏ các ngày lễ, kể cả Giáng Sinh, và cho học trò, thợ học việc, người hầu nghỉ vào thứ Ba thứ hai mỗi tháng.",
+    "Nhiều người không tuân và có bạo loạn đòi giữ lễ; năm 1660 lễ được khôi phục.",
+    "Sắc lệnh này không do Cromwell ban hành."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Sắc lệnh ghi ngày 8/6/1647 của hai viện Nghị viện nói các lễ Giáng Sinh, Phục Sinh, Hiện Xuống và các ngày lễ khác “không còn được giữ” ở Anh và xứ Wales. Một nguồn khác ghi ngày 10/6.",
+        "sources": [
+          {
+            "label": "british-history.ac.uk",
+            "url": "https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/p954"
+          },
+          {
+            "label": "digital.nls.uk",
+            "url": "https://digital.nls.uk/broadsides-from-the-crawford-collection/archive/144784128"
+          },
+          {
+            "label": "historyextra.com",
+            "url": "https://www.historyextra.com/period/stuart/no-christmas-under-cromwell-the-puritan-assault-on-christmas-during-the-1640s-and-1650s/"
+          }
+        ]
+      },
+      {
+        "text": "Thay vào đó, học trò, thợ học việc và người hầu được nghỉ vào thứ Ba thứ hai mỗi tháng, nếu chủ cho phép.",
+        "sources": [
+          {
+            "label": "british-history.ac.uk",
+            "url": "https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/p954"
+          }
+        ]
+      },
+      {
+        "text": "Nhiều người không tuân: có bạo loạn ủng hộ Giáng Sinh ở Bury St Edmunds, Norwich, Ipswich, London và Canterbury.",
+        "sources": [
+          {
+            "label": "historyextra.com",
+            "url": "https://www.historyextra.com/period/stuart/no-christmas-under-cromwell-the-puritan-assault-on-christmas-during-the-1640s-and-1650s/"
+          },
+          {
+            "label": "historyofparliament.com",
+            "url": "https://historyofparliament.com/2013/12/22/christmas-during-the-civil-war/"
+          }
+        ]
+      },
+      {
+        "text": "Năm 1660, khi vua Charles II trở lại, lễ Giáng Sinh được khôi phục.",
+        "sources": [
+          {
+            "label": "nam.ac.uk",
+            "url": "https://www.nam.ac.uk/explore/war-christmas"
+          }
+        ]
+      },
+      {
+        "text": "Cromwell không ban hành sắc lệnh 1647: ông làm Lord Protector từ tháng 12/1653 và sau đó ủng hộ việc thi hành các biện pháp này. “Cromwell cấm Giáng Sinh” là cách nói gọn bỏ qua việc Nghị viện làm trước ông.",
+        "sources": [
+          {
+            "label": "nam.ac.uk",
+            "url": "https://www.nam.ac.uk/explore/war-christmas"
+          },
+          {
+            "label": "historicengland.org.uk",
+            "url": "https://historicengland.org.uk/listing/what-is-designation/heritage-highlights/did-oliver-cromwell-really-ban-christmas/"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Holly, ivy và carol: Bảo tàng Quân đội Quốc gia Anh viết rằng cây xanh trang trí bị cấm và hát carol bị cấm; văn bản sắc lệnh 1647 không nhắc tới những điều đó. Sổ tay chỉ ghi cả hai phía, không khẳng định.",
+        "sources": [
+          {
+            "label": "nam.ac.uk",
+            "url": "https://www.nam.ac.uk/explore/war-christmas"
+          },
+          {
+            "label": "british-history.ac.uk",
+            "url": "https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/p954"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng Cromwell một mình cấm Giáng Sinh. Đây là niềm tin phổ biến, không đúng với trình tự thực.",
+        "sources": [
+          {
+            "label": "historicengland.org.uk",
+            "url": "https://historicengland.org.uk/listing/what-is-designation/heritage-highlights/did-oliver-cromwell-really-ban-christmas/"
+          }
+        ]
+      }
+    ]
+  }
+}

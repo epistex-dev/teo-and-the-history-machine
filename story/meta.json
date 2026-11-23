@@ -1,0 +1,262 @@
+{
+  "acts": [
+    {
+      "n": 1,
+      "title": "Cội nguồn"
+    },
+    {
+      "n": 2,
+      "title": "Trung Cổ đến cận đại"
+    },
+    {
+      "n": 3,
+      "title": "Dân gian và thế kỷ 19"
+    },
+    {
+      "n": 4,
+      "title": "Hiện đại"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "intro",
+      "title": "Mở đầu",
+      "act": 1,
+      "label": null,
+      "dagger": false,
+      "year": null,
+      "yearText": null,
+      "moc": null,
+      "unknown": null,
+      "stamp": null
+    },
+    {
+      "id": "saturnalia",
+      "title": "Saturnalia",
+      "act": 1,
+      "label": "Cổ",
+      "dagger": false,
+      "year": -50,
+      "yearText": "Thế kỷ 1 TCN",
+      "moc": "ít nhất từ thế kỷ 1 TCN (thời Cicero)",
+      "unknown": null,
+      "stamp": "TRANH CÃI"
+    },
+    {
+      "id": "yule",
+      "title": "Lễ Yule",
+      "act": 1,
+      "label": "KT",
+      "dagger": true,
+      "year": 725,
+      "yearText": "Khoảng 725",
+      "moc": "khoảng 725",
+      "unknown": null,
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "mistletoe",
+      "title": "Tầm gửi và Baldur",
+      "act": 1,
+      "label": "DG",
+      "dagger": true,
+      "year": 1784,
+      "yearText": "1784",
+      "moc": "1784 (ghi chép đầu tiên được biết)",
+      "unknown": null,
+      "stamp": "TRUYỀN THUYẾT"
+    },
+    {
+      "id": "bethlehem",
+      "title": "Bêlem",
+      "act": 1,
+      "label": "KT",
+      "dagger": false,
+      "year": 90,
+      "yearText": "Cuối thế kỷ 1",
+      "moc": "cuối thế kỷ 1 (thời viết Tin Mừng)",
+      "unknown": null,
+      "stamp": "THEO KINH THÁNH"
+    },
+    {
+      "id": "dec25",
+      "title": "Vì sao là 25/12",
+      "act": 1,
+      "label": "KT",
+      "dagger": false,
+      "year": 354,
+      "yearText": "354",
+      "moc": "354 (danh sách được cho là có từ 336)",
+      "unknown": null,
+      "stamp": "TRANH CÃI"
+    },
+    {
+      "id": "nicholas",
+      "title": "Thánh Nicôla",
+      "act": 1,
+      "label": "KT",
+      "dagger": false,
+      "year": 700,
+      "yearText": "Khoảng 700",
+      "moc": "khoảng 700 (tiểu sử còn lại sớm nhất; niên đại tranh cãi 700; 710–720; 814–842/843)",
+      "unknown": null,
+      "stamp": "TRUYỀN THUYẾT"
+    },
+    {
+      "id": "carol",
+      "title": "Hát carol",
+      "act": 2,
+      "label": "KT",
+      "dagger": false,
+      "year": 1250,
+      "yearText": "Thế kỷ 13",
+      "moc": "ít nhất từ thế kỷ 13",
+      "unknown": null,
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "krampus",
+      "title": "Krampus",
+      "act": 2,
+      "label": "DG",
+      "dagger": true,
+      "year": 1582,
+      "yearText": "1582",
+      "moc": "1582 (săn Percht, chưa gọi là Krampus)",
+      "unknown": null,
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "befana",
+      "title": "Befana",
+      "act": 2,
+      "label": "DG",
+      "dagger": true,
+      "year": null,
+      "yearText": null,
+      "moc": "chưa rõ (chưa tìm thấy bản ghi sớm nhất của truyện)",
+      "unknown": "chưa tìm thấy bản ghi sớm nhất của truyện",
+      "stamp": "TRUYỀN THUYẾT"
+    },
+    {
+      "id": "tree",
+      "title": "Cây thông Strasbourg 1605",
+      "act": 2,
+      "label": "DG",
+      "dagger": false,
+      "year": 1605,
+      "yearText": "1605",
+      "moc": "1605 (nguồn khác ghi 1604)",
+      "unknown": null,
+      "stamp": "TRANH CÃI"
+    },
+    {
+      "id": "ban1647",
+      "title": "Lệnh cấm 1647",
+      "act": 2,
+      "label": "DG",
+      "dagger": false,
+      "year": 1647,
+      "yearText": "1647",
+      "moc": "1647",
+      "unknown": null,
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "silent-night",
+      "title": "Stille Nacht 1818",
+      "act": 2,
+      "label": "DG",
+      "dagger": false,
+      "year": 1818,
+      "yearText": "1818",
+      "moc": "1818",
+      "unknown": null,
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "yule-lads",
+      "title": "Yule Lads",
+      "act": 3,
+      "label": "DG",
+      "dagger": false,
+      "year": 1850,
+      "yearText": "Khoảng 1850",
+      "moc": "khoảng 1850",
+      "unknown": null,
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "yule-cat",
+      "title": "Mèo Yule",
+      "act": 3,
+      "label": "DG",
+      "dagger": true,
+      "year": 1864,
+      "yearText": "1864",
+      "moc": "1864",
+      "unknown": null,
+      "stamp": "TRUYỀN THUYẾT"
+    },
+    {
+      "id": "santa-ny",
+      "title": "New York 1823",
+      "act": 3,
+      "label": "DG",
+      "dagger": false,
+      "year": 1823,
+      "yearText": "1823",
+      "moc": "1823",
+      "unknown": null,
+      "stamp": "TRANH CÃI"
+    },
+    {
+      "id": "caga-tio",
+      "title": "Caga Tió",
+      "act": 3,
+      "label": "DG",
+      "dagger": true,
+      "year": 1886,
+      "yearText": "1886",
+      "moc": "thế kỷ 19 (bài hát in 1886)",
+      "unknown": null,
+      "stamp": "TRANH CÃI"
+    },
+    {
+      "id": "dickens",
+      "title": "Dickens 1843",
+      "act": 3,
+      "label": "DG",
+      "dagger": false,
+      "year": 1843,
+      "yearText": "1843",
+      "moc": "1843",
+      "unknown": null,
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "brooms",
+      "title": "Đêm Giáng Sinh nguy hiểm",
+      "act": 3,
+      "label": "DG",
+      "dagger": true,
+      "year": null,
+      "yearText": null,
+      "moc": "chưa rõ (nguồn chỉ nói đêm nguy hiểm, không có bản ghi có năm)",
+      "unknown": "nguồn chỉ nói đêm nguy hiểm, không có bản ghi có năm",
+      "stamp": "SỰ THẬT"
+    },
+    {
+      "id": "ending",
+      "title": "Kết",
+      "act": 4,
+      "label": null,
+      "dagger": false,
+      "year": null,
+      "yearText": null,
+      "moc": null,
+      "unknown": null,
+      "stamp": null
+    }
+  ]
+}

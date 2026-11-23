@@ -1,0 +1,303 @@
+{
+  "id": "carol",
+  "format": "T",
+  "input": "order",
+  "goal": "date-records",
+  "orientation": "both",
+  "title": "Carol Anh: bản ghi nào có trước",
+  "question": "Bốn nấc trên trục năm, nấc 1 xưa nhất. Sáu mảnh: thẻ cho biết mảnh nào vào nấc nào, và mảnh nào không có nấc.",
+  "predict": {
+    "prompt": "Carol Anh xưa nhất còn lại: người ta hát chúng ở đâu?",
+    "options": [
+      "Nơi thờ phụng",
+      "Nơi chung vui",
+      "Nơi triều đình"
+    ]
+  },
+  "aha": "Rất khó có chuyện carol chép tay được soạn cho nhà thờ, nên mảnh ấy không có nấc.",
+  "history": "carol",
+  "rules": [
+    {
+      "text": "Mỗi mảnh vào nấc lúc có bản ghi của nó; số nhỏ là xưa hơn, chung nấc là cùng lúc."
+    },
+    {
+      "text": "Nấc nào cũng cần ít nhất một mảnh. Mảnh có thể không đặt."
+    },
+    {
+      "text": "Mỗi nấc nhận nhiều nhất hai mảnh."
+    },
+    {
+      "text": "Chạm một mảnh, rồi chạm một nấc để đặt."
+    },
+    {
+      "text": "Kiểm tra chấm cả bốn nấc một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Nấc 1 (xưa nhất)",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s2",
+      "label": "Nấc 2",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s3",
+      "label": "Nấc 3",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s4",
+      "label": "Nấc 4 (mới nhất)",
+      "cap": 2,
+      "min": 1
+    }
+  ],
+  "tokens": [
+    {
+      "id": "a",
+      "text": "Carol trong bản chép tay",
+      "status": "fact"
+    },
+    {
+      "id": "b",
+      "text": "Boar's Head trên trang in",
+      "status": "fact"
+    },
+    {
+      "id": "c",
+      "text": "Herrick cho in một carol",
+      "status": "fact"
+    },
+    {
+      "id": "e",
+      "text": "Stainer đưa carol vào lễ ở St Paul's",
+      "status": "fact"
+    },
+    {
+      "id": "g",
+      "text": "Carol về lễ khác hoặc thế tục",
+      "status": "fact"
+    },
+    {
+      "id": "f",
+      "text": "Carol cổ nhất viết cho nhà thờ",
+      "status": "decoy"
+    }
+  ],
+  "bankSeed": 1,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Cathedral Music Trust",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md §2.1 C2, C3, C4, C9",
+      "url": [
+        "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+      ],
+      "evidence": [
+        "The earliest carols (there are about 500 or so) are preserved in manuscripts from the 13th to the 15th centuries."
+      ],
+      "text": "Carol Anh xưa nhất còn lại nằm trong bản chép tay. Mảnh ấy ở nấc 1.",
+      "do": {
+        "op": "at",
+        "t": "a",
+        "s": "s1"
+      }
+    },
+    {
+      "id": "c2",
+      "who": "Suy ra từ Cathedral Music Trust",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md §2.1 C2, C3, C4, C9",
+      "url": [
+        "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+      ],
+      "evidence": [
+        "around half the extant early carols from England celebrate different religious festivals or have entirely secular texts"
+      ],
+      "text": "Khoảng nửa carol chép tay nói về lễ khác hoặc thế tục. Chúng cùng nấc với bản chép tay.",
+      "do": {
+        "op": "same",
+        "t": [
+          "g",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "c3",
+      "who": "Suy ra từ Cathedral Music Trust",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md §2.1 C2, C3, C4, C9",
+      "url": [
+        "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+      ],
+      "evidence": [
+        "It was the first English carol ever to appear in print (published by Wynkyn de Worde in 1521)",
+        "published during the Civil War by the Royalist poet Robert Herrick in a collection entitled His Noble Numbers: or, His Pious Pieces in 1647"
+      ],
+      "text": "Boar's Head là carol Anh in lần đầu. Herrick cho in carol không sớm hơn nó.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "ge",
+          [
+            "pos",
+            "c"
+          ],
+          [
+            "pos",
+            "b"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c4",
+      "who": "Suy ra từ Cathedral Music Trust",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md §2.1 C2, C3, C4, C9",
+      "url": [
+        "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+      ],
+      "evidence": [
+        "published during the Civil War by the Royalist poet Robert Herrick in a collection entitled His Noble Numbers: or, His Pious Pieces in 1647",
+        "John Stainer included carols in Choral Evensong at St Paul’s in 1878"
+      ],
+      "text": "Stainer đưa carol vào lễ ở St Paul's, sau Herrick.",
+      "do": {
+        "op": "before",
+        "t": [
+          "c",
+          "e"
+        ]
+      }
+    },
+    {
+      "id": "c5",
+      "who": "Suy ra từ Cathedral Music Trust",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md §2.1 C2, C3, C4, C9",
+      "url": [
+        "https://www.cathedralmusictrust.org.uk/discover/a-history-of-christmas-carols/"
+      ],
+      "evidence": [
+        "It is highly unlikely that any of these were conceived to be performed in church."
+      ],
+      "text": "Rất khó có chuyện carol chép tay viết cho nhà thờ. Nếu có chỗ, nó ở nấc bản chép tay.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "not",
+            [
+              "placed",
+              "f"
+            ]
+          ],
+          [
+            "eq",
+            [
+              "pos",
+              "f"
+            ],
+            [
+              "pos",
+              "a"
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    [
+      [
+        "a",
+        "g"
+      ],
+      [
+        "b"
+      ],
+      [
+        "c"
+      ],
+      [
+        "e"
+      ]
+    ]
+  ],
+  "space": 2880,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mỗi mảnh vào nấc nào, hay không vào nấc nào?"
+    },
+    {
+      "tier": 2,
+      "card": "c2",
+      "text": "Đọc thẻ 2 trước: thẻ nói nửa carol ấy cùng nấc với mảnh nào?"
+    },
+    {
+      "tier": 3,
+      "text": "Một câu Quạ Đồn nói chắc. Thẻ nào nói về câu ấy?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s1": "a"
+      },
+      "text": "Thẻ 1 đặt carol trong bản chép tay vào nấc 1. Đặt mảnh ấy vào, rồi đọc thẻ 2."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nấc."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Quạ Đồn nói: carol Anh xưa nhất viết cho nhà thờ.",
+    "cards": [
+      "c2",
+      "c5"
+    ],
+    "trap": {
+      "s1": [
+        "a",
+        "f"
+      ]
+    },
+    "do": [
+      {
+        "op": "same",
+        "t": [
+          "f",
+          "a"
+        ]
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Sự thật: carol Anh còn lại, ít nhất từ thế kỷ 13, nằm trong bản chép tay.",
+      "Nhiều khả năng chúng hát ở dịp chung vui, không soạn cho nhà thờ."
+    ],
+    "label": "SỰ THẬT"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả bốn nấc một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "tree",
+  "status": "verified",
+  "source": "research/m0b-act-2.md",
+  "stamp": "TRANH CÃI",
+  "card": [
+    "Một ghi chép tay ẩn danh ở Strasbourg, viết khoảng 1604–1605, kể rằng dịp Giáng Sinh người ta dựng cây thông trong phòng, treo hoa hồng giấy, táo, bánh xốp mỏng và đường.",
+    "Đây là một trong những ghi chép sớm nhất, nhưng ‘đầu tiên’ còn tranh cãi.",
+    "Chuyện Luther thắp nến lên cây chỉ là truyền thuyết."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Một người dân Strasbourg không rõ tên chép lại các tục lệ trong thành, trong bản chép tay mang nhan đề “Memorabilia quaedam Argentorati observata”: “Dịp Giáng Sinh người ta dựng cây thông trong phòng, treo hoa hồng cắt từ giấy nhiều màu, táo, bánh xốp mỏng (Oblaten), kim tuyến mỏng, đường.” Bản chép rách nên đoạn sau không đọc được.",
+        "sources": [
+          {
+            "label": "en.wikisource.org",
+            "url": "https://en.wikisource.org/wiki/Folk-Lore/Volume_3/German_Christmas_and_the_Christmas-Tree"
+          },
+          {
+            "label": "de.wikisource.org",
+            "url": "https://de.wikisource.org/wiki/Noch_einmal_auf_den_Spuren_des_Weihnachtsbaums"
+          }
+        ]
+      },
+      {
+        "text": "Bản gốc đã mất; người ta biết nó qua các bản chép in, có khác nhau về năm, chính tả và cách hiểu. Năm ghi là 1604 hoặc 1605.",
+        "sources": [
+          {
+            "label": "d-nb.info",
+            "url": "https://d-nb.info/1077702078/34"
+          }
+        ]
+      },
+      {
+        "text": "Không có nguồn nào cho thấy cây này có nến; các nguồn nêu mốc nến sớm nhất khác nhau: 1611 (Silesia), khoảng 1660 (Hannover). Thư năm 1708 của Elisabeth Charlotte nhắc nến nhỏ gắn trên một cành hoàng dương, không phải cây thông. Nến phổ biến mãi thế kỷ 18.",
+        "sources": [
+          {
+            "label": "wissenschaftsjahr.de",
+            "url": "https://www.wissenschaftsjahr.de/2022/fragen/antworten/detailansicht/woher-kommt-die-tradition-mit-dem-weihnachtsbaum.html"
+          },
+          {
+            "label": "waldwissen.net",
+            "url": "https://www.waldwissen.net/de/wald-und-mensch/forstgeschichte/geschichte-des-weihnachtsbaumes"
+          },
+          {
+            "label": "yalebooks.yale.edu",
+            "url": "https://yalebooks.yale.edu/2015/12/22/inventing-the-christmas-tree/"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng Martin Luther là người đầu tiên thắp nến trên cây thông. Không có cây Giáng Sinh nào được chứng minh trong các tác phẩm của Luther; hình ảnh này phổ biến từ một bức tranh minh họa năm 1843.",
+        "sources": [
+          {
+            "label": "blog.sbb.berlin",
+            "url": "https://blog.sbb.berlin/luther-als-erfinder-des-weihnachtsbaums-eine-interpretation-des-19-jahrhunderts/"
+          },
+          {
+            "label": "yalebooks.yale.edu",
+            "url": "https://yalebooks.yale.edu/2015/12/22/inventing-the-christmas-tree/"
+          }
+        ]
+      },
+      {
+        "text": "Người ta kể rằng cây Giáng Sinh bắt đầu ở Riga hoặc Tallinn. Đó là câu chuyện các sử gia thế kỷ 19 dựng lên.",
+        "sources": [
+          {
+            "label": "npr.org",
+            "url": "https://www.npr.org/2016/12/23/506759031/who-first-decorated-the-christmas-tree-historian-says-neither-latvia-or-estonia"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "“Đầu tiên”: một phía cho là Sélestat 1521; phía khác dẫn sổ sách Strasbourg 1492 (mua 9 cây cho 9 giáo xứ, nhân dịp năm mới) hoặc Rougemont 1340 (cây rừng cho nhà thờ dịp Giáng Sinh); các nhà sử học còn chia rẽ về việc cây trong nhà hội phường có phải là tục Giáng Sinh hay không. Bản Strasbourg 1604–1605 được dẫn nhiều vì là mô tả cây dựng trong nhà ở.",
+        "sources": [
+          {
+            "label": "wissenschaftsjahr.de",
+            "url": "https://www.wissenschaftsjahr.de/2022/fragen/antworten/detailansicht/woher-kommt-die-tradition-mit-dem-weihnachtsbaum.html"
+          },
+          {
+            "label": "savoirs.unistra.fr",
+            "url": "https://savoirs.unistra.fr/eclairage/lhistoire-du-sapin-de-noel-entre-religion-patriotisme-et-tradition-familiale"
+          },
+          {
+            "label": "d-nb.info",
+            "url": "https://d-nb.info/1077702078/34"
+          }
+        ]
+      }
+    ]
+  }
+}

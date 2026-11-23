@@ -1,0 +1,349 @@
+{
+  "id": "bethlehem",
+  "format": "D",
+  "input": "assign",
+  "goal": "find-in-text",
+  "orientation": "both",
+  "title": "Bức tranh Giáng Sinh qua các thế kỷ",
+  "question": "Sáu thế kỷ trên bàn, sáu mảnh của bức tranh Giáng Sinh. Mỗi mảnh thuộc thế kỷ mà các nguồn trên thẻ đồng ý.",
+  "predict": {
+    "prompt": "Bức tranh Giáng Sinh quen thuộc: các nét của nó có từ khi nào?",
+    "options": [
+      "Tất cả đã có trong hai bản Tin Mừng",
+      "Thêm dần qua vài thế kỷ",
+      "Phần lớn thêm vào thời Trung Cổ"
+    ]
+  },
+  "aha": "Bức tranh Giáng Sinh quen thuộc lớn dần qua nhiều thế kỷ, từng nét một, sau hai bản Tin Mừng.",
+  "history": "bethlehem",
+  "rules": [
+    {
+      "text": "Mỗi mảnh đặt vào thế kỷ mà các nguồn trên thẻ đồng ý. Nguồn không đồng ý thì mảnh để ngoài."
+    },
+    {
+      "text": "Mỗi thế kỷ nhận nhiều nhất hai mảnh."
+    },
+    {
+      "text": "Chạm một mảnh, rồi chạm một thế kỷ để đặt. Mảnh có thể không đặt."
+    },
+    {
+      "text": "Kiểm tra chấm cả sáu thế kỷ một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "th1",
+      "label": "Thế kỷ 1",
+      "cap": 2
+    },
+    {
+      "id": "th2",
+      "label": "Thế kỷ 2",
+      "cap": 2
+    },
+    {
+      "id": "th3",
+      "label": "Thế kỷ 3",
+      "cap": 2
+    },
+    {
+      "id": "th4",
+      "label": "Thế kỷ 4",
+      "cap": 2
+    },
+    {
+      "id": "th5",
+      "label": "Thế kỷ 5",
+      "cap": 2
+    },
+    {
+      "id": "th8",
+      "label": "Thế kỷ 8",
+      "cap": 2
+    }
+  ],
+  "tokens": [
+    {
+      "id": "k",
+      "text": "Lễ Hiển Linh được nhắc đến",
+      "status": "fact"
+    },
+    {
+      "id": "d",
+      "text": "Hình Chúa Hài Đồng trong máng cỏ, bên bò và lừa",
+      "status": "fact"
+    },
+    {
+      "id": "t",
+      "text": "Con số ba nhà chiêm tinh",
+      "status": "disputed"
+    },
+    {
+      "id": "a",
+      "text": "Chuyện nơi sinh là một cái hang",
+      "status": "fact"
+    },
+    {
+      "id": "c",
+      "text": "Ý các nhà chiêm tinh là vua",
+      "status": "fact"
+    },
+    {
+      "id": "b",
+      "text": "Hình các nhà chiêm tinh",
+      "status": "fact"
+    }
+  ],
+  "bankSeed": 24,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Justinô, Đối thoại với Trypho 78",
+      "kind": "record",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.bibliatheo.com/texts/dialogue-with-trypho/dialogue-with-trypho/78",
+        "https://www.newadvent.org/cathen/04488c.htm"
+      ],
+      "evidence": [
+        "he took up his quarters in a certain cave near the village",
+        "St. Justin, who died a martyr in 165, says"
+      ],
+      "text": "Justinô, mất năm 165, kể Đức Maria sinh Chúa Hài Đồng trong hang gần làng.",
+      "do": [
+        {
+          "op": "at",
+          "t": "a",
+          "s": "th2"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "who": "Suy ra từ HĐGMVN và BAR",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.biblicalarchaeology.org/daily/biblical-topics/new-testament/witnessing-the-divine/",
+        "https://hdgmvietnam.com/chi-tiet/le-chua-hien-linh-ba-vua-cac-dao-si-hay-cac-nha-chiem-tinh--54255"
+      ],
+      "evidence": [
+        "Gốc gác hoàng tộc của các nhà chiêm tinh xuất hiện vào đầu thế kỷ thứ 3, từ ông Tertullianô",
+        "dated to the mid-third century, appears above an arch in the Catacomb of Priscilla"
+      ],
+      "text": "Ý “vua”: Tertullianô, sau thế kỷ 1. Theo BAR, hình Priscilla cùng thế kỷ với ý ấy.",
+      "do": [
+        {
+          "op": "notAt",
+          "t": "c",
+          "s": "th1"
+        },
+        {
+          "op": "same",
+          "t": [
+            "b",
+            "c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "who": "Yale ISM Review; BAR",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.ismreview.yale.edu/the-magi-and-the-manger-imaging-christmas-in-ancient-art-and-ritual",
+        "https://www.biblicalarchaeology.org/daily/biblical-topics/new-testament/witnessing-the-divine/"
+      ],
+      "evidence": [
+        "the fourth century when the Lukan crib or manger was represented for the first time",
+        "accompanied only by the ox and ass",
+        "The East considers the Magi almost as Kings.",
+        "The magi were identified as these kings of “all nations”",
+        "In art, the adoration of the magi appeared earlier and far more frequently than any other scene of Jesus' birth and infancy, including images of the babe in a manger"
+      ],
+      "text": "Hình Chúa Hài Đồng trong máng cỏ, bên bò và lừa, hiện ra ở thế kỷ 4. Hình nhà chiêm tinh, ý “vua” có trước.",
+      "do": [
+        {
+          "op": "at",
+          "t": "d",
+          "s": "th4"
+        },
+        {
+          "op": "before",
+          "t": [
+            "b",
+            "d"
+          ]
+        },
+        {
+          "op": "before",
+          "t": [
+            "c",
+            "d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "who": "Catholic Encyclopedia",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://newadvent.org/cathen/05504c.htm"
+      ],
+      "evidence": [
+        "the first actual reference to the ecclesiastical feast of the Epiphany (Ammianus Marcellinus, XXI, ii), in 361"
+      ],
+      "text": "Catholic Encyclopedia ghi: lễ Hiển Linh của Giáo hội được nhắc sớm nhất năm 361.",
+      "do": [
+        {
+          "op": "at",
+          "t": "k",
+          "s": "th4"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "who": "Suy ra từ BAR và HĐGMVN",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.biblicalarchaeology.org/daily/biblical-topics/new-testament/witnessing-the-divine/",
+        "https://hdgmvietnam.com/chi-tiet/le-chua-hien-linh-ba-vua-cac-dao-si-hay-cac-nha-chiem-tinh--54255",
+        "https://www.ismreview.yale.edu/the-magi-and-the-manger-imaging-christmas-in-ancient-art-and-ritual"
+      ],
+      "evidence": [
+        "By the second century, they were identified as three",
+        "chính Origênê là người đầu tiên đặt con số của các nhà chiêm tinh là ba"
+      ],
+      "text": "Số ba: BAR cùng thế kỷ với chuyện hang; HĐGMVN, với ý “vua”. Nếu mảnh có chỗ, cả hai nguồn phải đồng ý.",
+      "do": [
+        {
+          "op": "expr",
+          "e": [
+            "or",
+            [
+              "not",
+              [
+                "placed",
+                "t"
+              ]
+            ],
+            [
+              "and",
+              [
+                "eq",
+                [
+                  "pos",
+                  "t"
+                ],
+                [
+                  "pos",
+                  "a"
+                ]
+              ],
+              [
+                "eq",
+                [
+                  "pos",
+                  "t"
+                ],
+                [
+                  "pos",
+                  "c"
+                ]
+              ]
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "solutions": [
+    [
+      [],
+      [
+        "a"
+      ],
+      [
+        "b",
+        "c"
+      ],
+      [
+        "d",
+        "k"
+      ],
+      [],
+      []
+    ]
+  ],
+  "space": 88567,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mỗi mảnh thuộc thế kỷ nào, theo các thẻ?"
+    },
+    {
+      "tier": 2,
+      "card": "c3",
+      "text": "Đọc thẻ 3 trước: mảnh nào thẻ ấy đặt vào một thế kỷ?"
+    },
+    {
+      "tier": 3,
+      "text": "Bức tranh quen thuộc có đủ nét trong hai bản Tin Mừng?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "th4": "d"
+      },
+      "text": "Thẻ 3 đặt hình bò và lừa ở thế kỷ 4. Đặt mảnh ấy vào, rồi đọc thẻ 2."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả sáu thế kỷ."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: cảnh máng cỏ quen thuộc, cả bò và lừa, đã nằm trong hai bản Tin Mừng.",
+    "cards": [
+      "c3"
+    ],
+    "trap": {
+      "th1": "d",
+      "th2": "a",
+      "th3": [
+        "b",
+        "c"
+      ],
+      "th4": "k"
+    },
+    "do": [
+      {
+        "op": "at",
+        "t": "d",
+        "s": "th1"
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Chuyện hang sinh được ghi từ thế kỷ 2, hình các nhà chiêm tinh từ thế kỷ 3.",
+      "Hình bò và lừa từ thế kỷ 4, lễ Hiển Linh năm 361; ba nguồn không cùng nêu một thế kỷ cho con số ba."
+    ],
+    "label": "SỰ THẬT"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả sáu thế kỷ một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  }
+}

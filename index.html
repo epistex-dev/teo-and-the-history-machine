@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ece2c8" />
+    <title>Tèo và Cỗ máy Lịch sử</title>
+    <meta name="description" content="Truyện tương tác kể Giáng Sinh từ đâu ra, từng chặng một, có kiểm chứng nguồn." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tèo và Cỗ máy Lịch sử" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="Tèo và Cỗ máy Lịch sử" />
+    <meta property="og:description" content="Giáng Sinh từ đâu ra? Tèo và Cúc Cu đi tìm qua 20 chặng; điều gì có nguồn mới chép vào Sổ nguồn." />
+    <meta property="og:image" content="https://teo-co-may-lich-su.pages.dev/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tèo đứng cạnh Cỗ máy Lịch sử trong Phòng Hồ sơ Cực Bắc" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://teo-co-may-lich-su.pages.dev/og.png" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="bar-title">
+        <h1>Tèo và Cỗ máy Lịch sử</h1>
+        <p id="status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="bar-actions">
+        <button type="button" id="log-open" class="bar-btn" aria-label="Xem lại thoại">Thoại</button>
+        <button type="button" id="menu-open" class="bar-btn" aria-haspopup="dialog">Menu</button>
+      </div>
+    </header>
+    <p id="storage-warning" class="notice" role="status" hidden>
+      Không lưu được tiến độ trên máy này. Tiến độ chỉ giữ đến khi đóng trang.
+    </p>
+    <p id="save-newer" class="notice" role="status" hidden>Bản lưu đến từ phiên bản mới hơn — tải lại trang để cập nhật</p>
+    <section id="net-error" class="notice error" role="alert" hidden>
+      <p id="net-error-text">Kiểm tra mạng rồi thử lại</p>
+      <button type="button" id="net-retry">Thử lại</button>
+    </section>
+    <main class="main">
+      <section id="story" class="story" aria-label="Truyện" hidden>
+        <picture id="backdrop" class="backdrop" hidden>
+          <source id="backdrop-landscape" media="(orientation: landscape)" />
+          <img id="backdrop-portrait" alt="" draggable="false" />
+        </picture>
+        <div class="cast-area" id="cast-area">
+          <div id="cast" class="cast"></div>
+        </div>
+        <div class="dialogue">
+          <p id="plate-caption" class="plate-caption" hidden></p>
+          <div class="live" aria-live="polite" aria-atomic="true" id="live">
+            <p id="speaker" class="speaker" hidden></p>
+            <p id="line" class="line"></p>
+          </div>
+          <div id="ask" class="ask" role="group" aria-labelledby="ask-label" hidden>
+            <label id="ask-label" for="name">Tên người gửi</label>
+            <div class="ask-row">
+              <input id="name" type="text" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="done" aria-describedby="ask-limit" />
+              <button type="button" id="name-done">Ký tên</button>
+            </div>
+            <p id="ask-limit" class="ask-limit">Tối đa 24 ký tự.</p>
+          </div>
+          <button type="button" id="advance" class="advance">Lật trang</button>
+        </div>
+      </section>
+      <section id="stage" class="stage" aria-label="Câu đố" hidden>
+        <div id="mg-canvas" class="mg-canvas"></div>
+        <div class="mg-bar">
+          <p id="mg-hint" class="mg-hint" role="status" aria-live="polite"></p>
+          <button type="button" id="mg-help" class="mg-help" hidden>Nhờ Cúc Cu soi tỏ</button>
+        </div>
+      </section>
+      <section id="card-screen" class="screen" aria-labelledby="card-heading" hidden>
+        <h2 id="card-heading" tabindex="-1">Vừa chép vào Sổ nguồn</h2>
+        <div id="card-slot"></div>
+        <section id="card-code" class="code-box" aria-labelledby="card-code-title" hidden>
+          <h3 id="card-code-title">Hết một hồi. Chép mã tiếp tục</h3>
+          <p>Mã này để chơi tiếp trên máy khác, hoặc khi máy này mất dữ liệu.</p>
+          <div class="code-row">
+            <textarea id="card-code-text" readonly rows="2" spellcheck="false" aria-label="Mã tiếp tục"></textarea>
+            <button type="button" id="card-code-copy">Sao chép</button>
+          </div>
+          <p id="card-code-note" class="hint" role="status" aria-live="polite"></p>
+        </section>
+        <button type="button" id="card-next">Lật trang</button>
+      </section>
+      <section id="timeline-screen" class="screen" aria-labelledby="timeline-heading" hidden>
+        <h2 id="timeline-heading" tabindex="-1">Dòng thời gian Giáng Sinh</h2>
+        <ul id="timeline-legend" class="legend" aria-label="Chú giải"></ul>
+        <ol id="timeline" class="timeline"></ol>
+        <section id="timeline-unknown" class="unknown" aria-labelledby="unknown-title">
+          <h3 id="unknown-title">Chưa rõ năm</h3>
+          <ul id="timeline-unknown-list"></ul>
+        </section>
+        <button type="button" id="timeline-next">Lật trang</button>
+      </section>
+      <section id="namecard-screen" class="screen" aria-labelledby="namecard-heading" hidden>
+        <h2 id="namecard-heading" tabindex="-1">Thư trả lời</h2>
+        <div id="namecard-letter" class="code-box" role="region" aria-labelledby="namecard-heading" tabindex="0"></div>
+        <img id="namecard-img" alt="" width="540" height="675" />
+        <p id="namecard-hint" class="hint">Nhấn giữ ảnh để lưu về máy.</p>
+        <div class="row">
+          <button type="button" id="namecard-share" hidden>Chia sẻ</button>
+          <a id="namecard-save" class="button" download="thu-tra-loi.png" hidden>Tải ảnh</a>
+          <button type="button" id="namecard-next">Xong</button>
+        </div>
+      </section>
+      <section id="code-screen" class="screen" aria-labelledby="code-screen-heading" hidden>
+        <h2 id="code-screen-heading" tabindex="-1">Mã tiếp tục</h2>
+        <div class="code-box">
+          <p>Chép mã này để lần sau quay lại màn kết, trên máy này hoặc máy khác. Mã cũng nằm trong Menu, mục "Nhập mã".</p>
+          <div class="code-row">
+            <textarea id="code-screen-text" readonly rows="2" spellcheck="false" aria-label="Mã tiếp tục"></textarea>
+            <button type="button" id="code-screen-copy">Sao chép</button>
+          </div>
+          <p id="code-screen-note" class="hint" role="status" aria-live="polite"></p>
+        </div>
+        <button type="button" id="code-screen-next">Lật trang</button>
+      </section>
+      <section id="end-screen" class="screen" aria-labelledby="end-heading" hidden>
+        <h2 id="end-heading" tabindex="-1">Hết truyện</h2>
+        <p id="end-text" class="end-text"></p>
+        <div class="row">
+          <button type="button" id="end-notebook">Sổ nguồn</button>
+          <button type="button" id="end-card">Xem lại thư trả lời</button>
+          <button type="button" id="end-new" class="quiet">Chơi mới</button>
+        </div>
+      </section>
+    </main>
+    <dialog id="menu" aria-labelledby="menu-title">
+      <h2 id="menu-title">Menu</h2>
+      <p id="menu-note" class="hint" role="status" hidden></p>
+      <ul class="menu-list">
+        <li><button type="button" id="menu-continue" autofocus>Tiếp tục</button></li>
+        <li><button type="button" id="menu-new">Chơi mới</button></li>
+        <li><button type="button" id="menu-code">Nhập mã</button></li>
+        <li><button type="button" id="menu-notebook">Sổ nguồn</button></li>
+        <li><button type="button" id="menu-settings">Cài đặt</button></li>
+      </ul>
+    </dialog>
+    <dialog id="confirm-new" aria-labelledby="confirm-title">
+      <h2 id="confirm-title">Chơi mới?</h2>
+      <p>Tiến độ trên máy này sẽ bị xóa. Muốn quay lại thì chép mã tiếp tục trước.</p>
+      <div class="row">
+        <button type="button" id="confirm-new-yes">Chơi mới</button>
+        <button type="button" id="confirm-new-no" class="quiet" autofocus>Giữ tiến độ</button>
+      </div>
+    </dialog>
+    <dialog id="settings" aria-labelledby="settings-title">
+      <form method="dialog" class="settings-form">
+        <h2 id="settings-title">Cài đặt</h2>
+        <label>Tốc độ chữ
+          <select id="set-speed">
+            <option value="instant">Hiện ngay</option>
+            <option value="fast">Nhanh</option>
+            <option value="normal">Vừa</option>
+            <option value="slow">Chậm</option>
+          </select>
+        </label>
+        <label>Tự chạy thoại
+          <select id="set-auto">
+            <option value="off">Tắt</option>
+            <option value="slow">Chậm</option>
+            <option value="normal">Vừa</option>
+            <option value="fast">Nhanh</option>
+          </select>
+        </label>
+        <label>Âm lượng nhạc <output id="out-music"></output>
+          <input id="set-music" type="range" min="0" max="100" step="5" />
+        </label>
+        <label>Âm lượng tiếng động <output id="out-sfx"></output>
+          <input id="set-sfx" type="range" min="0" max="100" step="5" />
+        </label>
+        <label>Cỡ chữ
+          <select id="set-font">
+            <option value="small">Nhỏ</option>
+            <option value="normal">Vừa</option>
+            <option value="large">Lớn</option>
+            <option value="xlarge">Rất lớn</option>
+          </select>
+        </label>
+        <label class="check"><input id="set-motion" type="checkbox" /> Giảm chuyển động</label>
+        <p id="motion-hint" class="hint"></p>
+        <button type="submit" id="settings-close">Xong</button>
+      </form>
+    </dialog>
+    <dialog id="code-dialog" aria-labelledby="code-title">
+      <form method="dialog" class="settings-form">
+        <h2 id="code-title">Mã tiếp tục</h2>
+        <label>Mã hiện tại
+          <span class="code-row">
+            <textarea id="code-mine" readonly rows="2" spellcheck="false"></textarea>
+            <button type="button" id="code-copy">Sao chép</button>
+          </span>
+        </label>
+        <label>Nhập mã để chơi tiếp
+          <span class="code-row">
+            <input id="code-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="code-error" />
+            <button type="button" id="code-use">Dùng mã</button>
+          </span>
+        </label>
+        <p id="code-note" class="hint" role="status" aria-live="polite"></p>
+        <p id="code-error" class="error" role="status" aria-live="polite"></p>
+        <button type="submit" class="quiet">Đóng</button>
+      </form>
+    </dialog>
+    <dialog id="notebook-dialog" aria-labelledby="notebook-title">
+      <form method="dialog" class="settings-form">
+        <h2 id="notebook-title">Sổ nguồn</h2>
+        <div id="notebook-list" class="notebook-list"></div>
+        <button type="submit" class="quiet">Đóng</button>
+      </form>
+    </dialog>
+    <dialog id="log-dialog" aria-labelledby="log-title">
+      <form method="dialog" class="settings-form">
+        <h2 id="log-title">Xem lại thoại</h2>
+        <ol id="log-list" class="log-list"></ol>
+        <button type="submit" class="quiet">Đóng</button>
+      </form>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

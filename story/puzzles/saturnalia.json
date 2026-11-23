@@ -1,0 +1,669 @@
+{
+  "id": "saturnalia",
+  "format": "N",
+  "input": "mark",
+  "goal": "read-roman-dates",
+  "orientation": "both",
+  "title": "Dải lễ Saturnalia trên lịch tháng 12",
+  "question": "Trên khăn bàn, dải lịch bảy ô chạy từ 19/12 đến 25/12. Sáu mảnh ghi ngày La Mã: mảnh nào vào đâu, thẻ cho biết.",
+  "predict": {
+    "prompt": "Kỳ lễ Saturnalia dài nhất dừng ở ngày nào?",
+    "options": [
+      "21/12",
+      "23/12",
+      "24/12"
+    ]
+  },
+  "aha": "Kỳ lễ dài nhất có bảy ngày, đếm cả ngày đầu 17/12: nó dừng ở 23/12, không phải 24/12 hay 25/12.",
+  "history": "saturnalia",
+  "rules": [
+    {
+      "text": "Mỗi ô là một ngày của tháng 12, và chỉ nhận một mảnh. Chạm một mảnh, rồi chạm một ô để đặt."
+    },
+    {
+      "text": "Mỗi kỳ lễ có một ngày cuối: ba kỳ lễ, ba mảnh trên dải. Ba mảnh kia để ngoài, ô thừa để trống.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "eq",
+          [
+            "add",
+            [
+              "if",
+              [
+                "placed",
+                "m"
+              ],
+              1,
+              0
+            ],
+            [
+              "if",
+              [
+                "placed",
+                "k"
+              ],
+              1,
+              0
+            ],
+            [
+              "if",
+              [
+                "placed",
+                "t"
+              ],
+              1,
+              0
+            ],
+            [
+              "if",
+              [
+                "placed",
+                "p"
+              ],
+              1,
+              0
+            ],
+            [
+              "if",
+              [
+                "placed",
+                "r"
+              ],
+              1,
+              0
+            ],
+            [
+              "if",
+              [
+                "placed",
+                "n"
+              ],
+              1,
+              0
+            ]
+          ],
+          3
+        ]
+      }
+    },
+    {
+      "text": "Kiểm tra chấm cả dải một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "19/12",
+      "cap": 1,
+      "value": 19
+    },
+    {
+      "id": "s2",
+      "label": "20/12",
+      "cap": 1,
+      "value": 20
+    },
+    {
+      "id": "s3",
+      "label": "21/12",
+      "cap": 1,
+      "value": 21
+    },
+    {
+      "id": "s4",
+      "label": "22/12",
+      "cap": 1,
+      "value": 22
+    },
+    {
+      "id": "s5",
+      "label": "23/12",
+      "cap": 1,
+      "value": 23
+    },
+    {
+      "id": "s6",
+      "label": "24/12",
+      "cap": 1,
+      "value": 24
+    },
+    {
+      "id": "s7",
+      "label": "25/12",
+      "cap": 1,
+      "value": 25
+    }
+  ],
+  "tokens": [
+    {
+      "id": "k",
+      "text": "Ngày a.d. XIII Kal. Ian.",
+      "status": "fact",
+      "value": 13
+    },
+    {
+      "id": "m",
+      "text": "Ngày a.d. XIV Kal. Ian.",
+      "status": "fact",
+      "value": 14
+    },
+    {
+      "id": "r",
+      "text": "Ngày a.d. X Kal. Ian.",
+      "status": "fact",
+      "value": 10
+    },
+    {
+      "id": "n",
+      "text": "Ngày a.d. IX Kal. Ian.",
+      "status": "fact",
+      "value": 9
+    },
+    {
+      "id": "p",
+      "text": "Ngày a.d. XI Kal. Ian.",
+      "status": "fact",
+      "value": 11
+    },
+    {
+      "id": "t",
+      "text": "Ngày a.d. XII Kal. Ian.",
+      "status": "fact",
+      "value": 12
+    }
+  ],
+  "bankSeed": 7,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Penelope (Encyclopaedia Romana)",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-1.md; research/m0c-puzzles.md §10 S2",
+      "url": [
+        "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/saturnalia.html",
+        "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/invictus.html"
+      ],
+      "evidence": [
+        "The Saturnalia officially was celebrated on December 17 (XVI Kal. Jan.)",
+        "VIII Kal. Jan. (December 25)"
+      ],
+      "text": "Lễ bắt đầu ngày 17/12, tức a.d. XVI Kal. Ian. Mỗi ngày muộn hơn, số a.d. nhỏ đi một.",
+      "do": [
+        {
+          "op": "expr",
+          "e": [
+            "or",
+            [
+              "not",
+              [
+                "placed",
+                "m"
+              ]
+            ],
+            [
+              "eq",
+              [
+                "add",
+                [
+                  "tok",
+                  "m"
+                ],
+                [
+                  "slot",
+                  "m"
+                ]
+              ],
+              33
+            ]
+          ]
+        },
+        {
+          "op": "expr",
+          "e": [
+            "or",
+            [
+              "not",
+              [
+                "placed",
+                "k"
+              ]
+            ],
+            [
+              "eq",
+              [
+                "add",
+                [
+                  "tok",
+                  "k"
+                ],
+                [
+                  "slot",
+                  "k"
+                ]
+              ],
+              33
+            ]
+          ]
+        },
+        {
+          "op": "expr",
+          "e": [
+            "or",
+            [
+              "not",
+              [
+                "placed",
+                "t"
+              ]
+            ],
+            [
+              "eq",
+              [
+                "add",
+                [
+                  "tok",
+                  "t"
+                ],
+                [
+                  "slot",
+                  "t"
+                ]
+              ],
+              33
+            ]
+          ]
+        },
+        {
+          "op": "expr",
+          "e": [
+            "or",
+            [
+              "not",
+              [
+                "placed",
+                "p"
+              ]
+            ],
+            [
+              "eq",
+              [
+                "add",
+                [
+                  "tok",
+                  "p"
+                ],
+                [
+                  "slot",
+                  "p"
+                ]
+              ],
+              33
+            ]
+          ]
+        },
+        {
+          "op": "expr",
+          "e": [
+            "or",
+            [
+              "not",
+              [
+                "placed",
+                "r"
+              ]
+            ],
+            [
+              "eq",
+              [
+                "add",
+                [
+                  "tok",
+                  "r"
+                ],
+                [
+                  "slot",
+                  "r"
+                ]
+              ],
+              33
+            ]
+          ]
+        },
+        {
+          "op": "expr",
+          "e": [
+            "or",
+            [
+              "not",
+              [
+                "placed",
+                "n"
+              ]
+            ],
+            [
+              "eq",
+              [
+                "add",
+                [
+                  "tok",
+                  "n"
+                ],
+                [
+                  "slot",
+                  "n"
+                ]
+              ],
+              33
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "who": "Penelope (Encyclopaedia Romana)",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/saturnalia.html",
+      "evidence": [
+        "lasted seven days (counting inclusively)"
+      ],
+      "text": "Thời Cicero, lễ kéo dài bảy ngày.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "ge",
+          [
+            "add",
+            [
+              "add",
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "k"
+                  ],
+                  23
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "m"
+                  ],
+                  23
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "r"
+                  ],
+                  23
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "n"
+                  ],
+                  23
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "p"
+                  ],
+                  23
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "t"
+                  ],
+                  23
+                ],
+                1,
+                0
+              ]
+            ],
+            [
+              "add",
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "k"
+                  ],
+                  24
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "m"
+                  ],
+                  24
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "r"
+                  ],
+                  24
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "n"
+                  ],
+                  24
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "p"
+                  ],
+                  24
+                ],
+                1,
+                0
+              ],
+              [
+                "if",
+                [
+                  "eq",
+                  [
+                    "slot",
+                    "t"
+                  ],
+                  24
+                ],
+                1,
+                0
+              ]
+            ]
+          ],
+          1
+        ]
+      }
+    },
+    {
+      "id": "c3",
+      "who": "Macrobius (bản Latin)",
+      "kind": "record",
+      "status": "fact",
+      "source": "research/m0c-puzzles.md §10 S1",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Macrobius/Saturnalia/1*.html",
+      "evidence": [
+        "a sexto decimo igitur coepta in quartum decimum desinunt"
+      ],
+      "text": "Lễ ba ngày chạy từ a.d. XVI đến a.d. XIV Kal. Ian.",
+      "do": {
+        "op": "used",
+        "t": "m"
+      }
+    },
+    {
+      "id": "c4",
+      "who": "Suy ra từ Penelope, theo giả định của câu đố",
+      "kind": "inference",
+      "status": "disputed",
+      "source": "research/m0b-act-1.md; research/m0c-puzzles.md §10 S4",
+      "url": [
+        "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/saturnalia.html",
+        "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Macrobius/Saturnalia/1*.html"
+      ],
+      "evidence": [
+        "Augustus limited the holiday to three days",
+        "Caligula extended it to five",
+        "lasted seven days (counting inclusively)"
+      ],
+      "text": "Giả sử ba kỳ lễ mở cùng ngày, kỳ sau dài hơn đều đặn: ngày cuối kỳ giữa nằm chính giữa hai ngày cuối kia.",
+      "do": {
+        "op": "spaced",
+        "t": [
+          "k",
+          "m",
+          "r",
+          "n",
+          "p",
+          "t"
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    [
+      "m",
+      null,
+      "t",
+      null,
+      "r",
+      null,
+      null
+    ]
+  ],
+  "space": 37633,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mỗi kỳ lễ dừng ở ngày nào, và mảnh nào ghi ngày ấy?"
+    },
+    {
+      "tier": 2,
+      "card": "c1",
+      "text": "Đọc thẻ 1 trước: thẻ ấy đổi số La Mã sang ngày tháng 12."
+    },
+    {
+      "tier": 3,
+      "text": "Bảy ngày bắt đầu từ 17/12: ngày 17/12 có tính là ngày thứ nhất không?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s1": "m"
+      },
+      "text": "Thẻ 3 nói mảnh a.d. XIV Kal. Ian. có chỗ trên dải, và thẻ 1 cho ngày của nó. Đặt mảnh ấy vào."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu đặt hộ cả dải."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: bảy ngày kể từ 17/12 thì dừng ở 24/12.",
+    "cards": [
+      "c2",
+      "c3"
+    ],
+    "trap": {
+      "s2": "k",
+      "s4": "p",
+      "s6": "n"
+    },
+    "exact": true,
+    "do": [
+      {
+        "op": "used",
+        "t": "k"
+      },
+      {
+        "op": "used",
+        "t": "p"
+      },
+      {
+        "op": "used",
+        "t": "n"
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Đếm cả ngày đầu 17/12, kỳ lễ dài nhất dừng ở 23/12: mảnh mang số X.",
+      "Qua ngày ấy, dải lịch còn trắng cho tới 25/12: Saturnalia không rơi vào 25/12."
+    ],
+    "label": "SỰ THẬT"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả dải một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra ngày nào sai."
+  }
+}

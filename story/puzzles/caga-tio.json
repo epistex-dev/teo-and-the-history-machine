@@ -1,0 +1,304 @@
+{
+ "id": "caga-tio",
+ "format": "A",
+ "input": "mark",
+ "goal": "date",
+ "orientation": "both",
+ "title": "Tió: lời nào của nguồn nào",
+ "question": "Bốn nguồn trên tờ nháp, sáu lời về Tió để đặt. Theo các nguồn đã mở, lời nào của nguồn nào? Các thẻ cho biết.",
+ "predict": {
+  "prompt": "Theo các nguồn đã mở, phần nào của tục Tió có niên đại muộn nhất?",
+  "options": [
+   "Bài hát đập Tió",
+   "Chiếc gậy",
+   "Khuôn mặt và chiếc mũ"
+  ]
+ },
+ "aha": "Trong các nguồn đã mở, mặt và mũ barretina có niên đại muộn nhất; bài hát chỉ thấy ghi từ cuối thế kỷ 19.",
+ "history": "caga-tio",
+ "rules": [
+  {
+   "text": "Chạm một mảnh, rồi chạm một nguồn để đặt. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Mỗi nguồn nhận ít nhất một mảnh. Kho ca khúc Catalan nhận nhiều nhất hai mảnh."
+  },
+  {
+   "text": "Kiểm tra chấm cả bốn nguồn một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Bảo tàng Catalonia",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s2",
+   "label": "Nhà nhân học, qua Betevé",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s3",
+   "label": "Đài phát thanh Mỹ",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s4",
+   "label": "Kho ca khúc Catalan",
+   "cap": 2,
+   "min": 1
+  }
+ ],
+ "tokens": [
+  {
+   "id": "a",
+   "text": "Bài hát đập Tió, in trong sách về làng Blanes",
+   "status": "fact"
+  },
+  {
+   "id": "b",
+   "text": "Đập Tió ở bếp lửa",
+   "status": "fact"
+  },
+  {
+   "id": "c",
+   "text": "Đêm 24/12, phủ chăn lên đầu không có mặt của Tió",
+   "status": "fact"
+  },
+  {
+   "id": "d",
+   "text": "Trẻ con đập bằng gậy, giả vờ Tió ỉa ra kẹo và quà",
+   "status": "fact"
+  },
+  {
+   "id": "g",
+   "text": "Ban đầu, Tió không mặt, không mũ barretina",
+   "status": "fact"
+  },
+  {
+   "id": "f",
+   "text": "Mọi phần của Tió đều lâu đời",
+   "status": "decoy"
+  }
+ ],
+ "bankSeed": 3,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Bảo tàng Catalonia, trang Gencat",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://visitmuseum.gencat.cat/ca/museu/museu-terra/objecte/el-tio-de-nadal"
+   ],
+   "evidence": [
+    "i a força de bastonades de les criatures, fingim que arriba a cagar dolços i altres regals"
+   ],
+   "text": "Bảo tàng ghi: nhờ những đòn gậy của trẻ con, người ta giả vờ Tió ỉa ra kẹo và quà.",
+   "do": {
+    "op": "at",
+    "t": "d",
+    "s": "s1"
+   }
+  },
+  {
+   "id": "c2",
+   "who": "NPR, đài phát thanh Mỹ",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://www.npr.org/sections/thesalt/2017/12/22/572569325/caga-ti-a-catalan-log-that-poops-nougats-at-christmas"
+   ],
+   "evidence": [
+    "on December 24, a blanket was placed on the non-face end of Tió"
+   ],
+   "text": "NPR ghi: đêm 24/12, người ta phủ chăn lên đầu không có mặt của Tió.",
+   "do": {
+    "op": "at",
+    "t": "c",
+    "s": "s3"
+   }
+  },
+  {
+   "id": "c3",
+   "who": "Betevé, bài về sách của nhà nhân học Josep Fornés",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://beteve.cat/cultura/llibre-tio-nadal-repassa-origens-ancestrals-tradicio/"
+   ],
+   "evidence": [
+    "Originàriament no tenia ni barretina ni cara",
+    "cap als anys 70 es va implantar",
+    "el costum de fer-lo cagar és més modern"
+   ],
+   "text": "Betevé ghi: Tió vốn không mặt, không mũ; cả hai phổ biến từ khoảng thập niên 1970. Tục bắt Tió «ỉa» mới hơn gốc cổ.",
+   "do": [
+    {
+     "op": "at",
+     "t": "g",
+     "s": "s2"
+    },
+    {
+     "op": "notAt",
+     "t": "f",
+     "s": "s2"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "who": "Suy ra từ Càntut (sách 1886)",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://cantut.cat/canconer/cancons/item/720-tio-tio"
+   ],
+   "evidence": [
+    "La primera referència l'hem trobat recollida l'any 1886",
+    "la acció de colpejar lo tió col-locat en la llar"
+   ],
+   "text": "Suy ra: sách in năm 1886 chép bài hát, kèm câu về việc đập Tió ở bếp lửa; hai lời ấy chung một nguồn.",
+   "do": {
+    "op": "same",
+    "t": [
+     "a",
+     "b"
+    ]
+   }
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra từ Càntut và Betevé",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://cantut.cat/canconer/cancons/item/720-tio-tio",
+    "https://beteve.cat/cultura/llibre-tio-nadal-repassa-origens-ancestrals-tradicio/"
+   ],
+   "evidence": [
+    "La primera referència l'hem trobat recollida l'any 1886",
+    "són de fa 150 anys"
+   ],
+   "text": "Suy ra: nguồn nào nói mọi phần của Tió đều lâu đời, nguồn ấy nêu niên đại bài hát. Chỉ sách 1886 và Betevé nêu.",
+   "do": {
+    "op": "expr",
+    "e": [
+     "or",
+     [
+      "not",
+      [
+       "placed",
+       "f"
+      ]
+     ],
+     [
+      "eq",
+      [
+       "pos",
+       "f"
+      ],
+      [
+       "pos",
+       "a"
+      ]
+     ],
+     [
+      "eq",
+      [
+       "pos",
+       "f"
+      ],
+      2
+     ]
+    ]
+   }
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "d"
+   ],
+   [
+    "g"
+   ],
+   [
+    "c"
+   ],
+   [
+    "a",
+    "b"
+   ]
+  ]
+ ],
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Câu hỏi: lời nào của nguồn nào? Mỗi thẻ dựa trên các nguồn đã mở."
+  },
+  {
+   "tier": 2,
+   "card": "c4",
+   "text": "Đọc thẻ 4: cuốn sách ấy chép những gì về Tió?"
+  },
+  {
+   "tier": 3,
+   "text": "Có chắc gốc đã cổ thì dòng nào cũng cổ?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s1": "d"
+   },
+   "text": "Thẻ 1 đặt một mảnh vào Bảo tàng Catalonia. Đặt mảnh ấy vào, rồi đọc lại thẻ 4."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nguồn."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo nghe Quạ Đồn: gốc đã cổ, nên dòng nào cũng cổ và cũng có nguồn nói ra.",
+  "cards": [
+   "c1",
+   "c2",
+   "c3",
+   "c4",
+   "c5"
+  ],
+  "trap": {
+   "s2": [
+    "g",
+    "f"
+   ]
+  },
+  "do": [
+   {
+    "op": "used",
+    "t": "f"
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Mặt và mũ barretina chỉ phổ biến từ khoảng thập niên 1970; bài hát chỉ thấy ghi từ cuối thế kỷ 19.",
+   "Còn tranh cãi: nhà nhân học Fornés nói gốc là nghi lễ cổ, nhưng việc bắt Tió «ỉa» thì mới hơn."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả bốn nguồn một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ },
+ "space": 3240
+}

@@ -1,0 +1,90 @@
+{
+  "id": "saturnalia",
+  "status": "verified",
+  "source": "research/m0b-act-1.md",
+  "stamp": "TRANH CÃI",
+  "card": [
+    "Từ 17/12, người La Mã mừng Saturnalia: nghỉ việc, chủ tớ đảo vai, tặng nến và tượng nhỏ.",
+    "Lễ chấm dứt muộn nhất ngày 23/12, không phải 25/12.",
+    "Giáng Sinh có thay chỗ lễ này hay không thì sử gia chưa đồng ý."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Lễ chính thức bắt đầu ngày 17/12; lúc dài nhất kéo đến 23/12, và độ dài thay đổi theo thời.",
+        "sources": [
+          {
+            "label": "penelope.uchicago.edu",
+            "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/saturnalia.html"
+          },
+          {
+            "label": "britannica.com",
+            "url": "https://www.britannica.com/topic/Saturnalia-Roman-festival"
+          }
+        ]
+      },
+      {
+        "text": "Trong lễ, quy tắc nới lỏng và thứ bậc đảo ngược: nô lệ được nghỉ việc, được mặc áo chủ và được phục vụ bữa ăn; trong nhà người ta chọn một “vua” cho bữa tiệc.",
+        "sources": [
+          {
+            "label": "penelope.uchicago.edu",
+            "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/saturnalia.html"
+          }
+        ]
+      },
+      {
+        "text": "Quà thường gặp là nến sáp và tượng đất nung nhỏ (sigillaria).",
+        "sources": [
+          {
+            "label": "penelope.uchicago.edu",
+            "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/saturnalia.html"
+          }
+        ]
+      },
+      {
+        "text": "Saturnalia không rơi vào 25/12 và không phải lễ mặt trời; chủ đề là mùa màng và thời hoàng kim của thần Saturnus.",
+        "sources": [
+          {
+            "label": "nationalgeographic.com",
+            "url": "https://www.nationalgeographic.com/history/article/christmas-jesus-birthday-ancient-rome-saturnalia-sol-invictus"
+          }
+        ]
+      },
+      {
+        "text": "Cicero nhắc Saturnalia trong bài phát biểu tháng 12 năm 63 TCN.",
+        "sources": [
+          {
+            "label": "attalus.org",
+            "url": "https://www.attalus.org/cicero/catilina3.html"
+          }
+        ]
+      }
+    ],
+    "tradition": [
+      {
+        "text": "Sử gia Livy kể lễ được lập cùng lúc với việc cung hiến đền Saturnus; chú thích bản dịch ghi 497 TCN và nói lễ này có lẽ có từ sớm hơn.",
+        "sources": [
+          {
+            "label": "perseus.tufts.edu",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0151%3Abook%3D2%3Achapter%3D21"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Một nguồn nói đến giữa thế kỷ 4 các nghi thức của Saturnalia dần hòa vào Giáng Sinh; nguồn khác nói Saturnalia là “ứng viên không hợp” làm nền cho Giáng Sinh vì không rơi vào 25/12 và không mang hình ảnh ánh sáng.",
+        "sources": [
+          {
+            "label": "penelope.uchicago.edu",
+            "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/saturnalia.html"
+          },
+          {
+            "label": "nationalgeographic.com",
+            "url": "https://www.nationalgeographic.com/history/article/christmas-jesus-birthday-ancient-rome-saturnalia-sol-invictus"
+          }
+        ]
+      }
+    ]
+  }
+}

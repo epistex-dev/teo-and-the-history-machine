@@ -1,0 +1,84 @@
+{
+  "id": "yule-cat",
+  "status": "verified",
+  "source": "research/m0b-act-3.md",
+  "stamp": "TRUYỀN THUYẾT",
+  "card": [
+    "Mèo Yule (Jólakötturinn) là con quái vật trong truyện dân gian Iceland, nhắm vào những ai không có áo mới trước Giáng Sinh.",
+    "Bản in sớm nhất là sách của Jón Árnason năm 1864; người ta thường giải thích đó là cách thúc mọi người xong việc chuẩn bị trước lễ."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Bản in sớm nhất còn biết nằm trong tập II sưu tập truyện dân gian của Jón Árnason (Leipzig, 1864), tr. 570. Viện Árni Magnússon nhận xét truyện về Mèo Yule \"không cổ\".",
+        "sources": [
+          {
+            "label": "archive.org",
+            "url": "https://archive.org/details/Islenzkarthjodso000197672v2JonReyk"
+          },
+          {
+            "label": "arnastofnun.is",
+            "url": "https://arnastofnun.is/is/greinar/jolakottur"
+          }
+        ]
+      },
+      {
+        "text": "Trong bản 1864, ai không có áo mới thì \"đi vào Mèo\": nó tóm họ (ông ghi thêm dấu hỏi, \"ăn?\"), hoặc ít nhất lấy phần ăn Giáng Sinh của họ.",
+        "sources": [
+          {
+            "label": "archive.org",
+            "url": "https://archive.org/details/Islenzkarthjodso000197672v2JonReyk"
+          }
+        ]
+      },
+      {
+        "text": "Giới dân tộc học giải thích: các \"vật dọa Giáng Sinh\" như thế giám sát việc chuẩn bị lễ để mọi người xong việc (đan, may áo, nướng bánh, nấu bia, làm bữa tiệc). Chính Jón Árnason ghi rằng ai cũng gắng làm việc cho chủ để xin áo mới, và nhận xét các hình phạt đi kèm có vẻ dùng cho trẻ lười học và lười làm xong việc trước Giáng Sinh.",
+        "sources": [
+          {
+            "label": "visindavefur.is",
+            "url": "https://www.visindavefur.is/svar.php?id=5511"
+          },
+          {
+            "label": "archive.org",
+            "url": "https://archive.org/details/Islenzkarthjodso000197672v2JonReyk"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng con mèo ăn những đứa trẻ không kịp có áo mới trước Giáng Sinh.",
+        "sources": [
+          {
+            "label": "landsbokasafn.is",
+            "url": "https://landsbokasafn.is/en/jolin-koma-christmas-arrives-finished/"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Phía \"mới\": Árni Björnsson cho rằng truyện từ Na Uy (con dê Yule) sang Iceland trong khoảng hai thế kỷ gần đây.",
+        "sources": [
+          {
+            "label": "bbl.is",
+            "url": "https://www.bbl.is/skodun/a-faglegum-notum/jolakotturinn-%E2%80%93-uppruni-hans-aettir-og-hlutverk"
+          }
+        ]
+      },
+      {
+        "text": "Phía \"cổ hơn\": nhà khảo cổ Guðmundur Ólafsson cho là mèo và dê cùng hậu duệ của con quỷ đi cùng Thánh Nicôla, nên cổ hơn nhiều; tác giả bài báo suy ra tục có gốc nhiều thế kỷ vì tục xấu hổ khi không có áo mới đã có ở Scotland khoảng 1500; Vísindavefur viết rằng học giả nhìn chung cho các vật dọa Giáng Sinh có chung gốc rất cổ từ thời ngoại giáo. Nhưng chưa có bản ghi nào về chính Mèo Yule trước giữa thế kỷ 19.",
+        "sources": [
+          {
+            "label": "bbl.is",
+            "url": "https://www.bbl.is/skodun/a-faglegum-notum/jolakotturinn-%E2%80%93-uppruni-hans-aettir-og-hlutverk"
+          },
+          {
+            "label": "visindavefur.is",
+            "url": "https://www.visindavefur.is/svar.php?id=5511"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+/* Start screen: a full-bleed engraved scene, the title in two lines, ruled rows like a table of contents. */
+#title {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.11'/%3E%3C/svg%3E");
+  inline-size: 100%;
+  max-inline-size: none;
+  block-size: 100%;
+  max-block-size: none;
+  border: 0;
+  padding: 0;
+  overflow: hidden auto;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: var(--page);
+  background-image:
+    radial-gradient(120% 90% at 50% 42%, rgb(27 23 18 / 0) 55%, rgb(27 23 18 / 0.16) 100%),
+    radial-gradient(90% 70% at 16% 6%, rgb(27 23 18 / 0.08), transparent 46%),
+    radial-gradient(80% 70% at 88% 100%, rgb(139 42 34 / 0.12), transparent 52%),
+    var(--grain);
+  background-size: auto, auto, auto, 160px 160px;
+  background-blend-mode: multiply;
+}
+#title img { opacity: 0; }
+#title img[data-ready] { opacity: 1; animation: title-art 420ms ease-out; }
+:root[data-reduced-motion='true'] #title img[data-ready] { animation: none; }
+@keyframes title-art { from { opacity: 0; } }
+
+.title-page {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100%;
+  max-inline-size: 40rem;
+  margin-inline: auto;
+  inline-size: 100%;
+}
+.title-vignette {
+  margin: 0;
+  flex: none;
+  border-block-end: 1.5px solid var(--ink);
+  overflow: hidden;
+}
+.title-vignette img { display: block; inline-size: 100%; block-size: auto; max-block-size: min(58dvh, 100dvh - 25rem); object-fit: cover; object-position: 50% 32%; }
+.title-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: max(12px, env(safe-area-inset-top, 0px)) max(clamp(18px, 5vw, 44px), env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(clamp(18px, 5vw, 44px), env(safe-area-inset-left, 0px));
+}
+.title-name { margin: 0; font-weight: 600; line-height: 1.15; }
+.title-name em { display: block; font-style: italic; font-weight: 400; font-size: 0.72em; letter-spacing: 0.05em; color: var(--ox2); }
+.title-name .caps { display: block; text-transform: uppercase; letter-spacing: 0.1em; font-size: clamp(1.4em, 4.8dvh, 2.1em); }
+.title-list { margin-block-start: clamp(10px, 2.4dvh, 20px); display: flex; flex-direction: column; }
+.title-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  inline-size: 100%;
+  min-block-size: 50px;
+  padding: 6px 6px 6px 2px;
+  border: 0;
+  border-block-start: 1.5px solid var(--ink);
+  background: none;
+  box-shadow: none;
+  color: var(--ink);
+  font-size: 0.86em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.title-list button::after { content: ''; flex: none; inline-size: 0.5em; block-size: 0.5em; background: currentColor; transform: rotate(45deg); margin-inline-end: 0.14em; }
+.title-list button:hover { color: var(--ox2); }
+.title-list button:active { background: var(--recess); }
+.title-start { color: var(--ox2); font-weight: 600; }
+.title-start::before { content: ''; flex: none; inline-size: 0.5em; block-size: 0.5em; background: currentColor; transform: rotate(45deg); margin-inline-end: 2px; }
+
+@media (max-height: 620px) and (orientation: portrait) {
+  .title-body { padding-block-start: 10px; }
+  .title-name .caps { font-size: clamp(1.3em, 4.2dvh, 1.8em); }
+  .title-list { margin-block-start: 8px; }
+  .title-list button { min-block-size: 46px; }
+  .title-vignette img { max-block-size: 34dvh; object-fit: contain; }
+}
+@media (orientation: landscape) and (max-height: 560px) {
+  .title-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    column-gap: 20px;
+    max-inline-size: 62rem;
+    padding: max(10px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  }
+  .title-vignette { border-block-end: 0; border-inline-end: 1.5px solid var(--ink); display: grid; align-items: center; justify-items: center; }
+  .title-vignette img { inline-size: 100%; block-size: auto; max-block-size: 92dvh; object-fit: contain; }
+  .title-body { justify-content: center; align-self: center; justify-self: center; inline-size: min(100%, 21rem); padding: max(10px, env(safe-area-inset-top, 0px)) clamp(14px, 3vw, 30px) 0; }
+  .title-name .caps { font-size: clamp(1.4em, 5.4dvh, 2em); }
+  .title-list { margin-block-start: 12px; }
+  .title-list button { min-block-size: 46px; }
+}

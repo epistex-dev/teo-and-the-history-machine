@@ -1,0 +1,322 @@
+{
+  "shade": {
+    "offset": [2, 3],
+    "files": [
+      "<part>-shade.svg",
+      "<part>-lit.svg"
+    ],
+    "rule": "Draw <part>-shade at the lit sprite position + (2,3) in world space, below the lit sprite and above everything drawn earlier. Rotate and scale the shade sprite with the part, but never rotate the (2,3) offset. Inside a rotated container, add the offset in world space too (or counter-rotate it by the container angle). Parts without a -shade file cast none. File coordinates: each sprite file has viewBox = bbox, so its top-left sits at bbox[0],bbox[1] of the character frame; pivots are in frame coordinates."
+  },
+  "rest": {
+    "pose": "normal",
+    "rule": "Parts and containers with a rest entry are posed as in <character>/expr-normal.svg: rotate by angle (SVG degrees, clockwise positive) about pivot, then translate by offset (parent frame), inside the rotated containers. No rest entry = angle 0. visible:false = only shown in other poses (fx, stamp). The face sprite kit/<character>-face-normal.svg goes inside the head rig. node art/safe-bg.mjs rebuilds every character this way and compares it with expr-normal.svg."
+  },
+  "plate": {
+    "files": "kit/plate-<colour>.svg",
+    "topLeft": [-28, -8],
+    "colourByBackground": "style.json plate",
+    "safeBackgrounds": "style.json castSafeBg"
+  },
+  "stamp": {
+    "size": [212, 92],
+    "text": [90, 30, 88, 42],
+    "textNote": "Default text box [x, y, w, h], inside every stamp; each mark has its own larger box in marks.<id>.text. Boxes are in stamp units, inside the paper area, clear of the glyph and the outline.",
+    "textColour": "ink",
+    "textLayout": {
+      "maxLines": 2,
+      "wrap": "by word, at most 2 lines",
+      "fit": "shrink the font until the wrapped text fits the box; align left, centre vertically"
+    },
+    "marks": {
+      "fact": {
+        "file": "kit/cuccu-stamp-mark-fact.svg",
+        "label": "SỰ THẬT",
+        "colour": "pine",
+        "shape": "rectangle",
+        "glyph": "check mark",
+        "text": [90, 28, 100, 48]
+      },
+      "legend": {
+        "file": "kit/cuccu-stamp-mark-legend.svg",
+        "label": "TRUYỀN THUYẾT",
+        "colour": "ember",
+        "shape": "scalloped rectangle",
+        "glyph": "crescent moon and star",
+        "text": [90, 28, 94, 44]
+      },
+      "dispute": {
+        "file": "kit/cuccu-stamp-mark-dispute.svg",
+        "label": "TRANH CÃI",
+        "colour": "teal and holly",
+        "shape": "chamfered rectangle",
+        "glyph": "two triangles facing each other",
+        "text": [90, 28, 100, 48]
+      },
+      "scripture": {
+        "file": "kit/cuccu-stamp-mark-scripture.svg",
+        "label": "THEO KINH THÁNH",
+        "colour": "night",
+        "shape": "arched top",
+        "glyph": "open book",
+        "text": [90, 30, 98, 46]
+      },
+      "tradition": {
+        "file": "kit/cuccu-stamp-mark-tradition.svg",
+        "label": "THEO TRUYỀN THỐNG",
+        "colour": "berry",
+        "shape": "swallowtail ribbon",
+        "glyph": "two linked rings",
+        "text": [74, 30, 104, 44]
+      }
+    }
+  },
+  "frame": [-18, 0, 196, 200],
+  "root": {
+    "id": "cuc-root",
+    "pivot": [80, 181]
+  },
+  "headRig": {
+    "id": "cuc-head-rig",
+    "pivot": [80, 84],
+    "children": [
+      "cuc-head",
+      "cuc-face",
+      "cuc-beak-low",
+      "cuc-beak-up",
+      "cuc-crest",
+      "cuc-fx-surprised"
+    ],
+    "rest": {
+      "angle": 0,
+      "pivot": [80, 84]
+    }
+  },
+  "wingRig": {
+    "id": "cuc-wing-r-rig",
+    "pivot": [114, 98],
+    "children": [
+      "cuc-stamp",
+      "cuc-wing-r"
+    ],
+    "rest": {
+      "angle": -4,
+      "pivot": [114, 98]
+    }
+  },
+  "parts": {
+    "cuc-foot-l": {
+      "bbox": [45, 167, 34, 15],
+      "pivot": [62, 170],
+      "shade": true
+    },
+    "cuc-foot-r": {
+      "bbox": [81, 167, 34, 15],
+      "pivot": [98, 170],
+      "shade": true
+    },
+    "cuc-body": {
+      "bbox": [31, 75, 98, 98],
+      "pivot": [80, 172],
+      "shade": true
+    },
+    "cuc-dial": {
+      "bbox": [49, 95, 62, 62],
+      "pivot": [80, 126],
+      "shade": true
+    },
+    "cuc-hand-hr": {
+      "bbox": [65, 112, 21, 20],
+      "pivot": [80, 126],
+      "shade": false
+    },
+    "cuc-hand-min": {
+      "bbox": [75, 105, 25, 26],
+      "pivot": [80, 126],
+      "shade": false
+    },
+    "cuc-wing-l": {
+      "bbox": [13, 89, 46, 72],
+      "pivot": [46, 98],
+      "shade": true,
+      "rest": {
+        "angle": 4,
+        "pivot": [46, 98]
+      }
+    },
+    "cuc-wing-r": {
+      "bbox": [101, 89, 46, 72],
+      "pivot": [114, 98],
+      "shade": true
+    },
+    "cuc-stamp": {
+      "bbox": [111, 115, 46, 76],
+      "pivot": [134, 150],
+      "shade": true,
+      "rest": {
+        "visible": false
+      }
+    },
+    "cuc-head": {
+      "bbox": [47, 19, 66, 66],
+      "pivot": [80, 84],
+      "shade": true
+    },
+    "cuc-crest": {
+      "bbox": [59, 2, 49, 29],
+      "pivot": [80, 26],
+      "shade": true
+    },
+    "cuc-beak-low": {
+      "bbox": [68, 69, 24, 21],
+      "pivot": [80, 72],
+      "shade": true
+    },
+    "cuc-beak-up": {
+      "bbox": [61, 54, 38, 28],
+      "pivot": [80, 62],
+      "shade": true
+    },
+    "cuc-fx-smug": {
+      "bbox": [155, 127, 22, 22],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "cuc-fx-smug-ink": {
+      "bbox": [155, 127, 22, 22],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "cuc-fx-deflated": {
+      "bbox": [121, 25, 22, 31],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "cuc-fx-deflated-ink": {
+      "bbox": [121, 25, 22, 31],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "cuc-fx-surprised": {
+      "bbox": [12, 18, 136, 36],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    },
+    "cuc-fx-surprised-ink": {
+      "bbox": [12, 18, 136, 36],
+      "pivot": [80, 84],
+      "shade": false,
+      "rest": {
+        "visible": false
+      }
+    }
+  },
+  "faces": {
+    "normal": {
+      "bbox": [49, 21, 62, 43],
+      "fx": null,
+      "beakOpen": 0
+    },
+    "talking": {
+      "bbox": [50, 19, 60, 67],
+      "fx": null,
+      "beakOpen": 0.6
+    },
+    "smug": {
+      "bbox": [50, 26, 60, 35],
+      "fx": "cuc-fx-smug",
+      "beakOpen": 0
+    },
+    "surprised": {
+      "bbox": [48, 13, 64, 79],
+      "fx": "cuc-fx-surprised",
+      "beakOpen": 1
+    },
+    "deflated": {
+      "bbox": [45, 25, 70, 42],
+      "fx": "cuc-fx-deflated",
+      "beakOpen": 0
+    }
+  },
+  "features": {
+    "cuc-eyes": [80, 50],
+    "cuc-brows": [80, 33],
+    "cuc-mouth": [80, 76]
+  },
+  "order": [
+    "cuc-foot-l",
+    "cuc-foot-r",
+    "cuc-body",
+    "cuc-dial",
+    "cuc-hand-hr",
+    "cuc-hand-min",
+    "cuc-wing-l",
+    "cuc-wing-r-rig",
+    "cuc-head-rig",
+    "cuc-fx-smug"
+  ],
+  "fxVariants": {
+    "cuc-fx-smug": {
+      "ink": "cuc-fx-smug-ink"
+    },
+    "cuc-fx-deflated": {
+      "ink": "cuc-fx-deflated-ink"
+    },
+    "cuc-fx-surprised": {
+      "ink": "cuc-fx-surprised-ink"
+    }
+  },
+  "views": {
+    "side": {
+      "pivots": {
+        "cuc-tail": [50, 127],
+        "cuc-foot-far": [66, 170],
+        "cuc-foot-near": [92, 170],
+        "cuc-body": [78, 172],
+        "cuc-dial": [118, 126],
+        "cuc-wing": [88, 98],
+        "cuc-head": [86, 84],
+        "cuc-crest": [86, 26],
+        "cuc-beak-low": [116, 66],
+        "cuc-beak-up": [116, 60]
+      },
+      "headRig": [86, 84],
+      "faces": {
+        "normal": {
+          "bbox": [90, 28, 26, 34],
+          "beakOpen": 0
+        },
+        "talking": {
+          "bbox": [91, 25, 56, 52],
+          "beakOpen": 0.6
+        },
+        "smug": {
+          "bbox": [88, 27, 30, 33],
+          "beakOpen": 0
+        },
+        "surprised": {
+          "bbox": [90, 23, 57, 58],
+          "beakOpen": 1
+        },
+        "deflated": {
+          "bbox": [89, 27, 28, 30],
+          "beakOpen": 0
+        }
+      }
+    }
+  }
+}

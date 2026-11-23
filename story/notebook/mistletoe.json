@@ -1,0 +1,84 @@
+{
+  "id": "mistletoe",
+  "status": "verified",
+  "source": "research/m0b-act-1.md",
+  "stamp": "TRUYỀN THUYẾT",
+  "card": [
+    "Tục hôn dưới tầm gửi chỉ thấy ghi từ năm 1784 ở Anh.",
+    "Truyện Baldur bị giết bằng cành tầm gửi có trong sách thế kỷ 13.",
+    "Chưa ai chứng minh hai việc có liên quan."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Ghi chép đầu tiên được biết về hôn dưới tầm gửi là một tác phẩm Anh năm 1784.",
+        "sources": [
+          {
+            "label": "smithsonianmag.com",
+            "url": "https://www.smithsonianmag.com/history/how-mistletoe-became-christmas-kissing-tradition-180985450/"
+          },
+          {
+            "label": "english-heritage.org.uk",
+            "url": "https://www.english-heritage.org.uk/learn/histories/christmas-greenery-history"
+          }
+        ]
+      },
+      {
+        "text": "Nguồn đầu tiên được biết gắn tầm gửi với Giáng Sinh là thơ của Robert Herrick (1591–1674); chưa rõ có nguồn sớm hơn mà không được ghi lại.",
+        "sources": [
+          {
+            "label": "english-heritage.org.uk",
+            "url": "https://www.english-heritage.org.uk/learn/histories/christmas-greenery-history"
+          }
+        ]
+      },
+      {
+        "text": "Pliny (thế kỷ 1) kể druid ở xứ Gaul hái tầm gửi trên cây sồi bằng liềm vàng; ông không nhắc Anh hay mùa Giáng Sinh.",
+        "sources": [
+          {
+            "label": "perseus.tufts.edu",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D16%3Achapter%3D95"
+          },
+          {
+            "label": "english-heritage.org.uk",
+            "url": "https://www.english-heritage.org.uk/learn/histories/christmas-greenery-history"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng thần Baldur của Bắc Âu bị giết bằng một cành tầm gửi do thần Hödr ném theo sự chỉ dẫn của Loki. Truyện có trong Völuspá (Codex Regius, khoảng 1270) và được Snorri Sturluson kể đầy đủ trong Prose Edda (khoảng 1222–23).",
+        "sources": [
+          {
+            "label": "sacred-texts.com",
+            "url": "https://sacred-texts.com/neu/poe/poe03.htm"
+          },
+          {
+            "label": "en.wikisource.org",
+            "url": "https://en.wikisource.org/wiki/The_Elder_Edda_and_the_Younger_Edda/Younger_Edda/The_Death_of_Baldur"
+          },
+          {
+            "label": "britannica.com",
+            "url": "https://www.britannica.com/topic/Edda"
+          },
+          {
+            "label": "arnastofnun.is",
+            "url": "https://www.arnastofnun.is/en/news/new-electronic-edition-codex-regius-poetic-edda"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Có người cho tục hôn có thể bắt nguồn từ “kissing bough” (vòng cành treo); đây chỉ là giả thuyết.",
+        "sources": [
+          {
+            "label": "english-heritage.org.uk",
+            "url": "https://www.english-heritage.org.uk/learn/histories/christmas-greenery-history"
+          }
+        ]
+      }
+    ]
+  }
+}

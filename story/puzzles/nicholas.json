@@ -1,0 +1,355 @@
+{
+ "id": "nicholas",
+ "format": "O",
+ "input": "assign",
+ "goal": "sort-claims",
+ "orientation": "both",
+ "title": "Thánh Nicôla: xếp theo thời điểm xảy ra hoặc được chép",
+ "question": "Bốn nấc theo thời gian, nấc 1 xưa nhất. Sáu mảnh: mảnh nào vào nấc nào, hay không đặt, các thẻ cho biết.",
+ "predict": {
+  "prompt": "Bản chép còn lại sớm nhất của chuyện túi vàng: ra đời bao lâu sau Thánh Nicôla?",
+  "options": [
+   "Ngay sau khi ngài mất",
+   "Khoảng một thế kỷ sau",
+   "Nhiều thế kỷ sau"
+  ]
+ },
+ "aha": "Chuyện túi vàng nằm trong tiểu sử còn lại sớm nhất, viết nhiều thế kỷ sau; không có tiểu sử cùng thời.",
+ "history": "nicholas",
+ "rules": [
+  {
+   "text": "Mỗi mảnh vào nấc lúc nó bắt đầu có; số nhỏ là cũ hơn, chung nấc là cùng lúc."
+  },
+  {
+   "text": "Nấc nào cũng cần ít nhất một mảnh. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Mỗi nấc nhận nhiều nhất hai mảnh."
+  },
+  {
+   "text": "Chạm một mảnh, rồi chạm một nấc để đặt."
+  },
+  {
+   "text": "Kiểm tra chấm cả bốn nấc một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Nấc 1 (xưa nhất)",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s2",
+   "label": "Nấc 2",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s3",
+   "label": "Nấc 3",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s4",
+   "label": "Nấc 4 (mới nhất)",
+   "cap": 2,
+   "min": 1
+  }
+ ],
+ "tokens": [
+  {
+   "id": "v",
+   "text": "Chuyện túi vàng ném qua cửa sổ",
+   "status": "fact"
+  },
+  {
+   "id": "m",
+   "text": "Tiểu sử của Michael",
+   "status": "fact"
+  },
+  {
+   "id": "j",
+   "text": "Tiểu sử của John the Deacon",
+   "status": "fact"
+  },
+  {
+   "id": "p",
+   "text": "Bài tán dương",
+   "status": "disputed"
+  },
+  {
+   "id": "b",
+   "text": "Hài cốt về Bari",
+   "status": "fact"
+  },
+  {
+   "id": "k",
+   "text": "Việc tôn kính ở Myra",
+   "status": "fact"
+  }
+ ],
+ "bankSeed": 2,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Suy ra từ St Nicholas Center",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-1.md; research/m0d-open.md",
+   "url": [
+    "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/early-sources",
+    "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/literary-development"
+   ],
+   "evidence": [
+    "There is no contemporary biography",
+    "The cult of Saint Nicholas started as early as the fourth century in the little port of Myra",
+    "can be dated to c.700",
+    "Appears about 880."
+   ],
+   "text": "Không có tiểu sử cùng thời; việc tôn kính ở Myra có từ thế kỷ 4. Tiểu sử của Michael và John đều đến sau.",
+   "do": [
+    {
+     "op": "before",
+     "t": [
+      "k",
+      "m"
+     ]
+    },
+    {
+     "op": "before",
+     "t": [
+      "k",
+      "j"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "who": "Suy ra từ các niên đại",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-1.md; research/m0d-open.md",
+   "url": [
+    "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/literary-development",
+    "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/john-the-deacon-ca-880"
+   ],
+   "evidence": [
+    "According to Anrich this was probably written between 814 and 843; according to Cioffari about 700.",
+    "a free adaptation of mainly the vita of Methodios (ad Theodorum). Appears about 880."
+   ],
+   "text": "Tiểu sử của Michael có nhiều mốc năm. Dù tính mốc nào, tiểu sử của John the Deacon không đến trước.",
+   "do": {
+    "op": "expr",
+    "e": [
+     "ge",
+     [
+      "pos",
+      "j"
+     ],
+     [
+      "pos",
+      "m"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "c3",
+   "who": "St Nicholas Center",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0d-open.md",
+   "url": [
+    "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/michael-the-archimandrite"
+   ],
+   "evidence": [
+    "believed to be the earliest surviving life",
+    "he threw another bag of gold, equal to the previous one, through the same window later at night"
+   ],
+   "text": "Chuyện túi vàng có trong tiểu sử Michael, bản được tin là tiểu sử còn lại sớm nhất.",
+   "do": {
+    "op": "same",
+    "t": [
+     "v",
+     "m"
+    ]
+   }
+  },
+  {
+   "id": "c4",
+   "who": "Suy ra từ các niên đại",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-1.md; research/m0d-open.md",
+   "url": [
+    "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/early-sources",
+    "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/literary-development"
+   ],
+   "evidence": [
+    "brought to Bari in Italy in 1087",
+    "According to Anrich this was probably written between 814 and 843; according to Cioffari about 700.",
+    "Appears about 880."
+   ],
+   "text": "Hài cốt về Bari đến sau hai tiểu sử, và sau chuyện túi vàng.",
+   "do": [
+    {
+     "op": "before",
+     "t": [
+      "m",
+      "b"
+     ]
+    },
+    {
+     "op": "before",
+     "t": [
+      "j",
+      "b"
+     ]
+    },
+    {
+     "op": "before",
+     "t": [
+      "v",
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra từ Anrich và Cioffari, St Nicholas Center",
+   "kind": "inference",
+   "status": "disputed",
+   "source": "research/m0b-act-1.md; research/m0d-open.md",
+   "url": [
+    "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/literary-development",
+    "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/early-sources"
+   ],
+   "evidence": [
+    "According Anrich this is a late text, and not by Proclus. According to Cioffari, it perhaps may be authentic, or from the period 447-550.",
+    "The cult of Saint Nicholas started as early as the fourth century in the little port of Myra",
+    "According to Anrich this was probably written between 814 and 843; according to Cioffari about 700."
+   ],
+   "text": "Anrich nói bài tán dương muộn; Cioffari: có thể sớm hơn. Chỉ theo Cioffari mới có chỗ: sau việc tôn kính ở Myra, trước Michael.",
+   "do": {
+    "op": "expr",
+    "e": [
+     "or",
+     [
+      "not",
+      [
+       "placed",
+       "p"
+      ]
+     ],
+     [
+      "and",
+      [
+       "gt",
+       [
+        "pos",
+        "p"
+       ],
+       [
+        "pos",
+        "k"
+       ]
+      ],
+      [
+       "lt",
+       [
+        "pos",
+        "p"
+       ],
+       [
+        "pos",
+        "m"
+       ]
+      ]
+     ]
+    ]
+   }
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "k"
+   ],
+   [
+    "m",
+    "v"
+   ],
+   [
+    "j"
+   ],
+   [
+    "b"
+   ]
+  ]
+ ],
+ "space": 2880,
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Mỗi mảnh vào nấc nào, hay không vào nấc nào? Chuyện túi vàng được chép ra từ lúc nào?"
+  },
+  {
+   "tier": 2,
+   "card": "c2",
+   "text": "Đọc thẻ 2: thẻ nói đúng điều gì về thứ tự hai tiểu sử?"
+  },
+  {
+   "tier": 3,
+   "text": "Tèo tin chuyện vàng cũ ngang lúc ngài được tôn kính. Thẻ nào cho thấy điều ấy sai?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s4": "b"
+   },
+   "text": "Thẻ 4: hai tiểu sử, và chuyện túi vàng, đều trước Bari; nấc 4 là của Bari."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nấc."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo đoán: chuyện vàng qua cửa sổ có bản ghi cùng thời.",
+  "cards": [
+   "c1",
+   "c3"
+  ],
+  "trap": {
+   "s1": [
+    "k",
+    "v"
+   ]
+  },
+  "do": [
+   {
+    "op": "same",
+    "t": [
+     "v",
+     "k"
+    ]
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Sự thật: không có tiểu sử cùng thời; chuyện túi vàng nằm trong tiểu sử còn lại sớm nhất.",
+   "Người ta kể rằng ngài ném túi vàng qua cửa sổ; trang ấy ra đời nhiều thế kỷ sau."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả bốn nấc một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ }
+}

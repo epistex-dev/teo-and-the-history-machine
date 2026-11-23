@@ -1,0 +1,332 @@
+{
+ "id": "befana",
+ "format": "M",
+ "input": "order",
+ "goal": "date-forms",
+ "orientation": "both",
+ "title": "Befana: xếp theo bản ghi sớm nhất mở được",
+ "question": "Năm nấc theo bản ghi, nấc 1 cũ nhất. Sáu mảnh: mảnh nào vào nấc nào, hay không đặt, các thẻ cho biết.",
+ "predict": {
+  "prompt": "Chữ befana và các dạng tên gần nó: bản ghi nào mở được sớm nhất?",
+  "options": [
+   "Chữ befana",
+   "Một dạng tên khác",
+   "Cùng một lúc"
+  ]
+ },
+ "aha": "Các dạng tên có năm gắn với Lễ Hiển Linh; chữ befana sớm nhất mở được đến sau cả bốn.",
+ "history": "befana",
+ "rules": [
+  {
+   "text": "Mỗi mảnh vào nấc lúc nó bắt đầu có bản ghi mở được; số nhỏ là cũ hơn, chung nấc là chưa tách được."
+  },
+  {
+   "text": "Nấc nào cũng cần ít nhất một mảnh. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Mỗi nấc nhận nhiều nhất hai mảnh."
+  },
+  {
+   "text": "Chạm một mảnh, rồi chạm một nấc để đặt."
+  },
+  {
+   "text": "Kiểm tra chấm cả năm nấc một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Nấc 1 (cũ nhất)",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s2",
+   "label": "Nấc 2",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s3",
+   "label": "Nấc 3",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s4",
+   "label": "Nấc 4",
+   "cap": 2,
+   "min": 1
+  },
+  {
+   "id": "s5",
+   "label": "Nấc 5 (mới nhất)",
+   "cap": 2,
+   "min": 1
+  }
+ ],
+ "tokens": [
+  {
+   "id": "e",
+   "text": "Bifania (G. Villani)",
+   "status": "fact"
+  },
+  {
+   "id": "w",
+   "text": "befana (Pulci)",
+   "status": "fact"
+  },
+  {
+   "id": "b",
+   "text": "befanias (Arezzo)",
+   "status": "fact"
+  },
+  {
+   "id": "h",
+   "text": "Strenia (La Mã)",
+   "status": "disputed"
+  },
+  {
+   "id": "a",
+   "text": "Bitfanie (Siena)",
+   "status": "fact"
+  },
+  {
+   "id": "c",
+   "text": "Befanie (Florence)",
+   "status": "fact"
+  }
+ ],
+ "bankSeed": 1,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Suy ra từ TLIO",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+   "url": [
+    "https://tlio.ovi.cnr.it/voci/005834.htm",
+    "https://tlio.ovi.cnr.it/TLIO/pagweb4.htm"
+   ],
+   "evidence": [
+    "Nella grafia Bitfanie il termine è att. in una carta lat. di Siena del 1048",
+    "in un doc. lat. aret. del 1211 compare la forma befanias",
+    "Stat. fior., a. 1284",
+    "Lo stesso che epifania",
+    "a. [anno] = ante [anno]"
+   ],
+   "text": "Ba dạng Bitfanie, befanias, Befanie gắn với Lễ Hiển Linh. Befanias, ở Arezzo, đứng giữa Bitfanie và Befanie.",
+   "do": {
+    "op": "between",
+    "t": [
+     "a",
+     "b",
+     "c"
+    ]
+   }
+  },
+  {
+   "id": "c2",
+   "who": "Suy ra từ TLIO và Treccani",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+   "url": [
+    "https://tlio.ovi.cnr.it/voci/005834.htm",
+    "https://tlio.ovi.cnr.it/TLIO/pagweb4.htm",
+    "https://www.treccani.it/enciclopedia/giovanni-villani_(Dizionario-Biografico)/"
+   ],
+   "evidence": [
+    "Nella grafia Bitfanie il termine è att. in una carta lat. di Siena del 1048",
+    "Stat. fior., a. 1284",
+    "Bifania (G. Villani, 1348)",
+    "a. [anno] = ante [anno]",
+    "Morì nel 1348, contagiato dalla peste nera come racconta, senza indicare la data precisa del decesso, il fratello Matteo suo continuatore",
+    "Villani ne abbia intrapreso la stesura molto più tardi – non prima degli anni Venti –"
+   ],
+   "text": "Befanie ở Florence đứng giữa Bitfanie ở Siena và Bifania của G. Villani.",
+   "do": {
+    "op": "between",
+    "t": [
+     "a",
+     "c",
+     "e"
+    ]
+   }
+  },
+  {
+   "id": "c3",
+   "who": "Suy ra từ TLIO, Treccani và Pulci",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+   "url": [
+    "https://tlio.ovi.cnr.it/voci/005834.htm",
+    "https://www.treccani.it/enciclopedia/morgante/",
+    "https://tlio.ovi.cnr.it/TLIO/pagweb4.htm",
+    "https://www.treccani.it/enciclopedia/giovanni-villani_(Dizionario-Biografico)/"
+   ],
+   "evidence": [
+    "in un doc. lat. aret. del 1211 compare la forma befanias",
+    "Bifania (G. Villani, 1348)",
+    "23 canto đầu in 1478 (không còn bản nào), bản đủ 1483",
+    "a. [anno] = ante [anno]",
+    "Morì nel 1348, contagiato dalla peste nera come racconta, senza indicare la data precisa del decesso, il fratello Matteo suo continuatore",
+    "Villani ne abbia intrapreso la stesura molto più tardi – non prima degli anni Venti –"
+   ],
+   "text": "Bifania của G. Villani đứng giữa befanias ở Arezzo và chữ befana của Pulci.",
+   "do": {
+    "op": "between",
+    "t": [
+     "b",
+     "e",
+     "w"
+    ]
+   }
+  },
+  {
+   "id": "c4",
+   "who": "Suy ra từ Pulci, GDLI và TLIO",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-2.md; research/m0c-puzzles.md",
+   "url": [
+    "https://tlio.ovi.cnr.it/voci/005834.htm",
+    "https://www.gdli.it/contesti/befana/245190",
+    "https://www.treccani.it/enciclopedia/morgante/"
+   ],
+   "evidence": [
+    "che faceva le mummie, anzi befana",
+    "23 canto đầu in 1478 (không còn bản nào), bản đủ 1483",
+    "Dạng befana (đuôi -a) không có trong danh sách forme của TLIO"
+   ],
+   "text": "Chữ befana sớm nhất mở được nằm trong thơ Pulci, ở nấc mới nhất.",
+   "do": {
+    "op": "at",
+    "t": "w",
+    "s": "s5"
+   }
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra từ Treccani và Britannica Kids",
+   "kind": "inference",
+   "status": "disputed",
+   "source": "research/m0b-act-2.md",
+   "url": [
+    "https://www.treccani.it/vocabolario/befana/",
+    "https://kids.britannica.com/scholars/article/Befana/14117"
+   ],
+   "evidence": [
+    "Personificazione dell’Epifania",
+    "some historians have suggested that she is a Christian version of an ancient Roman goddess named Strenia or Bestrina"
+   ],
+   "text": "Treccani: nhân cách hóa Lễ Hiển Linh. Britannica Kids: một số sử gia nêu Strenia. Nếu đặt Strenia thì chỉ được đặt trước Bitfanie.",
+   "do": {
+    "op": "expr",
+    "e": [
+     "or",
+     [
+      "not",
+      [
+       "placed",
+       "h"
+      ]
+     ],
+     [
+      "lt",
+      [
+       "pos",
+       "h"
+      ],
+      [
+       "pos",
+       "a"
+      ]
+     ]
+    ]
+   }
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "a"
+   ],
+   [
+    "b"
+   ],
+   [
+    "c"
+   ],
+   [
+    "e"
+   ],
+   [
+    "w"
+   ]
+  ]
+ ],
+ "space": 2520,
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Mỗi mảnh vào nấc nào, hay không vào nấc nào? Chữ befana có bản ghi mở được từ lúc nào?"
+  },
+  {
+   "tier": 2,
+   "card": "c4",
+   "text": "Đọc thẻ 4 trước: thẻ ấy nói một mảnh đứng ở nấc nào."
+  },
+  {
+   "tier": 3,
+   "text": "Tèo tin mọi dạng tên đều là tên của bà lão. Thẻ nào cho thấy điều ấy sai?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s5": "w"
+   },
+   "text": "Thẻ 4: chữ befana ở nấc mới nhất; nấc 5 là của nó."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả năm nấc."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo đoán: mọi dạng tên đều là tên của bà lão, nên bà có bản ghi từ dạng tên cũ nhất.",
+  "cards": [
+   "c1",
+   "c2",
+   "c3",
+   "c4"
+  ],
+  "trap": {
+   "s1": [
+    "a",
+    "w"
+   ]
+  },
+  "do": [
+   {
+    "op": "same",
+    "t": [
+     "w",
+     "a"
+    ]
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Các dạng tên có năm gắn với Lễ Hiển Linh; chữ befana sớm nhất mở được, trong thơ Pulci, đến sau chúng."
+  ],
+  "label": "SỰ THẬT"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả năm nấc một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ }
+}

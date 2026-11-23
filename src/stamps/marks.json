@@ -1,0 +1,53 @@
+{
+  "size": [
+    212,
+    92
+  ],
+  "marks": {
+    "fact": {
+      "label": "SỰ THẬT",
+      "text": [
+        90,
+        28,
+        100,
+        48
+      ]
+    },
+    "legend": {
+      "label": "TRUYỀN THUYẾT",
+      "text": [
+        90,
+        28,
+        94,
+        44
+      ]
+    },
+    "dispute": {
+      "label": "TRANH CÃI",
+      "text": [
+        90,
+        28,
+        100,
+        48
+      ]
+    },
+    "scripture": {
+      "label": "THEO KINH THÁNH",
+      "text": [
+        90,
+        30,
+        98,
+        46
+      ]
+    },
+    "tradition": {
+      "label": "THEO TRUYỀN THỐNG",
+      "text": [
+        74,
+        30,
+        110,
+        44
+      ]
+    }
+  }
+}

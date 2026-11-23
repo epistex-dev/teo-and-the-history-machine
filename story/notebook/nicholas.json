@@ -1,0 +1,111 @@
+{
+  "id": "nicholas",
+  "status": "verified",
+  "source": "research/m0b-act-1.md",
+  "stamp": "TRUYỀN THUYẾT",
+  "card": [
+    "Thánh Nicôla được tôn kính ở Myra từ thế kỷ 4, mất ngày 6/12; hài cốt về Bari năm 1087.",
+    "Về cuộc đời ngài, sử sách chắc rất ít.",
+    "Chuyện ném túi vàng cho ba cô gái là truyền thuyết: người ta kể rằng."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Việc tôn kính Thánh Nicôla bắt đầu ở Myra từ thế kỷ 4; ngài mất ngày 6/12 của một năm không rõ; hài cốt được đưa về Bari ở Ý năm 1087. Không có tiểu sử cùng thời.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/early-sources"
+          }
+        ]
+      },
+      {
+        "text": "Tiểu sử còn lại sớm nhất, theo St Nicholas Center, là của Michael the Archimandrite. Niên đại còn tranh cãi.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/michael-the-archimandrite"
+          },
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/literary-development"
+          }
+        ]
+      },
+      {
+        "text": "Cioffari xếp tiểu sử ấy khoảng năm 700; Anrich và bản dịch Quinn–Sewell xếp 814–842/843; trang bản dịch của St Nicholas Center ghi 710–720.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/literary-development"
+          },
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/michael-the-archimandrite"
+          }
+        ]
+      },
+      {
+        "text": "Methodius, John the Deacon và Legenda aurea theo cùng một dòng truyền từ Michael, không phải nguồn độc lập.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/literary-development"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng một người cha nghèo không có của hồi môn cho ba cô con gái; ban đêm Nicôla ném một túi vàng qua cửa sổ nhà ấy, rồi lần nữa qua cùng cửa sổ cho cô thứ hai và cô thứ ba.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/stories-legends/classic-sources/michael-the-archimandrite"
+          }
+        ]
+      },
+      {
+        "text": "Người ta kể rằng ngài dự Công đồng Nicêa; nguồn sớm nhất là khoảng năm 515.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/nicholas-of-patara"
+          }
+        ]
+      }
+    ],
+    "dispute": [
+      {
+        "text": "Của hồi môn: Cioffari cho rằng cốt truyện có thể có thật vì ba dị bản rất cổ và rất khác nhau (hai, ba hoặc bốn cô gái). Lendering nêu chuyện có song song trong tiểu sử Apollonius của Philostratus, nhưng khác ở lý do can thiệp nên kết luận câu chuyện là có thật. Phía kia, Britannica 1911 gọi mọi tường thuật còn lại là thuần túy truyền thuyết, còn Anrich cho rằng khó tìm lại con người thật của ngài.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/nicholas-of-patara"
+          },
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/early-sources"
+          },
+          {
+            "label": "en.wikisource.org",
+            "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Nicholas,_St"
+          }
+        ]
+      },
+      {
+        "text": "Công đồng Nicêa: có nguồn khoảng năm 515 nói ngài dự, nhưng các sử gia thời đó không nhắc, và Britannica 1911 ghi Athanasius không bao giờ nhắc tên ngài.",
+        "sources": [
+          {
+            "label": "stnicholascenter.org",
+            "url": "https://www.stnicholascenter.org/who-is-st-nicholas/real-person/nicholas-of-patara"
+          },
+          {
+            "label": "en.wikisource.org",
+            "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Nicholas,_St"
+          }
+        ]
+      }
+    ]
+  }
+}

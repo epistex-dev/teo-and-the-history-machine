@@ -1,0 +1,66 @@
+{
+  "id": "yule",
+  "status": "verified",
+  "source": "research/m0b-act-1.md",
+  "stamp": "SỰ THẬT",
+  "card": [
+    "Yule là tên mùa giữa đông của một số cộng đồng German thời trước Kitô giáo.",
+    "Một trong những bản ghi sớm nhất là của Bede, khoảng năm 725: tháng 12 và tháng 1 đều gọi là Giuli.",
+    "Về nghi lễ thì ta biết rất ít."
+  ],
+  "full": {
+    "fact": [
+      {
+        "text": "Bede (khoảng 725) viết rằng người Anh xưa gọi cả tháng 1 lẫn tháng 12 là Giuli, và tên ấy bắt nguồn từ việc mặt trời đổi chiều, vì một tháng đứng trước và một tháng đứng sau.",
+        "sources": [
+          {
+            "label": "monumenta.ch",
+            "url": "https://www.monumenta.ch/latein/text.php?rumpfid=Beda+Venerabilis%2C+De+Temporum+Ratione%2C+++15&tabelle=Beda_Venerabilis"
+          }
+        ]
+      },
+      {
+        "text": "Bede kể người Anh xưa tính năm mới từ đêm 24 rạng 25/12 và gọi đêm ấy là “đêm của các bà mẹ”; ông chỉ phỏng đoán lý do là những nghi lễ thức đêm.",
+        "sources": [
+          {
+            "label": "monumenta.ch",
+            "url": "https://www.monumenta.ch/latein/text.php?rumpfid=Beda+Venerabilis%2C+De+Temporum+Ratione%2C+++15&tabelle=Beda_Venerabilis"
+          }
+        ]
+      },
+      {
+        "text": "Từ Anh cổ geola có họ hàng với jól của Bắc Âu cổ nhưng dường như không phải con cháu của nó.",
+        "sources": [
+          {
+            "label": "wordorigins.org",
+            "url": "https://www.wordorigins.org/big-list-entries/yule"
+          }
+        ]
+      },
+      {
+        "text": "Ghi chép về jól trong văn chương Bắc Âu cổ rất thưa, và lễ có thể khác nhau theo vùng.",
+        "sources": [
+          {
+            "label": "scandinavianarchaeology.com",
+            "url": "https://www.scandinavianarchaeology.com/from-jol-to-yule/"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "text": "Người ta kể rằng, theo Snorri Sturluson (viết khoảng năm 1230), Yule từng kéo dài ba ngày trước thời vua Hákon của Na Uy. Snorri viết gần ba thế kỷ sau vua ấy. Nguồn học thuật lưu ý còn độ ngờ về độ chính xác của Snorri khi nói về thời ngoại giáo.",
+        "sources": [
+          {
+            "label": "gutenberg.org",
+            "url": "https://www.gutenberg.org/cache/epub/598/pg598.txt"
+          },
+          {
+            "label": "scandinavianarchaeology.com",
+            "url": "https://www.scandinavianarchaeology.com/from-jol-to-yule/"
+          }
+        ]
+      }
+    ]
+  }
+}

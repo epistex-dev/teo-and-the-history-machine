@@ -1,0 +1,380 @@
+{
+  "id": "dec25",
+  "format": "M",
+  "input": "order",
+  "goal": "rank-ties",
+  "orientation": "both",
+  "title": "Hai mục cùng ngày 25/12",
+  "question": "Ngày 25/12 có mặt trong nhiều nguồn, chưa rõ nguồn nào trước. Dải băng có ba nấc: mảnh nào vào đâu, các thẻ cho biết.",
+  "predict": {
+    "prompt": "Ngày 25/12 có hai mục: N INVICTI và Chúa sinh. Mục nào có bản ghi trước?",
+    "options": [
+      "Mục N INVICTI",
+      "Mục Chúa sinh",
+      "Cùng lúc"
+    ]
+  },
+  "aha": "Hai mục cùng nằm trong một cuốn lịch: bản 354 còn lại không xếp mục nào trước; chuyện thay thế mới là giả thuyết.",
+  "history": "dec25",
+  "rules": [
+    {
+      "text": "Nấc số nhỏ là cũ hơn; hai mảnh chung một nấc là cùng lúc. Nấc nào cũng phải có ít nhất một mảnh."
+    },
+    {
+      "text": "Chạm một mảnh, rồi chạm một nấc để đặt. Mảnh có thể không đặt."
+    },
+    {
+      "text": "Mỗi nấc nhận nhiều nhất hai mảnh."
+    },
+    {
+      "text": "Kiểm tra chấm cả băng một lượt: khớp, hoặc chưa khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Nấc 1 (cũ nhất)",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s2",
+      "label": "Nấc 2",
+      "cap": 2,
+      "min": 1
+    },
+    {
+      "id": "s3",
+      "label": "Nấc 3 (mới nhất)",
+      "cap": 2,
+      "min": 1
+    }
+  ],
+  "tokens": [
+    {
+      "id": "hyp",
+      "text": "Việc chọn ngày cho lễ ở Rôma",
+      "status": "disputed"
+    },
+    {
+      "id": "xm",
+      "text": "Mục Chúa sinh",
+      "status": "fact"
+    },
+    {
+      "id": "birth",
+      "text": "Ngày sinh của Chúa Giêsu",
+      "status": "decoy"
+    },
+    {
+      "id": "c380",
+      "text": "Lễ cử hành ở Constantinople",
+      "status": "fact"
+    },
+    {
+      "id": "sun",
+      "text": "Mục N INVICTI",
+      "status": "fact"
+    },
+    {
+      "id": "list",
+      "text": "Danh sách có mục Giáng Sinh",
+      "status": "fact"
+    }
+  ],
+  "bankSeed": 0,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Encyclopaedia Romana và Đại học Liverpool",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/invictus.html",
+        "https://www.liverpool.ac.uk/history/blog/2023/first-noel/"
+      ],
+      "evidence": [
+        "is annotated N INVICTI CM XXX",
+        "Christ was born in Bethlehem in Judaea"
+      ],
+      "text": "Mục N INVICTI (được cho là lễ mặt trời) và mục Chúa sinh: cả hai nằm trong một cuốn lịch La Mã, nên cùng lúc.",
+      "do": {
+        "op": "same",
+        "t": [
+          "xm",
+          "sun"
+        ]
+      }
+    },
+    {
+      "id": "c2",
+      "who": "Đại học Liverpool và History Today",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.liverpool.ac.uk/history/blog/2023/first-noel/",
+        "https://www.historytoday.com/archive/months-past/first-christmas-celebration"
+      ],
+      "evidence": [
+        "generally thought that this calendar was first produced in 336",
+        "In 354 a Roman aristocrat named Valentinus commissioned a book of calendars.",
+        "By 380 the day was being celebrated in Constantinople"
+      ],
+      "text": "Theo Liverpool và History Today, danh sách Giáng Sinh được cho là cũ hơn: nó có trước cuốn lịch La Mã và lễ ở Constantinople.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "and",
+          [
+            "lt",
+            [
+              "slot",
+              "list"
+            ],
+            [
+              "slot",
+              "xm"
+            ]
+          ],
+          [
+            "and",
+            [
+              "lt",
+              [
+                "slot",
+                "list"
+              ],
+              [
+                "slot",
+                "sun"
+              ]
+            ],
+            [
+              "lt",
+              [
+                "slot",
+                "list"
+              ],
+              [
+                "slot",
+                "c380"
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c3",
+      "who": "Suy ra từ Đại học Liverpool và History Today",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.liverpool.ac.uk/history/blog/2023/first-noel/",
+        "https://www.historytoday.com/archive/months-past/first-christmas-celebration"
+      ],
+      "evidence": [
+        "In 354 a Roman aristocrat named Valentinus commissioned a book of calendars.",
+        "By 380 the day was being celebrated in Constantinople"
+      ],
+      "text": "Lễ cử hành ở Constantinople không đến trước cuốn lịch La Mã.",
+      "do": [
+        {
+          "op": "expr",
+          "e": [
+            "ge",
+            [
+              "slot",
+              "c380"
+            ],
+            [
+              "slot",
+              "xm"
+            ]
+          ]
+        },
+        {
+          "op": "expr",
+          "e": [
+            "ge",
+            [
+              "slot",
+              "c380"
+            ],
+            [
+              "slot",
+              "sun"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "who": "Suy ra từ sử gia Hijmans và Bible Odyssey",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.academia.edu/968841/_Sol_Invictus_the_Winter_Solstice_and_the_Origins_of_Christmas_Mouseion_Number_47_3_2003_377_398",
+        "https://www.bibleodyssey.org/articles/the-nativity/"
+      ],
+      "evidence": [
+        "we do not know the exact date of the birth of Jesus Christ",
+        "the date was not recorded",
+        "In all probability, the earliest Christians did not know exactly when Jesus was born.",
+        "When Herod I died in 4 B.C.E.",
+        "the Christian feast honoring Christ's birthday on that day"
+      ],
+      "text": "Không bản ghi nào chép ngày sinh thật của Chúa: nếu ngày sinh ấy có chỗ, nó đứng trước danh sách có mục Giáng Sinh.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "not",
+            [
+              "placed",
+              "birth"
+            ]
+          ],
+          [
+            "lt",
+            [
+              "slot",
+              "birth"
+            ],
+            [
+              "slot",
+              "list"
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c5",
+      "who": "Suy ra từ History Today và sử gia Hijmans",
+      "kind": "inference",
+      "status": "disputed",
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.historytoday.com/archive/months-past/first-christmas-celebration",
+        "https://www.academia.edu/968841/_Sol_Invictus_the_Winter_Solstice_and_the_Origins_of_Christmas_Mouseion_Number_47_3_2003_377_398"
+      ],
+      "evidence": [
+        "One theory is that the date was chosen because it was the pagan solstice festival of Sol Invictus",
+        "unwarranted to take for granted that the actual festival celebrating the Natalis Invicti with 30 chariot races, mentioned in the Calendar of 354, was itself older than the Christian feast"
+      ],
+      "text": "Giả thuyết: lễ mặt trời có trước việc chọn ngày. Nếu việc ấy có chỗ, nó sau mục N INVICTI, trước mục Chúa sinh.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "not",
+            [
+              "placed",
+              "hyp"
+            ]
+          ],
+          [
+            "and",
+            [
+              "gt",
+              [
+                "slot",
+                "hyp"
+              ],
+              [
+                "slot",
+                "sun"
+              ]
+            ],
+            [
+              "lt",
+              [
+                "slot",
+                "hyp"
+              ],
+              [
+                "slot",
+                "xm"
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    [
+      [
+        "list"
+      ],
+      [
+        "xm",
+        "sun"
+      ],
+      [
+        "c380"
+      ]
+    ]
+  ],
+  "space": 1290,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: mảnh nào đến trước? Mỗi mảnh vào nấc nào, hay không vào nấc nào?"
+    },
+    {
+      "tier": 2,
+      "card": "c2",
+      "text": "Đọc thẻ 2 trước: thẻ ấy so thời điểm của một mảnh với ba mảnh khác."
+    },
+    {
+      "tier": 3,
+      "text": "Có chắc lễ mặt trời có bản ghi trước lễ Chúa sinh?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s1": "list"
+      },
+      "text": "Thẻ 2: danh sách có mục Giáng Sinh đứng trước mọi mảnh còn lại. Đặt nó vào nấc 1, rồi đọc thẻ 3."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả băng."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: lễ mặt trời có bản ghi trước.",
+    "cards": [
+      "c1"
+    ],
+    "do": [
+      {
+        "op": "before",
+        "t": [
+          "sun",
+          "xm"
+        ]
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Hai mục cùng nằm trong một cuốn lịch; trong bản 354 còn lại, bản ghi không xếp mục N INVICTI trước mục Chúa sinh.",
+      "Danh sách Giáng Sinh được cho là có trước cuốn lịch; lý do chọn ngày vẫn chỉ là giả thuyết."
+    ],
+    "label": "TRANH CÃI"
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả băng một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+  }
+}

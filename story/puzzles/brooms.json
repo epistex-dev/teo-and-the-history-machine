@@ -1,0 +1,292 @@
+{
+ "id": "brooms",
+ "format": "E",
+ "input": "mark",
+ "goal": "link-sources",
+ "orientation": "both",
+ "title": "Đêm nguy hiểm: lời nào của nguồn nào",
+ "question": "Bốn nguồn trong ô vàng, sáu lời về đêm Giáng Sinh ở Na Uy. Lời nào của nguồn nào? Các thẻ cho biết.",
+ "predict": {
+  "prompt": "Theo các nguồn đã mở, người Na Uy làm gì với chổi đêm Giáng Sinh?",
+  "options": [
+   "Giấu chổi đi",
+   "Để chổi ngoài cửa",
+   "Mỗi nguồn nói một khác"
+  ]
+ },
+ "aha": "Các nguồn kể ngược nhau về chổi: giấu trong nhà, hay để ngoài cửa chuồng. Tục ấy lâu đời đến đâu, không nguồn nào nói.",
+ "history": "brooms",
+ "rules": [
+  {
+   "text": "Chạm một mảnh, rồi chạm một nguồn để đặt. Mảnh có thể không đặt."
+  },
+  {
+   "text": "Bảo tàng Na Uy, trang tin khoa học, đài NRK: mỗi nơi nhận ít nhất một mảnh. Bản tin đại học: nhiều nhất một mảnh."
+  },
+  {
+   "text": "Kiểm tra chấm cả bốn nguồn một lượt: khớp, hoặc chưa khớp."
+  }
+ ],
+ "slots": [
+  {
+   "id": "s1",
+   "label": "Bảo tàng Na Uy",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s2",
+   "label": "Trang tin khoa học",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s3",
+   "label": "Đài NRK",
+   "cap": "any",
+   "min": 1
+  },
+  {
+   "id": "s4",
+   "label": "Bản tin đại học",
+   "cap": 1,
+   "min": 0
+  }
+ ],
+ "tokens": [
+  {
+   "id": "a",
+   "text": "Troll, hulder, draug và cả Quỷ đi lại đêm ấy",
+   "status": "fact"
+  },
+  {
+   "id": "b",
+   "text": "Gần như mọi sinh vật siêu nhiên ra ngoài đêm ấy",
+   "status": "fact"
+  },
+  {
+   "id": "c",
+   "text": "Lời khai ở phiên xử phù thủy bị ép ra",
+   "status": "fact"
+  },
+  {
+   "id": "d",
+   "text": "Đặt chổi và xẻng phân ngoài cửa chuồng",
+   "status": "disputed"
+  },
+  {
+   "id": "h",
+   "text": "Giấu hết chổi và giẻ lau trong nhà",
+   "status": "disputed"
+  },
+  {
+   "id": "f",
+   "text": "Cất chổi đêm ấy là tục rất lâu đời",
+   "status": "decoy"
+  }
+ ],
+ "bankSeed": 5,
+ "cards": [
+  {
+   "id": "c1",
+   "who": "Audun Kjus, Norsk Folkemuseum",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://norskfolkemuseum.no/den-skumle-jula"
+   ],
+   "evidence": [
+    "troll, hulder, draug og Djevelen selv"
+   ],
+   "text": "Audun Kjus ở Bảo tàng Dân gian Na Uy ghi: troll, hulder, draug và cả Quỷ đi lại đêm Giáng Sinh.",
+   "do": [
+    {
+     "op": "at",
+     "t": "a",
+     "s": "s1"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "who": "Suy ra từ một bài báo phổ biến",
+   "kind": "inference",
+   "status": "disputed",
+   "source": "research/m0c-puzzles.md",
+   "url": [
+    "https://www.forskning.no/jul/den-farlige-julenatta/1087733"
+   ],
+   "evidence": [
+    "Nær sagt alle overnaturlige vesener",
+    "sette sopelimen og møkkspaden utenfor fjøsdøra"
+   ],
+   "text": "Suy ra: hai lời chung một bài báo phổ biến, không nêu nguồn gốc: gần như mọi sinh vật siêu nhiên; chổi ngoài cửa chuồng.",
+   "do": [
+    {
+     "op": "same",
+     "t": [
+      "b",
+      "d"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "who": "Rune Blix Hagen, NRK",
+   "kind": "modern",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://www.nrk.no/kultur/heksenes-julegilde-1.6945584"
+   ],
+   "evidence": [
+    "presset fram"
+   ],
+   "text": "Sử gia Hagen trên đài NRK: lời khai ở các phiên xử phù thủy bị ép ra.",
+   "do": [
+    {
+     "op": "at",
+     "t": "c",
+     "s": "s3"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "who": "Northeastern, bản tin tổng hợp",
+   "kind": "modern",
+   "status": "disputed",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://news.northeastern.edu/2018/12/20/these-holiday-traditions-will-surprise-you/"
+   ],
+   "evidence": [
+    "Norwegians will hide all the brooms and mops in the house"
+   ],
+   "text": "Bản tin Đại học Northeastern ghi: người Na Uy giấu hết chổi và giẻ lau trong nhà.",
+   "do": [
+    {
+     "op": "at",
+     "t": "h",
+     "s": "s4"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "who": "Suy ra từ bản tin Northeastern",
+   "kind": "inference",
+   "status": "fact",
+   "source": "research/m0b-act-3.md",
+   "url": [
+    "https://news.northeastern.edu/2018/12/20/these-holiday-traditions-will-surprise-you/"
+   ],
+   "evidence": [
+    "Norwegians will hide all the brooms and mops in the house"
+   ],
+   "text": "Suy ra: nguồn nào nói cất chổi đêm ấy là tục rất lâu đời, nguồn ấy cũng nói giấu chổi trong nhà.",
+   "do": [
+    {
+     "op": "expr",
+     "e": [
+      "or",
+      [
+       "not",
+       [
+        "placed",
+        "f"
+       ]
+      ],
+      [
+       "eq",
+       [
+        "pos",
+        "f"
+       ],
+       [
+        "pos",
+        "h"
+       ]
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "solutions": [
+  [
+   [
+    "a"
+   ],
+   [
+    "b",
+    "d"
+   ],
+   [
+    "c"
+   ],
+   [
+    "h"
+   ]
+  ]
+ ],
+ "hints": [
+  {
+   "tier": 1,
+   "text": "Câu hỏi: lời nào của nguồn nào? Mỗi thẻ dựa trên một nguồn đã mở."
+  },
+  {
+   "tier": 2,
+   "card": "c2",
+   "text": "Đọc thẻ 2: hai lời nào chung một bài?"
+  },
+  {
+   "tier": 3,
+   "text": "Có chắc lời nghe hiền thì đáng tin hơn lời dọa?"
+  },
+  {
+   "tier": 4,
+   "fills": {
+    "s4": "h"
+   },
+   "text": "Thẻ 4 đặt một mảnh vào Bản tin đại học. Đặt mảnh ấy vào, rồi đọc lại thẻ 5."
+  },
+  {
+   "tier": 5,
+   "solves": true,
+   "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu xếp hộ cả bốn nguồn."
+  }
+ ],
+ "wrongFrame": {
+  "text": "Tèo nghe Quạ Đồn: lời nghe hiền thì hẳn có nguồn nói ra, nên mảnh ấy có chỗ.",
+  "cards": [
+   "c4",
+   "c5"
+  ],
+  "trap": {
+   "s1": [
+    "a",
+    "f"
+   ]
+  },
+  "do": [
+   {
+    "op": "used",
+    "t": "f"
+   }
+  ]
+ },
+ "reveal": {
+  "lines": [
+   "Bản tin đại học nói giấu chổi trong nhà; trang tin khoa học nói để ngoài cửa chuồng.",
+   "Tục ấy có từ bao giờ, không nguồn nào trong bốn nguồn nói."
+  ],
+  "label": "TRANH CÃI"
+ },
+ "antiGuess": {
+  "rule": "Kiểm tra chấm cả bốn nguồn một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra mảnh nào sai."
+ },
+ "space": 4440
+}

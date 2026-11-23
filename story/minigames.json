@@ -1,0 +1,975 @@
+[
+  {
+    "id": "intro",
+    "act": 1,
+    "format": "G",
+    "input": "assign",
+    "goal": "label",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Mặt số không thẻ nào nhắc tới vẫn xác định được nhờ loại trừ.",
+    "wrongFrame": "Mỗi mặt số cần một thẻ nói riêng về nó (giả định của người chơi).",
+    "key": "Không có (tutorial: dán nhãn mặt số, dạy cách chạm, Kiểm tra, bậc gợi ý)",
+    "label": "—",
+    "keySource": "story/puzzles/intro.json",
+    "cards": [
+      {
+        "text": "Bốn thẻ luật của Máy về bốn mặt số, hai nhãn thừa",
+        "source": "game",
+        "status": "rule"
+      }
+    ],
+    "solution": "1 đáp án; sâu 2; làm quen bằng ví dụ giả không tính; không gian hợp lệ P(6,4) = 360",
+    "l2": "không: chỉ L1, mỗi thẻ loại bớt chỗ cho các mảnh, không cần giả định hay đọc chung hai thẻ",
+    "reveal": "Mặt số 3 không thẻ nào nhắc tới, mà chỉ còn một nhãn hợp.",
+    "puzzle": "story/puzzles/intro.json"
+  },
+  {
+    "id": "saturnalia",
+    "act": 1,
+    "format": "N",
+    "input": "mark",
+    "goal": "read-roman-dates",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Lễ dài nhất bảy ngày, tính cả ngày đầu 17/12, nên kết thúc 23/12 (a.d. X Kal. Ian.), không phải 24/12 hay 25/12.",
+    "wrongFrame": "Cộng ba, năm, bảy ngày vào 17/12 mà không tính ngày đầu thì ra ngày cuối 20, 22, 24/12 (sai).",
+    "key": "Penelope: 17/12 là a.d. XVI Kal. Ian. và 25/12 là a.d. VIII Kal. Ian. (số La Mã nhỏ dần khi ngày muộn dần); lễ bảy ngày thời Cicero tính cả ngày đầu; Macrobius: lễ ba ngày chạy từ a.d. XVI đến a.d. XIV; Augustus ba ngày, Caligula năm ngày; giả định của câu đố: ba kỳ lễ cùng bắt đầu ở ngày lễ chính thức, nên ngày cuối cách đều (nguồn chỉ ủng hộ ba ngày 17–19/12 và bảy ngày 17–23/12); không thẻ nào nêu ngày cuối",
+    "label": "TRANH CÃI",
+    "keySource": "research/m0b-act-1.md §5 (S1, S2); research/m0c-puzzles.md §10 (S1, S2, S4)",
+    "cards": [
+      {
+        "text": "Penelope: lễ bắt đầu 17/12 (a.d. XVI Kal. Ian.); mỗi ngày muộn hơn, số a.d. nhỏ đi một",
+        "source": "research/m0b-act-1.md §5 S1; research/m0c-puzzles.md §10 S2",
+        "status": "fact"
+      },
+      {
+        "text": "Penelope: lễ thời Cicero kéo dài bảy ngày (ngày cuối 23/12 nếu tính cả ngày đầu, 24/12 nếu không; thẻ không nói cách đếm, người chơi suy ra từ thẻ 3)",
+        "source": "research/m0b-act-1.md §5 S2",
+        "status": "fact"
+      },
+      {
+        "text": "Macrobius: lễ ba ngày chạy từ a.d. XVI đến a.d. XIV Kal. Ian.",
+        "source": "research/m0c-puzzles.md §10 S1",
+        "status": "fact"
+      },
+      {
+        "text": "Giả định của câu đố: ba kỳ lễ cùng bắt đầu một ngày và dài hơn nhau đều đặn (ba, năm, bảy ngày), nên ngày cuối của kỳ giữa nằm giữa hai ngày cuối kia; thẻ không nêu độ dài nào",
+        "source": "research/m0b-act-1.md §5 S2; research/m0c-puzzles.md §10 S4",
+        "status": "disputed"
+      }
+    ],
+    "solution": "Logic: 19/12: Ngày a.d. XIV Kal. Ian.; 21/12: Ngày a.d. XII Kal. Ian.; 23/12: Ngày a.d. X Kal. Ian.; để ngoài: a.d. XIII, XI, IX; 1 đáp án; không gian hợp lệ 37633; L1 cộng 1 bước L2",
+    "l2": "đọc cùng luật 2 (ba mảnh trên dải) và thẻ 4 (ngày cuối cách đều): mảnh «Ngày a.d. IX Kal. Ian.» ở «24/12» không có bộ ba cách đều đi cùng «Ngày a.d. XIV Kal. Ian.» ở «19/12», nên loại chỗ đó",
+    "reveal": "Bảy ngày tính cả ngày đầu 17/12 thì ngày cuối là 23/12; ngày 25/12 nằm ngoài lễ.",
+    "note": "Không dùng Lord of Misrule, nến, tượng nhỏ; độ dài lễ 3, 5, 7 ngày lấy từ Penelope (S2); ngày cuối 21/12 không có nguồn, chỉ là hệ quả của giả định ở thẻ 4, nên không vào lời lộ hay Sổ tay; không thẻ nào nêu ngày cuối; NatGeo (S7) chỉ là nguồn của lời lộ; chọn 21/12 làm đáp án dự đoán nhiễu vì nó là ngày cuối của kỳ năm ngày.",
+    "puzzle": "story/puzzles/saturnalia.json"
+  },
+  {
+    "id": "yule",
+    "act": 1,
+    "format": "T",
+    "input": "order",
+    "goal": "two-lane",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Chi tiết ba ngày rõ nhất nằm ở bản ghi muộn nhất, viết gần ba thế kỷ sau thời nó kể.",
+    "wrongFrame": "Chi tiết càng rõ thì nguồn càng gần thời được tả (sai: chuyện ba ngày nằm ở nguồn muộn nhất); trong dữ liệu: sử thi của Snorri cách thời vua Hákon dưới 2 cột, thẻ 4 phá.",
+    "key": "Bede khoảng 725 nêu tên tháng Giuli của người Anh xưa; Snorri khoảng 1230 kể Yule ba ngày từ trước thời vua Hákon, viết gần 300 năm sau vua ấy (nguồn muộn: người ta kể, vào Truyền thuyết)",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0b-act-1.md §6 (Y1, Y5); story/notebook/yule.json",
+    "cards": [
+      {
+        "text": "Suy ra từ Bede: sách của Bede ở làn năm viết; người Anh xưa gọi tháng 12 và tháng 1 là Giuli, cái tên có từ trước ông; mảnh tên tháng đứng đầu làn thời được tả",
+        "source": "research/m0b-act-1.md §6 Y1",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Bede và Heimskringla: vua Hákon trị vì sau khi Bede viết sách; thời vua ấy là thời được tả",
+        "source": "research/m0b-act-1.md §6 Y1, Y5",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Bede và Snorri: theo số cột, mảnh thời vua đứng sau sách Bede và trước sử thi Snorri",
+        "source": "research/m0b-act-1.md §6 Y1, Y5",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Heimskringla (khoảng 1230) và vua Hákon (mất 961): sử thi của Snorri ở làn năm viết, Snorri viết gần ba thế kỷ sau, nên giữa hai mảnh còn ít nhất hai cột",
+        "source": "research/m0b-act-1.md §6 Y5",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Heimskringla: Heimskringla chép Yule kéo dài ba ngày; vẫn có chút ngờ về độ chính xác thông tin của Snorri về thời ngoại giáo, nên mảnh thời Yule ngoại giáo để ngoài",
+        "source": "research/m0b-act-1.md §6 Y5",
+        "status": "fact"
+      }
+    ],
+    "solution": "Logic: Năm viết, cột 2: Sách tính lịch của Bede; Năm viết, cột 7: Sử thi Heimskringla của Snorri; Thời được tả, cột 1: Tên tháng Giuli; Thời được tả, cột 4: Thời vua Hákon của Na Uy; để ngoài: Thời Yule ngoại giáo của Na Uy (thẻ 5: chỉ có lời của sử thi, vẫn có chút ngờ; chỗ duy nhất trước thời vua đã có tên Giuli); 1 đáp án; không gian hợp lệ 3360; L1 cộng 1 bước L2",
+    "l2": "giả định «Thời vua Hákon của Na Uy» nằm ở «Thời được tả, cột 6»: đối chiếu với các thẻ đã đọc thì mâu thuẫn, nên loại chỗ đó",
+    "reveal": "Sự thật: Bede chép tên Giuli. Chuyện ba ngày chỉ có ở nguồn muộn nhất: người ta kể, chưa phải bản ghi.",
+    "puzzle": "story/puzzles/yule.json"
+  },
+  {
+    "id": "mistletoe",
+    "act": 1,
+    "format": "A",
+    "input": "assign",
+    "goal": "find-missing-link",
+    "orientation": "both",
+    "minutes": [
+      100,
+      170
+    ],
+    "state": "full",
+    "aha": "Không nguồn nào nối truyện Baldur, sách thế kỷ 13, với nụ hôn; tục ấy chỉ thấy ghi từ năm 1784.",
+    "wrongFrame": "Nhờ Baldur mà người ta hôn dưới tầm gửi (chưa ai chứng minh).",
+    "key": "Prose Edda của Snorri kể đầy đủ chuyện lời thề của muôn vật trừ cây tầm gửi, còn Völuspá trong bản chép Codex Regius có đoạn thơ về cành cây mảnh trên đồng cao hóa mũi tên (cả hai là sách thế kỷ 13, truyền thuyết); bài của English Heritage dẫn thơ Herrick gắn tầm gửi với Giáng Sinh và hài kịch có nhạc Two to One năm 1784 (ghi chép đầu tiên được biết về hôn dưới tầm gửi), đồng thời nêu vòng cành treo kissing bough chỉ là giả thuyết; bài của Smithsonian dẫn lệ của Irving mỗi quả mọng một nụ hôn; chưa nguồn nào nối Baldur với nụ hôn; Pliny chỉ nói tầm gửi của druid Gaul, không là mảnh trên bàn",
+    "label": "TRUYỀN THUYẾT",
+    "keySource": "research/m0b-act-1.md §7; research/m0c-puzzles.md §13; story/notebook/mistletoe.json; story/puzzles/mistletoe.json",
+    "cards": [
+      {
+        "text": "Völuspá trong Codex Regius tả cành mảnh trên đồng cao, hóa mũi tên. Lời thề của muôn vật được Snorri kể trong Prose Edda.",
+        "source": "research/m0b-act-1.md §7 M4, M5",
+        "status": "fact"
+      },
+      {
+        "text": "Người ta kể rằng Hödr, theo lời chỉ dẫn của Loki, ném cành tầm gửi trúng thần Baldur.",
+        "source": "research/m0b-act-1.md §7 M4",
+        "status": "legend"
+      },
+      {
+        "text": "Một trong hai bài viết dẫn thơ Herrick về tầm gửi, và dẫn hài kịch có nhạc năm 1784.",
+        "source": "research/m0b-act-1.md §7 M1, M2",
+        "status": "fact"
+      },
+      {
+        "text": "Bài của Smithsonian dẫn lệ của Irving: mỗi quả mọng một nụ hôn, hết quả thì thôi.",
+        "source": "research/m0b-act-1.md §7 M1; research/m0c-puzzles.md §13 M2",
+        "status": "fact"
+      },
+      {
+        "text": "Tục hôn từ vòng cành treo: chỉ là giả thuyết. Nếu có chỗ, nó ở cùng bài với hài kịch có nhạc năm 1784.",
+        "source": "research/m0b-act-1.md §7 M1, M3",
+        "status": "disputed"
+      }
+    ],
+    "solution": "Xếp 5 trong 6 mảnh vào 4 nguồn (mỗi nguồn nhận một đến hai mảnh). Prose Edda của Snorri: Lời thề của muôn vật trừ cây tầm gửi; Völuspá trong Codex Regius: Cành cây mảnh trên đồng cao hóa mũi tên; Bài của English Heritage: Hài kịch có nhạc năm 1784 ghi nụ hôn dưới tầm gửi + Thơ gắn tầm gửi với mùa lễ Giáng Sinh; Bài của Smithsonian: Lệ của Irving: mỗi quả mọng một nụ hôn; để ngoài: Tục hôn bắt nguồn từ vòng cành treo; 1 đáp án; không gian hợp lệ 2880; L1 cộng 1 bước L2",
+    "l2": "giả định «Hài kịch có nhạc năm 1784 ghi nụ hôn dưới tầm gửi» nằm ở «Bài của Smithsonian»: thẻ 3 kéo cả «Thơ gắn tầm gửi với mùa lễ Giáng Sinh» vào đó cùng «Lệ của Irving: mỗi quả mọng một nụ hôn» (thẻ 4), thành ba mảnh trong một nguồn, trái luật mỗi nguồn nhận nhiều nhất hai mảnh, nên loại chỗ đó",
+    "reveal": "Nụ hôn dưới tầm gửi: ghi chép đầu tiên được biết là năm 1784, nhiều thế kỷ sau hai sách chép truyện Baldur. Giữa truyện Baldur và nụ hôn chưa nguồn nào nối: chưa ai chứng minh.",
+    "note": "Trục gán mảnh cho nguồn nói (Prose Edda, Völuspá trong Codex Regius, bài của English Heritage, bài của Smithsonian), mỗi nguồn nhận một đến hai mảnh, nên biết thứ tự niên đại cộng mốc 1784 trong cảnh vẫn không xếp được bàn khi che thẻ. Không dùng kissing bough như sự thật: thẻ 5 chỉ đặt điều kiện nếu mảnh ấy có chỗ thì ở cùng bài với hài kịch có nhạc năm 1784, mà bài của English Heritage đã đủ hai mảnh (thơ Herrick và hài kịch có nhạc năm 1784) nên mảnh giả thuyết nằm ngoài. Pliny không là mảnh trên bàn (dòng sau trò chơi hỏi riêng về druid).",
+    "puzzle": "story/puzzles/mistletoe.json"
+  },
+  {
+    "id": "bethlehem",
+    "act": 1,
+    "format": "D",
+    "input": "assign",
+    "goal": "find-in-text",
+    "orientation": "both",
+    "minutes": [
+      100,
+      160
+    ],
+    "state": "full",
+    "aha": "Bức tranh Giáng Sinh quen thuộc lớn dần qua nhiều thế kỷ, từng nét một, sau hai bản Tin Mừng.",
+    "wrongFrame": "Cảnh máng cỏ quen thuộc, cả bò và lừa, nằm hết trong hai bản Tin Mừng, nên hình bò và lừa đứng ở thế kỷ 1.",
+    "key": "Justinô (mất 165): sinh trong hang gần làng; HĐGMVN: ý “vua” đến từ Tertullianô, chưa có ở thế kỷ 1; Yale ISM và BAR: hình Chúa Hài Đồng bên bò và lừa hiện ra ở thế kỷ 4, sau hình các nhà chiêm tinh; BAR: hình ở hầm mộ Priscilla giữa thế kỷ 3 (Yale: cuối 3 hoặc đầu 4, chỉ ở Sổ tay); Catholic Encyclopedia: lễ Hiển Linh của Giáo hội được nhắc đến sớm nhất năm 361; con số ba: BAR cùng thế kỷ với chuyện hang, HĐGMVN cùng thế kỷ với ý “vua”",
+    "label": "THEO KINH THÁNH",
+    "keySource": "research/m0b-act-1.md §8 (B5, B6, B12, B15, B17–B19, B21, B22); story/notebook/bethlehem.json; story/puzzles/bethlehem.json",
+    "cards": [
+      {
+        "text": "Justinô, mất năm 165, kể Đức Maria sinh Chúa Hài Đồng trong hang gần làng.",
+        "source": "research/m0b-act-1.md §8 B19",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ HĐGMVN, Tertullianô và BAR: ý “vua” chưa có ở thế kỷ 1; theo BAR hình ở hầm mộ Priscilla cùng thế kỷ với ý ấy",
+        "source": "research/m0b-act-1.md §8 B5, B6, B17",
+        "status": "fact"
+      },
+      {
+        "text": "Yale ISM Review và BAR: hình Chúa Hài Đồng trong máng cỏ bên bò và lừa hiện ra ở thế kỷ 4; hình nhà chiêm tinh và ý “vua” có trước (nhận định hiện đại)",
+        "source": "research/m0b-act-1.md §8 B12, B18",
+        "status": "fact"
+      },
+      {
+        "text": "Catholic Encyclopedia: lễ Hiển Linh của Giáo hội được nhắc đến sớm nhất năm 361 (nhận định hiện đại)",
+        "source": "research/m0b-act-1.md §8 B21",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ BAR và HĐGMVN: BAR đặt con số ba cùng thế kỷ với chuyện hang (thế kỷ 2), HĐGMVN cùng thế kỷ với ý “vua” (thế kỷ 3); nếu mảnh có chỗ, cả hai nguồn phải đồng ý",
+        "source": "research/m0b-act-1.md §8 B6, B15",
+        "status": "fact"
+      }
+    ],
+    "solution": "Xếp 5 trong 6 mảnh vào 6 thế kỷ (mỗi thế kỷ nhận nhiều nhất hai mảnh). Thế kỷ 2: Chuyện nơi sinh là một cái hang; thế kỷ 3: Hình các nhà chiêm tinh + Ý các nhà chiêm tinh là vua; thế kỷ 4: Hình Chúa Hài Đồng trong máng cỏ, bên bò và lừa + Lễ Hiển Linh được nhắc đến; để ngoài: Con số ba nhà chiêm tinh; 1 đáp án; không gian hợp lệ 88567; L1 4 vòng, L2 1 bước",
+    "l2": "giả định «Ý các nhà chiêm tinh là vua» nằm ở «Thế kỷ 2»: thẻ 2 kéo cả «Hình các nhà chiêm tinh» vào đó cùng «Chuyện nơi sinh là một cái hang» (thẻ 1), thành ba mảnh trong một thế kỷ, trái luật mỗi thế kỷ nhận nhiều nhất hai mảnh, nên loại chỗ đó",
+    "reveal": "Chuyện hang sinh được ghi từ thế kỷ 2, hình các nhà chiêm tinh từ thế kỷ 3. Hình bò và lừa từ thế kỷ 4, lễ Hiển Linh năm 361; ba nguồn không cùng nêu một thế kỷ cho con số ba.",
+    "note": "Trục thế kỷ mà các nguồn trên thẻ đồng ý (sáu thế kỷ, mỗi thế kỷ nhận nhiều nhất hai mảnh). Chuồng không là mảnh, không thẻ nào nói Luca có hay không có chuồng (research B4b); câu về Luca 2 và Mátthêu 2 chỉ ở cảnh và Sổ tay. Ba tên không là mảnh: HĐGMVN khoảng thế kỷ 8, Yale thế kỷ 6, BAR thế kỷ 5 (B22), ghi ở Sổ tay. Con số ba là mảnh tranh cãi (B6, B15): thẻ 5 nói BAR đặt nó cùng thế kỷ với chuyện hang (thế kỷ 2), HĐGMVN cùng thế kỷ với ý “vua” (thế kỷ 3), và nếu mảnh có chỗ thì cả hai nguồn phải đồng ý (mã hóa: nếu đặt, cùng chỗ với mảnh hang và mảnh “vua”); luật nói nguồn không đồng ý thì mảnh để ngoài. Hai chỗ ấy khác nhau nên không thế kỷ nào cả hai nguồn cùng nêu; mảnh nằm ngoài nhờ thẻ cộng sức chứa hai: đặt nó thì nó cùng chỗ với mảnh hang và mảnh “vua”, thẻ 2 kéo cả mảnh hình vào đó: bốn mảnh trong một thế kỷ, vượt hai (test thử sức chứa 2 và 3 giữ mảnh ngoài; sức chứa 6 thì không, và nói rõ trong test). Không thẻ nào nói nguồn bảo “không”. Mốc hình Priscilla lệch giữa BAR (giữa thế kỷ 3) và Yale (cuối 3 hoặc đầu 4), thế kỷ 3 là phần chung (B17): thẻ 2 chỉ ghi “theo BAR, cùng thế kỷ với ý ấy” (đúng điều nó mã hóa, không nêu thế kỷ nào cho hình, để người chơi tự suy giả định c≠2); mốc Yale chỉ ở B17 và Sổ tay. Bò và lừa chỉ lấy mốc hình thế kỷ 4 (B12); Origênê (B11) và Giả Mátthêu (B13) không là thẻ vì chưa đủ nguồn trên màn hình. Thẻ 2 và 5 là suy ra, không trích nguyên văn bản dịch; trang trọng (R7). Số giây là ước tính từ số chữ và thao tác, chưa có người chơi thật.",
+    "puzzle": "story/puzzles/bethlehem.json"
+  },
+  {
+    "id": "dec25",
+    "act": 1,
+    "format": "M",
+    "input": "order",
+    "goal": "rank-ties",
+    "orientation": "both",
+    "minutes": [
+      90,
+      180
+    ],
+    "state": "full",
+    "aha": "Hai mục cùng nằm trong một cuốn lịch: bản 354 còn lại không xếp mục nào trước; chuyện thay thế mới là giả thuyết.",
+    "wrongFrame": "Tèo xếp theo câu \"đội lốt\" của Quạ Đồn: lễ mặt trời có bản ghi trước, nên mục N INVICTI đứng trước mục Chúa sinh.",
+    "key": "Lịch 354 ghi cả N INVICTI (được cho là lễ mặt trời) và Chúa sinh ở Bêlem ở 25/12; danh sách Giáng Sinh được cho là từ 336; 380 Constantinople; không ai biết ngày sinh thật; trùng lễ mặt trời chỉ là giả thuyết; chưa rõ cái nào có trước",
+    "label": "TRANH CÃI",
+    "keySource": "research/m0b-act-1.md §9; story/puzzles/dec25.json",
+    "cards": [
+      {
+        "text": "Suy ra từ cuốn lịch 354: mục N INVICTI (được cho là lễ mặt trời) và mục Chúa sinh cùng nằm trong một văn bản, nên bản ghi của chúng cùng lúc",
+        "source": "research/m0b-act-1.md §9 D1, D5",
+        "status": "fact"
+      },
+      {
+        "text": "Theo Liverpool và History Today, danh sách Giáng Sinh được cho là có trước cả cuốn lịch 354 lẫn lễ cử hành ở Constantinople",
+        "source": "research/m0b-act-1.md §9 D2, D8",
+        "status": "fact"
+      },
+      {
+        "text": "Lễ cử hành ở Constantinople không đến trước cuốn lịch 354",
+        "source": "research/m0b-act-1.md §9 D1, D8",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ sử gia Hijmans và Bible Odyssey: không bản ghi nào chép ngày sinh thật của Chúa; nếu ngày sinh ấy có chỗ thì đứng trước danh sách có mục Giáng Sinh",
+        "source": "research/m0b-act-1.md §8 B9, B10, §9 D5, D7",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ History Today và sử gia Hijmans: giả thuyết nói lễ mặt trời có trước việc chọn ngày; nếu việc ấy có chỗ thì nó sau mục N INVICTI, trước mục Chúa sinh",
+        "source": "research/m0b-act-1.md §9 D3, D5",
+        "status": "disputed"
+      }
+    ],
+    "solution": "Xếp 6 mảnh lên 3 nấc, mỗi nấc có một đến hai mảnh; 1 đáp án (hai mảnh không có nấc); không gian hợp lệ 1290; sâu 1; một bước giả thuyết",
+    "l2": "giả định «Mục Chúa sinh» nằm ở «Nấc 3 (mới nhất)»: thẻ 1 kéo «Mục N INVICTI» cùng nấc, thẻ 3 kéo cả «Lễ cử hành ở Constantinople» vào nấc 3, thành ba mảnh trong một nấc, trái luật mỗi nấc nhiều nhất hai mảnh, nên loại chỗ đó",
+    "reveal": "Hai mục cùng nằm trong một cuốn lịch; trong bản 354 còn lại, bản ghi không xếp mục nào trước; thay thế là giả thuyết.",
+    "puzzle": "story/puzzles/dec25.json"
+  },
+  {
+    "id": "nicholas",
+    "act": 1,
+    "format": "O",
+    "input": "assign",
+    "goal": "sort-claims",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Chuyện túi vàng nằm trong tiểu sử còn lại sớm nhất, viết nhiều thế kỷ sau; không có tiểu sử cùng thời.",
+    "wrongFrame": "Chuyện vàng qua cửa sổ có bản ghi cùng thời (người chơi tin vậy).",
+    "key": "Tôn kính ở Myra từ thế kỷ 4; không có tiểu sử cùng thời; tiểu sử còn lại sớm nhất là của Michael (niên đại tranh cãi: khoảng 700; 710–720; 814–842/843) và chép chuyện túi vàng qua cửa sổ; hài cốt về Bari năm 1087; chuyện vàng là truyền thuyết",
+    "label": "TRUYỀN THUYẾT",
+    "keySource": "research/m0b-act-1.md §10; story/notebook/nicholas.json; story/puzzles/nicholas.json",
+    "cards": [
+      {
+        "text": "Suy ra từ St Nicholas Center: không có tiểu sử cùng thời, việc tôn kính ở Myra có từ thế kỷ 4, nên tiểu sử Michael và John the Deacon đều sau việc ấy",
+        "source": "research/m0b-act-1.md §10; research/m0d-open.md §2.2 N9",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ các niên đại: tiểu sử của Michael có nhiều mốc năm; dù tính mốc nào, tiểu sử của John the Deacon không đến trước",
+        "source": "research/m0b-act-1.md §10; research/m0d-open.md §2.2 N3, N9",
+        "status": "fact"
+      },
+      {
+        "text": "St Nicholas Center: chuyện túi vàng có trong tiểu sử Michael, bản được tin là tiểu sử còn lại sớm nhất",
+        "source": "research/m0d-open.md §2.2 N1, N4",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ các niên đại: hài cốt về Bari năm 1087 đến sau hai tiểu sử và sau chuyện túi vàng",
+        "source": "research/m0b-act-1.md §10; research/m0d-open.md §2.2 N9",
+        "status": "fact"
+      },
+      {
+        "text": "Anrich: bài muộn, không phải của Proclus; Cioffari: có thể thật, hoặc sau thời Proclus; chỉ theo Cioffari mới đặt được: sau việc tôn kính ở Myra, trước tiểu sử Michael",
+        "source": "research/m0d-open.md §2.2 N10",
+        "status": "disputed"
+      }
+    ],
+    "solution": "Xếp 5 trong 6 mảnh lên 4 nấc, mỗi nấc có một đến hai mảnh; 1 đáp án (bài tán dương không có nấc: thẻ 5 chỉ cho nó chỗ giữa việc tôn kính và Michael, mà mỗi nấc nhận tối đa hai mảnh nên Michael và chuyện túi vàng chiếm trọn nấc 2, đẩy John sang nấc 3 và Bari ở nấc 4); không gian hợp lệ 2880; sâu 1; một bước giả thuyết",
+    "l2": "giả định «Chuyện túi vàng ném qua cửa sổ» nằm ở «Nấc 3»: thẻ 3 kéo «Tiểu sử của Michael» vào nấc 3, thẻ 2 và thẻ 4 buộc «Tiểu sử của John the Deacon» cũng ở nấc 3, thành ba mảnh trong một nấc, trái luật mỗi nấc nhiều nhất hai mảnh, nên loại chỗ đó",
+    "reveal": "Không có tiểu sử cùng thời; chuyện túi vàng nằm trong tiểu sử còn lại sớm nhất, viết nhiều thế kỷ sau.",
+    "note": "Giữ ngắn vì trùng dấu của Cúc Cu cuối chương. Ngày 6/12 chỉ ở Sổ nguồn và dấu, không ở câu đố (năm không rõ, không xếp được lên nấc). Không ống khói, tất, Nicêa (N7 tranh cãi). Methodius không vào câu đố: thứ tự với Michael chưa chốt (m0d N4), nên tiểu sử thứ hai là của John the Deacon, đến sau mọi niên đại của Michael (N9); cả hai không là nguồn độc lập (N2). Bài tán dương chỉ là mảnh chưa xếp được: hai học giả bất đồng, không nguồn nào nói nó có chuyện vàng (N10); thẻ 5 chỉ cho nó chỗ giữa việc tôn kính và Michael theo Cioffari, mà mỗi nấc nhiều nhất hai mảnh nên bốn nấc không đủ.",
+    "puzzle": "story/puzzles/nicholas.json"
+  },
+  {
+    "id": "carol",
+    "act": 2,
+    "format": "T",
+    "input": "order",
+    "goal": "date-records",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Rất khó có chuyện carol chép tay được soạn cho nhà thờ: nguồn không cho câu ấy một nấc nào trên trục.",
+    "wrongFrame": "Các carol Anh xưa nhất được soạn để hát trong nhà thờ (chưa ai chứng minh).",
+    "key": "Khoảng 500 carol Anh xưa nhất còn trong bản chép tay thế kỷ 13–15, khoảng một nửa nói về lễ khác hoặc thế tục; rất khó có chuyện chúng được soạn cho nhà thờ; Boar's Head là carol Anh in đầu tiên, 1521; Herrick in một carol, 1647; Stainer đưa carol vào Choral Evensong ở St Paul's, 1878; 1426 là năm ghi trong sách của Audelay, không phải năm carol ra đời",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0b-act-2.md §2.1 C2–C4, C9; story/notebook/carol.json; story/puzzles/carol.json",
+    "cards": [
+      {
+        "text": "Suy ra từ Cathedral Music Trust: carol Anh xưa nhất còn lại nằm trong bản chép tay thế kỷ 13 đến 15; mảnh ấy ở nấc 1",
+        "source": "research/m0b-act-2.md §2.1 C2",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Cathedral Music Trust: khoảng nửa carol Anh sớm còn lại nói về lễ khác hoặc thế tục; chúng cùng nấc với bản chép tay",
+        "source": "research/m0b-act-2.md §2.1 C4",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Cathedral Music Trust: Boar's Head là carol Anh in đầu tiên (1521), nên Herrick (in 1647) không đến trước nó",
+        "source": "research/m0b-act-2.md §2.1 C9",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Cathedral Music Trust: Stainer đưa carol vào lễ ở St Paul's (1878), sau Herrick (1647)",
+        "source": "research/m0b-act-2.md §2.1 C9",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Cathedral Music Trust: rất khó có chuyện carol chép tay được viết cho nhà thờ; nếu mảnh ấy có chỗ, nó ở nấc của bản chép tay",
+        "source": "research/m0b-act-2.md §2.1 C3",
+        "status": "fact"
+      }
+    ],
+    "solution": "Xếp 5 trong 6 mảnh lên 4 nấc, mỗi nấc có một đến hai mảnh; 1 đáp án (mảnh «Carol cổ nhất viết cho nhà thờ» không có nấc: thẻ 5 chỉ cho nó nấc của bản chép tay, mà nấc 1 đã đủ hai mảnh vì thẻ 1 và thẻ 2); không gian hợp lệ 2880; sâu 2; một bước giả thuyết",
+    "l2": "giả định «Boar's Head trên trang in» nằm ở «Nấc 3»: thẻ 3 và thẻ 4 đẩy Herrick cũng vào nấc 3 và Stainer sang nấc 4, thẻ 1, thẻ 2 và thẻ 5 giữ nấc 1 cho hai mảnh và không chừa chỗ cho mảnh còn lại, nên nấc 2 trống, trái luật mỗi nấc cần ít nhất một mảnh, nên loại chỗ đó",
+    "reveal": "Nhiều khả năng carol Anh xưa nhất hát ở dịp chung vui, không soạn cho nhà thờ.",
+    "note": "1426 là năm ghi trong sách của Audelay, không phải năm carol ra đời; Sổ nguồn ghi mốc thế kỷ 13 và không dùng 1426. Giữ «có lẽ» và «nhiều khả năng» của Cathedral Music Trust (nguồn một trang). Mảnh bỏ lại là khung của Quạ Đồn («chưa ai chứng minh»); nguồn chỉ nói «highly unlikely», nên thẻ 5 chỉ cho nó chỗ có điều kiện. Không dùng Act 1645, vòng nhảy, Greccio, Plymouth, Tate và Brady.",
+    "puzzle": "story/puzzles/carol.json"
+  },
+  {
+    "id": "krampus",
+    "act": 2,
+    "format": "G",
+    "input": "assign",
+    "goal": "match-records",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Mặt nạ, lông, chuông bò: bản ghi chỉ từ giữa thế kỷ 19.",
+    "wrongFrame": "Mặt nạ, lông, chuông đã có từ bản ghi cũ nhất, vì Krampus là thần cổ xưa (chưa ai chứng minh).",
+    "key": "Bản ghi 1582 ở Dießen là bản ghi săn Percht (người săn được thưởng tiền), chưa tả trang phục, chưa có chữ Krampus; thanh niên chưa vợ, mặt nạ gỗ có sừng, áo lông, chuông bò chỉ thấy ghi ở vài làng Alps giữa thế kỷ 19; chữ Krampus phổ biến cuối thế kỷ 19 nhờ bưu thiếp (1897); con của Hel: sách báo ngày nay chép, không dẫn chứng, chưa ai chứng minh",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0b-act-2.md §3 (K3–K7); story/notebook/krampus.json; story/puzzles/krampus.json",
+    "cards": [
+      {
+        "text": "Bản ghi săn Percht, ở Dießen, cũ hơn bản ghi mặt nạ gỗ có sừng.",
+        "source": "research/m0b-act-2.md §3 K5, K6",
+        "status": "fact"
+      },
+      {
+        "text": "Trong một bản ghi ở vài làng Alps, thanh niên chưa vợ đeo mặt nạ gỗ có sừng.",
+        "source": "research/m0b-act-2.md §3 K6",
+        "status": "fact"
+      },
+      {
+        "text": "Bài viết: mặt nạ gỗ có sừng đi cùng áo lông, chuông bò.",
+        "source": "research/m0b-act-2.md §3 K6",
+        "status": "fact"
+      },
+      {
+        "text": "Chữ Krampus chỉ phổ biến muộn hơn mặt nạ gỗ có sừng.",
+        "source": "research/m0b-act-2.md §3 K6, K7",
+        "status": "fact"
+      },
+      {
+        "text": "Sách báo ngày nay là tờ mới nhất. Nó chép con của Hel, không dẫn chứng.",
+        "source": "research/m0b-act-2.md §3 K3, K4",
+        "status": "fact"
+      }
+    ],
+    "solution": "Xếp 6 mảnh vào 4 tờ theo thời gian, tờ 1 cũ nhất (mỗi tờ ít nhất một mảnh, nhận bao nhiêu mảnh cũng được). Tờ 1: Săn Percht; Tờ 2: Nhóm thanh niên chưa vợ + Mặt nạ gỗ có sừng + Áo lông và chuông bò; Tờ 3: Chữ Krampus phổ biến; Tờ 4 (mới nhất): Con của Hel; 1 đáp án; không gian hợp lệ 3360; L1 cộng 1 bước L2",
+    "l2": "giả định «Áo lông và chuông bò» nằm ở «Tờ 3»: thẻ 2 và thẻ 3 kéo «Mặt nạ gỗ có sừng» và «Nhóm thanh niên chưa vợ» theo, thẻ 4 đẩy «Chữ Krampus phổ biến» sang «Tờ 4 (mới nhất)», nên «Săn Percht» chỉ lấp được một trong «Tờ 1» và «Tờ 2», tờ kia trống, trái luật mỗi tờ cần ít nhất một mảnh, nên loại chỗ đó",
+    "reveal": "Mặt nạ, lông và chuông bò chỉ có bản ghi ở vài làng Alps, giữa thế kỷ 19. Người ta kể rằng Krampus là con của Hel, nhưng chưa ai chứng minh.",
+    "note": "Nhãn tờ trung tính (Tờ 1 đến Tờ 4, xếp theo thời gian); thẻ nói bản ghi nào đến trước và tờ nào là sách báo ngày nay. Mảnh có hai chỗ hợp lý: thanh niên chưa vợ (cùng bản ghi săn Percht hay cùng mặt nạ), chữ Krampus (bưu thiếp hay sách báo), con của Hel (tờ cũ nhất hay tờ mới nhất). Nguồn không nói bản ghi nào gọi tên Krampus, nên không thẻ nào khẳng định điều đó.",
+    "puzzle": "story/puzzles/krampus.json"
+  },
+  {
+    "id": "befana",
+    "act": 2,
+    "format": "M",
+    "input": "order",
+    "goal": "date-forms",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Các dạng tên có năm gắn với Lễ Hiển Linh; chữ befana sớm nhất mở được đến sau cả bốn.",
+    "wrongFrame": "Mọi dạng tên đều là tên của bà lão, nên bà có bản ghi từ dạng cũ nhất (Tèo tin vậy).",
+    "key": "Bitfanie 1048 (Siena), befanias 1211 (Arezzo, quà nhân Lễ Hiển Linh), Befanie 1284 (Florence), Bifania 1348 (G. Villani) gắn với Lễ Hiển Linh; chữ befana sớm nhất mở được là thơ Pulci, trước hoặc năm 1483; bản ghi sớm nhất của truyện chưa tìm thấy; Strenia là giả thuyết còn tranh cãi",
+    "label": "TRUYỀN THUYẾT",
+    "keySource": "research/m0b-act-2.md §4 (B3, B4, B6, B8, B12, B13); research/m0c-puzzles.md §3 (F2, F4, F8); story/notebook/befana.json; story/puzzles/befana.json",
+    "cards": [
+      {
+        "text": "Suy ra từ TLIO: ba dạng Bitfanie, befanias, Befanie gắn với Lễ Hiển Linh; befanias ở Arezzo đứng giữa Bitfanie và Befanie",
+        "source": "research/m0b-act-2.md §4.1 B4; research/m0c-puzzles.md §3 F2",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ TLIO và Treccani: Befanie ở Florence đứng giữa Bitfanie ở Siena và Bifania của G. Villani",
+        "source": "research/m0b-act-2.md §4.1 B12, B13; research/m0c-puzzles.md §3 F2",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ TLIO, Treccani và Pulci: Bifania của G. Villani đứng giữa befanias ở Arezzo và chữ befana của Pulci",
+        "source": "research/m0b-act-2.md §4.1 B12, B13; research/m0c-puzzles.md §3 F2, F4",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Pulci, GDLI và TLIO: chữ befana sớm nhất mở được nằm trong thơ Pulci, ở nấc mới nhất",
+        "source": "research/m0c-puzzles.md §3 F4",
+        "status": "fact"
+      },
+      {
+        "text": "Treccani: nhân cách hóa Lễ Hiển Linh; Britannica Kids: một số sử gia nêu Strenia; nếu đặt Strenia thì chỉ được đặt trước Bitfanie",
+        "source": "research/m0b-act-2.md §4.1 B5, B6; research/m0c-puzzles.md §3 F8",
+        "status": "disputed"
+      }
+    ],
+    "solution": "Xếp 5 trong 6 mảnh lên 5 nấc, mỗi nấc một mảnh: Bitfanie, befanias, Befanie, Bifania, befana (Strenia không có nấc: thẻ 5 chỉ cho nó chỗ trước Bitfanie, mà năm nấc đã đủ năm mảnh khác); 1 đáp án; không gian hợp lệ 2520; một bước giả thuyết",
+    "l2": "giả định «Bifania (G. Villani)» nằm ở «Nấc 3»: thẻ 2 đặt Befanie giữa Bitfanie và Bifania nên Befanie ở nấc 2 hoặc nấc 4, nếu ở nấc 2 thì Bitfanie ở nấc 1 và thẻ 1 cần befanias nằm giữa hai mảnh ấy mà không còn chỗ, nếu ở nấc 4 thì Bitfanie ở nấc 5 và thẻ 1 cần befanias giữa nấc 4 và nấc 5, cũng không còn chỗ, nên loại chỗ đó",
+    "reveal": "Các dạng tên có năm gắn với Lễ Hiển Linh; chữ befana sớm nhất mở được, trong thơ Pulci, đến sau chúng.",
+    "note": "Bỏ đổi từng chữ (F3, F6). Bỏ dạng Befania: ví dụ 1341/48, 1347, 1357 chồng lên Bifania 1348 nên không tách được nấc. Donna Befania 1231–32 chưa rõ nghĩa (F7). Bản ghi sớm nhất của truyện chưa tìm thấy (B8). Không dùng hình nộm ở cửa sổ (năm bài Berni không rõ, F5).",
+    "puzzle": "story/puzzles/befana.json"
+  },
+  {
+    "id": "tree",
+    "act": 2,
+    "format": "I",
+    "input": "assign",
+    "goal": "identify",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Tille và đoạn trích không giống nhau từng chữ; nến không có trong phần đọc được của cả hai.",
+    "wrongFrame": "Tille và đoạn trích giống nhau từng chữ, và chỉ ghi chép nơi khác mới có nến (Luther thắp nến đầu tiên là chuyện người ta kể).",
+    "key": "Một ghi chép tay ẩn danh ở Strasbourg, bản gốc đã mất, qua hai nơi chép lại: bản Tille (1889; dịch Folk-Lore 1892) viết «Zischgolt», kết bằng «etc.» rồi câu khung bốn cạnh; đoạn trích Augsburger (ghi chú 48, theo Ortwein 1892, chính tả hiện đại hóa) viết «Zischgold» và kết bằng «Zucker.»; cả hai ghi hoa hồng cắt từ giấy nhiều màu; nến không có trong phần đọc được; cây có nến ở 1611 và khoảng 1660, thư 1708 nói về cành hoàng dương; Luther thắp nến là truyền thuyết",
+    "label": "TRANH CÃI",
+    "keySource": "research/m0b-act-2.md §5 (T1, T4, T6, T7, T10); research/m0c-puzzles.md §4 (T1, T2, T3, T4, T8); story/notebook/tree.json; story/puzzles/tree.json",
+    "cards": [
+      {
+        "text": "Tille và đoạn trích Augsburger đều ghi: hoa hồng cắt từ giấy nhiều màu.",
+        "source": "research/m0c-puzzles.md §4 T1, T2; research/m0b-act-2.md §5 T1",
+        "status": "fact"
+      },
+      {
+        "text": "«v.v.», câu khung bốn cạnh và «Zischgolt» nằm ở cùng các bản.",
+        "source": "research/m0c-puzzles.md §4 T1, T2, T3, T4; research/m0b-act-2.md §5 T1",
+        "status": "fact"
+      },
+      {
+        "text": "Bản Tille ghi đúng bốn trong sáu mảnh này.",
+        "source": "research/m0c-puzzles.md §4 T1, T4; research/m0b-act-2.md §5 T1",
+        "status": "fact"
+      },
+      {
+        "text": "Đoạn trích ở Augsburger ghi đúng hai trong sáu mảnh này.",
+        "source": "research/m0c-puzzles.md §4 T2",
+        "status": "fact"
+      },
+      {
+        "text": "Phần đọc được của bản Tille không nhắc nến; đoạn trích cũng không. Wissenschaftsjahr và Waldwissen ghi cây có nến.",
+        "source": "research/m0b-act-2.md §5 T6, T7; research/m0c-puzzles.md §4 T8",
+        "status": "fact"
+      }
+    ],
+    "solution": "Xếp 6 mảnh vào 4 ô, không giới hạn số mảnh mỗi ô. Cả Tille và đoạn trích: Hoa hồng giấy; Chỉ bản Tille: Chữ «Zischgolt» + Câu khung bốn cạnh + Chữ «v.v.»; Chỉ đoạn trích Augsburger: Chữ «Zischgold»; Chỉ ghi chép nơi khác: Nến; 1 đáp án; không gian hợp lệ 15625; L1 cộng 2 bước L2",
+    "l2": "giả định «Zischgolt» nằm ở «Cả Tille và đoạn trích»: thẻ 2 kéo «v.v.» và câu khung theo nó, thành bốn mảnh cùng với hoa hồng, trái thẻ 4 (đoạn trích ghi đúng hai mảnh), nên loại chỗ đó; đọc cùng thẻ 2 và thẻ 3: «Zischgolt», «v.v.» và câu khung đi cùng nhau, mà thẻ 3 đòi bản Tille ghi đúng bốn mảnh, nên ba mảnh ấy ở «Chỉ bản Tille», cạnh hoa hồng",
+    "reveal": "Đoạn trích ở Augsburger kết bằng «Zucker.», không có «v.v.» và câu khung của bản Tille. Phần đọc được không nhắc nến; cây có nến ở 1611, khoảng 1660, còn thư 1708 chỉ nói cành hoàng dương.",
+    "note": "Trục gán mảnh cho nơi ghi: bản Tille (1889, dịch 1892), đoạn trích ở Augsburger (ghi chú 48), cả hai, và ghi chép nơi khác. Game chỉ khẳng định về đoạn trích, vì trang d-nb.info không mở lại được (m0c T2): đoạn trích viết «Zischgold», kết bằng «Zucker.», không có «etc.» và câu khung; chưa kiểm được bản chép Ortwein. «Zischgolt» (Tille, m0c T1) và «Zischgold» (Augsburger, m0c T2) hiện theo đúng chữ của từng nguồn, không trộn trong một câu trích (m0c T3). Mọi thẻ có do bằng đúng lời thẻ: thẻ 1 «at», thẻ 2 hai «same», thẻ 3 và 4 đếm số mảnh một bản ghi, thẻ 5 «at» nến vào ghi chép nơi khác; thẻ 5 không chọn mốc 1611 hay khoảng 1660 (T7 tranh cãi) và không dùng thư 1708 (nến trên cành hoàng dương, không phải cây thông). Luther là truyền thuyết (T10): có ở Sổ nguồn và lời thoại, không phải thẻ, vì giới hạn 5 thẻ. Rủi ro chuyên gia được chấp nhận: một người biết văn bản Tille và biết hai cách viết Zischgolt/Zischgold là của hai nơi chép sẽ dựng đúng bảng không cần thẻ; research không có điểm khác biệt nào khác giữa hai nơi mà người đọc không tra được từ chữ trên mảnh. Không dùng Riga, Tallinn, Sélestat 1521, Strasbourg 1492, Rougemont 1340 trong câu đố (chỉ ở Sổ nguồn).",
+    "puzzle": "story/puzzles/tree.json"
+  },
+  {
+    "id": "ban1647",
+    "act": 2,
+    "format": "C",
+    "input": "assign",
+    "goal": "attribute-claims",
+    "orientation": "both",
+    "minutes": [
+      90,
+      180
+    ],
+    "state": "full",
+    "aha": "Văn bản lệnh 1647 không nhắc holly hay carol, dù NAM ghi chúng bị cấm; hai bản gốc không nhắc Cromwell.",
+    "wrongFrame": "Văn bản lệnh ghi cả lệnh cấm hát carol lẫn ngày lệnh được thông qua (người đọc khá giả định lệnh cấm cả phong tục và mang ngày của nó; Tèo nói ra khung ấy trước bảng). Hai thẻ nêu tên bác khung: thẻ 2 (hai bản gốc không ghi carol, ngày 10/6, Ipswich) và thẻ 3 (mảnh carol và mảnh ngày 10/6 thuộc hai nguồn khác nhau), mỗi thẻ đủ một mình.",
+    "key": "Văn bản sắc lệnh của hai viện Nghị viện (ghi 8/6/1647): Giáng Sinh, Phục Sinh, Hiện Xuống không còn là ngày lễ; học trò, thợ học việc, người hầu nghỉ thứ Ba thứ hai mỗi tháng; không có holly, carol, hình phạt hay tên Cromwell. Hạ viện 24/12/1647 ra lệnh ngăn rối loạn; 14/12 và 25/12/1647 là Thứ Ba và Thứ Bảy theo lịch Julius (lời kể chương). NAM ghi holly, ivy và carol bị cấm, không dẫn điều khoản (câu đố chỉ lấy carol vì HistoryExtra kể học trò dựng holly và ivy ở Cornhill); HistoryExtra ghi lệnh ngày 10/6 và bạo loạn ở Ipswich. Cromwell làm Lord Protector từ 12/1653, sau lệnh 1647 (tranh cãi: holly và carol, ngày 8/6 hay 10/6)",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0c-puzzles.md §6 (N10–N14); research/m0b-act-2.md §6; story/notebook/ban1647.json; story/puzzles/ban1647.json",
+    "cards": [
+      {
+        "text": "Văn bản sắc lệnh có ngày nghỉ thứ Ba thứ hai; Nhật ký Hạ viện 24/12 ghi lệnh ngăn rối loạn",
+        "source": "research/m0c-puzzles.md §6 N10, N11",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ văn bản sắc lệnh và Nhật ký Hạ viện: hai nguồn ấy không ghi hát carol, ngày 10/6, Ipswich",
+        "source": "research/m0c-puzzles.md §6 N10, N11",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ NAM và HistoryExtra: mảnh carol và mảnh ngày 10/6 thuộc hai nguồn khác nhau",
+        "source": "research/m0c-puzzles.md §6 N12, N13",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ NAM và HistoryExtra: mảnh carol và mảnh Ipswich thuộc hai nguồn khác nhau",
+        "source": "research/m0c-puzzles.md §6 N12, N13",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ bốn nguồn: mảnh về Cromwell, nếu đặt, cùng bài với mảnh carol hoặc mảnh ngày 10/6",
+        "source": "research/m0c-puzzles.md §6 N10, N11, N12, N13",
+        "status": "fact"
+      }
+    ],
+    "solution": "Sáu mảnh vào bốn nguồn: Văn bản sắc lệnh: Học trò, thợ học việc, người hầu nghỉ thứ Ba thứ hai mỗi tháng; Nhật ký Hạ viện 24/12: Ủy ban dân quân London phải ngăn rối loạn ngày Giáng Sinh; Bảo tàng Quân đội (NAM): Hát carol bị cấm; HistoryExtra: Lệnh được thông qua ngày 10/6 + Có bạo loạn đòi giữ lễ ở Ipswich; mảnh «Lệnh cấm Giáng Sinh là việc riêng của Cromwell» không có nguồn nào trong bốn nguồn nhận. 1 đáp án; không gian hợp lệ 8910; L1 cộng 1 bước L2",
+    "l2": "giả định «Có bạo loạn đòi giữ lễ ở Ipswich» nằm ở «Bảo tàng Quân đội (NAM)»: thẻ 2, thẻ 3 và thẻ 4 đẩy mảnh carol sang HistoryExtra và mảnh ngày 10/6 vào NAM, nơi chỉ nhận một mảnh, nên loại chỗ đó",
+    "reveal": "Văn bản lệnh không nhắc holly hay carol, dù NAM ghi chúng bị cấm. Hai bản gốc đều của Nghị viện, không nhắc tên Cromwell.",
+    "note": "Bốn nguồn trên bậc đá: văn bản sắc lệnh, Nhật ký Hạ viện 24/12, NAM, HistoryExtra. Mảnh Cromwell không có chỗ: hai bản gốc không nhắc ông (thẻ 5 chỉ cho phép đặt cùng bài với mảnh carol hoặc mảnh ngày 10/6), NAM và HistoryExtra đã đủ chỗ cho ba mảnh kia; hai bài ấy cũng không viết ông một mình cấm (HistoryExtra: ông không chịu trách nhiệm hủy lễ từ đầu; NAM: ông ủng hộ việc thi hành khi làm Lord Protector từ 12/1653). Mảnh carol chỉ giữ chữ carol vì HistoryExtra có đoạn học trò dựng holly và ivy ở Cornhill. Ngày 8/6 và 10/6, holly và carol: chỉ qua thẻ nêu từng nguồn, không là ràng buộc cứng. Kịch bản không nói trước bảng điều gì nằm trong văn bản lệnh ngoài việc bỏ lễ; Tèo nói khung sai (lệnh cấm cả carol) trước bảng. Rủi ro mù được chấp nhận (như chương 13): ai đã đọc bài NAM và bài HistoryExtra, biết NAM ghi carol bị cấm còn HistoryExtra ghi ngày 10/6 và vụ Ipswich, đặt đúng bảng khi giấu thẻ; nhãn ô là tên nguồn nên không tránh được, và không thẻ nào đúng nguồn kéo thêm mà không bịa ràng buộc. Người chỉ biết hai bản gốc còn ba bảng đủ mảnh để chọn (trong 39 bàn họ thấy hợp lệ); người đọc phổ thông và người đọc khá chữ trượt. Rủi ro còn lại, chủ dự án chấp nhận: ai tin sức chứa (NAM một mảnh, HistoryExtra hai mảnh) và biết a, b, mảnh Cromwell ở ngoài hai bản gốc, mảnh ngày 10/6 và mảnh Ipswich cũng ở ngoài, chỉ còn tối đa 3 bàn đủ mảnh (273 → 39 → 3) và thử tối đa 3 lần không phạt. Không thêm thẻ chặn mảnh Cromwell ở NAM hay HistoryExtra: cùng với việc loại nó khỏi hai bản gốc, thẻ ấy thành lệnh đuổi mảnh khỏi bàn, chủ dự án cấm; mảnh rời bàn bằng thẻ có điều kiện cộng sức chứa. Lịch Julius và thứ trong tuần nằm trong lời kể của chương (N5, N6).",
+    "puzzle": "story/puzzles/ban1647.json"
+  },
+  {
+    "id": "silent-night",
+    "act": 2,
+    "format": "I",
+    "input": "assign",
+    "goal": "cast",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Ai hát, ai đàn và ca đoàn: tất cả từ lời kể về sau, không giống nhau. Bản kể Gruber chỉ nói bài được đặt cho hợp xướng, ai hát giọng nào là lời của các trang hiện nay.",
+    "wrongFrame": "Lời Gruber kể trọn đêm ấy, nên cả ba mảnh về hợp xướng và giọng hát đều là lời ông (người đọc khá giả định hợp xướng đã hát theo Gruber).",
+    "key": "Gruber viết ngày 30/12/1854, gần đúng 36 năm sau: bài được đặt cho hai giọng solo, hợp xướng và guitar, và vang lên trong Đêm Thánh; ông không nêu ai hát giọng nào. Theo stillenacht.at và bảo tàng Oberndorf, Mohr hát tenor và chơi guitar, Gruber hát bass; trong các nguồn đã mở, chỉ bảo tàng Oberndorf kể ca đoàn nhà thờ lặp bốn ô nhịp cuối, không dẫn nguồn sơ cấp (tranh cãi, không khẳng định). Bản gốc 1818 đã mất, bản chép cổ nhất khoảng 1820; chuyện đàn hỏng từ 1909 và chuyện chuột từ 1954 (bảo tàng Stille Nacht: không đúng)",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0b-act-2.md §7; story/notebook/silent-night.json; story/puzzles/silent-night.json",
+    "cards": [
+      {
+        "text": "Suy ra từ Gruber, 1854: trong ba mảnh về hợp xướng và giọng hát, bản kể ngày 30/12/1854 chứa một",
+        "source": "research/m0b-act-2.md §7 S2, S3, S4, S11",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Bảo tàng Oberndorf: về hợp xướng và giọng hát, bảo tàng có hai mảnh mà bản kể Gruber không có",
+        "source": "research/m0b-act-2.md §7 S3, S4, S11",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra từ Bảo tàng Oberndorf: câu về giọng hát và câu về ca đoàn lặp đứng liền nhau, trong một đoạn",
+        "source": "research/m0b-act-2.md §7 S4, S11",
+        "status": "fact"
+      },
+      {
+        "text": "Bảo tàng Salzburg, một mục: bản gốc 1818 đã mất và bản chép cổ nhất của Mohr, khoảng 1820",
+        "source": "research/m0b-act-2.md §7 S8",
+        "status": "fact"
+      },
+      {
+        "text": "Salzburgerland: chuyện đàn hỏng từ năm 1909, chuyện chuột từ năm 1954, trong mục chuyện hoang đường",
+        "source": "research/m0b-act-2.md §7 S6",
+        "status": "fact"
+      }
+    ],
+    "solution": "Sáu mảnh vào bốn nguồn: Gruber, 1854: Bài được đặt cho hai giọng solo, hợp xướng và guitar; Bảo tàng Oberndorf: Mohr hát tenor và đệm guitar, Gruber hát bass + Ca đoàn nhà thờ lặp bốn ô nhịp cuối; Bảo tàng Salzburg: Bản gốc đã mất + Bản chép cổ nhất của Mohr, khoảng 1820; Salzburgerland: Chuột gặm đàn organ, nên phải dùng guitar. 1 đáp án; không gian hợp lệ 9990; L1 cộng 1 bước L2",
+    "l2": "giả định «Mohr hát tenor và đệm guitar, Gruber hát bass» nằm ở «Gruber, 1854» (khung sai): thẻ 3 kéo «Ca đoàn nhà thờ lặp bốn ô nhịp cuối» theo, thành hai mảnh về hợp xướng và giọng hát, trái thẻ 1 (bản kể Gruber chứa một), nên loại chỗ đó",
+    "reveal": "Gruber viết lời kể ba mươi sáu năm sau, và không nêu ai hát giọng nào. Trong các nguồn đã mở, ca đoàn hát chỉ có ở một bảo tàng, không dẫn nguồn sơ cấp; các lời kể không giống nhau.",
+    "note": "Bốn nguồn trên bậc đá: Gruber 1854, Bảo tàng Oberndorf, Bảo tàng Salzburg, Salzburgerland; nhãn ô trùng tên nguồn trong thẻ, nên mỗi mảnh phải đọc thẻ mới đặt được. Hợp xướng: Gruber chỉ nói bài được đặt cho hợp xướng; stillenacht.at chỉ nêu Gruber và Mohr là người trình diễn; trong các nguồn đã mở, chỉ bảo tàng Oberndorf kể ca đoàn lặp bốn ô nhịp cuối. Mảnh ấy mang trạng thái tranh cãi và có chỗ ở bảo tàng Oberndorf, không bị loại khỏi bảng bằng thẻ nào. stillenacht.at kể cùng vai giọng hát với bảo tàng Oberndorf nên không là ô (một mảnh chỉ nằm một ô). Giờ và chỗ trong buổi lễ không dùng: các lời kể về sau không thống nhất (S5). Bảng đặt theo tên nguồn (Gruber: lời đặt bài; Oberndorf: giọng hát và ca đoàn; Salzburg: bản chép; Salzburgerland: chuyện chuột) là đáp án; ai biết các trang này có thể đặt đúng khi giấu thẻ (mức mù chấp nhận, như chương 9): nhãn ô là tên nguồn nên không thể tránh, và không thẻ nào đúng nguồn kéo thêm mà không bịa ràng buộc.",
+    "puzzle": "story/puzzles/silent-night.json"
+  },
+  {
+    "id": "yule-lads",
+    "act": 3,
+    "format": "C",
+    "input": "assign",
+    "goal": "attribute-records",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Số mười ba có từ thế kỷ 18, tên và lịch đến chỉ thấy ghi từ 1862; chỉ ngày 24/12 đủ cả mười ba chàng.",
+    "wrongFrame": "Tên các chàng lâu đời bằng con số mười ba (chưa ai chứng minh, sai): mảnh «Mười ba tên có trước sách in trăm năm» nằm cùng con số mười ba ở ô bản chép tay.",
+    "key": "Số mười ba có trong một bản chép tay thế kỷ 18, sớm hơn Jón Árnason chừng một thế kỷ, khi chưa có tên nào (Árni Björnsson); Jón Árnason 1862 (I, tr. 219): chàng đầu xuống mười ba ngày trước Giáng Sinh, mỗi ngày thêm một, chàng cuối vào 24/12, chàng đầu đi vào ngày Giáng Sinh; lịch ngày nay: Hurðaskellir 18/12, Ketkrókur 23/12, Kertasníkir 24/12",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0c-puzzles.md §2 (Y1–Y5); story/notebook/yule-lads.json; story/puzzles/yule-lads.json",
+    "cards": [
+      {
+        "text": "Theo Árni Björnsson, tên các chàng chưa thấy ở đâu trước năm 1862.",
+        "source": "research/m0c-puzzles.md §2 Y1, Y2",
+        "status": "fact"
+      },
+      {
+        "text": "Jón Árnason chép năm 1862: chàng đầu xuống núi cách Giáng Sinh mười ba ngày, mỗi ngày thêm một.",
+        "source": "research/m0c-puzzles.md §2 Y4",
+        "status": "fact"
+      },
+      {
+        "text": "Lịch ngày nay đếm từ 12/12: Hurðaskellir 18/12, Ketkrókur 23/12, Kertasníkir 24/12. Không có Faldafeykir.",
+        "source": "research/m0c-puzzles.md §2 Y5",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: lời về số mười ba, cùng lời chưa có tên, thuộc một bản ghi.",
+        "source": "research/m0c-puzzles.md §2 Y1, Y2",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: nguồn nào nói mười ba tên có trước sách in trăm năm, nguồn ấy cũng nói con số mười ba sớm chừng ấy.",
+        "source": "research/m0c-puzzles.md §2 Y1",
+        "status": "fact"
+      }
+    ],
+    "solution": "Sáu mảnh vào ba ô: Bản chép tay thế kỷ 18: Con số mười ba, có sớm hơn sách in chừng một thế kỷ + Chưa gọi tên chàng nào; Jón Árnason 1862: Chàng đầu xuống mười ba ngày trước Giáng Sinh, mỗi ngày thêm một chàng + Faldafeykir là chàng thứ bảy; Lịch Iceland ngày nay: Hurðaskellir là chàng thứ bảy; để ngoài: Mười ba tên có trước sách in trăm năm. 1 đáp án; không gian hợp lệ 960; L1 cộng 2 bước L2",
+    "l2": "giả định «Chưa gọi tên chàng nào» nằm ở «Jón Árnason 1862»: thẻ 4 kéo mảnh «Con số mười ba, có sớm hơn sách in chừng một thế kỷ» theo cùng ô, thẻ 1 giữ hai mảnh có tên ra khỏi bản chép tay, thẻ 2 và thẻ 3 đặt hai mảnh còn lại ở ô khác, thẻ 5 chỉ cho mảnh «Mười ba tên có trước sách in trăm năm», nếu đặt, cùng ô với con số mười ba, nên bản chép tay không còn mảnh nào, trái luật mỗi ô nhận ít nhất một mảnh, nên loại chỗ đó; giả định «Chưa gọi tên chàng nào» nằm ở «Lịch Iceland ngày nay»: thẻ 4 kéo mảnh «Con số mười ba, có sớm hơn sách in chừng một thế kỷ» theo, bản chép tay trống như trên, nên loại chỗ đó",
+    "reveal": "Số mười ba có trong bản chép tay thế kỷ 18; tên và lịch đến chỉ thấy ghi từ sách 1862. Theo quy tắc 1862, chàng cuối đến 24/12 và chàng đầu đi 25/12, nên chỉ ngày 24/12 đủ cả mười ba chàng.",
+    "note": "Trục gán lời cho bản ghi đã nói ra nó: bản chép tay thế kỷ 18, Jón Árnason 1862 và lịch Iceland ngày nay; lời nào không bản ghi nào nói ra thì để ngoài bảng. Thơ 1932 không là thẻ cũng không là ô. Thẻ 1 (Árni Björnsson, Árnastofnun): tên các chàng chưa thấy ở đâu trước 1862, do là notAt cho hai mảnh có tên (Faldafeykir, Hurðaskellir); lời «mười ba tên có trước sách in trăm năm» là lời về tuổi của tên chứ không phải một cái tên, nên thẻ không đụng tới nó; thẻ không nói lời nào ở lại bản chép tay. Thẻ 2 (Jón Árnason I, tr. 219): at cho mảnh quy tắc đến, chàng đầu xuống mười ba ngày trước Giáng Sinh, mỗi ngày thêm một; không nêu ngày từng chàng, ngày đi từng chàng chỉ là suy ra. Thẻ 3 (Vísindavefur): lịch ngày nay đếm từ 12/12, Hurðaskellir ở 18/12 là ngày thứ bảy, Ketkrókur 23/12, Kertasníkir 24/12; do là at cộng notAt cho Faldafeykir, vì lịch không ghi tên ấy. Thẻ 4 (suy ra từ Árni Björnsson): chỉ same, lời về số mười ba và lời chưa có tên cùng một bản ghi; chúng vào bản chép tay nhờ luật mỗi ô nhận ít nhất một mảnh (hai bước L2). Thẻ 5 (suy ra từ Árni Björnsson): chỉ là điều kiện «nguồn nào nói mười ba tên có trước sách in trăm năm, nguồn ấy cũng nói con số mười ba sớm chừng ấy», tức cùng bản ghi với lời về số mười ba cổ; mảnh ấy rời bảng nhờ điều kiện ấy cộng sức chứa hai mảnh của bản chép tay (con số mười ba và lời chưa có tên), không thẻ nào đẩy nó ra; không bản ghi nào nói lời ấy, và nó không là lời có nguồn. Đơn vị là ngày vì Y5 và Y10 lệch nhau về buổi. Ngoài phạm vi: nhóm chín chàng và hai biến thể 1932 Pottaskefill, Skyrjarmur. Rủi ro chuyên gia được chấp nhận: ai biết quy tắc đến, đi nằm trong sách 1862, lời «mười ba tên có trước sách in trăm năm» không có nguồn và số mười ba đã có từ thế kỷ 18 dựng đúng bảng nhờ ba điều còn lại (Faldafeykir thuộc sách 1862, Hurðaskellir thuộc lịch ngày nay, lời chưa có tên thuộc bản chép tay), đều tra được từ research/m0c-puzzles.md. Bảng người đọc chưa biết (Hurðaskellir cùng Faldafeykir vào sách 1862, quy tắc đến vào lịch) và bảng người đọc rộng (lời chưa có tên vào sách 1862 vì thơ 1932 mới chốt tên, quy tắc đến vào lịch) đều trượt; 18 bảng hợp với điều chuyên gia biết, một bảng hợp mọi thẻ.",
+    "puzzle": "story/puzzles/yule-lads.json"
+  },
+  {
+    "id": "yule-cat",
+    "act": 3,
+    "format": "A",
+    "input": "assign",
+    "goal": "attribute-claims",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Sách 1864 chỉ chép «tóm (ăn?)»; mèo ăn trẻ em là lời kể sau. Lời về sách thời trung cổ không nằm trong bốn nguồn.",
+    "wrongFrame": "Mèo Yule có từ thời Viking (chưa ai chứng minh): mảnh «Đã có mặt trong sách thời trung cổ» nằm cùng lời «cổ hơn nhiều» ở ô Hai học giả.",
+    "key": "Jón Árnason, tập II, Leipzig 1864, tr. 570; ai không có áo mới đi vào Mèo; giải thích dân tộc học: thúc làm xong việc chuẩn bị; Árni Björnsson cho là mới, Guðmundur Ólafsson cho là cổ hơn; chưa có bản ghi trước giữa thế kỷ 19",
+    "label": "TRUYỀN THUYẾT",
+    "keySource": "research/m0b-act-3.md (mục yule-cat); story/notebook/yule-cat.json; story/puzzles/yule-cat.json",
+    "cards": [
+      {
+        "text": "Jón Árnason chép «tóm (ăn?)», dấu hỏi là của chính ông. Trang ấy không nêu riêng trẻ em.",
+        "source": "research/m0b-act-3.md (mục yule-cat): Jón Árnason, tập II, tr. 570",
+        "status": "fact"
+      },
+      {
+        "text": "Thư viện Quốc gia ghi: theo truyện dân gian, con quái ăn trẻ em không kịp có áo mới trước lễ.",
+        "source": "research/m0b-act-3.md (mục yule-cat): Landsbókasafn",
+        "status": "fact"
+      },
+      {
+        "text": "Nhà dân tộc học ghi: như nhiều sinh vật Giáng Sinh, Mèo Yule theo dõi việc chuẩn bị lễ, để ai cũng làm xong việc.",
+        "source": "research/m0b-act-3.md (mục yule-cat): Vísindavefur, Hrefna S. Bjartmarsdóttir",
+        "status": "fact"
+      },
+      {
+        "text": "Árni Björnsson cho rằng truyện sinh ra nhờ chuyện dê Yule; Guðmundur Ólafsson không đồng ý: có lẽ cổ hơn. Hai lời chung một bài.",
+        "source": "research/m0b-act-3.md (mục yule-cat): bbl.is, Árni Björnsson và Guðmundur Ólafsson",
+        "status": "disputed"
+      },
+      {
+        "text": "Suy ra: nguồn nào nói mèo đã có mặt trong sách thời trung cổ, nguồn ấy cũng nói truyện có lẽ cổ hơn nhiều.",
+        "source": "research/m0b-act-3.md (mục yule-cat): bbl.is (Árni Björnsson, Guðmundur Ólafsson)",
+        "status": "fact"
+      }
+    ],
+    "solution": "Sáu mảnh vào bốn nguồn: Jón Árnason: Tóm ai không có áo mới, hoặc ít nhất lấy phần ăn Giáng Sinh của họ; Nhà dân tộc học: Giám sát việc chuẩn bị lễ, để ai cũng xong việc, từ đan áo đến nấu bia; Thư viện Quốc gia: Ăn trẻ em chưa kịp có áo mới trước Giáng Sinh; Hai học giả: Sinh ra nhờ chuyện dê Yule, từ Na Uy sang trong hai thế kỷ gần đây + Có lẽ cổ hơn nhiều trong tín ngưỡng của người Iceland; để ngoài: Đã có mặt trong sách thời trung cổ. 1 đáp án; không gian hợp lệ 4050; L1 cộng 2 bước L2",
+    "l2": "giả định «Sinh ra nhờ chuyện dê Yule, từ Na Uy sang trong hai thế kỷ gần đây» nằm ở «Jón Árnason»: thẻ 4 kéo mảnh «cổ hơn nhiều» theo cùng ô, thẻ 5 giữ mảnh «Đã có mặt trong sách thời trung cổ», nếu đặt, cùng ô với nó, Hai học giả không còn mảnh nào, trái luật mỗi nguồn nhận ít nhất một mảnh, nên loại chỗ đó; giả định «Sinh ra nhờ chuyện dê Yule, từ Na Uy sang trong hai thế kỷ gần đây» nằm ở «Nhà dân tộc học»: thẻ 4 kéo mảnh «cổ hơn nhiều» theo, Hai học giả trống như trên, nên loại chỗ đó",
+    "reveal": "Sách 1864 chỉ chép «tóm (ăn?)», dấu hỏi là của người chép; mèo ăn trẻ em là lời kể sau. Lời đặt mèo vào sách thời trung cổ: bốn nguồn đã mở, không nguồn nào nói thế.",
+    "note": "Trục gán lời cho nguồn đã nói ra nó: Jón Árnason, nhà dân tộc học, Thư viện Quốc gia, Hai học giả. Thẻ 1 (Jón Árnason II, tr. 570): do là at cộng notAt, đúng lời thẻ: trang chép «tóm (ăn?)», dấu hỏi là của chính ông, và không có lời mèo ăn trẻ em; mảnh của Jón Árnason không mang dấu hỏi vì dấu ấy đứng trên thẻ. Thẻ 2 (Landsbókasafn): at; «theo truyện dân gian» là chữ của chính trang, và Thư viện Quốc gia là ô duy nhất nhận mảnh truyền thuyết (ô riêng của truyền thuyết, chỉ thẻ này nói ô ấy chứa gì). Thẻ 3 (Hrefna S. Bjartmarsdóttir, nhà dân tộc học): at; trang viết câu ấy cho cả nhóm sinh vật Giáng Sinh mà Mèo Yule là một («einn af mörgum svipuðum jólavættum»), thẻ ghi rõ. Thẻ 4 (bbl.is): chỉ same, đúng lời thẻ «cùng một bài»; thẻ nêu cả Árni Björnsson lẫn Guðmundur Ólafsson, ai đúng không là ràng buộc nào, và cặp mảnh vào Hai học giả nhờ luật mỗi nguồn nhận ít nhất một mảnh (hai bước L2). Thẻ 5 (suy ra): chỉ là điều kiện «nếu có nguồn nói mèo đã có mặt trong sách thời trung cổ thì cùng nguồn với lời cổ hơn nhiều»; mảnh ấy rời bảng nhờ điều kiện ấy cộng sức chứa Hai học giả, không thẻ nào đẩy nó ra, và không nguồn nào nói thế (research: không nguồn nào nêu bản ghi trước giữa thế kỷ 19) nên không ô nào là của nó. Mảnh không dùng chữ «Viking» và không nói «từ thuở lập đảo»: chữ đầu lặp lời Quạ Đồn, lời sau sát câu bbl.is về người định cư «có thể» mang tín ngưỡng sang. Không dùng năm 1862 và không dùng Grýla. Rủi ro chuyên gia được chấp nhận: ai biết sách 1864 chỉ chép «tóm (ăn?)», biết mèo ăn trẻ em là lời kể sau và biết chưa có bản ghi nào trước giữa thế kỷ 19 thì dựng đúng bảng nhờ mảnh còn lại vào Thư viện Quốc gia; research không có điều khác lạ mà người đọc không tra được từ chữ trên mảnh. Bảng người đọc chưa biết (hai mảnh về mèo cùng vào Jón Árnason) và bảng người đọc rộng (mảnh dê Yule sang nhà dân tộc học) đều trượt; 154 bảng hợp với điều chuyên gia biết, một bảng hợp mọi thẻ.",
+    "puzzle": "story/puzzles/yule-cat.json"
+  },
+  {
+    "id": "santa-ny",
+    "act": 3,
+    "format": "G",
+    "input": "assign",
+    "goal": "match-hands",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Không bàn tay nào làm ra trọn hình ông già Noel. Áo đỏ có trước quảng cáo năm 1931.",
+    "wrongFrame": "Coca-Cola phát minh ông già Noel áo đỏ (sai): mảnh áo đỏ nằm cùng hình của Sundblom ở quảng cáo 1931.",
+    "key": "Thơ nặc danh 23/12/1823; Nast từ 3/1/1863; quảng cáo Coca-Cola 1931; áo đỏ đã có trước 1931",
+    "label": "TRANH CÃI",
+    "keySource": "research/m0b-act-3.md (mục santa-ny); story/notebook/santa-ny.json; story/puzzles/santa-ny.json",
+    "cards": [
+      {
+        "text": "Suy ra từ Columbia: dáng béo tròn, vui tính và xe trượt tuyết tuần lộc kéo chung một nguồn.",
+        "source": "research/m0b-act-3.md (mục santa-ny): Columbia",
+        "status": "fact"
+      },
+      {
+        "text": "Coca-Cola ghi: trước năm 1931 đã có nhiều hình ông già Noel. Trang của hãng về Sundblom: áo đỏ có trước khi ông vẽ.",
+        "source": "research/m0b-act-3.md (mục santa-ny): trang công ty Coca-Cola",
+        "status": "fact"
+      },
+      {
+        "text": "HarpWeek ghi: trong bản thơ do Nast minh họa năm 1869, áo ông già Noel được đổi sang màu đỏ.",
+        "source": "research/m0b-act-3.md (mục santa-ny): HarpWeek (1869)",
+        "status": "fact"
+      },
+      {
+        "text": "HarpWeek ghi: ông già Noel ở Bắc Cực, có thể Nast vẽ sớm nhất.",
+        "source": "research/m0b-act-3.md (mục santa-ny): HarpWeek (có thể)",
+        "status": "fact"
+      },
+      {
+        "text": "NYSL ghi: bài thơ năm 1823 in ra không đề tên tác giả; năm 1837, sách của Hoffman nêu tên Moore.",
+        "source": "research/m0b-act-3.md (mục santa-ny): NYSL",
+        "status": "fact"
+      }
+    ],
+    "solution": "Sáu mảnh vào bốn ô: Bài thơ năm 1823: Xe trượt tuyết tuần lộc kéo + Béo tròn, vui tính; Tranh Nast: Ở Bắc Cực + Áo đỏ; Quảng cáo: Hình do Haddon Sundblom vẽ; Nguồn khác: Tên Moore gắn với bài thơ. 1 đáp án; không gian hợp lệ 4440; L1 cộng 2 bước L2",
+    "l2": "giả định «Xe trượt tuyết tuần lộc kéo» nằm ở «Tranh Nast»: thẻ 1 kéo «Béo tròn, vui tính» theo, bài thơ không còn mảnh nào, trái luật mỗi nơi nhận ít nhất một mảnh, nên loại chỗ đó; giả định «Xe trượt tuyết tuần lộc kéo» nằm ở «Quảng cáo»: thẻ 1 kéo «Béo tròn, vui tính» theo, bài thơ cũng trống, nên loại chỗ đó",
+    "reveal": "Theo HarpWeek, áo đỏ có trong bản thơ Nast minh họa năm 1869, trước quảng cáo 1931; chính Coca-Cola cũng ghi áo đỏ có trước. Không bàn tay nào làm ra trọn hình ấy: thơ, tranh Nast và quảng cáo đều góp phần; tên Moore do sách năm 1837 nêu.",
+    "note": "Trục gán chi tiết cho nguồn ghi nó, theo các nguồn đã mở (không khẳng định «sớm nhất» tuyệt đối: xe tuần lộc đã in trước 1823 ở nơi research chưa mở). Ô: bài thơ 1823, tranh Nast, quảng cáo 1931, nguồn khác. Thẻ 1 chỉ nói hai nét của bài thơ cùng một nguồn (Columbia); chúng vào bài thơ nhờ luật mỗi bàn tay nhận ít nhất một mảnh, đó là hai bước L2. Thẻ 2 (hai trang của Coca-Cola): trước 1931 đã có nhiều hình ông già Noel, và ông đã mặc áo đỏ trước khi Sundblom vẽ (hai câu tiếng Anh có trong research); do at cộng notAt, đúng lời thẻ; câu «năm 1931 hãng thuê Sundblom» là ghi chú tiếng Việt của research, không phải câu nguồn, nên thẻ không dùng; thẻ chỉ gọi trang thứ hai là trang của hãng về Sundblom (tên trang: «Haddon Sundblom and the Coca-Cola Santas»), để hình của Sundblom đọc ra được là hình của quảng cáo; đây là lời của công ty, thẻ ghi rõ. Thẻ 3: HarpWeek viết bị động, trong bản thơ do Nast minh họa năm 1869 áo được đổi sang đỏ (at). Thẻ 4: HarpWeek chỉ nói Nast «có thể» là người đầu tiên gắn Bắc Cực, nên do là oneOf Tranh Nast hoặc Nguồn khác, không phải at; mảnh mang trạng thái tranh cãi, và luật Nguồn khác nhận nhiều nhất một mảnh cùng thẻ 5 đưa mảnh vào Tranh Nast (luật của game, không phải lời sử liệu). Thẻ 5: NYSL, bài thơ 1823 đăng không ghi tên; năm 1837 sách của Hoffman nêu tên Moore: notAt bài thơ cộng at Nguồn khác. Mảnh chỉ nói tên Moore gắn với bài thơ từ 1837; ai là tác giả (Moore hay Livingston) không là ràng buộc nào. Không dùng Sinterklaas, «Nast phát minh», năm 1822, hình gà tây 1858 (chỉ có trong dòng Sổ tay tiếng Việt). Rủi ro chuyên gia được chấp nhận: ai biết tên Moore chỉ xuất hiện năm 1837 và biết áo đỏ, Bắc Cực của Nast, Sundblom thì dựng đúng bảng không cần thẻ; người chỉ biết chuyện phổ biến (Moore viết bài thơ) đặt mảnh tên Moore vào bài thơ và sai.",
+    "puzzle": "story/puzzles/santa-ny.json"
+  },
+  {
+    "id": "caga-tio",
+    "act": 3,
+    "format": "A",
+    "input": "mark",
+    "goal": "date",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Trong các nguồn đã mở, mặt và mũ barretina có niên đại muộn nhất; bài hát chỉ thấy ghi từ cuối thế kỷ 19.",
+    "wrongFrame": "Gốc đã cổ thì dòng nào cũng cổ và cũng có nguồn nói ra (lời Quạ Đồn, còn tranh cãi): mảnh «Mọi phần của Tió đều lâu đời» đứng cùng lời về ban đầu không mặt ở ô Nhà nhân học, qua Betevé.",
+    "key": "Sách Ethologia de Blanes (Cortils i Vieta, in 1886) là bản ghi sớm nhất Càntut tìm được: có bài hát và câu về việc đập Tió ở bếp lửa; mặt và mũ barretina phổ biến từ khoảng thập niên 1970 (Betevé); chăn (NPR) và gậy (bảo tàng) chỉ được tả như tục ngày nay; không nguồn nào nói mọi phần của Tió đều lâu đời",
+    "label": "TRANH CÃI",
+    "keySource": "research/m0b-act-3.md (mục caga-tio); story/notebook/caga-tio.json; story/puzzles/caga-tio.json",
+    "cards": [
+      {
+        "text": "Bảo tàng ghi: nhờ những đòn gậy của trẻ con, người ta giả vờ Tió ỉa ra kẹo và quà.",
+        "source": "research/m0b-act-3.md (mục caga-tio): trang bảo tàng trên visitmuseum.gencat.cat",
+        "status": "fact"
+      },
+      {
+        "text": "NPR ghi: đêm 24/12, người ta phủ chăn lên đầu không có mặt của Tió.",
+        "source": "research/m0b-act-3.md (mục caga-tio): NPR (The Salt, 22/12/2017)",
+        "status": "fact"
+      },
+      {
+        "text": "Betevé ghi: Tió vốn không mặt, không mũ; cả hai phổ biến từ khoảng thập niên 1970. Tục bắt Tió «ỉa» mới hơn gốc cổ.",
+        "source": "research/m0b-act-3.md (mục caga-tio): Betevé, bài về sách của Josep Fornés (2020)",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: sách in năm 1886 chép bài hát, kèm câu về việc đập Tió ở bếp lửa; hai lời ấy chung một nguồn.",
+        "source": "research/m0b-act-3.md (mục caga-tio): Càntut, trích sách 1886 của Cortils i Vieta; hồ sơ PCCD",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: nguồn nào nói mọi phần của Tió đều lâu đời, nguồn ấy nêu niên đại bài hát. Chỉ sách 1886 và Betevé nêu.",
+        "source": "research/m0b-act-3.md (mục caga-tio): Càntut và Betevé (suy ra: mọi phần gồm cả bài hát)",
+        "status": "fact"
+      }
+    ],
+    "solution": "Sáu mảnh vào bốn nguồn: Bảo tàng Catalonia: Trẻ con đập bằng gậy, giả vờ Tió ỉa ra kẹo và quà; Nhà nhân học, qua Betevé: Ban đầu, Tió không mặt, không mũ barretina; Đài phát thanh Mỹ: Đêm 24/12, phủ chăn lên đầu không có mặt của Tió; Kho ca khúc Catalan: Bài hát đập Tió, in trong sách về làng Blanes + Đập Tió ở bếp lửa; để ngoài: Mọi phần của Tió đều lâu đời. 1 đáp án; không gian hợp lệ 3240; L1 cộng 3 bước L2",
+    "l2": "giả định «Bài hát đập Tió, in trong sách về làng Blanes» nằm ở «Bảo tàng Catalonia»: thẻ 4 kéo mảnh «Đập Tió ở bếp lửa» theo cùng ô, thẻ 5 giữ mảnh «Mọi phần của Tió đều lâu đời», nếu đặt, cùng ô với bài hát, nên Kho ca khúc Catalan không còn mảnh nào, trái luật mỗi nguồn nhận ít nhất một mảnh, nên loại chỗ đó; giả định «Bài hát đập Tió, in trong sách về làng Blanes» nằm ở «Nhà nhân học, qua Betevé»: thẻ 4 kéo mảnh «Đập Tió ở bếp lửa» theo cùng ô, thẻ 5 giữ mảnh «Mọi phần của Tió đều lâu đời», nếu đặt, cùng ô với bài hát, nên Kho ca khúc Catalan không còn mảnh nào, trái luật mỗi nguồn nhận ít nhất một mảnh, nên loại chỗ đó; giả định «Bài hát đập Tió, in trong sách về làng Blanes» nằm ở «Đài phát thanh Mỹ»: thẻ 4 kéo mảnh «Đập Tió ở bếp lửa» theo cùng ô, thẻ 5 giữ mảnh «Mọi phần của Tió đều lâu đời», nếu đặt, cùng ô với bài hát, nên Kho ca khúc Catalan không còn mảnh nào, trái luật mỗi nguồn nhận ít nhất một mảnh, nên loại chỗ đó",
+    "reveal": "Mặt và mũ barretina chỉ phổ biến từ khoảng thập niên 1970; bài hát chỉ thấy ghi từ cuối thế kỷ 19. Còn tranh cãi: nhà nhân học Fornés nói gốc là nghi lễ cổ, nhưng việc bắt Tió «ỉa» thì mới hơn.",
+    "note": "Trục gán lời cho nguồn đã nói ra nó: Bảo tàng Catalonia; Nhà nhân học, qua Betevé; Đài phát thanh Mỹ; Kho ca khúc Catalan (đúng thứ tự Cúc Cu kể). Thẻ 1 (trang bảo tàng, Gencat): at, đúng lời thẻ: nhờ đòn gậy của trẻ con người ta giả vờ Tió ỉa kẹo và quà; trang không nói bếp lửa hay chăn. Thẻ 2 (NPR): at; chăn phủ lên đầu không mặt đêm 24/12; NPR cũng nói hát và đập nhưng thẻ không dùng. Thẻ 3 (Betevé, bài về sách của Josep Fornés): at, và notAt cho mảnh «Mọi phần của Tió đều lâu đời» ở ô này, vì cũng bài ấy ghi tục bắt Tió «ỉa» mới hơn gốc cổ (Fornés: «el costum de fer-lo cagar és més modern»), nên bài không nói mọi phần đều lâu đời; ban đầu Tió không mặt, không mũ, mặt và mũ phổ biến từ khoảng thập niên 1970 (Betevé: «es va implantar»); năm chỉ nằm trong lời thẻ, mảnh không mang năm. Thẻ 4 (suy ra, sách in 1886 qua Càntut): chỉ là same, đúng lời thẻ: cuốn sách chép cả bài hát lẫn câu «la acció de colpejar lo tió col-locat en la llar» (đập Tió đặt ở bếp lửa; «llar» dịch là bếp lửa), nên hai lời chung một nguồn; thẻ không nêu nguồn nào nên Kho ca khúc Catalan chỉ tìm được nhờ luật mỗi nguồn nhận ít nhất một mảnh cùng thẻ 5 (ba bước L2). Câu 1886 không nói gậy, nên mảnh gậy ở lại với bảo tàng và mảnh đập ở bếp lửa đi với bài hát: dòng «Còn chăn và gậy: chưa biết niên đại» của kịch bản vẫn đúng. Thẻ 5 (suy ra): chỉ là điều kiện «nếu có nguồn nói mọi phần đều lâu đời thì nguồn ấy phải nói về niên đại bài hát», mà trong bốn nguồn chỉ sách 1886 (Càntut) và Betevé nói: mảnh ấy, nếu đặt, ở cùng ô với bài hát hoặc ở ô Nhà nhân học, và thẻ 3 loại ô Nhà nhân học; mảnh «mọi phần đều lâu đời» rời bảng nhờ điều kiện ấy cộng sức chứa hai mảnh của Kho ca khúc Catalan, không thẻ nào đẩy nó ra; không nguồn nào nói thế (tờ rơi Barcelona qua NPR và Fornés nói gốc nghi lễ cổ, một lời về nguồn gốc chứ không về từng phần; cũng Fornés nói bài hát khoảng 150 năm). Gốc cổ không là ràng buộc nào: đó là tranh cãi, kịch bản nêu hai phía sau bảng. Bốn nguồn, không phải sáu liên kết của bible §7: PCCD chỉ là hồ sơ thư mục của sách 1886 (đi với Càntut), Gencat Cultura lặp lời «không mặt» của Betevé và không cần cho bảng. Lời «không mặt, không mũ» là của Betevé, bài về sách của Fornés; research chỉ ghi «Betevé» cho câu này và ghi «Fornés (qua Betevé, 2020)» cho lời về bài hát, nên nhãn ô gọi nguồn là «Nhà nhân học, qua Betevé»; gán riêng câu này cho nhà nhân học vẫn là cách đọc của kịch bản và của hàng này. Rủi ro chuyên gia được chấp nhận: ai đã đọc trang Càntut và biết sách 1886 cũng chép việc đập Tió ở bếp lửa thì dựng đúng bảng không cần thẻ; ai chỉ biết bản ghi sớm nhất, mặt và mũ mới, chăn và gậy chỉ tả ngày nay thì bỏ mảnh đập ở bếp lửa ra ngoài hoặc ghép nó với gậy, và trượt. Bảng người đọc chưa biết (hai mảnh đập cùng vào bảo tàng), bảng người đọc rộng (đập ở bếp lửa cùng chăn ở đài phát thanh) và bảng chuyên gia (bỏ mảnh đập ở bếp lửa) đều trượt; 24 bảng hợp với điều chuyên gia biết, một bảng hợp mọi thẻ.",
+    "puzzle": "story/puzzles/caga-tio.json"
+  },
+  {
+    "id": "dickens",
+    "act": 3,
+    "format": "M",
+    "input": "order",
+    "goal": "age-customs",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Hai mảnh có bản ghi xưa hơn cuốn sách của Dickens. Mảnh Albert không có nấc: V&A chỉ ghi một thập niên.",
+    "wrongFrame": "Dickens phát minh ra Giáng Sinh: cuốn sách làm ra cả mùa lễ, nên mọi mảnh khác đứng sau nó (người ta hay gọi vậy; biệt danh, không phải sự thật lịch sử). Và «Albert đưa cây vào Anh»: Birmingham và V&A viết vậy, Royal Collection ghi Charlotte.",
+    "key": "Bản ghi hôn dưới tầm gửi sớm nhất được biết là một tác phẩm Anh năm 1784; Hoàng hậu Charlotte dựng cây thủy tùng trang trí ở Queen's Lodge, Windsor, đêm 24/12/1800; Henry Cole đặt thiệp Giáng Sinh thương mại năm 1843; A Christmas Carol ra ngày 19/12/1843; hình gia đình hoàng gia quanh cây trên Illustrated London News năm 1848; Birmingham và V&A viết Albert đưa cây vào, Royal Collection ghi Charlotte đưa cây vào cuối thế kỷ 18 và Victoria với Albert làm nó phổ biến",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0b-act-3.md §3.5; research/m0b-act-1.md §7 M1; story/notebook/dickens.json; story/puzzles/dickens.json",
+    "cards": [
+      {
+        "text": "Suy ra: trong các mảnh được nguồn ghi rõ năm, hình cây trên báo có bản ghi mới nhất.",
+        "source": "research/m0b-act-3.md §3.5 (Royal Collection Trust, bài royal-christmas-trees: Illustrated London News 1848; V&A: «the 1840s was a period of change»)",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: thiệp thương mại được đặt làm đúng năm cuốn sách ra. Hai nguồn không nói cái nào có trước.",
+        "source": "research/m0b-act-3.md §3.5 (Postal Museum; British Library)",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: không mảnh nào có bản ghi xưa hơn hôn dưới tầm gửi.",
+        "source": "research/m0b-act-1.md §7 M1; research/m0b-act-3.md §3.5 (English Heritage 1784; Royal Collection Trust 1800; Postal Museum 1843)",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: cây ở Windsor có bản ghi xưa hơn tấm thiệp thương mại.",
+        "source": "research/m0b-act-3.md §3.5 (Royal Collection Trust 1800; Postal Museum 1843)",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: V&A chỉ cho Albert một thập niên, trùng cả thiệp lẫn hình trên báo. Mảnh Albert, nếu đặt, chung nấc với cả hai.",
+        "source": "research/m0b-act-3.md §3.5 (Birmingham; V&A; Postal Museum)",
+        "status": "fact"
+      }
+    ],
+    "solution": "Xếp 5 trong 6 mảnh vào 4 nấc, nấc nào cũng có ít nhất một mảnh và nhiều nhất hai. Nấc 1: Hôn dưới tầm gửi; Nấc 2: Cây trang trí ở Windsor; Nấc 3: Thiệp Giáng Sinh thương mại + Cuốn A Christmas Carol; Nấc 4: Hình cây nhà Victoria và Albert trên báo; để ngoài: Hoàng thân Albert đưa cây thông vào Anh; 1 đáp án; không gian hợp lệ 1320; L1 cộng 2 bước L2",
+    "l2": "giả định «Thiệp Giáng Sinh thương mại» nằm ở «Nấc 2»: thẻ 2 kéo cuốn sách theo, thẻ 4 đẩy cây ở Windsor về nấc 1 cùng hôn dưới tầm gửi nên nấc 3 trống, trái luật mỗi nấc cần ít nhất một mảnh, nên loại chỗ đó; giả định «Thiệp Giáng Sinh thương mại» nằm ở «Nấc 4»: thẻ 2 kéo cuốn sách theo, cùng hình cây trên báo ở nấc 4 thành ba mảnh, trái luật mỗi nấc nhận nhiều nhất hai mảnh, nên loại chỗ đó",
+    "reveal": "Hai mảnh có bản ghi xưa hơn cuốn sách của Dickens: hôn dưới tầm gửi và cây ở Windsor. Royal Collection ghi Hoàng hậu Charlotte đưa cây vào Anh; Victoria và Albert làm nó phổ biến, hình trên báo ra sau cuốn sách.",
+    "note": "Trục xếp mảnh lên bốn nấc theo mốc bản ghi sớm nhất được biết của từng mảnh, nấc 1 xưa nhất; đó là tuổi của bản ghi, không phải tuổi của tục. Bible §6 («cũ / mới 1843 / chưa rõ») không dùng: nguồn cho mỗi mảnh một mốc cụ thể và «cũ» sẽ khẳng định tuổi của tục. Mảnh «Hoàng thân Albert đưa cây thông vào Anh» là lời có hai nguồn nói ngược nhau: Birmingham và V&A viết Albert đưa cây vào cùng những đổi mới thập niên 1840 với thiệp, Royal Collection ghi Charlotte đưa cây vào cuối thế kỷ 18 và Victoria với Albert làm nó phổ biến (hình trên báo 1848). Thẻ 5 (V&A: «the 1840s was a period of change, with Prince Albert introducing … the decorated Christmas tree»; Birmingham liệt kê cây của Albert cùng thiệp «first sent in the 1840s» nhưng không gán năm cho cây): nguồn chỉ cho Albert một thập niên, mà thập niên 1840 chứa cả thiệp (1843) lẫn hình trên báo (1848), hai mảnh ở hai nấc khác nhau, nên mảnh Albert không tách được khỏi cả hai; do là điều kiện «nếu mảnh Albert có chỗ, nó chung nấc với cả thiệp lẫn hình trên báo», không bao giờ là lệnh bỏ mảnh; mảnh rời bảng nhờ điều kiện ấy cộng sức chứa hai mảnh mỗi nấc (không nấc nào chứa nổi thiệp, sách và hình báo cùng Albert). Royal Collection ghi Charlotte đưa cây vào không nằm trong thẻ nào; nó chỉ có ở lời lật cuối (reveal). Thẻ 1: câu RCT «In 1848, The Illustrated London News printed a picture of the royal family around a Christmas tree» (research §3.5), do at nấc cuối vì nấc nào cũng cần một mảnh; thẻ chỉ so «các mảnh được nguồn ghi rõ năm» vì V&A chỉ cho Albert một thập niên 1840, có thể sau cả 1848; mảnh Albert là việc của riêng thẻ 5. Thẻ 2: thiệp được đặt làm năm 1843 (Postal Museum) và sách xuất bản 19/12/1843 (British Library): nguồn đã mở không xếp trước sau, nên same; thẻ nói «được đặt làm đúng năm cuốn sách ra», không nói hai thứ ra cùng ngày. Thẻ 3: bản ghi 1784 xưa hơn mọi mảnh trên bảng (at nấc 1). Thẻ 4: cây Windsor (24/12/1800) xưa hơn thiệp (1843). Không dùng: carol chép tay và Saturnalia (bỏ khỏi bảng vì không còn chỗ trong sáu mảnh; carol vẫn có ở Sổ nguồn chương 8), Herrick, Pickwick Papers 1837, thiệp bán chạy hay ế (tranh cãi), Albert «đưa cây vào» như sự thật, và chữ «đầu tiên». Rủi ro chuyên gia được chấp nhận: ai biết lời «Albert đưa cây vào» bị Royal Collection bác, và biết hôn dưới tầm gửi xưa nhất, thiệp cùng năm với sách, hình báo 1848 cuối, thì dựng đúng bảng không cần thẻ; research không có điểm khác biệt nào khác mà người đọc không tra được từ chữ trên mảnh. Bảng người đọc thường (sách và Albert cùng nấc), bảng người đọc rộng tin truyện phổ biến (Albert đưa cây vào cùng cây Windsor) và bảng chuyên gia chưa biết Albert bị bác (Albert cùng hình trên báo) đều trượt; 12 bảng hợp với điều chuyên gia biết (thiệp cùng nấc sách, hình báo nấc cuối, tầm gửi nấc 1), một bảng hợp mọi thẻ. Bảng B ở lần thử mù c40f544 (carol, tầm gửi, Windsor, sách cùng thiệp, hình báo) thắng vì chỉ là thứ tự năm ai cũng biết; bản này bỏ carol và thêm mảnh Albert để bảng ấy phải trả lời lời đồn chứ không chỉ xếp năm.",
+    "puzzle": "story/puzzles/dickens.json"
+  },
+  {
+    "id": "brooms",
+    "act": 3,
+    "format": "E",
+    "input": "mark",
+    "goal": "link-sources",
+    "orientation": "both",
+    "minutes": [
+      90,
+      150
+    ],
+    "state": "full",
+    "aha": "Các nguồn kể ngược nhau về chổi: giấu trong nhà, hay để ngoài cửa chuồng. Tục ấy lâu đời đến đâu, không nguồn nào nói.",
+    "wrongFrame": "Người Na Uy giấu chổi từ cả nghìn năm (chưa ai chứng minh): mảnh «Cất chổi đêm ấy là tục rất lâu đời» nằm cùng danh sách của Norsk Folkemuseum.",
+    "key": "Norsk Folkemuseum nêu troll, hulder, draug và Quỷ; NRK: Hagen nói lời khai ở phiên xử phù thủy bị ép ra; forskning.no: gần như mọi sinh vật siêu nhiên ra ngoài và chổi, xẻng đặt ngoài cửa chuồng; bản tin Northeastern: giấu hết chổi trong nhà; không nguồn nào nói «nghìn năm»",
+    "label": "SỰ THẬT",
+    "keySource": "research/m0b-act-3.md (mục brooms); research/m0c-puzzles.md §11 (Br1, Br2, Br3, Br4); story/notebook/brooms.json; story/puzzles/brooms.json",
+    "cards": [
+      {
+        "text": "Audun Kjus ở Bảo tàng Dân gian Na Uy ghi: troll, hulder, draug và cả Quỷ đi lại đêm Giáng Sinh.",
+        "source": "research/m0b-act-3.md (Norsk Folkemuseum, Kjus)",
+        "status": "fact"
+      },
+      {
+        "text": "Suy ra: hai lời chung một bài báo phổ biến, không nêu nguồn gốc: gần như mọi sinh vật siêu nhiên; chổi ngoài cửa chuồng.",
+        "source": "research/m0c-puzzles.md (forskning.no §11 Br2, Br3)",
+        "status": "disputed"
+      },
+      {
+        "text": "Sử gia Hagen trên đài NRK: lời khai ở các phiên xử phù thủy bị ép ra.",
+        "source": "research/m0b-act-3.md (NRK, Hagen)",
+        "status": "fact"
+      },
+      {
+        "text": "Bản tin Đại học Northeastern ghi: người Na Uy giấu hết chổi và giẻ lau trong nhà.",
+        "source": "research/m0b-act-3.md (Northeastern)",
+        "status": "disputed"
+      },
+      {
+        "text": "Suy ra: nguồn nào nói cất chổi đêm ấy là tục rất lâu đời, nguồn ấy cũng nói giấu chổi trong nhà.",
+        "source": "research/m0b-act-3.md (Northeastern)",
+        "status": "fact"
+      }
+    ],
+    "solution": "Sáu mảnh vào bốn nguồn: Norsk Folkemuseum: Troll, hulder, draug và cả Quỷ đi lại đêm ấy; forskning.no: Gần như mọi sinh vật siêu nhiên ra ngoài đêm ấy + Đặt chổi và xẻng phân ngoài cửa chuồng; NRK: Lời khai ở phiên xử phù thủy bị ép ra; Bản tin Northeastern: Giấu hết chổi và giẻ lau trong nhà; để ngoài: Cất chổi đêm ấy là tục rất lâu đời. 1 đáp án; không gian hợp lệ 4440; L1 cộng 2 bước L2",
+    "l2": "giả định «Gần như mọi sinh vật siêu nhiên ra ngoài đêm ấy» nằm ở «Norsk Folkemuseum»: thẻ 4 kéo mảnh «Đặt chổi và xẻng phân ngoài cửa chuồng» theo cùng ô, forskning.no không còn mảnh nào, trái luật mỗi nguồn nhận ít nhất một mảnh, nên loại chỗ đó; giả định «Gần như mọi sinh vật siêu nhiên ra ngoài đêm ấy» nằm ở «NRK»: thẻ 4 kéo mảnh «Đặt chổi và xẻng phân ngoài cửa chuồng» theo cùng ô, forskning.no cũng không còn mảnh nào, nên loại chỗ đó",
+    "reveal": "Bản tin đại học nói giấu chổi trong nhà; trang tin khoa học nói để ngoài cửa chuồng. Tục ấy có từ bao giờ, không nguồn nào trong bốn nguồn nói.",
+    "puzzle": "story/puzzles/brooms.json",
+    "thin": true,
+    "note": "Mỏng về lịch sử; giữ ngắn. Trục gán lời cho nguồn đã nói ra nó: Norsk Folkemuseum, forskning.no, NRK, bản tin Northeastern. Br3 (forskning.no) là dòng mà research đánh «~ (không dùng)»: ở đây nó không là bằng chứng cho điều gì đúng, chỉ là lời của một bài báo phổ biến không nêu nguồn gốc (thẻ 2 nói thẳng điều ấy và mang trạng thái tranh cãi), ngược chiều với bản tin Northeastern (giấu trong nhà); không thay được bằng Bratberg, nguồn ngược chiều duy nhất khác, vì bài ấy cũng không dẫn nguồn và không nói «gần như mọi sinh vật»; nên cả hai mảnh chổi mang trạng thái tranh cãi và các thẻ nêu từng nguồn nói gì; không thẻ nào nói ai đúng. Mảnh «Gần như mọi sinh vật siêu nhiên» cũng ghi đúng «Nær sagt alle» của bài ấy. Thẻ 1 (Kjus, Norsk Folkemuseum): at. Thẻ 3 (Hagen, NRK): at; không dùng Vardø, năm hay máu. Thẻ 4 (Northeastern): at, chỉ là điều bản tin ghi. Thẻ 2: chỉ same, đúng lời thẻ «chung một bài»; thẻ không nêu bài nào trong lời, và cặp mảnh vào forskning.no nhờ luật mỗi nguồn nhận ít nhất một mảnh (hai bước L2). Thẻ 5 (suy ra): chỉ là điều kiện «nếu có nguồn nói cất chổi là tục rất lâu đời thì nguồn ấy cũng nói giấu trong nhà»; mảnh «rất lâu đời» (tin của Quạ Đồn, viết bằng chữ khác) rời bảng nhờ điều kiện ấy cộng sức chứa một mảnh của bản tin Northeastern, không thẻ nào đẩy nó ra, và không nguồn nào nêu tuổi của tục. Không năm nào trên thẻ, mảnh hay nhãn. Không chổi như hành động hay kết quả của câu đố. Rủi ro chuyên gia được chấp nhận: ai đã đọc nghiên cứu và biết forskning.no kể cả «gần như mọi sinh vật» lẫn «chổi ngoài cửa chuồng», biết bản tin Northeastern nói giấu chổi và biết không nguồn nào nói «nghìn năm» thì dựng đúng bảng không cần thẻ; research không có điều khác lạ mà người đọc không tra được từ chữ trên mảnh. Bảng người đọc chưa biết (chổi ngoài cửa chuồng vào bảo tàng cùng mảnh «rất lâu đời»), bảng người đọc rộng (cùng bảng ấy, bỏ mảnh «rất lâu đời») và bảng chuyên gia chỉ biết ba điều chung (chổi ngoài cửa chuồng vào NRK) đều trượt; 58 bảng hợp với điều chuyên gia biết, một bảng hợp mọi thẻ."
+  },
+  {
+    "id": "ending",
+    "act": 4,
+    "format": "T",
+    "input": "order",
+    "goal": "sequence",
+    "orientation": "both",
+    "minutes": [
+      120,
+      180
+    ],
+    "state": "full",
+    "aha": "Bản ghi cây thông không cổ nhất: cuốn lịch La Mã có trước. Bánh gặp sau trên đường đi chưa chắc mới hơn.",
+    "wrongFrame": "Bánh gặp sau trong hành trình thì mới hơn: tấm thiệp 1843 gặp sau cùng nhưng cũ hơn Mèo Yule 1864 và bài hát Tió 1886.",
+    "key": "Năm bánh răng: lịch La Mã 354, cây thông Strasbourg 1605, thiệp thương mại 1843, Mèo Yule 1864, bài hát đập Tió 1886; thêm Bánh ngọn nến: truyền thuyết (mồi nhử, không có nấc; mốc nến sớm nhất nằm giữa cây thông và thiệp, mà hai bánh ấy liền nhau); thứ tự gặp trên đường đi (lịch, cây thông, thiệp, Mèo Yule, Tió) không phải thứ tự thời gian",
+    "label": "—",
+    "keySource": "story/puzzles/ending.json; research/m0b-act-1.md; research/m0b-act-2.md; research/m0b-act-3.md",
+    "cards": [
+      {
+        "text": "Ghi chép cây thông ở Strasbourg nằm giữa cuốn lịch La Mã và bản in về Mèo Yule",
+        "source": "research/m0b-act-1.md; research/m0b-act-2.md; research/m0b-act-3.md",
+        "status": "fact"
+      },
+      {
+        "text": "Tấm thiệp thương mại liền kề bản in về Mèo Yule; bản in ấy nằm giữa tấm thiệp và bài hát đập Tió",
+        "source": "research/m0b-act-3.md",
+        "status": "fact"
+      },
+      {
+        "text": "Cây thông liền thiệp",
+        "source": "research/m0b-act-2.md; research/m0b-act-3.md",
+        "status": "fact"
+      },
+      {
+        "text": "Bài hát đập Tió in trong sách là bánh mới nhất",
+        "source": "research/m0b-act-3.md",
+        "status": "fact"
+      },
+      {
+        "text": "Các mốc sớm của cây có nến đều sau ghi chép Strasbourg, trước tấm thiệp; hai bánh ấy liền nhau nên bánh ngọn nến không có nấc",
+        "source": "research/m0b-act-2.md; research/m0b-act-3.md",
+        "status": "fact"
+      }
+    ],
+    "solution": "Xếp 5 trong 6 bánh lên 5 nấc nhận nhiều bánh, Bánh ngọn nến ngoài trục, bánh có thể không đặt; 1 đáp án; sau đó ghép câu kết luận (6 chỗ, nhãn ẩn) từ ngân hàng chữ",
+    "l2": "giả định «Bánh Mèo Yule» nằm ở «Nấc 2»: đối chiếu với các thẻ đã đọc thì mâu thuẫn, nên loại chỗ đó; giả định «Bánh Mèo Yule» nằm ở «Nấc 3»: đối chiếu với các thẻ đã đọc thì mâu thuẫn, nên loại chỗ đó",
+    "reveal": "Lịch 354, cây thông 1605, thiệp 1843, Mèo Yule 1864, Tió 1886; ghi chép cây thông đứng sau cuốn lịch La Mã.",
+    "puzzle": "story/puzzles/ending.json",
+    "note": "Chương thưởng, nhẹ. Năm bánh: lịch, cây thông, thiệp, Mèo Yule, Tió."
+  }
+]

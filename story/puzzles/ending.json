@@ -1,0 +1,492 @@
+{
+  "id": "ending",
+  "format": "T",
+  "input": "order",
+  "goal": "sequence",
+  "orientation": "both",
+  "title": "Ráp lại cỗ máy",
+  "question": "Bánh răng nhẵn số chờ sẵn. Bánh nào vào nấc nào, hay không vào nấc nào; chưa thẻ nào nói bánh nào cũ nhất.",
+  "predict": {
+    "prompt": "Bánh nào mang bản ghi cũ nhất?",
+    "options": [
+      "Bánh cây thông",
+      "Bánh lịch",
+      "Bánh thiệp",
+      "Bánh con mèo"
+    ]
+  },
+  "aha": "Bản ghi cây thông không cổ nhất: cuốn lịch La Mã có trước. Bánh gặp sau trên đường đi chưa chắc mới hơn.",
+  "history": "ending",
+  "rules": [
+    {
+      "text": "Nấc số nhỏ là cũ hơn. Hai bánh liền nhau thì ở hai nấc kề nhau."
+    },
+    {
+      "text": "Chạm một bánh, rồi chạm một nấc để đặt. Hai bánh chung một nấc là cùng thời. Bánh có thể không đặt."
+    },
+    {
+      "text": "Năm chỉ hiện ra khi cả trục khớp."
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "label": "Nấc 1 (cũ nhất)",
+      "cap": "any"
+    },
+    {
+      "id": "s2",
+      "label": "Nấc 2",
+      "cap": "any"
+    },
+    {
+      "id": "s3",
+      "label": "Nấc 3",
+      "cap": "any"
+    },
+    {
+      "id": "s4",
+      "label": "Nấc 4",
+      "cap": "any"
+    },
+    {
+      "id": "s5",
+      "label": "Nấc 5 (mới nhất)",
+      "cap": "any"
+    }
+  ],
+  "tokens": [
+    {
+      "id": "l",
+      "text": "Bánh con mèo",
+      "icon": "cat",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "d",
+      "text": "Bánh lịch",
+      "icon": "calendar",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "x",
+      "text": "Bánh ngọn nến",
+      "icon": "candle",
+      "status": "legend",
+      "source": "research/m0b-act-2.md",
+      "url": "https://blog.sbb.berlin/luther-als-erfinder-des-weihnachtsbaums-eine-interpretation-des-19-jahrhunderts/",
+      "evidence": [
+        "Người ta kể rằng Martin Luther là người đầu tiên thắp nến trên cây thông"
+      ]
+    },
+    {
+      "id": "h",
+      "text": "Bánh cây gậy",
+      "icon": "stick",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "t",
+      "text": "Bánh cây thông",
+      "icon": "fir",
+      "status": "fact",
+      "required": true
+    },
+    {
+      "id": "k",
+      "text": "Bánh thiệp",
+      "icon": "card",
+      "status": "fact",
+      "required": true
+    }
+  ],
+  "bankSeed": 0,
+  "cards": [
+    {
+      "id": "c1",
+      "who": "Suy ra từ Sổ nguồn: lịch, cây thông và Mèo Yule",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-1.md; research/m0b-act-2.md; research/m0b-act-3.md",
+      "url": [
+        "https://www.liverpool.ac.uk/history/blog/2023/first-noel/",
+        "https://de.wikisource.org/wiki/Noch_einmal_auf_den_Spuren_des_Weihnachtsbaums",
+        "https://www.bbl.is/skodun/a-faglegum-notum/jolakotturinn-%E2%80%93-uppruni-hans-aettir-og-hlutverk"
+      ],
+      "evidence": [
+        "In 354 a Roman aristocrat named Valentinus commissioned a book of calendars.",
+        "Auff Weihenachten richtett man Dannenbäum zu Straßburg in den stuben auff",
+        "Frásögn um jólaköttinn birtist fyrst á prenti í þjóðsögum Jóns Árnasonar árið 1864."
+      ],
+      "text": "Ghi chép cây thông ở Strasbourg nằm giữa hai bánh: cuốn lịch La Mã, và bản in về Mèo Yule.",
+      "do": {
+        "op": "between",
+        "t": [
+          "d",
+          "t",
+          "l"
+        ]
+      }
+    },
+    {
+      "id": "c2",
+      "who": "Suy ra từ Sổ nguồn: thiệp, Mèo Yule và Tió",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-3.md",
+      "url": [
+        "https://www.postalmuseum.org/collections/first-christmas-card/",
+        "https://www.bbl.is/skodun/a-faglegum-notum/jolakotturinn-%E2%80%93-uppruni-hans-aettir-og-hlutverk",
+        "https://cantut.cat/canconer/cancons/item/720-tio-tio"
+      ],
+      "evidence": [
+        "commissioned the first commercial Christmas card in 1843",
+        "Frásögn um jólaköttinn birtist fyrst á prenti í þjóðsögum Jóns Árnasonar árið 1864.",
+        "La primera referència l'hem trobat recollida l'any 1886"
+      ],
+      "text": "Tấm thiệp thương mại liền kề bản in về Mèo Yule; bản in ấy nằm giữa tấm thiệp và bài hát đập Tió.",
+      "do": [
+        {
+          "op": "adjacent",
+          "t": [
+            "k",
+            "l"
+          ]
+        },
+        {
+          "op": "between",
+          "t": [
+            "k",
+            "l",
+            "h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "who": "Suy ra từ Sổ nguồn: cây thông và thiệp",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-2.md; research/m0b-act-3.md",
+      "url": [
+        "https://de.wikisource.org/wiki/Noch_einmal_auf_den_Spuren_des_Weihnachtsbaums",
+        "https://www.postalmuseum.org/collections/first-christmas-card/"
+      ],
+      "evidence": [
+        "Auff Weihenachten richtett man Dannenbäum zu Straßburg in den stuben auff",
+        "commissioned the first commercial Christmas card in 1843"
+      ],
+      "text": "Hai bánh liền nhau, không bánh nào xen giữa: ghi chép cây thông ở Strasbourg, và tấm thiệp thương mại.",
+      "do": {
+        "op": "adjacent",
+        "t": [
+          "t",
+          "k"
+        ]
+      }
+    },
+    {
+      "id": "c4",
+      "who": "Suy ra từ Sổ nguồn: bài hát đập Tió",
+      "kind": "inference",
+      "status": "fact",
+      "source": "research/m0b-act-3.md",
+      "url": [
+        "https://cantut.cat/canconer/cancons/item/720-tio-tio"
+      ],
+      "evidence": [
+        "La primera referència l'hem trobat recollida l'any 1886"
+      ],
+      "text": "Bài hát đập Tió in trong sách là bánh mới nhất: không bánh nào đến sau.",
+      "do": {
+        "op": "at",
+        "t": "h",
+        "s": "s5"
+      }
+    },
+    {
+      "id": "c5",
+      "who": "Nguồn hiện đại về cây Giáng Sinh có nến",
+      "kind": "modern",
+      "status": "fact",
+      "source": "research/m0b-act-2.md; research/m0b-act-3.md",
+      "url": [
+        "https://www.wissenschaftsjahr.de/2022/fragen/antworten/detailansicht/woher-kommt-die-tradition-mit-dem-weihnachtsbaum.html",
+        "https://www.waldwissen.net/de/wald-und-mensch/forstgeschichte/geschichte-des-weihnachtsbaumes",
+        "https://www.postalmuseum.org/collections/first-christmas-card/"
+      ],
+      "evidence": [
+        "allerdings noch ohne Kerzen",
+        "Der erste kerzengeschmückte Tannenbaum ist überliefert aus dem Jahr 1611",
+        "Erste Weihnachtsbäume mit Lichtschmuck sind für den Hannoverschen Hof um 1660 belegt",
+        "first commercial Christmas card in 1843"
+      ],
+      "text": "Cây có nến: các mốc sớm đều sau ghi chép Strasbourg, trước tấm thiệp. Bánh ngọn nến, nếu có chỗ, đứng giữa hai bánh ấy.",
+      "do": {
+        "op": "expr",
+        "e": [
+          "or",
+          [
+            "not",
+            [
+              "placed",
+              "x"
+            ]
+          ],
+          [
+            "and",
+            [
+              "gt",
+              [
+                "pos",
+                "x"
+              ],
+              [
+                "pos",
+                "t"
+              ]
+            ],
+            [
+              "lt",
+              [
+                "pos",
+                "x"
+              ],
+              [
+                "pos",
+                "k"
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "solutions": [
+    [
+      [
+        "d"
+      ],
+      [
+        "t"
+      ],
+      [
+        "k"
+      ],
+      [
+        "l"
+      ],
+      [
+        "h"
+      ]
+    ]
+  ],
+  "space": 18750,
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Câu hỏi: bánh nào mang bản ghi cũ nhất? Thẻ không ghi năm: chỗ của mỗi bánh phải suy từ thẻ."
+    },
+    {
+      "tier": 2,
+      "card": "c4",
+      "text": "Đọc thẻ 4 trước: thẻ ấy nói chắc về một bánh."
+    },
+    {
+      "tier": 3,
+      "text": "Bánh gặp sau trên đường đi có chắc mới hơn không?"
+    },
+    {
+      "tier": 4,
+      "fills": {
+        "s5": "h"
+      },
+      "text": "Thẻ 4 đặt bánh cây gậy ở nấc 5. Đặt bánh ấy vào, rồi đọc thẻ 2."
+    },
+    {
+      "tier": 5,
+      "solves": true,
+      "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu ráp hộ đủ năm bánh."
+    }
+  ],
+  "wrongFrame": {
+    "text": "Tèo đoán: bánh gặp sau thì mới hơn.",
+    "cards": [
+      "c2",
+      "c4"
+    ],
+    "do": [
+      {
+        "op": "before",
+        "t": [
+          "d",
+          "t"
+        ]
+      },
+      {
+        "op": "before",
+        "t": [
+          "t",
+          "l"
+        ]
+      },
+      {
+        "op": "before",
+        "t": [
+          "l",
+          "h"
+        ]
+      },
+      {
+        "op": "before",
+        "t": [
+          "h",
+          "k"
+        ]
+      }
+    ]
+  },
+  "reveal": {
+    "lines": [
+      "Không thẻ nào nói bánh nào cũ nhất; xếp xong, chỗ ấy thuộc về bánh lịch.",
+      "Ghi chép cây thông đứng sau cuốn lịch La Mã."
+    ],
+    "label": "—"
+  },
+  "conclusion": {
+    "template": "Giáng Sinh là sự pha trộn nhiều lớp. Chắc: ___ và ___. Còn tranh cãi: ___ và ___. Người ta kể rằng ___ và ___.",
+    "blanks": [
+      {
+        "label": "SỰ THẬT"
+      },
+      {
+        "label": "SỰ THẬT"
+      },
+      {
+        "label": "TRANH CÃI"
+      },
+      {
+        "label": "TRANH CÃI"
+      },
+      {
+        "label": "TRUYỀN THUYẾT"
+      },
+      {
+        "label": "TRUYỀN THUYẾT"
+      }
+    ],
+    "bank": [
+      {
+        "text": "cuốn lịch La Mã năm 354 có ghi Giáng Sinh ngày 25/12",
+        "label": "SỰ THẬT",
+        "status": "fact",
+        "notebook": "dec25.fact.0",
+        "source": "research/m0b-act-1.md",
+        "url": "https://www.liverpool.ac.uk/history/blog/2023/first-noel/",
+        "evidence": [
+          "Christ was born in Bethlehem in Judaea"
+        ]
+      },
+      {
+        "text": "năm 1843, một tấm thiệp Giáng Sinh thương mại được in 1.000 tấm",
+        "label": "SỰ THẬT",
+        "status": "fact",
+        "notebook": "dickens.fact.3",
+        "source": "research/m0b-act-3.md",
+        "url": "https://www.postalmuseum.org/collections/first-christmas-card/",
+        "evidence": [
+          "commissioned the first commercial Christmas card in 1843",
+          "The initial print run was for 1000 cards"
+        ]
+      },
+      {
+        "text": "vì sao chọn ngày 25/12",
+        "label": "TRANH CÃI",
+        "status": "disputed",
+        "notebook": "dec25.dispute.0",
+        "source": "research/m0b-act-1.md",
+        "url": "https://www.historytoday.com/archive/months-past/first-christmas-celebration",
+        "evidence": [
+          "One theory is that the date was chosen because it was the pagan solstice festival of Sol Invictus",
+          "Another has it calculated from 25 March, the date of the Annunciation."
+        ]
+      },
+      {
+        "text": "Giáng Sinh thay chỗ lễ Saturnalia",
+        "label": "TRANH CÃI",
+        "status": "disputed",
+        "notebook": "saturnalia.dispute.0",
+        "source": "research/m0b-act-1.md",
+        "url": "https://www.nationalgeographic.com/history/article/christmas-jesus-birthday-ancient-rome-saturnalia-sol-invictus",
+        "evidence": [
+          "As the basis for Christmas, Saturnalia is an imperfect candidate"
+        ]
+      },
+      {
+        "text": "bà Befana hẹn đi sau rồi tìm mãi",
+        "label": "TRUYỀN THUYẾT",
+        "status": "legend",
+        "notebook": "befana.legend.0",
+        "source": "research/m0b-act-2.md",
+        "url": "https://kids.britannica.com/scholars/article/Befana/14117",
+        "evidence": [
+          "Befana said she would see them on their return",
+          "doomed to search for the Magi and the baby Jesus forever"
+        ]
+      },
+      {
+        "text": "Truyện Baldur sinh ra tục hôn dưới tầm gửi",
+        "label": "CHƯA CÓ NGUỒN",
+        "status": "decoy",
+        "notebook": "mistletoe.card.2",
+        "source": "research/m0b-act-1.md",
+        "url": "https://www.smithsonianmag.com/history/how-mistletoe-became-christmas-kissing-tradition-180985450/",
+        "evidence": [
+          "Smithsonian kể Baldur và druid như bối cảnh, không nói chúng sinh ra tục hôn"
+        ]
+      },
+      {
+        "text": "Luther thắp nến trên cây thông",
+        "label": "TRUYỀN THUYẾT",
+        "status": "legend",
+        "notebook": "tree.legend.0",
+        "source": "research/m0b-act-2.md",
+        "url": "https://blog.sbb.berlin/luther-als-erfinder-des-weihnachtsbaums-eine-interpretation-des-19-jahrhunderts/",
+        "evidence": [
+          "im umfangreichen Schrifttum zu Luther ist kein Weihnachtsbaum nachgewiesen"
+        ]
+      }
+    ],
+    "thesis": {
+      "source": "research/m0b-act-1.md",
+      "url": [
+        "https://www.nationalgeographic.com/history/article/christmas-jesus-birthday-ancient-rome-saturnalia-sol-invictus",
+        "https://doi.org/10.1017/s0009640712001941"
+      ],
+      "evidence": [
+        "The choice reflected a mix of religious reasoning, symbolic association, and a Roman calendar crowded with midwinter festivals.",
+        "traditionally crystallized around two competing approaches"
+      ]
+    },
+    "hints": [
+      {
+        "text": "Câu hỏi: mỗi chỗ trống nhận một mảnh. Chỗ nào cần điều chắc, chỗ nào còn tranh cãi, chỗ nào chỉ là lời kể?"
+      },
+      {
+        "text": "Mở Sổ nguồn trong Menu: mỗi thẻ ghi rõ Sự thật, Truyền thuyết hay Tranh cãi, kèm nguồn."
+      },
+      {
+        "text": "Nhờ Cúc Cu soi tỏ: Cúc Cu điền hộ cả câu.",
+        "solves": true
+      }
+    ]
+  },
+  "antiGuess": {
+    "rule": "Kiểm tra chấm cả trục một lần, chỉ nói khớp hoặc chưa khớp, không chỉ ra bánh nào sai."
+  },
+  "minPlaced": 5
+}
